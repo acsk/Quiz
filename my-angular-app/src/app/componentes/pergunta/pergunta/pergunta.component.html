@@ -1,5 +1,5 @@
 <div class="container mx-auto p-4">
-  <div class="mb-4 flex space-x-4">
+  <div class="mb-4 flex space-x-4 items-end">
     <div>
       <label for="topicSelect" class="block text-sm font-medium text-gray-700">Selecione os Tópicos:</label>
       <app-multi-select-box [items]="topics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted">
@@ -17,9 +17,15 @@
         <option [ngValue]="3">Nível 3</option>
       </select>
     </div>
-    <div class="flex items-end">
+    <div class="flex space-x-2">
       <button (click)="startTest()" [disabled]="!canStartTest() || testStarted" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest() || testStarted}">
         Iniciar Teste
+      </button>
+      <button *ngIf="testStarted" (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
+        Finalizar Teste
+      </button>
+      <button *ngIf="showSummary" (click)="resetTest()" class="px-4 py-2 bg-gray-500 text-white rounded">
+        Refazer Teste
       </button>
     </div>
   </div>
@@ -28,7 +34,12 @@
   </div>
   <div *ngIf="testStarted && currentQuestion" class="mb-6 p-4 border rounded shadow">
     <div class="flex justify-between items-center mb-2">
-      <h2 class="text-xl font-semibold">{{ currentQuestionIndex + 1 }}. {{ currentQuestion.question }}</h2>
+      <h2 class="text-xl font-semibold">
+        {{ currentQuestionIndex + 1 }}. {{ currentQuestion.question }}
+        <a [href]="'https://www.google.com/search?q=' + currentQuestion.question" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
+          <i class="fas fa-search"></i>
+        </a>
+      </h2>
       <span class="bg-blue-500 text-white text-sm font-semibold px-2 py-1 rounded">{{ currentQuestion.topicName }}</span>
     </div>
     <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
@@ -65,11 +76,6 @@
       </div>
     </div>
   </div>
-  <div *ngIf="testStarted" class="mt-4">
-    <button (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
-      Finalizar Teste
-    </button>
-  </div>
   <div *ngIf="showSummary" class="mt-6 p-4 border rounded shadow">
     <h2 class="text-xl font-semibold mb-4">Resumo do Teste</h2>
     <div class="flex items-center mb-2">
@@ -83,11 +89,6 @@
     <div class="flex items-center">
       <i class="fas fa-times-circle text-red-500 mr-2"></i>
       <p class="text-lg">Erradas: <span class="font-bold">{{ incorrectAnswers }}</span></p>
-    </div>
-    <div class="mt-4">
-      <button (click)="resetTest()" class="px-4 py-2 bg-gray-500 text-white rounded">
-        Refazer Teste
-      </button>
     </div>
   </div>
 </div>
