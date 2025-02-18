@@ -16,6 +16,7 @@ export class PerguntaComponent implements OnInit {
   showAnswer: boolean = false;
   topics: any[] = [];
   selectedTopicId: number | null = null;
+  selectedLevelId: number | null = null;
   questionCounts: { [key: number]: number } = {};
   selectedOptions: { [key: string]: number | null } = {};
   showAnswers: { [key: string]: boolean } = {};
@@ -37,6 +38,8 @@ export class PerguntaComponent implements OnInit {
     this.httpQuestionsService.getTopics().subscribe(data => {
       this.topics = data.topics;
     });
+
+    this.filterQuestionsByTopic();
   }
 
   get progressPercentage(): number {
@@ -53,6 +56,11 @@ export class PerguntaComponent implements OnInit {
     this.showAnswer = true;
     this.showAnswers[this.currentQuestion.id] = true;
     this.unansweredQuestions.delete(this.currentQuestion.id);
+    if (this.selectedOptions[this.currentQuestion.id] === this.currentQuestion.answer) {
+      this.correctAnswers++;
+    } else {
+      this.incorrectAnswers++;
+    }
   }
 
   nextQuestion(): void {
@@ -82,11 +90,11 @@ export class PerguntaComponent implements OnInit {
   }
 
   filterQuestionsByTopic(): void {
-    if (this.selectedTopicId !== null) {
-      this.filteredQuestions = this.allQuestions.filter(q => q.topicId === this.selectedTopicId);
-    } else {
-      this.filteredQuestions = this.allQuestions;
-    }
+    this.filteredQuestions = this.allQuestions.filter(question => {
+      const matchesTopic = this.selectedTopicId === null || question.topicId === this.selectedTopicId;
+      const matchesLevel = this.selectedLevelId === null || question.levelId === this.selectedLevelId;
+      return matchesTopic && matchesLevel;
+    });
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
     this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
@@ -101,15 +109,6 @@ export class PerguntaComponent implements OnInit {
   }
 
   finalizeTest(): void {
-    this.correctAnswers = 0;
-    this.incorrectAnswers = 0;
-    this.filteredQuestions.forEach(question => {
-      if (this.selectedOptions[question.id] === question.answer) {
-        this.correctAnswers++;
-      } else {
-        this.incorrectAnswers++;
-      }
-    });
     this.showSummary = true;
   }
 }
