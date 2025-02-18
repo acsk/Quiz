@@ -1,32 +1,34 @@
 <div class="container mx-auto p-4">
-  <div class="mb-4 flex space-x-4 items-end">
-    <div>
-      <label for="topicSelect" class="block text-sm font-medium text-gray-700">Selecione os Tópicos:</label>
-      <app-multi-select-box [items]="topics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted">
-        <ng-template let-topic>
-          {{ topic.name }} ({{ questionCounts[topic.id] || 0 }})
-        </ng-template>
-      </app-multi-select-box>
-    </div>
-    <div>
-      <label for="levelSelect" class="block text-sm font-medium text-gray-700">Selecione o Nível:</label>
-      <select id="levelSelect" [(ngModel)]="selectedLevelId" (change)="filterQuestionsByTopic()" [disabled]="testStarted" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-        <option [ngValue]="null">Todos os Níveis</option>
-        <option [ngValue]="1">Nível 1</option>
-        <option [ngValue]="2">Nível 2</option>
-        <option [ngValue]="3">Nível 3</option>
-      </select>
-    </div>
-    <div class="flex space-x-2">
-      <button (click)="startTest()" [disabled]="!canStartTest() || testStarted" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest() || testStarted}">
-        Iniciar Teste
-      </button>
-      <button *ngIf="testStarted" (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
-        Finalizar Teste
-      </button>
-      <button *ngIf="showSummary" (click)="resetTest()" class="px-4 py-2 bg-gray-500 text-white rounded">
-        Refazer Teste
-      </button>
+  <div class="mb-4 p-4 bg-white border border-gray-300 rounded-lg shadow-lg">
+    <div class="flex space-x-4 items-end">
+      <div>
+        <label for="topicSelect" class="block text-sm font-medium text-gray-700">Selecione os Tópicos:</label>
+        <app-multi-select-box [items]="topics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted">
+          <ng-template let-topic>
+            {{ topic.name }} ({{ questionCounts[topic.id] || 0 }})
+          </ng-template>
+        </app-multi-select-box>
+      </div>
+      <div>
+        <label for="levelSelect" class="block text-sm font-medium text-gray-700">Selecione o Nível:</label>
+        <select id="levelSelect" [(ngModel)]="selectedLevelId" (change)="filterQuestionsByTopic()" [disabled]="testStarted" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+          <option [ngValue]="null">Todos os Níveis</option>
+          <option [ngValue]="1">Nível 1</option>
+          <option [ngValue]="2">Nível 2</option>
+          <option [ngValue]="3">Nível 3</option>
+        </select>
+      </div>
+      <div class="flex space-x-2">
+        <button (click)="startTest()" [disabled]="!canStartTest() || testStarted" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest() || testStarted}">
+          Iniciar Teste
+        </button>
+        <button *ngIf="testStarted" (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
+          Finalizar Teste
+        </button>
+        <button *ngIf="showSummary" (click)="resetTest()" class="px-4 py-2 bg-gray-500 text-white rounded">
+          Refazer Teste
+        </button>
+      </div>
     </div>
   </div>
   <div class="mb-4">
