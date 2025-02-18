@@ -79,6 +79,66 @@
       "id": 16,
       "name": "AWS IAM",
       "description": "Serviço de gerenciamento de acesso e identidade que ajuda a controlar de forma segura o acesso aos recursos da AWS."
+    },
+    {
+      "id": 17,
+      "name": "AWS Step Functions",
+      "description": "Serviço que permite coordenar componentes de aplicativos distribuídos e microsserviços usando fluxos de trabalho visuais."
+    },
+    {
+      "id": 18,
+      "name": "AWS IoT Core",
+      "description": "Serviço que permite conectar dispositivos da Internet das Coisas (IoT) à nuvem AWS de forma segura e escalável."
+    },
+    {
+      "id": 19,
+      "name": "AWS Amplify",
+      "description": "Plataforma que facilita a criação, implantação e hospedagem de aplicativos web e móveis completos."
+    },
+    {
+      "id": 20,
+      "name": "AWS AppSync",
+      "description": "Serviço que permite criar APIs GraphQL flexíveis e escaláveis para aplicativos móveis e web."
+    },
+    {
+      "id": 21,
+      "name": "AWS Device Farm",
+      "description": "Serviço que permite testar aplicativos móveis e web em uma ampla variedade de dispositivos reais na nuvem."
+    },
+    {
+      "id": 22,
+      "name": "AWS Security Token Service (STS)",
+      "description": "Serviço que permite criar e gerenciar credenciais temporárias para acessar recursos da AWS."
+    },
+    {
+      "id": 23,
+      "name": "Amazon Cognito",
+      "description": "Serviço que permite adicionar autenticação, autorização e gerenciamento de usuários aos seus aplicativos web e móveis."
+    },
+    {
+      "id": 24,
+      "name": "AWS AppFlow",
+      "description": "Serviço que facilita a transferência de dados entre serviços da AWS e aplicativos SaaS."
+    },
+    {
+      "id": 25,
+      "name": "AWS Backup",
+      "description": "Serviço que facilita o backup centralizado e automatizado de dados em serviços da AWS."
+    },
+    {
+      "id": 26,
+      "name": "AWS Disaster Recovery Strategy",
+      "description": "Conjunto de práticas e serviços que ajudam a proteger dados e aplicativos críticos contra desastres e interrupções."
+    },
+    {
+      "id": 27,
+      "name": "Amazon WorkSpaces",
+      "description": "Serviço de desktop como serviço (DaaS) que permite provisionar desktops virtuais na nuvem."
+    },
+    {
+      "id": 28,
+      "name": "Amazon AppStream 2.0",
+      "description": "Serviço que permite transmitir aplicativos de desktop para qualquer dispositivo diretamente do AWS."
     }
   ]
 }

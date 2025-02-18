@@ -1,0 +1,17 @@
+{
+  "questions": [
+    {
+      "id": "disasterrecovery1a2b3c4d5",
+      "topicId": 26,
+      "levelId": 1,
+      "question": "O que é AWS Disaster Recovery Strategy?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Conjunto de práticas e serviços que ajudam a proteger dados e aplicativos críticos contra desastres e interrupções" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    }
+  ]
+}

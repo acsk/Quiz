@@ -9,19 +9,30 @@ import { map } from 'rxjs/operators';
 export class HttpQuestionsService {
 
   private topicsUrl = 'assets/data/topics.json';
-  private s3QuestionsUrl = 'assets/data/question/s3.json';
+  private amplifyQuestionsUrl = 'assets/data/question/amplify.json';
+  private appFlowQuestionsUrl = 'assets/data/question/appFlow.json';
+  private appStreamQuestionsUrl = 'assets/data/question/appStream.json';
+  private appSyncQuestionsUrl = 'assets/data/question/appSync.json';
+  private backupQuestionsUrl = 'assets/data/question/backup.json';
+  private cloudfrontQuestionsUrl = 'assets/data/question/cloudfront.json';
+  private cognitoQuestionsUrl = 'assets/data/question/cognito.json';
+  private deviceFarmQuestionsUrl = 'assets/data/question/deviceFarm.json';
+  private disasterRecoveryQuestionsUrl = 'assets/data/question/disasterRecovery.json';
+  private dynamoQuestionsUrl = 'assets/data/question/dynamo.json';
   private ec2QuestionsUrl = 'assets/data/question/ec2.json';
+  private ecsQuestionsUrl = 'assets/data/question/ecs.json';
+  private iamQuestionsUrl = 'assets/data/question/iam.json';
+  private iotCoreQuestionsUrl = 'assets/data/question/iotCore.json';
   private lambdaQuestionsUrl = 'assets/data/question/lambda.json';
   private rdsQuestionsUrl = 'assets/data/question/rds.json';
-  private supportQuestionsUrl = 'assets/data/question/support.json';
-  private dynamoQuestionsUrl = 'assets/data/question/dynamo.json';
+  private s3QuestionsUrl = 'assets/data/question/s3.json';
   private snsQuestionsUrl = 'assets/data/question/sns.json';
   private sqsQuestionsUrl = 'assets/data/question/sqs.json';
-  private cloudfrontQuestionsUrl = 'assets/data/question/cloudfront.json';
-  private wellArchitectedQuestionsUrl = 'assets/data/question/wellArchitected.json';
+  private stepFunctionsQuestionsUrl = 'assets/data/question/stepFunctions.json';
+  private stsQuestionsUrl = 'assets/data/question/sts.json';
+  private supportQuestionsUrl = 'assets/data/question/support.json';
   private vpcQuestionsUrl = 'assets/data/question/vpc.json';
-  private iamQuestionsUrl = 'assets/data/question/iam.json';
-  private ecsQuestionsUrl = 'assets/data/question/ecs.json'; // Adicionada a URL para ECS
+  private wellArchitectedQuestionsUrl = 'assets/data/question/wellArchitected.json';
 
   constructor(private http: HttpClient) { }
 
@@ -29,12 +40,60 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.topicsUrl);
   }
 
-  getS3Questions(): Observable<any> {
-    return this.http.get<any>(this.s3QuestionsUrl);
+  getAmplifyQuestions(): Observable<any> {
+    return this.http.get<any>(this.amplifyQuestionsUrl);
+  }
+
+  getAppFlowQuestions(): Observable<any> {
+    return this.http.get<any>(this.appFlowQuestionsUrl);
+  }
+
+  getAppStreamQuestions(): Observable<any> {
+    return this.http.get<any>(this.appStreamQuestionsUrl);
+  }
+
+  getAppSyncQuestions(): Observable<any> {
+    return this.http.get<any>(this.appSyncQuestionsUrl);
+  }
+
+  getBackupQuestions(): Observable<any> {
+    return this.http.get<any>(this.backupQuestionsUrl);
+  }
+
+  getCloudFrontQuestions(): Observable<any> {
+    return this.http.get<any>(this.cloudfrontQuestionsUrl);
+  }
+
+  getCognitoQuestions(): Observable<any> {
+    return this.http.get<any>(this.cognitoQuestionsUrl);
+  }
+
+  getDeviceFarmQuestions(): Observable<any> {
+    return this.http.get<any>(this.deviceFarmQuestionsUrl);
+  }
+
+  getDisasterRecoveryQuestions(): Observable<any> {
+    return this.http.get<any>(this.disasterRecoveryQuestionsUrl);
+  }
+
+  getDynamoQuestions(): Observable<any> {
+    return this.http.get<any>(this.dynamoQuestionsUrl);
   }
 
   getEC2Questions(): Observable<any> {
     return this.http.get<any>(this.ec2QuestionsUrl);
+  }
+
+  getECSQuestions(): Observable<any> {
+    return this.http.get<any>(this.ecsQuestionsUrl);
+  }
+
+  getIAMQuestions(): Observable<any> {
+    return this.http.get<any>(this.iamQuestionsUrl);
+  }
+
+  getIoTCoreQuestions(): Observable<any> {
+    return this.http.get<any>(this.iotCoreQuestionsUrl);
   }
 
   getLambdaQuestions(): Observable<any> {
@@ -45,12 +104,8 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.rdsQuestionsUrl);
   }
 
-  getSupportQuestions(): Observable<any> {
-    return this.http.get<any>(this.supportQuestionsUrl);
-  }
-
-  getDynamoQuestions(): Observable<any> {
-    return this.http.get<any>(this.dynamoQuestionsUrl);
+  getS3Questions(): Observable<any> {
+    return this.http.get<any>(this.s3QuestionsUrl);
   }
 
   getSNSQuestions(): Observable<any> {
@@ -61,24 +116,24 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.sqsQuestionsUrl);
   }
 
-  getCloudFrontQuestions(): Observable<any> {
-    return this.http.get<any>(this.cloudfrontQuestionsUrl);
+  getStepFunctionsQuestions(): Observable<any> {
+    return this.http.get<any>(this.stepFunctionsQuestionsUrl);
   }
 
-  getWellArchitectedQuestions(): Observable<any> {
-    return this.http.get<any>(this.wellArchitectedQuestionsUrl);
+  getSTSQuestions(): Observable<any> {
+    return this.http.get<any>(this.stsQuestionsUrl);
+  }
+
+  getSupportQuestions(): Observable<any> {
+    return this.http.get<any>(this.supportQuestionsUrl);
   }
 
   getVPCQuestions(): Observable<any> {
     return this.http.get<any>(this.vpcQuestionsUrl);
   }
 
-  getIAMQuestions(): Observable<any> {
-    return this.http.get<any>(this.iamQuestionsUrl);
-  }
-
-  getECSQuestions(): Observable<any> { // Adicionado método para buscar perguntas sobre ECS
-    return this.http.get<any>(this.ecsQuestionsUrl);
+  getWellArchitectedQuestions(): Observable<any> {
+    return this.http.get<any>(this.wellArchitectedQuestionsUrl);
   }
 
   private shuffleArray(array: any[]): any[] {
@@ -92,36 +147,58 @@ export class HttpQuestionsService {
   getAllQuestions(): Observable<any> {
     return forkJoin({
       topics: this.getTopics(),
-      s3: this.getS3Questions(),
+      amplify: this.getAmplifyQuestions(),
+      appFlow: this.getAppFlowQuestions(),
+      appStream: this.getAppStreamQuestions(),
+      appSync: this.getAppSyncQuestions(),
+      backup: this.getBackupQuestions(),
+      cloudfront: this.getCloudFrontQuestions(),
+      cognito: this.getCognitoQuestions(),
+      deviceFarm: this.getDeviceFarmQuestions(),
+      disasterRecovery: this.getDisasterRecoveryQuestions(),
+      dynamo: this.getDynamoQuestions(),
       ec2: this.getEC2Questions(),
+      ecs: this.getECSQuestions(),
+      iam: this.getIAMQuestions(),
+      iotCore: this.getIoTCoreQuestions(),
       lambda: this.getLambdaQuestions(),
       rds: this.getRDSQuestions(),
-      support: this.getSupportQuestions(),
-      dynamo: this.getDynamoQuestions(),
+      s3: this.getS3Questions(),
       sns: this.getSNSQuestions(),
       sqs: this.getSQSQuestions(),
-      cloudfront: this.getCloudFrontQuestions(),
-      wellArchitected: this.getWellArchitectedQuestions(),
+      stepFunctions: this.getStepFunctionsQuestions(),
+      sts: this.getSTSQuestions(),
+      support: this.getSupportQuestions(),
       vpc: this.getVPCQuestions(),
-      iam: this.getIAMQuestions(),
-      ecs: this.getECSQuestions() // Adicionado ECS ao forkJoin
+      wellArchitected: this.getWellArchitectedQuestions()
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
         const allQuestions = [
-          ...responses.s3.questions,
+          ...responses.amplify.questions,
+          ...responses.appFlow.questions,
+          ...responses.appStream.questions,
+          ...responses.appSync.questions,
+          ...responses.backup.questions,
+          ...responses.cloudfront.questions,
+          ...responses.cognito.questions,
+          ...responses.deviceFarm.questions,
+          ...responses.disasterRecovery.questions,
+          ...responses.dynamo.questions,
           ...responses.ec2.questions,
+          ...responses.ecs.questions,
+          ...responses.iam.questions,
+          ...responses.iotCore.questions,
           ...responses.lambda.questions,
           ...responses.rds.questions,
-          ...responses.support.questions,
-          ...responses.dynamo.questions,
+          ...responses.s3.questions,
           ...responses.sns.questions,
           ...responses.sqs.questions,
-          ...responses.cloudfront.questions,
-          ...responses.wellArchitected.questions,
+          ...responses.stepFunctions.questions,
+          ...responses.sts.questions,
+          ...responses.support.questions,
           ...responses.vpc.questions,
-          ...responses.iam.questions,
-          ...responses.ecs.questions // Adicionado perguntas sobre ECS
+          ...responses.wellArchitected.questions
         ].map((question: any) => ({
           ...question,
           topicName: topicsMap.get(question.topicId)

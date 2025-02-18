@@ -1,0 +1,17 @@
+{
+  "questions": [
+    {
+      "id": "sts1a2b3c4d5",
+      "topicId": 22,
+      "levelId": 1,
+      "question": "O que é AWS Security Token Service (STS)?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço que permite criar e gerenciar credenciais temporárias para acessar recursos da AWS" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    }
+  ]
+}
