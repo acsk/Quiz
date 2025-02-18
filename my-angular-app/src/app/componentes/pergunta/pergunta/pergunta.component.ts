@@ -36,6 +36,10 @@ export class PerguntaComponent implements OnInit {
     });
   }
 
+  get progressPercentage(): number {
+    return (this.currentQuestionIndex + 1) / this.filteredQuestions.length * 100;
+  }
+
   selectOption(index: number): void {
     this.selectedOption = index;
     this.selectedOptions[this.currentQuestion.id] = index;
