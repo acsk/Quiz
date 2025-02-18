@@ -1,15 +1,21 @@
 <div class="relative" clickOutside (clickOutside)="closeDropdown()">
-  <div class="border rounded-md p-2 cursor-pointer" (click)="toggleDropdown()">
-    <span *ngIf="selectedItems.length === 0">Selecione os Tópicos</span>
-    <span *ngIf="selectedItems.length > 0">{{ selectedItems.length }} Tópico(s) Selecionado(s)</span>
+  <div class="rounded-md cursor-pointer flex items-center" (click)="toggleDropdown()">
+    <input type="text" class="input-simulated w-full" [value]="selectedItems.length === 0 ? 'Selecione os Tópicos' : selectedItems.length + ' Tópico(s) Selecionado(s)'" readonly>
+    <i class="ml-2 fa" [ngClass]="{'fa-chevron-down': !dropdownOpen, 'fa-chevron-up': dropdownOpen}"></i>
   </div>
   <div *ngIf="dropdownOpen" class="absolute mt-1 w-full bg-white border rounded-md shadow-lg z-10">
     <input type="text" [(ngModel)]="searchText" (input)="filterItems()" placeholder="Pesquisar..." class="w-full p-2 border-b">
     <ul class="max-h-60 overflow-auto">
+      <li class="p-2">
+        <label class="flex items-center">
+          <input type="checkbox" [checked]="allSelected" (change)="toggleSelectAll()" class="mr-2">
+          Selecionar Todos
+        </label>
+      </li>
       <li *ngFor="let item of filteredItems" class="p-2">
         <label class="flex items-center">
           <input type="checkbox" [checked]="isSelected(item)" (change)="toggleSelection(item)" class="mr-2">
-          {{ item.name }}
+          {{ item.name }} 
         </label>
       </li>
     </ul>

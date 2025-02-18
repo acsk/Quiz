@@ -37,6 +37,7 @@ export class PerguntaComponent implements OnInit {
 
     this.httpQuestionsService.getTopics().subscribe((data) => {
       this.topics = data.topics;
+      console.log('Tópicos carregados:', this.topics);
     });
 
     this.filterQuestionsByTopic();
@@ -100,17 +101,25 @@ export class PerguntaComponent implements OnInit {
       const matchesLevel = this.selectedLevelId === null || question.levelId === this.selectedLevelId;
       return matchesTopic && matchesLevel;
     });
+    this.countQuestionsByTopic();
     this.currentQuestionIndex = 0;
-    this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-    this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
-    this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
+    if (this.filteredQuestions.length > 0) {
+      this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
+      this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
+    } else {
+      this.currentQuestion = null;
+      this.selectedOption = null;
+      this.showAnswer = false;
+    }
   }
 
   countQuestionsByTopic(): void {
-    this.questionCounts = this.allQuestions.reduce((counts, question) => {
+    this.questionCounts = this.filteredQuestions.reduce((counts, question) => {
       counts[question.topicId] = (counts[question.topicId] || 0) + 1;
       return counts;
     }, {});
+    console.log('Quantidade de perguntas por tópico:', this.questionCounts);
   }
 
   finalizeTest(): void {

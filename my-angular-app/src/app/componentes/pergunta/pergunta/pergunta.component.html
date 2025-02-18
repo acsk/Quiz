@@ -2,7 +2,11 @@
   <div class="mb-4 flex space-x-4">
     <div>
       <label for="topicSelect" class="block text-sm font-medium text-gray-700">Selecione os Tópicos:</label>
-      <app-multi-select-box [items]="topics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted"></app-multi-select-box>
+      <app-multi-select-box [items]="topics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted">
+        <ng-template let-topic>
+          {{ topic.name }} ({{ questionCounts[topic.id] || 0 }})
+        </ng-template>
+      </app-multi-select-box>
     </div>
     <div>
       <label for="levelSelect" class="block text-sm font-medium text-gray-700">Selecione o Nível:</label>
@@ -31,14 +35,15 @@
       <div class="bg-blue-500 h-2.5 rounded-full" [style.width.%]="progressPercentage"></div>
     </div>
     <ul class="list-none pl-0">
-      <li *ngFor="let option of currentQuestion.options" class="mb-1 flex items-center p-2 rounded"
+      <li *ngFor="let option of currentQuestion.options" class="mb-1 flex items-center p-2 rounded cursor-pointer hover:bg-gray-200"
           [ngClass]="{
             'bg-green-200': selectedOptions[currentQuestion.id] === option.index && showAnswer && option.index === currentQuestion.answer,
             'bg-red-200': selectedOptions[currentQuestion.id] === option.index && showAnswer && option.index !== currentQuestion.answer,
             'bg-gray-100': !showAnswer,
             'bg-green-100': showAnswer && option.index === currentQuestion.answer && selectedOptions[currentQuestion.id] !== option.index
-          }">
-        <input type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2"
+          }"
+          (click)="selectOption(option.index)">
+        <input type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-full"
                (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id] === option.index">
        {{ option.text }}
       </li>

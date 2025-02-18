@@ -1,404 +1,204 @@
 {
   "questions": [
     {
-      "id": "wellArchitected8a9b0c1d2",
+      "id": "vpc1",
       "topicId": 5,
       "levelId": 1,
-      "question": "Qual é o objetivo principal do AWS Well-Architected Framework?",
+      "question": "O que é uma Amazon VPC?",
       "options": [
         {
           "index": 1,
-          "text": "Fornecer diretrizes para construir sistemas seguros, resilientes, eficientes e de alta performance na nuvem"
+          "text": "Um serviço que permite provisionar uma seção logicamente isolada da nuvem AWS onde você pode lançar recursos da AWS em uma rede virtual que você define"
         },
         {
           "index": 2,
-          "text": "Fornecer diretrizes para reduzir custos de TI"
+          "text": "Um serviço que permite armazenar grandes quantidades de dados na nuvem"
         },
         {
           "index": 3,
-          "text": "Fornecer diretrizes para aumentar a segurança física dos data centers"
+          "text": "Um serviço que permite gerenciar identidades e permissões"
         },
         {
           "index": 4,
-          "text": "Fornecer diretrizes para melhorar a interface do usuário"
+          "text": "Um serviço que permite monitorar a performance de aplicações"
         }
       ],
       "answer": 1
     },
     {
-      "id": "wellArchitected9e0f1g2h3",
+      "id": "vpc2",
       "topicId": 5,
-      "levelId": 2,
-      "question": "Quais são os cinco pilares do AWS Well-Architected Framework?",
+      "levelId": 1,
+      "question": "Qual é o principal benefício de usar Amazon VPC?",
       "options": [
         {
           "index": 1,
-          "text": "Excelência operacional, Segurança, Confiabilidade, Eficiência de performance, Otimização de custos"
+          "text": "A capacidade de provisionar uma seção logicamente isolada da nuvem AWS"
         },
         {
           "index": 2,
-          "text": "Segurança, Confiabilidade, Eficiência de performance, Otimização de custos, Sustentabilidade"
+          "text": "A capacidade de armazenar dados de forma segura"
         },
         {
           "index": 3,
-          "text": "Excelência operacional, Segurança, Confiabilidade, Eficiência de performance, Sustentabilidade"
+          "text": "A capacidade de gerenciar identidades e permissões"
         },
         {
           "index": 4,
-          "text": "Excelência operacional, Segurança, Confiabilidade, Eficiência de performance, Otimização de custos, Sustentabilidade"
-        }
-      ],
-      "answer": 4
-    },
-    {
-      "id": "wellArchitected1i2j3k4l6",
-      "topicId": 5,
-      "levelId": 2,
-      "question": "O que é o pilar Sustentabilidade no AWS Well-Architected Framework?",
-      "options": [
-        {
-          "index": 1,
-          "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos"
-        },
-        {
-          "index": 2,
-          "text": "Se concentra na proteção de informações e sistemas"
-        },
-        {
-          "index": 3,
-          "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação"
-        },
-        {
-          "index": 4,
-          "text": "Se concentra em minimizar os impactos ambientais da execução de workloads em nuvem"
-        }
-      ],
-      "answer": 4
-    },
-    {
-      "id": "wellArchitected2m3n4o5p6",
-      "topicId": 5,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Sustentabilidade?",
-      "options": [
-        {
-          "index": 1,
-          "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias"
-        },
-        {
-          "index": 2,
-          "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança"
-        },
-        {
-          "index": 3,
-          "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças"
-        },
-        {
-          "index": 4,
-          "text": "Modelo de responsabilidade compartilhada para sustentabilidade, compreensão do impacto e maximização da utilização para minimizar os recursos necessários e reduzir os impactos posteriores"
-        }
-      ],
-      "answer": 4
-    },
-    {
-      "id": "wellArchitected3q4r5s6t7",
-      "topicId": 5,
-      "levelId": 2,
-      "question": "O que é o pilar Excelência operacional no AWS Well-Architected Framework?",
-      "options": [
-        {
-          "index": 1,
-          "text": "Se concentra na proteção de informações e sistemas"
-        },
-        {
-          "index": 2,
-          "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos"
-        },
-        {
-          "index": 3,
-          "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação"
-        },
-        {
-          "index": 4,
-          "text": "Se concentra em evitar custos desnecessários"
-        }
-      ],
-      "answer": 2
-    },
-    {
-      "id": "wellArchitected4u5v6w7x8",
-      "topicId": 5,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Excelência operacional?",
-      "options": [
-        {
-          "index": 1,
-          "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias"
-        },
-        {
-          "index": 2,
-          "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança"
-        },
-        {
-          "index": 3,
-          "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças"
-        },
-        {
-          "index": 4,
-          "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem"
+          "text": "A capacidade de monitorar a performance de aplicações"
         }
       ],
       "answer": 1
     },
     {
-      "id": "wellArchitected5y6z7a8b9",
+      "id": "vpc3",
       "topicId": 5,
       "levelId": 2,
-      "question": "O que é o pilar Segurança no AWS Well-Architected Framework?",
+      "question": "Quais são os componentes principais de uma Amazon VPC?",
       "options": [
         {
           "index": 1,
-          "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos"
+          "text": "Sub-redes, tabelas de roteamento, gateways de internet, e ACLs de rede"
         },
         {
           "index": 2,
-          "text": "Se concentra na proteção de informações e sistemas"
+          "text": "Buckets, objetos, e políticas de acesso"
         },
         {
           "index": 3,
-          "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação"
+          "text": "Usuários, grupos, e políticas"
         },
         {
           "index": 4,
-          "text": "Se concentra em evitar custos desnecessários"
+          "text": "Instâncias, volumes, e snapshots"
         }
       ],
-      "answer": 2
+      "answer": 1
     },
     {
-      "id": "wellArchitected6c7d8e9f0",
+      "id": "vpc4",
       "topicId": 5,
       "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Segurança?",
+      "question": "O que é uma sub-rede em uma Amazon VPC?",
       "options": [
         {
           "index": 1,
-          "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias"
+          "text": "Uma faixa de endereços IP na sua VPC onde você pode lançar instâncias"
         },
         {
           "index": 2,
-          "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança"
+          "text": "Um serviço que permite armazenar dados na nuvem"
         },
         {
           "index": 3,
-          "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças"
+          "text": "Um serviço que permite gerenciar identidades e permissões"
         },
         {
           "index": 4,
-          "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem"
+          "text": "Um serviço que permite monitorar a performance de aplicações"
         }
       ],
-      "answer": 2
+      "answer": 1
     },
     {
-      "id": "wellArchitected7g8h9i0j1",
+      "id": "vpc5",
       "topicId": 5,
-      "levelId": 2,
-      "question": "O que é o pilar Confiabilidade no AWS Well-Architected Framework?",
+      "levelId": 3,
+      "question": "Como você pode conectar sua VPC a um data center on-premises?",
       "options": [
         {
           "index": 1,
-          "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos"
+          "text": "Usando uma conexão VPN ou AWS Direct Connect"
         },
         {
           "index": 2,
-          "text": "Se concentra na proteção de informações e sistemas"
+          "text": "Usando um bucket do S3"
         },
         {
           "index": 3,
-          "text": "Se concentra nos workloads que executam as funções pretendidas e na recuperação rápida de falhas em atender demandas"
+          "text": "Usando um grupo de segurança"
         },
         {
           "index": 4,
-          "text": "Se concentra em evitar custos desnecessários"
+          "text": "Usando uma instância EC2"
         }
       ],
-      "answer": 3
+      "answer": 1
     },
     {
-      "id": "wellArchitected8k9l0m1n2",
+      "id": "vpc6",
       "topicId": 5,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Confiabilidade?",
+      "levelId": 3,
+      "question": "O que é uma tabela de roteamento em uma Amazon VPC?",
       "options": [
         {
           "index": 1,
-          "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias"
+          "text": "Um conjunto de regras que determinam para onde o tráfego de rede é direcionado"
         },
         {
           "index": 2,
-          "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança"
+          "text": "Um serviço que permite armazenar dados na nuvem"
         },
         {
           "index": 3,
-          "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças"
+          "text": "Um serviço que permite gerenciar identidades e permissões"
         },
         {
           "index": 4,
-          "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem"
+          "text": "Um serviço que permite monitorar a performance de aplicações"
         }
       ],
-      "answer": 3
+      "answer": 1
     },
     {
-      "id": "wellArchitected9o0p1q2r3",
+      "id": "vpc7",
       "topicId": 5,
-      "levelId": 2,
-      "question": "O que é o pilar Eficiência de performance no AWS Well-Architected Framework?",
+      "levelId": 3,
+      "question": "O que é um gateway de internet em uma Amazon VPC?",
       "options": [
         {
           "index": 1,
-          "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos"
+          "text": "Um componente que permite a comunicação entre instâncias na VPC e a internet"
         },
         {
           "index": 2,
-          "text": "Se concentra na proteção de informações e sistemas"
+          "text": "Um serviço que permite armazenar dados na nuvem"
         },
         {
           "index": 3,
-          "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação"
+          "text": "Um serviço que permite gerenciar identidades e permissões"
         },
         {
           "index": 4,
-          "text": "Se concentra em evitar custos desnecessários"
+          "text": "Um serviço que permite monitorar a performance de aplicações"
         }
       ],
-      "answer": 3
+      "answer": 1
     },
     {
-      "id": "wellArchitected0s1t2u3v4",
+      "id": "vpc8",
       "topicId": 5,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Eficiência de performance?",
+      "levelId": 3,
+      "question": "O que é uma ACL de rede em uma Amazon VPC?",
       "options": [
         {
           "index": 1,
-          "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias"
+          "text": "Uma lista de controle de acesso que atua como um firewall para controlar o tráfego de entrada e saída de uma sub-rede"
         },
         {
           "index": 2,
-          "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança"
+          "text": "Um serviço que permite armazenar dados na nuvem"
         },
         {
           "index": 3,
-          "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças"
+          "text": "Um serviço que permite gerenciar identidades e permissões"
         },
         {
           "index": 4,
-          "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem"
+          "text": "Um serviço que permite monitorar a performance de aplicações"
         }
       ],
-      "answer": 4
-    },
-    {
-      "id": "wellArchitected1w2x3y4z5",
-      "topicId": 5,
-      "levelId": 2,
-      "question": "O que é o pilar Otimização de custos no AWS Well-Architected Framework?",
-      "options": [
-        {
-          "index": 1,
-          "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos"
-        },
-        {
-          "index": 2,
-          "text": "Se concentra na proteção de informações e sistemas"
-        },
-        {
-          "index": 3,
-          "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação"
-        },
-        {
-          "index": 4,
-          "text": "Se concentra em evitar custos desnecessários"
-        }
-      ],
-      "answer": 4
-    },
-    {
-      "id": "wellArchitected2a3b4c5d7",
-      "topicId": 5,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Otimização de custos?",
-      "options": [
-        {
-          "index": 1,
-          "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias"
-        },
-        {
-          "index": 2,
-          "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança"
-        },
-        {
-          "index": 3,
-          "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças"
-        },
-        {
-          "index": 4,
-          "text": "Compreensão dos gastos ao longo do tempo e controle da alocação de fundos, seleção do tipo e quantidade certa de recursos e dimensionamento para atender às necessidades de negócios sem gastos excessivos"
-        }
-      ],
-      "answer": 4
-    },
-    {
-      "id": "wellArchitected3e4f5g6h8",
-      "topicId": 5,
-      "levelId": 2,
-      "question": "O que é o pilar Sustentabilidade no AWS Well-Architected Framework?",
-      "options": [
-        {
-          "index": 1,
-          "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos"
-        },
-        {
-          "index": 2,
-          "text": "Se concentra na proteção de informações e sistemas"
-        },
-        {
-          "index": 3,
-          "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação"
-        },
-        {
-          "index": 4,
-          "text": "Se concentra em minimizar os impactos ambientais da execução de workloads em nuvem"
-        }
-      ],
-      "answer": 4
-    },
-    {
-      "id": "wellArchitected4i5j6k7l9",
-      "topicId": 5,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Sustentabilidade?",
-      "options": [
-        {
-          "index": 1,
-          "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias"
-        },
-        {
-          "index": 2,
-          "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança"
-        },
-        {
-          "index": 3,
-          "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças"
-        },
-        {
-          "index": 4,
-          "text": "Modelo de responsabilidade compartilhada para sustentabilidade, compreensão do impacto e maximização da utilização para minimizar os recursos necessários e reduzir os impactos posteriores"
-        }
-      ],
-      "answer": 4
+      "answer": 1
     }
   ]
 }
