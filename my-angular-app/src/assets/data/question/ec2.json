@@ -599,6 +599,156 @@
                 }
             ],
             "answer": 2
+        },
+        {
+            "id": "ec2pricing1",
+            "topicId": 1,
+            "levelId": 1,
+            "question": "Qual é o modelo de preço mais econômico para cargas de trabalho flexíveis e tolerantes a falhas no Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Instâncias On-Demand"
+                },
+                {
+                    "index": 2,
+                    "text": "Instâncias Reservadas"
+                },
+                {
+                    "index": 3,
+                    "text": "Instâncias Spot"
+                },
+                {
+                    "index": 4,
+                    "text": "Instâncias Dedicadas"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2pricing2",
+            "topicId": 1,
+            "levelId": 1,
+            "question": "Qual modelo de preço do Amazon EC2 oferece um desconto significativo em troca de um compromisso de uso de um ou três anos?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Instâncias On-Demand"
+                },
+                {
+                    "index": 2,
+                    "text": "Instâncias Reservadas"
+                },
+                {
+                    "index": 3,
+                    "text": "Instâncias Spot"
+                },
+                {
+                    "index": 4,
+                    "text": "Instâncias Dedicadas"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2pricing3",
+            "topicId": 1,
+            "levelId": 1,
+            "question": "Qual modelo de preço do Amazon EC2 permite que você pague pela capacidade de computação por hora ou segundo, sem compromisso de longo prazo?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Instâncias On-Demand"
+                },
+                {
+                    "index": 2,
+                    "text": "Instâncias Reservadas"
+                },
+                {
+                    "index": 3,
+                    "text": "Instâncias Spot"
+                },
+                {
+                    "index": 4,
+                    "text": "Instâncias Dedicadas"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "ec2pricing4",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a principal vantagem das instâncias reservadas do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Maior flexibilidade"
+                },
+                {
+                    "index": 2,
+                    "text": "Descontos significativos em troca de um compromisso de uso"
+                },
+                {
+                    "index": 3,
+                    "text": "Maior desempenho"
+                },
+                {
+                    "index": 4,
+                    "text": "Menor custo inicial"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2pricing5",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a principal característica das instâncias spot do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Descontos significativos para cargas de trabalho tolerantes a falhas"
+                },
+                {
+                    "index": 2,
+                    "text": "Maior custo"
+                },
+                {
+                    "index": 3,
+                    "text": "Maior flexibilidade"
+                },
+                {
+                    "index": 4,
+                    "text": "Desempenho garantido"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "ec2pricing6",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a principal vantagem das instâncias On-Demand do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Descontos significativos"
+                },
+                {
+                    "index": 2,
+                    "text": "Maior flexibilidade sem compromisso de longo prazo"
+                },
+                {
+                    "index": 3,
+                    "text": "Maior desempenho"
+                },
+                {
+                    "index": 4,
+                    "text": "Menor custo inicial"
+                }
+            ],
+            "answer": 2
         }
     ]
 }

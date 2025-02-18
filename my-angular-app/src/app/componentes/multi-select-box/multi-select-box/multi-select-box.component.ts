@@ -8,6 +8,7 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class MultiSelectBoxComponent {
   @Input() items: any[] = [];
+  @Input() disabled: boolean = false; // Adicionar a propriedade disabled
   @Output() selectionChange = new EventEmitter<number[]>();
 
   selectedItems: any[] = [];
@@ -20,7 +21,12 @@ export class MultiSelectBoxComponent {
   }
 
   toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen;
+    if (!this.disabled) {
+      this.dropdownOpen = !this.dropdownOpen;
+      if (this.dropdownOpen) {
+        this.filteredItems = this.items;
+      }
+    }
   }
 
   closeDropdown() {
@@ -42,7 +48,7 @@ export class MultiSelectBoxComponent {
       this.selectedItems.push(item);
     }
     this.selectionChange.emit(this.selectedItems.map(i => i.id));
-    }
+  }
 
   clearAll() {
     this.selectedItems = [];
