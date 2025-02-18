@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "id": "wellArchitected1a2b3c4d5",
+      "topicId": 10,
+      "question": "O que é o pilar Excelência operacional no AWS Well-Architected Framework?",
+      "options": [
+        { "index": 1, "text": "Se concentra na proteção de informações e sistemas" },
+        { "index": 2, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
+        { "index": 3, "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação" },
+        { "index": 4, "text": "Se concentra em evitar custos desnecessários" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "wellArchitected6e7f8g9h0",
+      "topicId": 10,
+      "question": "Quais são os principais tópicos do pilar Excelência operacional?",
+      "options": [
+        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
+        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
+        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
+        { "index": 4, "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "wellArchitected1i2j3k4l5",
+      "topicId": 10,
+      "question": "O que é o pilar Segurança no AWS Well-Architected Framework?",
+      "options": [
+        { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
+        { "index": 2, "text": "Se concentra na proteção de informações e sistemas" },
+        { "index": 3, "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação" },
+        { "index": 4, "text": "Se concentra em evitar custos desnecessários" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "wellArchitected6m7n8o9p0",
+      "topicId": 10,
+      "question": "Quais são os principais tópicos do pilar Segurança?",
+      "options": [
+        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
+        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
+        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
+        { "index": 4, "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "wellArchitected1q2r3s4t5",
+      "topicId": 10,
+      "question": "O que é o pilar Confiabilidade no AWS Well-Architected Framework?",
+      "options": [
+        { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
+        { "index": 2, "text": "Se concentra na proteção de informações e sistemas" },
+        { "index": 3, "text": "Se concentra nos workloads que executam as funções pretendidas e na recuperação rápida de falhas em atender demandas" },
+        { "index": 4, "text": "Se concentra em evitar custos desnecessários" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "wellArchitected6u7v8w9x0",
+      "topicId": 10,
+      "question": "Quais são os principais tópicos do pilar Confiabilidade?",
+      "options": [
+        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
+        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
+        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
+        { "index": 4, "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "wellArchitected2a3b4c5d6",
+      "topicId": 10,
+      "question": "O que é o pilar Eficiência de performance no AWS Well-Architected Framework?",
+      "options": [
+        { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
+        { "index": 2, "text": "Se concentra na proteção de informações e sistemas" },
+        { "index": 3, "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação" },
+        { "index": 4, "text": "Se concentra em evitar custos desnecessários" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "wellArchitected3e4f5g6h7",
+      "topicId": 10,
+      "question": "Quais são os principais tópicos do pilar Eficiência de performance?",
+      "options": [
+        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
+        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
+        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
+        { "index": 4, "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "wellArchitected4i5j6k7l8",
+      "topicId": 10,
+      "question": "O que é o pilar Otimização de custos no AWS Well-Architected Framework?",
+      "options": [
+        { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
+        { "index": 2, "text": "Se concentra na proteção de informações e sistemas" },
+        { "index": 3, "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação" },
+        { "index": 4, "text": "Se concentra em evitar custos desnecessários" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "wellArchitected5m6n7o8p9",
+      "topicId": 10,
+      "question": "Quais são os principais tópicos do pilar Otimização de custos?",
+      "options": [
+        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
+        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
+        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
+        { "index": 4, "text": "Compreensão dos gastos ao longo do tempo e controle da alocação de fundos, seleção do tipo e quantidade certa de recursos e dimensionamento para atender às necessidades de negócios sem gastos excessivos" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "wellArchitected6q7r8s9t0",
+      "topicId": 10,
+      "question": "O que é o pilar Sustentabilidade no AWS Well-Architected Framework?",
+      "options": [
+        { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
+        { "index": 2, "text": "Se concentra na proteção de informações e sistemas" },
+        { "index": 3, "text": "Se concentra na alocação estruturada e simplificada de recursos de TI e computação" },
+        { "index": 4, "text": "Se concentra em minimizar os impactos ambientais da execução de workloads em nuvem" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "wellArchitected7u8v9w0x1",
+      "topicId": 10,
+      "question": "Quais são os principais tópicos do pilar Sustentabilidade?",
+      "options": [
+        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
+        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
+        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
+        { "index": 4, "text": "Modelo de responsabilidade compartilhada para sustentabilidade, compreensão do impacto e maximização da utilização para minimizar os recursos necessários e reduzir os impactos posteriores" }
+      ],
+      "answer": 4
+    }
+  ]
+}

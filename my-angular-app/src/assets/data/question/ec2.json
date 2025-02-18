@@ -1,76 +1,796 @@
 {
-  "questions": [
-    {
-      "id": "ec2a1b2c3d4",
-      "topicId": 1,
-      "question": "O que é Amazon EC2?",
-      "options": [
-        { "index": 1, "text": "Serviço de armazenamento de objetos" },
-        { "index": 2, "text": "Serviço de banco de dados relacional" },
-        { "index": 3, "text": "Serviço de computação em nuvem" },
-        { "index": 4, "text": "Serviço de computação sem servidor" }
-      ],
-      "answer": 3
-    },
-    {
-      "id": "ec2e5f6g7h8",
-      "topicId": 1,
-      "question": "Qual é a principal função do Amazon EC2?",
-      "options": [
-        { "index": 1, "text": "Armazenamento de objetos" },
-        { "index": 2, "text": "Computação em nuvem" },
-        { "index": 3, "text": "Banco de dados relacional" },
-        { "index": 4, "text": "Computação sem servidor" }
-      ],
-      "answer": 2
-    },
-    {
-      "id": "ec2i9j0k1l2",
-      "topicId": 1,
-      "question": "Qual é a vantagem do Amazon EC2 em relação à infraestrutura tradicional?",
-      "options": [
-        { "index": 1, "text": "Maior custo" },
-        { "index": 2, "text": "Escalabilidade e flexibilidade" },
-        { "index": 3, "text": "Menor segurança" },
-        { "index": 4, "text": "Menor desempenho" }
-      ],
-      "answer": 2
-    },
-    {
-      "id": "ec2m3n4o5p6",
-      "topicId": 1,
-      "question": "Qual é o benefício do Amazon EC2 Auto Scaling?",
-      "options": [
-        { "index": 1, "text": "Reduzir a latência" },
-        { "index": 2, "text": "Aumentar a segurança" },
-        { "index": 3, "text": "Ajustar automaticamente a capacidade" },
-        { "index": 4, "text": "Melhorar a interface do usuário" }
-      ],
-      "answer": 3
-    },
-    {
-      "id": "ec2q7r8s9t0",
-      "topicId": 1,
-      "question": "Qual é a finalidade das instâncias spot do Amazon EC2?",
-      "options": [
-        { "index": 1, "text": "Executar cargas de trabalho de longa duração" },
-        { "index": 2, "text": "Executar cargas de trabalho de curto prazo e tolerantes a falhas" },
-        { "index": 3, "text": "Armazenar grandes volumes de dados" },
-        { "index": 4, "text": "Gerenciar bancos de dados relacionais" }
-      ],
-      "answer": 2
-    },
-    {
-      "id": "ec2u1v2w3x4",
-      "topicId": 1,
-      "question": "Qual é a principal característica das instâncias reservadas do Amazon EC2?",
-      "options": [
-        { "index": 1, "text": "Maior flexibilidade" },
-        { "index": 2, "text": "Maior custo" },
-        { "index": 3, "text": "Descontos significativos em troca de um compromisso de uso" },
-        { "index": 4, "text": "Menor desempenho" }
-      ],
-      "answer": 3
-    }
-  ]
+    "questions": [
+        {
+            "id": "ec2a1b2c3d4",
+            "topicId": 1,
+            "question": "O que é Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Serviço de armazenamento de objetos"
+                },
+                {
+                    "index": 2,
+                    "text": "Serviço de banco de dados relacional"
+                },
+                {
+                    "index": 3,
+                    "text": "Serviço de computação em nuvem"
+                },
+                {
+                    "index": 4,
+                    "text": "Serviço de computação sem servidor"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2e5f6g7h8",
+            "topicId": 1,
+            "question": "Qual é a principal função do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento de objetos"
+                },
+                {
+                    "index": 2,
+                    "text": "Computação em nuvem"
+                },
+                {
+                    "index": 3,
+                    "text": "Banco de dados relacional"
+                },
+                {
+                    "index": 4,
+                    "text": "Computação sem servidor"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2i9j0k1l2",
+            "topicId": 1,
+            "question": "Qual é a vantagem do Amazon EC2 em relação à infraestrutura tradicional?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Maior custo"
+                },
+                {
+                    "index": 2,
+                    "text": "Escalabilidade e flexibilidade"
+                },
+                {
+                    "index": 3,
+                    "text": "Menor segurança"
+                },
+                {
+                    "index": 4,
+                    "text": "Menor desempenho"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2m3n4o5p6",
+            "topicId": 1,
+            "question": "Qual é o benefício do Amazon EC2 Auto Scaling?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Reduzir a latência"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança"
+                },
+                {
+                    "index": 3,
+                    "text": "Ajustar automaticamente a capacidade"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2q7r8s9t0",
+            "topicId": 1,
+            "question": "Qual é a finalidade das instâncias spot do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Executar cargas de trabalho de longa duração"
+                },
+                {
+                    "index": 2,
+                    "text": "Executar cargas de trabalho de curto prazo e tolerantes a falhas"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenar grandes volumes de dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciar bancos de dados relacionais"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2u1v2w3x4",
+            "topicId": 1,
+            "question": "Qual é a principal característica das instâncias reservadas do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Maior flexibilidade"
+                },
+                {
+                    "index": 2,
+                    "text": "Maior custo"
+                },
+                {
+                    "index": 3,
+                    "text": "Descontos significativos em troca de um compromisso de uso"
+                },
+                {
+                    "index": 4,
+                    "text": "Menor desempenho"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2y5z6a7b8",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Dedicated Hosts?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Executar cargas de trabalho de longa duração"
+                },
+                {
+                    "index": 2,
+                    "text": "Executar cargas de trabalho de curto prazo e tolerantes a falhas"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenar grandes volumes de dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Permitir a execução de instâncias em um servidor físico dedicado"
+                }
+            ],
+            "answer": 4
+        },
+        {
+            "id": "ec2c9d0e1f2",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Placement Groups?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Executar cargas de trabalho de longa duração"
+                },
+                {
+                    "index": 2,
+                    "text": "Executar cargas de trabalho de curto prazo e tolerantes a falhas"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenar grandes volumes de dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Controlar a colocação de instâncias em relação a outras instâncias"
+                }
+            ],
+            "answer": 4
+        },
+        {
+            "id": "ec2g3h4i5j6",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Elastic Load Balancing?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Reduzir a latência"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança"
+                },
+                {
+                    "index": 3,
+                    "text": "Distribuir o tráfego entre instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2k7l8m9n0",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Elastic IP?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Reduzir a latência"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança"
+                },
+                {
+                    "index": 3,
+                    "text": "Permitir a comunicação entre instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2o1p2q3r4",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Security Groups?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Reduzir a latência"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança"
+                },
+                {
+                    "index": 3,
+                    "text": "Permitir a comunicação entre instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2s5t6u7v8",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Instance Store?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenar dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Executar código"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenar dados temporários em discos locais"
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciar bancos de dados"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2w9x0y1z2",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Elastic Block Store?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenar dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Executar código"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenar dados temporários em discos locais"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenar dados persistentes em volumes de bloco"
+                }
+            ],
+            "answer": 4
+        },
+        {
+            "id": "ec2a1b2c3d5",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Auto Scaling?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para aumentar a segurança"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para ajustar automaticamente a capacidade de instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para melhorar a interface do usuário"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para reduzir a latência"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2e5f6g7h9",
+            "topicId": 1,
+            "question": "Qual é a principal vantagem das instâncias spot do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Maior custo"
+                },
+                {
+                    "index": 2,
+                    "text": "Descontos significativos para cargas de trabalho tolerantes a falhas"
+                },
+                {
+                    "index": 3,
+                    "text": "Menor segurança"
+                },
+                {
+                    "index": 4,
+                    "text": "Menor desempenho"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2i9j0k1l3",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Elastic Load Balancing?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para aumentar a segurança"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para distribuir o tráfego entre instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para melhorar a interface do usuário"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para reduzir a latência"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2m3n4o5p7",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Dedicated Hosts?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Executar cargas de trabalho de longa duração"
+                },
+                {
+                    "index": 2,
+                    "text": "Executar cargas de trabalho de curto prazo e tolerantes a falhas"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenar grandes volumes de dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Permitir a execução de instâncias em um servidor físico dedicado"
+                }
+            ],
+            "answer": 4
+        },
+        {
+            "id": "ec2q7r8s9t1",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Placement Groups?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Executar cargas de trabalho de longa duração"
+                },
+                {
+                    "index": 2,
+                    "text": "Executar cargas de trabalho de curto prazo e tolerantes a falhas"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenar grandes volumes de dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Controlar a colocação de instâncias em relação a outras instâncias"
+                }
+            ],
+            "answer": 4
+        },
+        {
+            "id": "ec2u1v2w3x5",
+            "topicId": 1,
+            "question": "Qual é a principal característica das instâncias reservadas do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Maior flexibilidade"
+                },
+                {
+                    "index": 2,
+                    "text": "Maior custo"
+                },
+                {
+                    "index": 3,
+                    "text": "Descontos significativos em troca de um compromisso de uso"
+                },
+                {
+                    "index": 4,
+                    "text": "Menor desempenho"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2y5z6a7b9",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Elastic IP?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Atribuir endereços IP dinâmicos a instâncias"
+                },
+                {
+                    "index": 2,
+                    "text": "Atribuir endereços IP estáticos a instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Atribuir endereços IP temporários a instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Atribuir endereços IP privados a instâncias"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2c9d0e1f3",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Spot Fleet?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para gerenciar instâncias reservadas"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para gerenciar instâncias dedicadas"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para gerenciar um grupo de instâncias spot"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para gerenciar instâncias de longa duração"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2g3h4i5j7",
+            "topicId": 1,
+            "question": "Qual é a principal vantagem do Amazon EC2 Hibernate?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Reduzir a latência"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança"
+                },
+                {
+                    "index": 3,
+                    "text": "Preservar o estado da instância ao desligá-la"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2k7l8m9n1",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Instance Store?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento persistente para instâncias"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento temporário para instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de longo prazo para instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de backup para instâncias"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2a1b2c3d6",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Security Groups?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Gerenciar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Gerenciar a segurança das instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Gerenciar a velocidade de acesso aos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciar a interface do usuário"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2e5f6g7h0",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Key Pairs?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para gerenciar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para gerenciar a segurança das instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para gerenciar a velocidade de acesso aos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para gerenciar a interface do usuário"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2i9j0k1l4",
+            "topicId": 1,
+            "question": "Qual é a principal função do Amazon EC2 Elastic Network Interfaces (ENI)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Aumentar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança das instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Fornecer conectividade de rede flexível para instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2m3n4o5p8",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Instance Metadata?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Informações sobre a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Informações sobre a segurança das instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Informações sobre a configuração e estado das instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Informações sobre a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2q7r8s9t2",
+            "topicId": 1,
+            "question": "Qual é a principal vantagem do Amazon EC2 Nitro System?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Aumentar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança das instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Aumentar a performance e segurança das instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2u1v2w3x6",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Spot Instances?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Instâncias reservadas para cargas de trabalho de longa duração"
+                },
+                {
+                    "index": 2,
+                    "text": "Instâncias de baixo custo para cargas de trabalho tolerantes a falhas"
+                },
+                {
+                    "index": 3,
+                    "text": "Instâncias dedicadas para cargas de trabalho de alta segurança"
+                },
+                {
+                    "index": 4,
+                    "text": "Instâncias temporárias para cargas de trabalho de curto prazo"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2y5z6a7b0",
+            "topicId": 1,
+            "question": "Qual é a finalidade do Amazon EC2 Elastic Fabric Adapter (EFA)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Aumentar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança das instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Aumentar a performance de aplicações de alta performance"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2c9d0e1f4",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Instance Types?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Diferentes tipos de armazenamento para instâncias"
+                },
+                {
+                    "index": 2,
+                    "text": "Diferentes tipos de segurança para instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Diferentes tipos de instâncias otimizadas para diferentes workloads"
+                },
+                {
+                    "index": 4,
+                    "text": "Diferentes tipos de interfaces para instâncias"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2g3h4i5j8",
+            "topicId": 1,
+            "question": "Qual é a principal função do Amazon EC2 Auto Scaling Groups?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Aumentar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança das instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Gerenciar automaticamente o número de instâncias para atender à demanda"
+                },
+                {
+                    "index": 4,
+                    "text": "Melhorar a interface do usuário"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "ec2k7l8m9n2",
+            "topicId": 1,
+            "question": "O que é o Amazon EC2 Elastic Block Store (EBS)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento temporário para instâncias"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento persistente para instâncias"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de longo prazo para instâncias"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de backup para instâncias"
+                }
+            ],
+            "answer": 2
+        }
+    ]
 }

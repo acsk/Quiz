@@ -16,6 +16,8 @@ export class PerguntaComponent implements OnInit {
   showAnswer: boolean = false;
   topics: any[] = [];
   selectedTopicId: number | null = null;
+  questionCounts: { [key: number]: number } = {};
+  selectedOptions: { [key: string]: number | null } = {};
 
   constructor(private httpQuestionsService: HttpQuestionsService) { }
 
@@ -24,6 +26,7 @@ export class PerguntaComponent implements OnInit {
       this.allQuestions = data;
       this.filteredQuestions = this.allQuestions;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+      this.countQuestionsByTopic();
     });
 
     this.httpQuestionsService.getTopics().subscribe(data => {
@@ -33,6 +36,7 @@ export class PerguntaComponent implements OnInit {
 
   selectOption(index: number): void {
     this.selectedOption = index;
+    this.selectedOptions[this.currentQuestion.id] = index;
   }
 
   checkAnswer(): void {
@@ -43,7 +47,7 @@ export class PerguntaComponent implements OnInit {
     if (this.currentQuestionIndex < this.filteredQuestions.length - 1) {
       this.currentQuestionIndex++;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.selectedOption = null;
+      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
       this.showAnswer = false;
     }
   }
@@ -52,7 +56,7 @@ export class PerguntaComponent implements OnInit {
     if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.selectedOption = null;
+      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
       this.showAnswer = false;
     }
   }
@@ -65,5 +69,13 @@ export class PerguntaComponent implements OnInit {
     }
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+    this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
+  }
+
+  countQuestionsByTopic(): void {
+    this.questionCounts = this.allQuestions.reduce((counts, question) => {
+      counts[question.topicId] = (counts[question.topicId] || 0) + 1;
+      return counts;
+    }, {});
   }
 }

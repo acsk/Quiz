@@ -49,6 +49,11 @@
       "id": 10,
       "name": "AWS Support",
       "description": "Serviço que oferece suporte técnico e orientação para ajudar a construir e gerenciar seus aplicativos na AWS."
+    },
+    {
+      "id": 11,
+      "name": "AWS Well-Architected",
+      "description": "Serviço que ajuda a criar arquiteturas seguras, de alto desempenho, resilientes e eficientes."
     }
   ]
 }

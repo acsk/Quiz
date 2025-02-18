@@ -3,8 +3,8 @@
   <div class="mb-4">
     <label for="topicSelect" class="block text-sm font-medium text-gray-700">Selecione o Tópico:</label>
     <select id="topicSelect" [(ngModel)]="selectedTopicId" (change)="filterQuestionsByTopic()" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-      <option [ngValue]="null">Todos os Tópicos</option>
-      <option *ngFor="let topic of topics" [ngValue]="topic.id">{{ topic.name }}</option>
+      <option [ngValue]="null">Todos os Tópicos ({{ allQuestions.length }})</option>
+      <option *ngFor="let topic of topics" [ngValue]="topic.id">{{ topic.name }} ({{ questionCounts[topic.id] || 0 }})</option>
     </select>
   </div>
   <div *ngIf="currentQuestion" class="mb-6 p-4 border rounded shadow">
@@ -13,13 +13,15 @@
       <span class="bg-blue-500 text-white text-sm font-semibold px-2 py-1 rounded">{{ currentQuestion.topicName }}</span>
     </div>
     <ul class="list-none pl-0">
-      <li *ngFor="let option of currentQuestion.options" class="mb-1 flex items-center"
+      <li *ngFor="let option of currentQuestion.options" class="mb-1 flex items-center p-2 rounded"
           [ngClass]="{
-            'bg-green-200': selectedOption === option.index && showAnswer && option.index === currentQuestion.answer,
-            'bg-red-200': selectedOption === option.index && showAnswer && option.index !== currentQuestion.answer
+            'bg-green-200': selectedOptions[currentQuestion.id] === option.index && showAnswer && option.index === currentQuestion.answer,
+            'bg-red-200': selectedOptions[currentQuestion.id] === option.index && showAnswer && option.index !== currentQuestion.answer,
+            'bg-gray-100': !showAnswer,
+            'bg-green-100': showAnswer && option.index === currentQuestion.answer && selectedOptions[currentQuestion.id] !== option.index
           }">
         <input type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2"
-               (change)="selectOption(option.index)">
+               (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id] === option.index">
         {{ option.index }}. {{ option.text }}
       </li>
     </ul>
@@ -34,5 +36,5 @@
         Próxima Pergunta<i class="fas fa-arrow-right ml-2"></i>
       </button>
     </div>
-  </div>
+  </div> 
 </div>

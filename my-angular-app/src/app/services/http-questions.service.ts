@@ -18,6 +18,7 @@ export class HttpQuestionsService {
   private snsQuestionsUrl = 'assets/data/question/sns.json';
   private sqsQuestionsUrl = 'assets/data/question/sqs.json';
   private cloudfrontQuestionsUrl = 'assets/data/question/cloudfront.json';
+  private wellArchitectedQuestionsUrl = 'assets/data/question/wellArchitected.json';
 
   constructor(private http: HttpClient) { }
 
@@ -61,6 +62,10 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.cloudfrontQuestionsUrl);
   }
 
+  getWellArchitectedQuestions(): Observable<any> {
+    return this.http.get<any>(this.wellArchitectedQuestionsUrl);
+  }
+
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -80,7 +85,8 @@ export class HttpQuestionsService {
       dynamo: this.getDynamoQuestions(),
       sns: this.getSNSQuestions(),
       sqs: this.getSQSQuestions(),
-      cloudfront: this.getCloudFrontQuestions()
+      cloudfront: this.getCloudFrontQuestions(),
+      wellArchitected: this.getWellArchitectedQuestions()
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -93,7 +99,8 @@ export class HttpQuestionsService {
           ...responses.dynamo.questions,
           ...responses.sns.questions,
           ...responses.sqs.questions,
-          ...responses.cloudfront.questions
+          ...responses.cloudfront.questions,
+          ...responses.wellArchitected.questions
         ].map((question: any) => ({
           ...question,
           topicName: topicsMap.get(question.topicId)

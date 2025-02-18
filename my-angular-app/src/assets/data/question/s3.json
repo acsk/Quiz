@@ -1,40 +1,676 @@
 {
-  "questions": [
-    {
-      "id": "a1b2c3d4",
-      "topicId": 2,
-      "question": "Qual é a principal função do Amazon S3?",
-      "options": [
-        { "index": 1, "text": "Armazenamento de objetos" },
-        { "index": 2, "text": "Computação em nuvem" },
-        { "index": 3, "text": "Banco de dados relacional" },
-        { "index": 4, "text": "Computação sem servidor" }
-      ],
-      "answer": 1
-    },
-    {
-      "id": "e5f6g7h8",
-      "topicId": 2,
-      "question": "O Amazon S3 é ideal para qual tipo de armazenamento?",
-      "options": [
-        { "index": 1, "text": "Armazenamento de blocos" },
-        { "index": 2, "text": "Armazenamento de arquivos" },
-        { "index": 3, "text": "Armazenamento de objetos" },
-        { "index": 4, "text": "Armazenamento de banco de dados" }
-      ],
-      "answer": 3
-    },
-    {
-      "id": "i9j0k1l2",
-      "topicId": 2,
-      "question": "Qual é a durabilidade dos dados armazenados no Amazon S3?",
-      "options": [
-        { "index": 1, "text": "99.9%" },
-        { "index": 2, "text": "99.99%" },
-        { "index": 3, "text": "99.999999999%" },
-        { "index": 4, "text": "100%" }
-      ],
-      "answer": 3
-    }
-  ]
+    "questions": [
+        {
+            "id": "a1b2c3d4",
+            "topicId": 2,
+            "question": "Qual é a principal função do Amazon S3?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento de objetos"
+                },
+                {
+                    "index": 2,
+                    "text": "Computação em nuvem"
+                },
+                {
+                    "index": 3,
+                    "text": "Banco de dados relacional"
+                },
+                {
+                    "index": 4,
+                    "text": "Computação sem servidor"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "e5f6g7h8",
+            "topicId": 2,
+            "question": "O Amazon S3 é ideal para qual tipo de armazenamento?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento de blocos"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de arquivos"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de objetos"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de banco de dados"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "i9j0k1l2",
+            "topicId": 2,
+            "question": "Qual é a durabilidade dos dados armazenados no Amazon S3?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "99.9%"
+                },
+                {
+                    "index": 2,
+                    "text": "99.99%"
+                },
+                {
+                    "index": 3,
+                    "text": "99.999999999%"
+                },
+                {
+                    "index": 4,
+                    "text": "100%"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "m3n4o5p6",
+            "topicId": 2,
+            "question": "Qual é a principal característica do Amazon S3 Glacier?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento de objetos de alta frequência"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de objetos de baixa frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de arquivos de alta frequência"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de arquivos de baixa frequência"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "q7r8s9t0",
+            "topicId": 2,
+            "question": "Qual é a principal vantagem do Amazon S3 Intelligent-Tiering?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Reduzir custos movendo automaticamente os dados entre duas camadas de acesso"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Melhorar a durabilidade dos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Aumentar a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "u1v2w3x4",
+            "topicId": 2,
+            "question": "O que é uma política de bucket no Amazon S3?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Um documento que define permissões para um bucket específico"
+                },
+                {
+                    "index": 2,
+                    "text": "Um documento que define a durabilidade dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Um documento que define a frequência de acesso aos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Um documento que define a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "y5z6a7b8",
+            "topicId": 2,
+            "question": "Qual é a função do Amazon S3 Transfer Acceleration?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Aumentar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Aumentar a velocidade de upload e download de dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Reduzir os custos de armazenamento"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "c9d0e1f2",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Lifecycle Management?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para gerenciar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para gerenciar a segurança dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para gerenciar a movimentação automática de dados entre diferentes camadas de armazenamento"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para gerenciar a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "g3h4i5j6",
+            "topicId": 2,
+            "question": "Qual é a principal função do Amazon S3 Versioning?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Aumentar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a segurança dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Manter múltiplas versões de um objeto para recuperação de dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Reduzir os custos de armazenamento"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "k7l8m9n0",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Cross-Region Replication?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para replicar dados entre diferentes buckets na mesma região"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para replicar dados entre diferentes buckets em diferentes regiões"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para replicar dados entre diferentes buckets em diferentes contas"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para replicar dados entre diferentes buckets em diferentes camadas de armazenamento"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "o1p2q3r4",
+            "topicId": 2,
+            "question": "Qual é a principal vantagem do Amazon S3 One Zone-IA?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Reduzir custos armazenando dados em uma única zona de disponibilidade"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a durabilidade dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Aumentar a segurança dos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Aumentar a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s5t6u7v8",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Select?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para selecionar buckets específicos"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para selecionar objetos específicos"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para selecionar e recuperar subconjuntos de dados de um objeto usando SQL"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para selecionar e gerenciar políticas de bucket"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "w9x0y1z2",
+            "topicId": 2,
+            "question": "Qual é a principal função do Amazon S3 Event Notifications?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Notificar sobre alterações na durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Notificar sobre alterações na segurança dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Notificar sobre eventos específicos, como criação ou exclusão de objetos"
+                },
+                {
+                    "index": 4,
+                    "text": "Notificar sobre alterações na velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "a3b4c5d6",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Access Points?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para gerenciar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para gerenciar a segurança dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para gerenciar o acesso a dados compartilhados em grande escala"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para gerenciar a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "e7f8g9h0",
+            "topicId": 2,
+            "question": "Qual é a principal vantagem do Amazon S3 Storage Class Analysis?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Analisar a durabilidade dos dados"
+                },
+                {
+                    "index": 2,
+                    "text": "Analisar a segurança dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Analisar padrões de acesso aos dados para otimizar custos"
+                },
+                {
+                    "index": 4,
+                    "text": "Analisar a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "i1j2k3l4",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Object Lock?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para bloquear objetos para evitar exclusão acidental"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para bloquear buckets para evitar exclusão acidental"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para bloquear políticas de bucket"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para bloquear políticas de acesso"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "m5n6o7p8",
+            "topicId": 2,
+            "question": "Qual é a principal função do Amazon S3 Access Logs?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Registrar acessos a buckets e objetos para auditoria e análise"
+                },
+                {
+                    "index": 2,
+                    "text": "Registrar alterações na durabilidade dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Registrar alterações na segurança dos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Registrar alterações na velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "q9r0s1t2",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Multipart Upload?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para dividir objetos em partes menores para upload mais rápido e eficiente"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para dividir buckets em partes menores"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para dividir políticas de bucket"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para dividir políticas de acesso"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "u3v4w5x6",
+            "topicId": 2,
+            "question": "Qual é a principal vantagem do Amazon S3 Replication Time Control (RTC)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Garantir a replicação de dados em menos de 15 minutos"
+                },
+                {
+                    "index": 2,
+                    "text": "Garantir a replicação de dados em menos de 30 minutos"
+                },
+                {
+                    "index": 3,
+                    "text": "Garantir a replicação de dados em menos de 1 hora"
+                },
+                {
+                    "index": 4,
+                    "text": "Garantir a replicação de dados em menos de 24 horas"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "y7z8a9b0",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Batch Operations?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para executar operações em grande escala em objetos S3"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para executar operações em grande escala em buckets S3"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para executar operações em grande escala em políticas de bucket"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para executar operações em grande escala em políticas de acesso"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "c1d2e3f4",
+            "topicId": 2,
+            "question": "Qual é a principal função do Amazon S3 Replication?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Replicar dados entre diferentes buckets na mesma região"
+                },
+                {
+                    "index": 2,
+                    "text": "Replicar dados entre diferentes buckets em diferentes regiões"
+                },
+                {
+                    "index": 3,
+                    "text": "Replicar dados entre diferentes buckets em diferentes contas"
+                },
+                {
+                    "index": 4,
+                    "text": "Replicar dados entre diferentes buckets em diferentes camadas de armazenamento"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "g5h6i7j8",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Block Public Access?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para bloquear o acesso público a buckets e objetos"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para bloquear o acesso privado a buckets e objetos"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para bloquear o acesso a buckets e objetos em diferentes regiões"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para bloquear o acesso a buckets e objetos em diferentes contas"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "k9l0m1n2",
+            "topicId": 2,
+            "question": "Qual é a principal vantagem do Amazon S3 Data Replication?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Replicar dados entre diferentes buckets na mesma região"
+                },
+                {
+                    "index": 2,
+                    "text": "Replicar dados entre diferentes buckets em diferentes regiões"
+                },
+                {
+                    "index": 3,
+                    "text": "Replicar dados entre diferentes buckets em diferentes contas"
+                },
+                {
+                    "index": 4,
+                    "text": "Replicar dados entre diferentes buckets em diferentes camadas de armazenamento"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "b1c2d3e4",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Object Lambda?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para executar código personalizado em objetos S3"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para gerenciar a durabilidade dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para gerenciar a segurança dos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para gerenciar a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "c5d6e7f8",
+            "topicId": 2,
+            "question": "Qual é a principal função do Amazon S3 Inventory?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Fornecer relatórios de inventário de objetos S3"
+                },
+                {
+                    "index": 2,
+                    "text": "Fornecer relatórios de durabilidade dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Fornecer relatórios de segurança dos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Fornecer relatórios de velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "d9e0f1g2",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Access Analyzer?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma ferramenta para analisar políticas de acesso a buckets e objetos S3"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma ferramenta para analisar a durabilidade dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para analisar a segurança dos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma ferramenta para analisar a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "e3f4g5h6",
+            "topicId": 2,
+            "question": "Qual é a principal vantagem do Amazon S3 Outposts?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenar dados localmente em hardware gerenciado pela AWS"
+                },
+                {
+                    "index": 2,
+                    "text": "Aumentar a durabilidade dos dados"
+                },
+                {
+                    "index": 3,
+                    "text": "Aumentar a segurança dos dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Aumentar a velocidade de acesso aos dados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "f7g8h9i0",
+            "topicId": 2,
+            "question": "O que é o Amazon S3 Glacier Deep Archive?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uma camada de armazenamento de custo extremamente baixo para dados raramente acessados"
+                },
+                {
+                    "index": 2,
+                    "text": "Uma camada de armazenamento de alta frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma camada de armazenamento de arquivos de alta frequência"
+                },
+                {
+                    "index": 4,
+                    "text": "Uma camada de armazenamento de banco de dados"
+                }
+            ],
+            "answer": 1
+        }
+    ]
 }
