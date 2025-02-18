@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "id": "lambda1a2b3c4d5",
+      "topicId": 4,
+      "question": "O que é AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço de computação em nuvem" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "lambda6e7f8g9h0",
+      "topicId": 4,
+      "question": "Qual é a principal função do AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de objetos" },
+        { "index": 2, "text": "Executar código em resposta a eventos" },
+        { "index": 3, "text": "Gerenciar bancos de dados relacionais" },
+        { "index": 4, "text": "Prover alta disponibilidade e redundância" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "lambda1i2j3k4l5",
+      "topicId": 4,
+      "question": "Qual é a vantagem do AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Reduzir a latência" },
+        { "index": 2, "text": "Aumentar a segurança" },
+        { "index": 3, "text": "Executar código sem gerenciar servidores" },
+        { "index": 4, "text": "Melhorar a interface do usuário" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "lambda6m7n8o9p0",
+      "topicId": 4,
+      "question": "Qual é o modelo de pagamento do AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Pagamento por instância" },
+        { "index": 2, "text": "Pagamento por hora" },
+        { "index": 3, "text": "Pagamento por uso" },
+        { "index": 4, "text": "Pagamento por armazenamento" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "lambda1q2r3s4t5",
+      "topicId": 4,
+      "question": "Qual é a principal característica do AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Gerenciamento automático de recursos de computação" },
+        { "index": 2, "text": "Armazenamento de grandes volumes de dados" },
+        { "index": 3, "text": "Gerenciamento de bancos de dados relacionais" },
+        { "index": 4, "text": "Prover alta disponibilidade e redundância" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "lambda6u7v8w9x0",
+      "topicId": 4,
+      "question": "Qual é a finalidade das funções no AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Armazenar dados" },
+        { "index": 2, "text": "Executar código em resposta a eventos" },
+        { "index": 3, "text": "Gerenciar redes virtuais" },
+        { "index": 4, "text": "Prover alta disponibilidade e redundância" }
+      ],
+      "answer": 2
+    }
+  ]
+}

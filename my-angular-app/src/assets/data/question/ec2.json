@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "id": "ec2a1b2c3d4",
+      "topicId": 1,
+      "question": "O que é Amazon EC2?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço de computação em nuvem" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "ec2e5f6g7h8",
+      "topicId": 1,
+      "question": "Qual é a principal função do Amazon EC2?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de objetos" },
+        { "index": 2, "text": "Computação em nuvem" },
+        { "index": 3, "text": "Banco de dados relacional" },
+        { "index": 4, "text": "Computação sem servidor" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "ec2i9j0k1l2",
+      "topicId": 1,
+      "question": "Qual é a vantagem do Amazon EC2 em relação à infraestrutura tradicional?",
+      "options": [
+        { "index": 1, "text": "Maior custo" },
+        { "index": 2, "text": "Escalabilidade e flexibilidade" },
+        { "index": 3, "text": "Menor segurança" },
+        { "index": 4, "text": "Menor desempenho" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "ec2m3n4o5p6",
+      "topicId": 1,
+      "question": "Qual é o benefício do Amazon EC2 Auto Scaling?",
+      "options": [
+        { "index": 1, "text": "Reduzir a latência" },
+        { "index": 2, "text": "Aumentar a segurança" },
+        { "index": 3, "text": "Ajustar automaticamente a capacidade" },
+        { "index": 4, "text": "Melhorar a interface do usuário" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "ec2q7r8s9t0",
+      "topicId": 1,
+      "question": "Qual é a finalidade das instâncias spot do Amazon EC2?",
+      "options": [
+        { "index": 1, "text": "Executar cargas de trabalho de longa duração" },
+        { "index": 2, "text": "Executar cargas de trabalho de curto prazo e tolerantes a falhas" },
+        { "index": 3, "text": "Armazenar grandes volumes de dados" },
+        { "index": 4, "text": "Gerenciar bancos de dados relacionais" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "ec2u1v2w3x4",
+      "topicId": 1,
+      "question": "Qual é a principal característica das instâncias reservadas do Amazon EC2?",
+      "options": [
+        { "index": 1, "text": "Maior flexibilidade" },
+        { "index": 2, "text": "Maior custo" },
+        { "index": 3, "text": "Descontos significativos em troca de um compromisso de uso" },
+        { "index": 4, "text": "Menor desempenho" }
+      ],
+      "answer": 3
+    }
+  ]
+}

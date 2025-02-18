@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "id": "rds1a2b3c4d5",
+      "topicId": 3,
+      "question": "O que é Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de computação em nuvem" },
+        { "index": 3, "text": "Serviço de banco de dados relacional" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "rds6e7f8g9h0",
+      "topicId": 3,
+      "question": "Qual é a principal função do Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de objetos" },
+        { "index": 2, "text": "Computação em nuvem" },
+        { "index": 3, "text": "Facilitar a configuração, operação e escalabilidade de um banco de dados relacional" },
+        { "index": 4, "text": "Computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "rds1i2j3k4l5",
+      "topicId": 3,
+      "question": "Quais bancos de dados são suportados pelo Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "MySQL, PostgreSQL, MariaDB, Oracle, Microsoft SQL Server e Amazon Aurora" },
+        { "index": 2, "text": "MongoDB, Cassandra, Redis, DynamoDB" },
+        { "index": 3, "text": "SQLite, Firebird, Ingres" },
+        { "index": 4, "text": "Neo4j, OrientDB, ArangoDB" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "rds6m7n8o9p0",
+      "topicId": 3,
+      "question": "Qual é a vantagem do Amazon RDS Multi-AZ?",
+      "options": [
+        { "index": 1, "text": "Melhorar a segurança" },
+        { "index": 2, "text": "Aumentar a capacidade de armazenamento" },
+        { "index": 3, "text": "Prover alta disponibilidade e redundância" },
+        { "index": 4, "text": "Reduzir o custo" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "rds1q2r3s4t5",
+      "topicId": 3,
+      "question": "O que é Amazon Aurora?",
+      "options": [
+        { "index": 1, "text": "Um serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Um serviço de computação em nuvem" },
+        { "index": 3, "text": "Um banco de dados relacional compatível com MySQL e PostgreSQL" },
+        { "index": 4, "text": "Um serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "rds6u7v8w9x0",
+      "topicId": 3,
+      "question": "Qual é a principal característica do Amazon RDS Read Replicas?",
+      "options": [
+        { "index": 1, "text": "Aumentar a segurança" },
+        { "index": 2, "text": "Melhorar a escalabilidade de leitura" },
+        { "index": 3, "text": "Reduzir o custo" },
+        { "index": 4, "text": "Melhorar a interface do usuário" }
+      ],
+      "answer": 2
+    }
+  ]
+}

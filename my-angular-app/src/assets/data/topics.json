@@ -1,0 +1,29 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "name": "Amazon EC2",
+      "description": "Serviço de computação em nuvem que fornece capacidade de computação redimensionável na nuvem."
+    },
+    {
+      "id": 2,
+      "name": "Amazon S3",
+      "description": "Serviço de armazenamento de objetos que oferece escalabilidade, disponibilidade de dados e segurança."
+    },
+    {
+      "id": 3,
+      "name": "Amazon RDS",
+      "description": "Serviço de banco de dados relacional que facilita a configuração, operação e escalabilidade de um banco de dados relacional na nuvem."
+    },
+    {
+      "id": 4,
+      "name": "AWS Lambda",
+      "description": "Serviço de computação sem servidor que executa código em resposta a eventos e gerencia automaticamente os recursos de computação subjacentes."
+    },
+    {
+      "id": 5,
+      "name": "Amazon VPC",
+      "description": "Serviço que permite provisionar uma seção logicamente isolada da nuvem AWS onde você pode lançar recursos da AWS em uma rede virtual que você define."
+    }
+  ]
+}
