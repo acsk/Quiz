@@ -1,0 +1,134 @@
+{
+  "questions": [
+    {
+      "id": "stepfunctions1a2b3c4d5",
+      "topicId": 17,
+      "levelId": 1,
+      "question": "O que é AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço que permite coordenar componentes de aplicativos distribuídos e microsserviços usando fluxos de trabalho visuais" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "stepfunctions6e7f8g9h0",
+      "topicId": 17,
+      "levelId": 2,
+      "question": "Qual é a principal função do AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de objetos" },
+        { "index": 2, "text": "Computação em nuvem" },
+        { "index": 3, "text": "Coordenação de componentes de aplicativos distribuídos e microsserviços" },
+        { "index": 4, "text": "Computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "stepfunctions1i2j3k4l5",
+      "topicId": 17,
+      "levelId": 2,
+      "question": "Qual é a vantagem do AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Maior custo" },
+        { "index": 2, "text": "Escalabilidade e flexibilidade na coordenação de fluxos de trabalho" },
+        { "index": 3, "text": "Menor segurança" },
+        { "index": 4, "text": "Menor desempenho" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "stepfunctions2a3b4c5d6",
+      "topicId": 17,
+      "levelId": 3,
+      "question": "O que é um estado no AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Uma coleção de servidores de banco de dados" },
+        { "index": 2, "text": "Uma coleção de servidores de armazenamento" },
+        { "index": 3, "text": "Uma unidade de trabalho em um fluxo de trabalho" },
+        { "index": 4, "text": "Uma coleção de servidores de computação" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "stepfunctions3e4f5g6h7",
+      "topicId": 17,
+      "levelId": 1,
+      "question": "Qual é a função de um estado de escolha no AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Armazenar dados" },
+        { "index": 2, "text": "Executar código" },
+        { "index": 3, "text": "Tomar decisões baseadas em condições" },
+        { "index": 4, "text": "Gerenciar bancos de dados" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "stepfunctions4i5j6k7l8",
+      "topicId": 17,
+      "levelId": 2,
+      "question": "O que é um estado de tarefa no AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Um estado que armazena o conteúdo original" },
+        { "index": 2, "text": "Um estado que entrega o conteúdo aos usuários finais" },
+        { "index": 3, "text": "Um estado que executa uma unidade de trabalho" },
+        { "index": 4, "text": "Um estado que gerencia bancos de dados" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "stepfunctions5m6n7o8p9",
+      "topicId": 17,
+      "levelId": 1,
+      "question": "Qual é a principal vantagem de usar o AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Reduzir a latência e aumentar a velocidade de entrega de conteúdo" },
+        { "index": 2, "text": "Aumentar a segurança" },
+        { "index": 3, "text": "Coordenação visual de fluxos de trabalho complexos" },
+        { "index": 4, "text": "Gerenciar bancos de dados" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "stepfunctions6q7r8s9t0",
+      "topicId": 17,
+      "levelId": 2,
+      "question": "O que é um estado de espera no AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Um estado que entrega conteúdo estático e dinâmico" },
+        { "index": 2, "text": "Um estado que entrega apenas conteúdo estático" },
+        { "index": 3, "text": "Um estado que pausa o fluxo de trabalho por um período de tempo especificado" },
+        { "index": 4, "text": "Um estado que entrega apenas vídeos" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "stepfunctions7u8v9w0x1",
+      "topicId": 17,
+      "levelId": 3,
+      "question": "O que é um estado paralelo no AWS Step Functions?",
+      "options": [
+        { "index": 1, "text": "Um estado que entrega conteúdo estático" },
+        { "index": 2, "text": "Um estado que entrega conteúdo dinâmico" },
+        { "index": 3, "text": "Um estado que executa várias ramificações de estados em paralelo" },
+        { "index": 4, "text": "Um estado que entrega APIs" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "stepfunctions8y9z0a1b2",
+      "topicId": 17,
+      "levelId": 3,
+      "question": "Qual é a função do AWS Step Functions com o AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Proteger o conteúdo entregando apenas para usuários autorizados" },
+        { "index": 2, "text": "Aumentar a velocidade de entrega de conteúdo" },
+        { "index": 3, "text": "Orquestrar a execução de funções Lambda em um fluxo de trabalho" },
+        { "index": 4, "text": "Gerenciar bancos de dados" }
+      ],
+      "answer": 3
+    }
+  ]
+}

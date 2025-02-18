@@ -1,0 +1,17 @@
+{
+  "questions": [
+    {
+      "id": "amplify1a2b3c4d5",
+      "topicId": 19,
+      "levelId": 1,
+      "question": "O que é AWS Amplify?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Plataforma que facilita a criação, implantação e hospedagem de aplicativos web e móveis completos" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    }
+  ]
+}

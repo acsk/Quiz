@@ -1,0 +1,17 @@
+{
+  "questions": [
+    {
+      "id": "iot1a2b3c4d5",
+      "topicId": 18,
+      "levelId": 1,
+      "question": "O que é AWS IoT Core?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço que permite conectar dispositivos da Internet das Coisas (IoT) à nuvem AWS de forma segura e escalável" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    }
+  ]
+}
