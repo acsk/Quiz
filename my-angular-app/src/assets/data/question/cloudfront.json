@@ -35,6 +35,114 @@
         { "index": 4, "text": "Menor desempenho" }
       ],
       "answer": 2
+    },
+    {
+      "id": "cloudfront2a3b4c5d6",
+      "topicId": 7,
+      "question": "O que é uma distribuição no Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "Uma coleção de servidores de banco de dados" },
+        { "index": 2, "text": "Uma coleção de servidores de armazenamento" },
+        { "index": 3, "text": "Uma coleção de servidores de borda que entregam conteúdo" },
+        { "index": 4, "text": "Uma coleção de servidores de computação" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "cloudfront3e4f5g6h7",
+      "topicId": 7,
+      "question": "Qual é a função de um servidor de borda no Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "Armazenar dados" },
+        { "index": 2, "text": "Executar código" },
+        { "index": 3, "text": "Entregar conteúdo aos usuários finais" },
+        { "index": 4, "text": "Gerenciar bancos de dados" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "cloudfront4i5j6k7l8",
+      "topicId": 7,
+      "question": "O que é uma origem no Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "O servidor que armazena o conteúdo original" },
+        { "index": 2, "text": "O servidor que entrega o conteúdo aos usuários finais" },
+        { "index": 3, "text": "O servidor que executa código" },
+        { "index": 4, "text": "O servidor que gerencia bancos de dados" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "cloudfront5m6n7o8p9",
+      "topicId": 7,
+      "question": "Qual é a principal vantagem de usar o Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "Reduzir a latência e aumentar a velocidade de entrega de conteúdo" },
+        { "index": 2, "text": "Aumentar a segurança" },
+        { "index": 3, "text": "Reduzir o custo de armazenamento" },
+        { "index": 4, "text": "Gerenciar bancos de dados" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "cloudfront6q7r8s9t0",
+      "topicId": 7,
+      "question": "O que é uma distribuição web no Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "Uma distribuição que entrega conteúdo estático e dinâmico" },
+        { "index": 2, "text": "Uma distribuição que entrega apenas conteúdo estático" },
+        { "index": 3, "text": "Uma distribuição que entrega apenas conteúdo dinâmico" },
+        { "index": 4, "text": "Uma distribuição que entrega apenas vídeos" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "cloudfront7u8v9w0x1",
+      "topicId": 7,
+      "question": "O que é uma distribuição RTMP no Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "Uma distribuição que entrega conteúdo estático" },
+        { "index": 2, "text": "Uma distribuição que entrega conteúdo dinâmico" },
+        { "index": 3, "text": "Uma distribuição que entrega vídeos usando o protocolo RTMP" },
+        { "index": 4, "text": "Uma distribuição que entrega APIs" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "cloudfront8y9z0a1b2",
+      "topicId": 7,
+      "question": "Qual é a função do Amazon CloudFront Signed URLs?",
+      "options": [
+        { "index": 1, "text": "Proteger o conteúdo entregando apenas para usuários autorizados" },
+        { "index": 2, "text": "Aumentar a velocidade de entrega de conteúdo" },
+        { "index": 3, "text": "Reduzir a latência" },
+        { "index": 4, "text": "Gerenciar bancos de dados" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "cloudfront9c0d1e2f3",
+      "topicId": 7,
+      "question": "O que é o Amazon CloudFront Origin Access Identity (OAI)?",
+      "options": [
+        { "index": 1, "text": "Uma identidade que permite que o CloudFront acesse o conteúdo privado no Amazon S3" },
+        { "index": 2, "text": "Uma identidade que permite que o CloudFront acesse bancos de dados" },
+        { "index": 3, "text": "Uma identidade que permite que o CloudFront execute código" },
+        { "index": 4, "text": "Uma identidade que permite que o CloudFront gerencie redes virtuais" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "cloudfront0g1h2i3j4",
+      "topicId": 7,
+      "question": "Qual é a função do Amazon CloudFront Field-Level Encryption?",
+      "options": [
+        { "index": 1, "text": "Criptografar dados sensíveis em campos específicos antes de encaminhá-los para a origem" },
+        { "index": 2, "text": "Criptografar dados em repouso" },
+        { "index": 3, "text": "Criptografar dados em trânsito" },
+        { "index": 4, "text": "Criptografar dados em bancos de dados" }
+      ],
+      "answer": 1
     }
   ]
 }
