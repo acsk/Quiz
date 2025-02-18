@@ -18,6 +18,8 @@ export class PerguntaComponent implements OnInit {
   selectedTopicId: number | null = null;
   questionCounts: { [key: number]: number } = {};
   selectedOptions: { [key: string]: number | null } = {};
+  showAnswers: { [key: string]: boolean } = {};
+  unansweredQuestions: Set<string> = new Set();
 
   constructor(private httpQuestionsService: HttpQuestionsService) { }
 
@@ -37,27 +39,38 @@ export class PerguntaComponent implements OnInit {
   selectOption(index: number): void {
     this.selectedOption = index;
     this.selectedOptions[this.currentQuestion.id] = index;
+    this.unansweredQuestions.add(this.currentQuestion.id);
   }
 
   checkAnswer(): void {
     this.showAnswer = true;
+    this.showAnswers[this.currentQuestion.id] = true;
+    this.unansweredQuestions.delete(this.currentQuestion.id);
   }
 
   nextQuestion(): void {
+    if (this.selectedOption !== null && !this.showAnswer) {
+      alert('Você marcou uma resposta, mas não clicou em "Responder". Por favor, responda antes de continuar.');
+      return;
+    }
     if (this.currentQuestionIndex < this.filteredQuestions.length - 1) {
       this.currentQuestionIndex++;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
       this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
-      this.showAnswer = false;
+      this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
     }
   }
 
   previousQuestion(): void {
+    if (this.selectedOption !== null && !this.showAnswer) {
+      alert('Você marcou uma resposta, mas não clicou em "Responder". Por favor, responda antes de continuar.');
+      return;
+    }
     if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
       this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
-      this.showAnswer = false;
+      this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
     }
   }
 
@@ -70,6 +83,7 @@ export class PerguntaComponent implements OnInit {
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
     this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
+    this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
   }
 
   countQuestionsByTopic(): void {
