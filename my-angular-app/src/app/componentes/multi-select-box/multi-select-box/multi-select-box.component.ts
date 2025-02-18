@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener, OnInit } from '@angular/core';
 import { Directive, ElementRef } from '@angular/core';
 
 @Component({
@@ -6,7 +6,7 @@ import { Directive, ElementRef } from '@angular/core';
   templateUrl: './multi-select-box.component.html',
   styleUrls: ['./multi-select-box.component.css']
 })
-export class MultiSelectBoxComponent {
+export class MultiSelectBoxComponent implements OnInit {
   @Input() items: any[] = [];
   @Input() disabled: boolean = false; // Adicionar a propriedade disabled
   @Output() selectionChange = new EventEmitter<number[]>();
@@ -15,9 +15,11 @@ export class MultiSelectBoxComponent {
   dropdownOpen = false;
   searchText = '';
   filteredItems: any[] = [];
+  allSelected = false;
 
   ngOnInit() {
     this.filteredItems = this.items;
+
   }
 
   toggleDropdown() {
@@ -48,15 +50,31 @@ export class MultiSelectBoxComponent {
       this.selectedItems.push(item);
     }
     this.selectionChange.emit(this.selectedItems.map(i => i.id));
+    this.updateSelectAllState();
+  }
+
+  toggleSelectAll() {
+    if (this.allSelected) {
+      this.selectedItems = [];
+    } else {
+      this.selectedItems = [...this.items];
+    }
+    this.selectionChange.emit(this.selectedItems.map(i => i.id));
+    this.allSelected = !this.allSelected;
   }
 
   clearAll() {
     this.selectedItems = [];
     this.selectionChange.emit(this.selectedItems);
+    this.allSelected = false;
+  }
+
+  updateSelectAllState() {
+    this.allSelected = this.selectedItems.length === this.items.length;
   }
 
   @HostListener('document:click', ['$event'])
-  onClickOutside(event: Event) {
+  onClickOutside(event: MouseEvent) {
     const target = event.target as HTMLElement;
     if (target && !target.closest('.relative')) {
       this.closeDropdown();
