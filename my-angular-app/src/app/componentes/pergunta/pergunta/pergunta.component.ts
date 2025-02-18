@@ -9,17 +9,25 @@ import { HttpQuestionsService } from '../../../services/http-questions.service';
 export class PerguntaComponent implements OnInit {
 
   allQuestions: any[] = [];
+  filteredQuestions: any[] = [];
   currentQuestionIndex: number = 0;
   currentQuestion: any;
   selectedOption: number | null = null;
   showAnswer: boolean = false;
+  topics: any[] = [];
+  selectedTopicId: number | null = null;
 
   constructor(private httpQuestionsService: HttpQuestionsService) { }
 
   ngOnInit(): void {
     this.httpQuestionsService.getAllQuestions().subscribe(data => {
       this.allQuestions = data;
-      this.currentQuestion = this.allQuestions[this.currentQuestionIndex];
+      this.filteredQuestions = this.allQuestions;
+      this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+    });
+
+    this.httpQuestionsService.getTopics().subscribe(data => {
+      this.topics = data.topics;
     });
   }
 
@@ -32,9 +40,9 @@ export class PerguntaComponent implements OnInit {
   }
 
   nextQuestion(): void {
-    if (this.currentQuestionIndex < this.allQuestions.length - 1) {
+    if (this.currentQuestionIndex < this.filteredQuestions.length - 1) {
       this.currentQuestionIndex++;
-      this.currentQuestion = this.allQuestions[this.currentQuestionIndex];
+      this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
       this.selectedOption = null;
       this.showAnswer = false;
     }
@@ -43,9 +51,19 @@ export class PerguntaComponent implements OnInit {
   previousQuestion(): void {
     if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
-      this.currentQuestion = this.allQuestions[this.currentQuestionIndex];
+      this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
       this.selectedOption = null;
       this.showAnswer = false;
     }
+  }
+
+  filterQuestionsByTopic(): void {
+    if (this.selectedTopicId !== null) {
+      this.filteredQuestions = this.allQuestions.filter(q => q.topicId === this.selectedTopicId);
+    } else {
+      this.filteredQuestions = this.allQuestions;
+    }
+    this.currentQuestionIndex = 0;
+    this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
   }
 }

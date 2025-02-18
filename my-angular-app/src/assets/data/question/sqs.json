@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "id": "sqs1a2b3c4d5",
+      "topicId": 9,
+      "question": "O que é Amazon SQS?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço de fila de mensagens totalmente gerenciado" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "sqs6e7f8g9h0",
+      "topicId": 9,
+      "question": "Qual é a principal função do Amazon SQS?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de objetos" },
+        { "index": 2, "text": "Computação em nuvem" },
+        { "index": 3, "text": "Desacoplar e escalar microsserviços, sistemas distribuídos e aplicativos sem servidor" },
+        { "index": 4, "text": "Computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "sqs1i2j3k4l5",
+      "topicId": 9,
+      "question": "Quais são os benefícios do Amazon SQS?",
+      "options": [
+        { "index": 1, "text": "Desacoplar componentes de aplicativos" },
+        { "index": 2, "text": "Escalabilidade" },
+        { "index": 3, "text": "Disponibilidade" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    }
+  ]
+}

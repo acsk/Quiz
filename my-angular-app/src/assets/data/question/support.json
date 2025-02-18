@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "id": "support1a2b3c4d5",
+      "topicId": 10,
+      "question": "O que é o AWS Support?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço de suporte técnico e orientação para ajudar a construir e gerenciar aplicativos na AWS" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "support6e7f8g9h0",
+      "topicId": 10,
+      "question": "Quais são os tipos de planos de suporte oferecidos pelo AWS Support?",
+      "options": [
+        { "index": 1, "text": "Basic, Developer, Business e Enterprise" },
+        { "index": 2, "text": "Free, Standard, Premium e Enterprise" },
+        { "index": 3, "text": "Bronze, Silver, Gold e Platinum" },
+        { "index": 4, "text": "Starter, Professional, Business e Enterprise" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "support1i2j3k4l5",
+      "topicId": 10,
+      "question": "Qual plano de suporte AWS oferece acesso a um gerente técnico de conta (TAM)?",
+      "options": [
+        { "index": 1, "text": "Basic" },
+        { "index": 2, "text": "Developer" },
+        { "index": 3, "text": "Business" },
+        { "index": 4, "text": "Enterprise" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "support6m7n8o9p0",
+      "topicId": 10,
+      "question": "Qual é a principal característica do plano de suporte AWS Business?",
+      "options": [
+        { "index": 1, "text": "Suporte 24/7 por telefone, chat e e-mail" },
+        { "index": 2, "text": "Acesso a um gerente técnico de conta (TAM)" },
+        { "index": 3, "text": "Acesso a recursos de treinamento online" },
+        { "index": 4, "text": "Suporte apenas durante o horário comercial" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "support1q2r3s4t5",
+      "topicId": 10,
+      "question": "Qual plano de suporte AWS é recomendado para startups e desenvolvedores que estão começando na AWS?",
+      "options": [
+        { "index": 1, "text": "Basic" },
+        { "index": 2, "text": "Developer" },
+        { "index": 3, "text": "Business" },
+        { "index": 4, "text": "Enterprise" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "support6u7v8w9x0",
+      "topicId": 10,
+      "question": "Qual é a principal vantagem do plano de suporte AWS Enterprise?",
+      "options": [
+        { "index": 1, "text": "Acesso a um gerente técnico de conta (TAM)" },
+        { "index": 2, "text": "Suporte 24/7 por telefone, chat e e-mail" },
+        { "index": 3, "text": "Acesso a recursos de treinamento online" },
+        { "index": 4, "text": "Suporte apenas durante o horário comercial" }
+      ],
+      "answer": 1
+    }
+  ]
+}

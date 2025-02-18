@@ -24,6 +24,31 @@
       "id": 5,
       "name": "Amazon VPC",
       "description": "Serviço que permite provisionar uma seção logicamente isolada da nuvem AWS onde você pode lançar recursos da AWS em uma rede virtual que você define."
+    },
+    {
+      "id": 6,
+      "name": "Amazon DynamoDB",
+      "description": "Serviço de banco de dados NoSQL rápido e flexível para todas as aplicações que precisam de latência de milissegundos de um dígito em qualquer escala."
+    },
+    {
+      "id": 7,
+      "name": "Amazon CloudFront",
+      "description": "Serviço de rede de entrega de conteúdo (CDN) que entrega dados, vídeos, aplicativos e APIs a clientes globalmente com baixa latência e altas velocidades de transferência."
+    },
+    {
+      "id": 8,
+      "name": "Amazon SNS",
+      "description": "Serviço de mensagens totalmente gerenciado para comunicação entre aplicativos e microserviços."
+    },
+    {
+      "id": 9,
+      "name": "Amazon SQS",
+      "description": "Serviço de fila de mensagens totalmente gerenciado que permite desacoplar e escalar microsserviços, sistemas distribuídos e aplicativos sem servidor."
+    },
+    {
+      "id": 10,
+      "name": "AWS Support",
+      "description": "Serviço que oferece suporte técnico e orientação para ajudar a construir e gerenciar seus aplicativos na AWS."
     }
   ]
 }

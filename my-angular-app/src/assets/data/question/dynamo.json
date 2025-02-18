@@ -1,0 +1,436 @@
+{
+  "questions": [
+    {
+      "id": "dynamo1a2b3c4d5",
+      "topicId": 6,
+      "question": "O que é Amazon DynamoDB?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Serviço de armazenamento de objetos"
+        },
+        {
+          "index": 2,
+          "text": "Serviço de banco de dados relacional"
+        },
+        {
+          "index": 3,
+          "text": "Serviço de banco de dados NoSQL rápido e flexível"
+        },
+        {
+          "index": 4,
+          "text": "Serviço de computação sem servidor"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo6e7f8g9h0",
+      "topicId": 6,
+      "question": "Qual é a principal característica do Amazon DynamoDB?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Alta latência"
+        },
+        {
+          "index": 2,
+          "text": "Latência de milissegundos de um dígito em qualquer escala"
+        },
+        {
+          "index": 3,
+          "text": "Armazenamento de objetos"
+        },
+        {
+          "index": 4,
+          "text": "Computação sem servidor"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamo1i2j3k4l5",
+      "topicId": 6,
+      "question": "Quais tipos de dados são suportados pelo Amazon DynamoDB?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Documentos e chave-valor"
+        },
+        {
+          "index": 2,
+          "text": "Relacionais e chave-valor"
+        },
+        {
+          "index": 3,
+          "text": "Documentos e relacionais"
+        },
+        {
+          "index": 4,
+          "text": "Chave-valor e gráficos"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "dynamo6m7n8o9p0",
+      "topicId": 6,
+      "question": "Qual é a vantagem do Amazon DynamoDB Streams?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Armazenamento de objetos"
+        },
+        {
+          "index": 2,
+          "text": "Computação sem servidor"
+        },
+        {
+          "index": 3,
+          "text": "Captura de alterações em tabelas DynamoDB em tempo real"
+        },
+        {
+          "index": 4,
+          "text": "Gerenciamento de bancos de dados relacionais"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo1q2r3s4t5",
+      "topicId": 6,
+      "question": "Qual é a principal característica do Amazon DynamoDB Accelerator (DAX)?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Aumentar a segurança"
+        },
+        {
+          "index": 2,
+          "text": "Melhorar a escalabilidade de leitura"
+        },
+        {
+          "index": 3,
+          "text": "Reduzir a latência de leitura"
+        },
+        {
+          "index": 4,
+          "text": "Melhorar a interface do usuário"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo6u7v8w9x0",
+      "topicId": 6,
+      "question": "Qual é a finalidade do Amazon DynamoDB Global Tables?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Armazenar dados em uma única região"
+        },
+        {
+          "index": 2,
+          "text": "Armazenar dados em múltiplas regiões para alta disponibilidade e redundância"
+        },
+        {
+          "index": 3,
+          "text": "Gerenciar redes virtuais"
+        },
+        {
+          "index": 4,
+          "text": "Prover alta disponibilidade e redundância"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamo1a2b3c4d5",
+      "topicId": 6,
+      "question": "Qual é o benefício do uso do Amazon DynamoDB para armazenamento de dados?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Alta latência"
+        },
+        {
+          "index": 2,
+          "text": "Baixo desempenho"
+        },
+        {
+          "index": 3,
+          "text": "Flexibilidade e escalabilidade"
+        },
+        {
+          "index": 4,
+          "text": "Custo alto"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo6e7f8g9h0",
+      "topicId": 6,
+      "question": "Qual é a diferença entre o Amazon DynamoDB e o Amazon RDS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "DynamoDB é um banco de dados relacional, enquanto RDS é um banco de dados NoSQL"
+        },
+        {
+          "index": 2,
+          "text": "DynamoDB é um banco de dados NoSQL, enquanto RDS é um banco de dados relacional"
+        },
+        {
+          "index": 3,
+          "text": "DynamoDB é um serviço de armazenamento de objetos, enquanto RDS é um serviço de banco de dados"
+        },
+        {
+          "index": 4,
+          "text": "DynamoDB é um serviço de computação sem servidor, enquanto RDS é um serviço de banco de dados"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamo1i2j3k4l5",
+      "topicId": 6,
+      "question": "Qual é o benefício do uso do Amazon DynamoDB Streams?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Captura de alterações em tabelas DynamoDB em tempo real"
+        },
+        {
+          "index": 2,
+          "text": "Armazenamento de objetos"
+        },
+        {
+          "index": 3,
+          "text": "Computação sem servidor"
+        },
+        {
+          "index": 4,
+          "text": "Gerenciamento de bancos de dados relacionais"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "dynamo6m7n8o9p0",
+      "topicId": 6,
+      "question": "Qual é a finalidade do Amazon DynamoDB Accelerator (DAX)?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Aumentar a segurança"
+        },
+        {
+          "index": 2,
+          "text": "Melhorar a escalabilidade de leitura"
+        },
+        {
+          "index": 3,
+          "text": "Reduzir a latência de leitura"
+        },
+        {
+          "index": 4,
+          "text": "Melhorar a interface do usuário"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo1q2r3s4t5",
+      "topicId": 6,
+      "question": "Qual é a vantagem do uso do Amazon DynamoDB para armazenamento de dados em tempo real?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Alta latência"
+        },
+        {
+          "index": 2,
+          "text": "Baixo desempenho"
+        },
+        {
+          "index": 3,
+          "text": "Flexibilidade e escalabilidade"
+        },
+        {
+          "index": 4,
+          "text": "Custo alto"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo6u7v8w9x0",
+      "topicId": 6,
+      "question": "Qual é a finalidade do Amazon DynamoDB Global Tables?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Armazenar dados em uma única região"
+        },
+        {
+          "index": 2,
+          "text": "Armazenar dados em múltiplas regiões para alta disponibilidade e redundância"
+        },
+        {
+          "index": 3,
+          "text": "Gerenciar redes virtuais"
+        },
+        {
+          "index": 4,
+          "text": "Prover alta disponibilidade e redundância"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamo1c2d3e4f5",
+      "topicId": 6,
+      "question": "Qual é o propósito do Amazon DynamoDB Auto Scaling?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Aumentar a segurança"
+        },
+        {
+          "index": 2,
+          "text": "Melhorar a escalabilidade"
+        },
+        {
+          "index": 3,
+          "text": "Reduzir a latência"
+        },
+        {
+          "index": 4,
+          "text": "Melhorar a interface do usuário"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamo6g7h8i9j0",
+      "topicId": 6,
+      "question": "Qual é a diferença entre o Amazon DynamoDB e o Amazon S3?",
+      "options": [
+        {
+          "index": 1,
+          "text": "DynamoDB é um banco de dados relacional, enquanto S3 é um serviço de armazenamento de objetos"
+        },
+        {
+          "index": 2,
+          "text": "DynamoDB é um banco de dados NoSQL, enquanto S3 é um serviço de armazenamento de objetos"
+        },
+        {
+          "index": 3,
+          "text": "DynamoDB é um serviço de computação sem servidor, enquanto S3 é um serviço de armazenamento de objetos"
+        },
+        {
+          "index": 4,
+          "text": "DynamoDB é um serviço de armazenamento de objetos, enquanto S3 é um banco de dados NoSQL"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamo1k2l3m4n5",
+      "topicId": 6,
+      "question": "Qual é o benefício do uso do Amazon DynamoDB para armazenamento de dados em tempo real?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Alta latência"
+        },
+        {
+          "index": 2,
+          "text": "Baixo desempenho"
+        },
+        {
+          "index": 3,
+          "text": "Flexibilidade e escalabilidade"
+        },
+        {
+          "index": 4,
+          "text": "Custo alto"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo6o7p8q9r0",
+      "topicId": 6,
+      "question": "Qual é a finalidade do Amazon DynamoDB Backup e Restore?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Armazenar dados em uma única região"
+        },
+        {
+          "index": 2,
+          "text": "Armazenar dados em múltiplas regiões para alta disponibilidade e redundância"
+        },
+        {
+          "index": 3,
+          "text": "Realizar backups e restaurar dados em caso de falha"
+        },
+        {
+          "index": 4,
+          "text": "Melhorar a interface do usuário"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo1s2t3u4v5",
+      "topicId": 6,
+      "question": "Qual é o benefício do uso do Amazon DynamoDB para armazenamento de dados em larga escala?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Alta latência"
+        },
+        {
+          "index": 2,
+          "text": "Baixo desempenho"
+        },
+        {
+          "index": 3,
+          "text": "Flexibilidade e escalabilidade"
+        },
+        {
+          "index": 4,
+          "text": "Custo alto"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "dynamo6w7x8y9z0",
+      "topicId": 6,
+      "question": "Qual é a diferença entre o Amazon DynamoDB e o Amazon Redshift?",
+      "options": [
+        {
+          "index": 1,
+          "text": "DynamoDB é um banco de dados relacional, enquanto Redshift é um serviço de armazenamento de objetos"
+        },
+        {
+          "index": 2,
+          "text": "DynamoDB é um banco de dados NoSQL, enquanto Redshift é um serviço de armazenamento de dados em larga escala"
+        },
+        {
+          "index": 3,
+          "text": "DynamoDB é um serviço de computação sem servidor, enquanto Redshift é um serviço de armazenamento de dados em larga escala"
+        },
+        {
+          "index": 4,
+          "text": "DynamoDB é um serviço de armazenamento de objetos, enquanto Redshift é um banco de dados NoSQL"
+        }
+      ],
+      "answer": 2
+    }
+  ]
+}

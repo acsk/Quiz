@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "id": "cloudfront1a2b3c4d5",
+      "topicId": 7,
+      "question": "O que é Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço de rede de entrega de conteúdo (CDN)" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "cloudfront6e7f8g9h0",
+      "topicId": 7,
+      "question": "Qual é a principal função do Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de objetos" },
+        { "index": 2, "text": "Computação em nuvem" },
+        { "index": 3, "text": "Entrega de dados, vídeos, aplicativos e APIs a clientes globalmente com baixa latência e altas velocidades de transferência" },
+        { "index": 4, "text": "Computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "cloudfront1i2j3k4l5",
+      "topicId": 7,
+      "question": "Qual é a vantagem do Amazon CloudFront?",
+      "options": [
+        { "index": 1, "text": "Maior custo" },
+        { "index": 2, "text": "Escalabilidade e flexibilidade" },
+        { "index": 3, "text": "Menor segurança" },
+        { "index": 4, "text": "Menor desempenho" }
+      ],
+      "answer": 2
+    }
+  ]
+}

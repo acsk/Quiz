@@ -13,6 +13,11 @@ export class HttpQuestionsService {
   private ec2QuestionsUrl = 'assets/data/question/ec2.json';
   private lambdaQuestionsUrl = 'assets/data/question/lambda.json';
   private rdsQuestionsUrl = 'assets/data/question/rds.json';
+  private supportQuestionsUrl = 'assets/data/question/support.json';
+  private dynamoQuestionsUrl = 'assets/data/question/dynamo.json';
+  private snsQuestionsUrl = 'assets/data/question/sns.json';
+  private sqsQuestionsUrl = 'assets/data/question/sqs.json';
+  private cloudfrontQuestionsUrl = 'assets/data/question/cloudfront.json';
 
   constructor(private http: HttpClient) { }
 
@@ -36,6 +41,26 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.rdsQuestionsUrl);
   }
 
+  getSupportQuestions(): Observable<any> {
+    return this.http.get<any>(this.supportQuestionsUrl);
+  }
+
+  getDynamoQuestions(): Observable<any> {
+    return this.http.get<any>(this.dynamoQuestionsUrl);
+  }
+
+  getSNSQuestions(): Observable<any> {
+    return this.http.get<any>(this.snsQuestionsUrl);
+  }
+
+  getSQSQuestions(): Observable<any> {
+    return this.http.get<any>(this.sqsQuestionsUrl);
+  }
+
+  getCloudFrontQuestions(): Observable<any> {
+    return this.http.get<any>(this.cloudfrontQuestionsUrl);
+  }
+
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -50,7 +75,12 @@ export class HttpQuestionsService {
       s3: this.getS3Questions(),
       ec2: this.getEC2Questions(),
       lambda: this.getLambdaQuestions(),
-      rds: this.getRDSQuestions()
+      rds: this.getRDSQuestions(),
+      support: this.getSupportQuestions(),
+      dynamo: this.getDynamoQuestions(),
+      sns: this.getSNSQuestions(),
+      sqs: this.getSQSQuestions(),
+      cloudfront: this.getCloudFrontQuestions()
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -58,7 +88,12 @@ export class HttpQuestionsService {
           ...responses.s3.questions,
           ...responses.ec2.questions,
           ...responses.lambda.questions,
-          ...responses.rds.questions
+          ...responses.rds.questions,
+          ...responses.support.questions,
+          ...responses.dynamo.questions,
+          ...responses.sns.questions,
+          ...responses.sqs.questions,
+          ...responses.cloudfront.questions
         ].map((question: any) => ({
           ...question,
           topicName: topicsMap.get(question.topicId)
