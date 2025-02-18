@@ -1,0 +1,20 @@
+<div class="relative" clickOutside (clickOutside)="closeDropdown()">
+  <div class="border rounded-md p-2 cursor-pointer" (click)="toggleDropdown()">
+    <span *ngIf="selectedItems.length === 0">Selecione os Tópicos</span>
+    <span *ngIf="selectedItems.length > 0">{{ selectedItems.length }} Tópico(s) Selecionado(s)</span>
+  </div>
+  <div *ngIf="dropdownOpen" class="absolute mt-1 w-full bg-white border rounded-md shadow-lg z-10">
+    <input type="text" [(ngModel)]="searchText" (input)="filterItems()" placeholder="Pesquisar..." class="w-full p-2 border-b">
+    <ul class="max-h-60 overflow-auto">
+      <li *ngFor="let item of filteredItems" class="p-2">
+        <label class="flex items-center">
+          <input type="checkbox" [checked]="isSelected(item)" (change)="toggleSelection(item)" class="mr-2">
+          {{ item.name }}
+        </label>
+      </li>
+    </ul>
+    <div class="p-2 border-t">
+      <button (click)="clearAll()" class="w-full text-left text-red-500">Clear All</button>
+    </div>
+  </div>
+</div>

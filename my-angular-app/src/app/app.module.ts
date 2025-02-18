@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { PerguntaModule } from './componentes/pergunta/pergunta.module';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+ 
   ],
   imports: [
     BrowserModule,

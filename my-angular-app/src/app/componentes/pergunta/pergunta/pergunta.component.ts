@@ -4,7 +4,8 @@ import { HttpQuestionsService } from '../../../services/http-questions.service';
 @Component({
   selector: 'app-pergunta',
   templateUrl: './pergunta.component.html',
-  styleUrls: ['./pergunta.component.css']
+  styleUrls: ['./pergunta.component.css'],
+
 })
 export class PerguntaComponent implements OnInit {
 
@@ -15,7 +16,7 @@ export class PerguntaComponent implements OnInit {
   selectedOption: number | null = null;
   showAnswer: boolean = false;
   topics: any[] = [];
-  selectedTopicId: number | null = null;
+  selectedTopicIds: number[] = [];
   selectedLevelId: number | null = null;
   questionCounts: { [key: number]: number } = {};
   selectedOptions: { [key: string]: number | null } = {};
@@ -91,7 +92,7 @@ export class PerguntaComponent implements OnInit {
 
   filterQuestionsByTopic(): void {
     this.filteredQuestions = this.allQuestions.filter(question => {
-      const matchesTopic = this.selectedTopicId === null || question.topicId === this.selectedTopicId;
+      const matchesTopic = this.selectedTopicIds.length === 0 || this.selectedTopicIds.includes(question.topicId);
       const matchesLevel = this.selectedLevelId === null || question.levelId === this.selectedLevelId;
       return matchesTopic && matchesLevel;
     });
@@ -110,5 +111,10 @@ export class PerguntaComponent implements OnInit {
 
   finalizeTest(): void {
     this.showSummary = true;
+  }
+
+  onTopicsChange(selectedTopics: number[]): void {
+    this.selectedTopicIds = selectedTopics;
+    this.filterQuestionsByTopic();
   }
 }
