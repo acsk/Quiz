@@ -25,7 +25,7 @@
           }">
         <input type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2"
                (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id] === option.index">
-        {{ option.index }}. {{ option.text }}
+       {{ option.text }}
       </li>
     </ul>
     <div class="mt-4 flex justify-between">

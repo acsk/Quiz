@@ -54,6 +54,31 @@
       "id": 11,
       "name": "AWS Well-Architected",
       "description": "Serviço que ajuda a criar arquiteturas seguras, de alto desempenho, resilientes e eficientes."
+    },
+    {
+      "id": 12,
+      "name": "Amazon EKS",
+      "description": "Serviço gerenciado para executar Kubernetes na AWS sem precisar instalar e operar seu próprio plano de controle Kubernetes."
+    },
+    {
+      "id": 13,
+      "name": "Amazon ECS",
+      "description": "Serviço de orquestração de contêineres que permite executar e escalar aplicativos Docker na AWS."
+    },
+    {
+      "id": 14,
+      "name": "Amazon Aurora",
+      "description": "Serviço de banco de dados relacional compatível com MySQL e PostgreSQL, construído para a nuvem, que combina o desempenho e a disponibilidade de bancos de dados comerciais com a simplicidade e o custo-benefício de bancos de dados de código aberto."
+    },
+    {
+      "id": 15,
+      "name": "Amazon Redshift",
+      "description": "Serviço de armazenamento de dados em nuvem que permite analisar todos os seus dados usando SQL padrão e ferramentas de inteligência de negócios existentes."
+    },
+    {
+      "id": 16,
+      "name": "AWS IAM",
+      "description": "Serviço de gerenciamento de acesso e identidade que ajuda a controlar de forma segura o acesso aos recursos da AWS."
     }
   ]
 }

@@ -19,7 +19,8 @@ export class HttpQuestionsService {
   private sqsQuestionsUrl = 'assets/data/question/sqs.json';
   private cloudfrontQuestionsUrl = 'assets/data/question/cloudfront.json';
   private wellArchitectedQuestionsUrl = 'assets/data/question/wellArchitected.json';
-  private vpcQuestionsUrl = 'assets/data/question/vpc.json'; // Adicionada a URL para VPC
+  private vpcQuestionsUrl = 'assets/data/question/vpc.json';
+  private iamQuestionsUrl = 'assets/data/question/iam.json'; // Adicionada a URL para IAM
 
   constructor(private http: HttpClient) { }
 
@@ -67,8 +68,12 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.wellArchitectedQuestionsUrl);
   }
 
-  getVPCQuestions(): Observable<any> { // Adicionado método para buscar perguntas sobre VPC
+  getVPCQuestions(): Observable<any> {
     return this.http.get<any>(this.vpcQuestionsUrl);
+  }
+
+  getIAMQuestions(): Observable<any> { // Adicionado método para buscar perguntas sobre IAM
+    return this.http.get<any>(this.iamQuestionsUrl);
   }
 
   private shuffleArray(array: any[]): any[] {
@@ -92,7 +97,8 @@ export class HttpQuestionsService {
       sqs: this.getSQSQuestions(),
       cloudfront: this.getCloudFrontQuestions(),
       wellArchitected: this.getWellArchitectedQuestions(),
-      vpc: this.getVPCQuestions() // Adicionado VPC ao forkJoin
+      vpc: this.getVPCQuestions(),
+      iam: this.getIAMQuestions() // Adicionado IAM ao forkJoin
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -107,7 +113,8 @@ export class HttpQuestionsService {
           ...responses.sqs.questions,
           ...responses.cloudfront.questions,
           ...responses.wellArchitected.questions,
-          ...responses.vpc.questions // Adicionado perguntas sobre VPC
+          ...responses.vpc.questions,
+          ...responses.iam.questions // Adicionado perguntas sobre IAM
         ].map((question: any) => ({
           ...question,
           topicName: topicsMap.get(question.topicId)

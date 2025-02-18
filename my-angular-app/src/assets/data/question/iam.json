@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "id": "iam1a2b3c4d5",
+      "topicId": 16,
+      "question": "O que significa a sigla IAM na AWS?",
+      "options": [
+        { "index": 1, "text": "Identity and Access Management" },
+        { "index": 2, "text": "Internet Access Management" },
+        { "index": 3, "text": "Infrastructure as a Management" },
+        { "index": 4, "text": "Integrated Account Manager" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam6e7f8g9h0",
+      "topicId": 16,
+      "question": "Qual é o principal propósito do IAM?",
+      "options": [
+        { "index": 1, "text": "Gerenciar instâncias EC2" },
+        { "index": 2, "text": "Controlar acesso a recursos da AWS" },
+        { "index": 3, "text": "Monitorar custos da AWS" },
+        { "index": 4, "text": "Automatizar implantações de aplicações" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "iam1i2j3k4l5",
+      "topicId": 16,
+      "question": "Qual entidade do IAM representa um usuário ou aplicação que precisa de acesso aos recursos da AWS?",
+      "options": [
+        { "index": 1, "text": "Grupo" },
+        { "index": 2, "text": "Política" },
+        { "index": 3, "text": "Função" },
+        { "index": 4, "text": "Usuário" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "iam6m7n8o9p0",
+      "topicId": 16,
+      "question": "O que é uma política no IAM?",
+      "options": [
+        { "index": 1, "text": "Um conjunto de permissões" },
+        { "index": 2, "text": "Um tipo de instância EC2" },
+        { "index": 3, "text": "Um serviço de banco de dados" },
+        { "index": 4, "text": "Um método de criptografia" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam1q2r3s4t5",
+      "topicId": 16,
+      "question": "Qual serviço da AWS é usado para autenticação multifator (MFA)?",
+      "options": [
+        { "index": 1, "text": "IAM" },
+        { "index": 2, "text": "S3" },
+        { "index": 3, "text": "EC2" },
+        { "index": 4, "text": "RDS" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam6u7v8w9x0",
+      "topicId": 16,
+      "question": "Qual é a diferença entre uma política gerenciada pela AWS e uma política personalizada no IAM?",
+      "options": [
+        { "index": 1, "text": "Políticas gerenciadas são criadas pela AWS, enquanto políticas personalizadas são criadas pelo usuário" },
+        { "index": 2, "text": "Políticas gerenciadas são mais restritivas" },
+        { "index": 3, "text": "Políticas personalizadas não podem ser anexadas a usuários" },
+        { "index": 4, "text": "Não há diferença" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam1y2z3a4b5",
+      "topicId": 16,
+      "question": "O que é uma função IAM?",
+      "options": [
+        { "index": 1, "text": "Um usuário temporário" },
+        { "index": 2, "text": "Uma entidade com permissões que pode ser assumida por usuários ou serviços" },
+        { "index": 3, "text": "Um tipo de política de segurança" },
+        { "index": 4, "text": "Um método de autenticação" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "iam6c7d8e9f0",
+      "topicId": 16,
+      "question": "Qual comando da AWS CLI é usado para criar um usuário IAM?",
+      "options": [
+        { "index": 1, "text": "aws iam create-user" },
+        { "index": 2, "text": "aws iam add-user" },
+        { "index": 3, "text": "aws iam new-user" },
+        { "index": 4, "text": "aws iam make-user" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam1g2h3i4j5",
+      "topicId": 16,
+      "question": "O que é o princípio do menor privilégio no contexto do IAM?",
+      "options": [
+        { "index": 1, "text": "Conceder apenas as permissões necessárias para realizar uma tarefa" },
+        { "index": 2, "text": "Conceder todas as permissões possíveis" },
+        { "index": 3, "text": "Nunca conceder permissões" },
+        { "index": 4, "text": "Conceder permissões apenas para administradores" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam6k7l8m9n0",
+      "topicId": 16,
+      "question": "Qual é o limite máximo de caracteres para o nome de uma política IAM?",
+      "options": [
+        { "index": 1, "text": "128" },
+        { "index": 2, "text": "256" },
+        { "index": 3, "text": "512" },
+        { "index": 4, "text": "1024" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam1o2p3q4r5",
+      "topicId": 16,
+      "question": "Explique como você pode usar o IAM para permitir que uma instância EC2 acesse um bucket S3 específico.",
+      "options": [
+        { "index": 1, "text": "Criando uma função IAM com permissões para o S3 e anexando-a à instância EC2" },
+        { "index": 2, "text": "Configurando uma política de bucket diretamente no S3" },
+        { "index": 3, "text": "Usando o IAM para criar um usuário específico para a instância EC2" },
+        { "index": 4, "text": "Não é possível fazer isso com o IAM" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam6s7t8u9v0",
+      "topicId": 16,
+      "question": "Como você pode auditar as permissões concedidas a um usuário IAM?",
+      "options": [
+        { "index": 1, "text": "Usando o IAM Access Analyzer" },
+        { "index": 2, "text": "Revisando manualmente todas as políticas anexadas ao usuário" },
+        { "index": 3, "text": "Usando o AWS Config" },
+        { "index": 4, "text": "Não é possível auditar permissões de usuários IAM" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "iam1w2x3y4z5",
+      "topicId": 16,
+      "question": "Qual é a diferença entre uma política baseada em identidade e uma política baseada em recursos no IAM?",
+      "options": [
+        { "index": 1, "text": "Políticas baseadas em identidade são anexadas a usuários, grupos ou roles, enquanto políticas baseadas em recursos são anexadas a recursos como buckets S3" },
+        { "index": 2, "text": "Políticas baseadas em identidade são mais restritivas" },
+        { "index": 3, "text": "Políticas baseadas em recursos não podem ser usadas com o IAM" },
+        { "index": 4, "text": "Não há diferença" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam6a7b8c9d0",
+      "topicId": 16,
+      "question": "Como você pode garantir que um usuário IAM só possa acessar recursos em uma região específica da AWS?",
+      "options": [
+        { "index": 1, "text": "Usando condições em uma política IAM para restringir o acesso por região" },
+        { "index": 2, "text": "Criando uma política que bloqueia todas as regiões exceto a desejada" },
+        { "index": 3, "text": "Isso não é possível com o IAM" },
+        { "index": 4, "text": "Configurando o usuário para usar apenas uma região" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "iam1e2f3g4h5",
+      "topicId": 16,
+      "question": "O que é o IAM Access Analyzer e como ele pode ser útil?",
+      "options": [
+        { "index": 1, "text": "Uma ferramenta que ajuda a identificar recursos que podem ser acessados de fora da sua organização" },
+        { "index": 2, "text": "Um serviço para monitorar o uso de instâncias EC2" },
+        { "index": 3, "text": "Um método para criptografar dados no S3" },
+        { "index": 4, "text": "Uma forma de gerenciar usuários IAM" }
+      ],
+      "answer": 1
+    }
+  ]
+}
