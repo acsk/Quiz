@@ -3,6 +3,7 @@
     {
       "id": "sns1a2b3c4d5",
       "topicId": 8,
+      "levelId": 1,
       "question": "O que é Amazon SNS?",
       "options": [
         { "index": 1, "text": "Serviço de armazenamento de objetos" },
@@ -15,6 +16,7 @@
     {
       "id": "sns6e7f8g9h0",
       "topicId": 8,
+      "levelId": 1,
       "question": "Qual é a principal função do Amazon SNS?",
       "options": [
         { "index": 1, "text": "Armazenamento de objetos" },
@@ -27,6 +29,7 @@
     {
       "id": "sns1i2j3k4l5",
       "topicId": 8,
+      "levelId": 2,
       "question": "Qual é a vantagem do Amazon SNS?",
       "options": [
         { "index": 1, "text": "Maior custo" },
@@ -39,6 +42,7 @@
     {
       "id": "sns7m8n9o0p1",
       "topicId": 8,
+      "levelId": 2,
       "question": "O que é um tópico no Amazon SNS?",
       "options": [
         { "index": 1, "text": "Um serviço de armazenamento de objetos" },
@@ -51,6 +55,7 @@
     {
       "id": "sns2q3r4s5t6",
       "topicId": 8,
+      "levelId": 2,
       "question": "Qual é a função de um assinante no Amazon SNS?",
       "options": [
         { "index": 1, "text": "Enviar mensagens para um tópico" },
@@ -63,6 +68,7 @@
     {
       "id": "sns8u9v0w1x2",
       "topicId": 8,
+      "levelId": 2,
       "question": "Quais são os tipos de endpoints suportados pelo Amazon SNS?",
       "options": [
         { "index": 1, "text": "HTTP/HTTPS, Email, SMS, SQS, Lambda" },
@@ -75,6 +81,7 @@
     {
       "id": "sns3a4b5c6d7",
       "topicId": 8,
+      "levelId": 2,
       "question": "Como o Amazon SNS garante a entrega de mensagens?",
       "options": [
         { "index": 1, "text": "Usando um protocolo de entrega confiável e reenvio automático em caso de falha" },
@@ -87,6 +94,7 @@
     {
       "id": "sns9e0f1g2h3",
       "topicId": 8,
+      "levelId": 2,
       "question": "O que é uma política de acesso no Amazon SNS?",
       "options": [
         { "index": 1, "text": "Um conjunto de regras que define quem pode publicar ou assinar tópicos" },
@@ -99,6 +107,7 @@
     {
       "id": "sns4i5j6k7l8",
       "topicId": 8,
+      "levelId": 2,
       "question": "Qual é a diferença entre Amazon SNS e Amazon SQS?",
       "options": [
         { "index": 1, "text": "SNS é um serviço de mensagens public/subscribe, enquanto SQS é um serviço de fila de mensagens" },
@@ -111,6 +120,7 @@
     {
       "id": "sns5m6n7o8p9",
       "topicId": 8,
+      "levelId": 2,
       "question": "Como você pode integrar o Amazon SNS com o AWS Lambda?",
       "options": [
         { "index": 1, "text": "Criando uma função Lambda que publica mensagens em um tópico SNS" },
@@ -123,6 +133,7 @@
     {
       "id": "sns6q7r8s9t0",
       "topicId": 8,
+      "levelId": 2,
       "question": "O que é um filtro de mensagens no Amazon SNS?",
       "options": [
         { "index": 1, "text": "Um mecanismo para armazenar mensagens de forma segura" },

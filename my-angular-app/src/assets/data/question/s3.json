@@ -3,6 +3,7 @@
         {
             "id": "a1b2c3d4",
             "topicId": 2,
+            "levelId": 1,
             "question": "Qual é a principal função do Amazon S3?",
             "options": [
                 {
@@ -27,6 +28,7 @@
         {
             "id": "e5f6g7h8",
             "topicId": 2,
+            "levelId": 1,
             "question": "O Amazon S3 é ideal para qual tipo de armazenamento?",
             "options": [
                 {
@@ -51,6 +53,7 @@
         {
             "id": "i9j0k1l2",
             "topicId": 2,
+            "levelId": 1,
             "question": "Qual é a durabilidade dos dados armazenados no Amazon S3?",
             "options": [
                 {
@@ -75,6 +78,7 @@
         {
             "id": "m3n4o5p6",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal característica do Amazon S3 Glacier?",
             "options": [
                 {
@@ -99,6 +103,7 @@
         {
             "id": "q7r8s9t0",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal vantagem do Amazon S3 Intelligent-Tiering?",
             "options": [
                 {
@@ -123,6 +128,7 @@
         {
             "id": "u1v2w3x4",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é uma política de bucket no Amazon S3?",
             "options": [
                 {
@@ -147,6 +153,7 @@
         {
             "id": "y5z6a7b8",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a função do Amazon S3 Transfer Acceleration?",
             "options": [
                 {
@@ -171,6 +178,7 @@
         {
             "id": "c9d0e1f2",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Lifecycle Management?",
             "options": [
                 {
@@ -195,6 +203,7 @@
         {
             "id": "g3h4i5j6",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal função do Amazon S3 Versioning?",
             "options": [
                 {
@@ -219,6 +228,7 @@
         {
             "id": "k7l8m9n0",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Cross-Region Replication?",
             "options": [
                 {
@@ -243,6 +253,7 @@
         {
             "id": "o1p2q3r4",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal vantagem do Amazon S3 One Zone-IA?",
             "options": [
                 {
@@ -267,6 +278,7 @@
         {
             "id": "s5t6u7v8",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Select?",
             "options": [
                 {
@@ -291,6 +303,7 @@
         {
             "id": "w9x0y1z2",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal função do Amazon S3 Event Notifications?",
             "options": [
                 {
@@ -315,6 +328,7 @@
         {
             "id": "a3b4c5d6",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Access Points?",
             "options": [
                 {
@@ -339,6 +353,7 @@
         {
             "id": "e7f8g9h0",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal vantagem do Amazon S3 Storage Class Analysis?",
             "options": [
                 {
@@ -363,6 +378,7 @@
         {
             "id": "i1j2k3l4",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Object Lock?",
             "options": [
                 {
@@ -387,6 +403,7 @@
         {
             "id": "m5n6o7p8",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal função do Amazon S3 Access Logs?",
             "options": [
                 {
@@ -411,6 +428,7 @@
         {
             "id": "q9r0s1t2",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Multipart Upload?",
             "options": [
                 {
@@ -435,6 +453,7 @@
         {
             "id": "u3v4w5x6",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal vantagem do Amazon S3 Replication Time Control (RTC)?",
             "options": [
                 {
@@ -459,6 +478,7 @@
         {
             "id": "y7z8a9b0",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Batch Operations?",
             "options": [
                 {
@@ -483,6 +503,7 @@
         {
             "id": "c1d2e3f4",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal função do Amazon S3 Replication?",
             "options": [
                 {
@@ -507,6 +528,7 @@
         {
             "id": "g5h6i7j8",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Block Public Access?",
             "options": [
                 {
@@ -531,6 +553,7 @@
         {
             "id": "k9l0m1n2",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal vantagem do Amazon S3 Data Replication?",
             "options": [
                 {
@@ -555,6 +578,7 @@
         {
             "id": "b1c2d3e4",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Object Lambda?",
             "options": [
                 {
@@ -579,6 +603,7 @@
         {
             "id": "c5d6e7f8",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal função do Amazon S3 Inventory?",
             "options": [
                 {
@@ -603,6 +628,7 @@
         {
             "id": "d9e0f1g2",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Access Analyzer?",
             "options": [
                 {
@@ -627,6 +653,7 @@
         {
             "id": "e3f4g5h6",
             "topicId": 2,
+            "levelId": 2,
             "question": "Qual é a principal vantagem do Amazon S3 Outposts?",
             "options": [
                 {
@@ -651,6 +678,7 @@
         {
             "id": "f7g8h9i0",
             "topicId": 2,
+            "levelId": 2,
             "question": "O que é o Amazon S3 Glacier Deep Archive?",
             "options": [
                 {

@@ -1,0 +1,19 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "name": "easy",
+      "description": "Perguntas de nível fácil."
+    },
+    {
+      "id": 2,
+      "name": "medium",
+      "description": "Perguntas de nível médio."
+    },
+    {
+      "id": 3,
+      "name": "hard",
+      "description": "Perguntas de nível difícil."
+    }
+  ]
+}

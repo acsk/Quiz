@@ -1,0 +1,199 @@
+{
+    "questions": [
+      {
+        "id": "ecs1a2b3c4d5",
+        "topicId": 13,
+        "levelId": 1,
+        "question": "O que é o Amazon ECS?",
+        "options": [
+          { "index": 1, "text": "Um serviço de banco de dados relacional" },
+          { "index": 2, "text": "Um serviço de orquestração de contêineres" },
+          { "index": 3, "text": "Um serviço de armazenamento de objetos" },
+          { "index": 4, "text": "Um serviço de computação sem servidor" }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ecs6e7f8g9h0",
+        "topicId": 13,
+        "levelId": 1,
+        "question": "Qual tecnologia de contêineres o Amazon ECS suporta nativamente?",
+        "options": [
+          { "index": 1, "text": "Kubernetes" },
+          { "index": 2, "text": "Docker" },
+          { "index": 3, "text": "Podman" },
+          { "index": 4, "text": "LXC" }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ecs1i2j3k4l5",
+        "topicId": 13,
+        "levelId": 1,
+        "question": "O que é um 'cluster' no contexto do Amazon ECS?",
+        "options": [
+          { "index": 1, "text": "Um grupo de instâncias EC2 que executam tarefas ECS" },
+          { "index": 2, "text": "Um banco de dados distribuído" },
+          { "index": 3, "text": "Um serviço de armazenamento em nuvem" },
+          { "index": 4, "text": "Um tipo de instância EC2" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs6m7n8o9p0",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "Qual é o componente do ECS que define os recursos de CPU e memória necessários para uma aplicação?",
+        "options": [
+          { "index": 1, "text": "Task Definition" },
+          { "index": 2, "text": "Cluster" },
+          { "index": 3, "text": "Service" },
+          { "index": 4, "text": "Container Instance" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs1q2r3s4t5",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "O que é um 'Service' no Amazon ECS?",
+        "options": [
+          { "index": 1, "text": "Um contêiner Docker em execução" },
+          { "index": 2, "text": "Uma definição de como as tarefas devem ser executadas e escaladas" },
+          { "index": 3, "text": "Um tipo de instância EC2" },
+          { "index": 4, "text": "Um banco de dados gerenciado" }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ecs6u7v8w9x0",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "Qual serviço da AWS pode ser usado para armazenar imagens Docker usadas no ECS?",
+        "options": [
+          { "index": 1, "text": "Amazon S3" },
+          { "index": 2, "text": "Amazon ECR" },
+          { "index": 3, "text": "Amazon RDS" },
+          { "index": 4, "text": "Amazon DynamoDB" }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ecs1y2z3a4b5",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "Qual é a diferença entre o modo 'EC2' e o modo 'Fargate' no ECS?",
+        "options": [
+          { "index": 1, "text": "No modo EC2, você gerencia as instâncias subjacentes; no modo Fargate, a AWS gerencia a infraestrutura" },
+          { "index": 2, "text": "O modo Fargate é mais barato que o modo EC2" },
+          { "index": 3, "text": "O modo EC2 não suporta Docker" },
+          { "index": 4, "text": "O modo Fargate não suporta escalabilidade automática" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs6c7d8e9f0",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "O que é uma 'Task' no Amazon ECS?",
+        "options": [
+          { "index": 1, "text": "Uma instância EC2 em execução" },
+          { "index": 2, "text": "Uma unidade de trabalho que consiste em um ou mais contêineres" },
+          { "index": 3, "text": "Um banco de dados gerenciado" },
+          { "index": 4, "text": "Um serviço de armazenamento de objetos" }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ecs1g2h3i4j5",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "Qual comando da AWS CLI é usado para criar um cluster ECS?",
+        "options": [
+          { "index": 1, "text": "aws ecs create-cluster" },
+          { "index": 2, "text": "aws ecs new-cluster" },
+          { "index": 3, "text": "aws ecs make-cluster" },
+          { "index": 4, "text": "aws ecs start-cluster" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs6k7l8m9n0",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "O que é o 'Task Placement' no Amazon ECS?",
+        "options": [
+          { "index": 1, "text": "Um método para definir onde as tarefas serão executadas dentro de um cluster" },
+          { "index": 2, "text": "Um serviço de armazenamento de dados" },
+          { "index": 3, "text": "Um tipo de instância EC2" },
+          { "index": 4, "text": "Um banco de dados gerenciado" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs1o2p3q4r5",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "Como o ECS lida com o balanceamento de carga?",
+        "options": [
+          { "index": 1, "text": "Integrando-se com o Elastic Load Balancing (ELB)" },
+          { "index": 2, "text": "Usando o Amazon RDS para distribuir carga" },
+          { "index": 3, "text": "Não suporta balanceamento de carga" },
+          { "index": 4, "text": "Usando o Amazon S3 para armazenar dados de carga" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs6s7t8u9v0",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "Qual é o propósito do 'Auto Scaling' no ECS?",
+        "options": [
+          { "index": 1, "text": "Ajustar automaticamente o número de tarefas em execução com base na demanda" },
+          { "index": 2, "text": "Gerenciar instâncias EC2 manualmente" },
+          { "index": 3, "text": "Armazenar imagens Docker" },
+          { "index": 4, "text": "Monitorar o uso de CPU e memória" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs1w2x3y4z5",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "O que é o 'Service Discovery' no Amazon ECS?",
+        "options": [
+          { "index": 1, "text": "Um recurso que permite que contêineres se descubram e se comuniquem automaticamente" },
+          { "index": 2, "text": "Um serviço de armazenamento de objetos" },
+          { "index": 3, "text": "Um tipo de instância EC2" },
+          { "index": 4, "text": "Um banco de dados gerenciado" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs6a7b8c9d0",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "Qual serviço da AWS pode ser usado para monitorar o desempenho de aplicações em execução no ECS?",
+        "options": [
+          { "index": 1, "text": "Amazon CloudWatch" },
+          { "index": 2, "text": "Amazon S3" },
+          { "index": 3, "text": "Amazon RDS" },
+          { "index": 4, "text": "Amazon DynamoDB" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ecs1e2f3g4h5",
+        "topicId": 13,
+        "levelId": 2,
+        "question": "O que é o 'Launch Type' no Amazon ECS?",
+        "options": [
+          { "index": 1, "text": "Define como as tarefas são executadas, como EC2 ou Fargate" },
+          { "index": 2, "text": "Um tipo de instância EC2" },
+          { "index": 3, "text": "Um serviço de armazenamento de objetos" },
+          { "index": 4, "text": "Um banco de dados gerenciado" }
+        ],
+        "answer": 1
+      }
+    ]
+  }

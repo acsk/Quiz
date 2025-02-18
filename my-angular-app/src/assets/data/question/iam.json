@@ -3,6 +3,7 @@
     {
       "id": "iam1a2b3c4d5",
       "topicId": 16,
+      "levelId": 1,
       "question": "O que significa a sigla IAM na AWS?",
       "options": [
         { "index": 1, "text": "Identity and Access Management" },
@@ -15,6 +16,7 @@
     {
       "id": "iam6e7f8g9h0",
       "topicId": 16,
+      "levelId": 1,
       "question": "Qual é o principal propósito do IAM?",
       "options": [
         { "index": 1, "text": "Gerenciar instâncias EC2" },
@@ -27,6 +29,7 @@
     {
       "id": "iam1i2j3k4l5",
       "topicId": 16,
+      "levelId": 2,
       "question": "Qual entidade do IAM representa um usuário ou aplicação que precisa de acesso aos recursos da AWS?",
       "options": [
         { "index": 1, "text": "Grupo" },
@@ -39,6 +42,7 @@
     {
       "id": "iam6m7n8o9p0",
       "topicId": 16,
+      "levelId": 2,
       "question": "O que é uma política no IAM?",
       "options": [
         { "index": 1, "text": "Um conjunto de permissões" },
@@ -51,6 +55,7 @@
     {
       "id": "iam1q2r3s4t5",
       "topicId": 16,
+      "levelId": 1,
       "question": "Qual serviço da AWS é usado para autenticação multifator (MFA)?",
       "options": [
         { "index": 1, "text": "IAM" },
@@ -63,6 +68,7 @@
     {
       "id": "iam6u7v8w9x0",
       "topicId": 16,
+      "levelId": 2,
       "question": "Qual é a diferença entre uma política gerenciada pela AWS e uma política personalizada no IAM?",
       "options": [
         { "index": 1, "text": "Políticas gerenciadas são criadas pela AWS, enquanto políticas personalizadas são criadas pelo usuário" },
@@ -75,6 +81,7 @@
     {
       "id": "iam1y2z3a4b5",
       "topicId": 16,
+      "levelId": 2,
       "question": "O que é uma função IAM?",
       "options": [
         { "index": 1, "text": "Um usuário temporário" },
@@ -87,6 +94,7 @@
     {
       "id": "iam6c7d8e9f0",
       "topicId": 16,
+      "levelId": 2,
       "question": "Qual comando da AWS CLI é usado para criar um usuário IAM?",
       "options": [
         { "index": 1, "text": "aws iam create-user" },
@@ -99,6 +107,7 @@
     {
       "id": "iam1g2h3i4j5",
       "topicId": 16,
+      "levelId": 2,
       "question": "O que é o princípio do menor privilégio no contexto do IAM?",
       "options": [
         { "index": 1, "text": "Conceder apenas as permissões necessárias para realizar uma tarefa" },
@@ -111,6 +120,7 @@
     {
       "id": "iam6k7l8m9n0",
       "topicId": 16,
+      "levelId": 2,
       "question": "Qual é o limite máximo de caracteres para o nome de uma política IAM?",
       "options": [
         { "index": 1, "text": "128" },
@@ -123,6 +133,7 @@
     {
       "id": "iam1o2p3q4r5",
       "topicId": 16,
+      "levelId": 3,
       "question": "Explique como você pode usar o IAM para permitir que uma instância EC2 acesse um bucket S3 específico.",
       "options": [
         { "index": 1, "text": "Criando uma função IAM com permissões para o S3 e anexando-a à instância EC2" },
@@ -135,6 +146,7 @@
     {
       "id": "iam6s7t8u9v0",
       "topicId": 16,
+      "levelId": 3,
       "question": "Como você pode auditar as permissões concedidas a um usuário IAM?",
       "options": [
         { "index": 1, "text": "Usando o IAM Access Analyzer" },
@@ -147,6 +159,7 @@
     {
       "id": "iam1w2x3y4z5",
       "topicId": 16,
+      "levelId": 3,
       "question": "Qual é a diferença entre uma política baseada em identidade e uma política baseada em recursos no IAM?",
       "options": [
         { "index": 1, "text": "Políticas baseadas em identidade são anexadas a usuários, grupos ou roles, enquanto políticas baseadas em recursos são anexadas a recursos como buckets S3" },
@@ -159,6 +172,7 @@
     {
       "id": "iam6a7b8c9d0",
       "topicId": 16,
+      "levelId": 3,
       "question": "Como você pode garantir que um usuário IAM só possa acessar recursos em uma região específica da AWS?",
       "options": [
         { "index": 1, "text": "Usando condições em uma política IAM para restringir o acesso por região" },
@@ -171,6 +185,7 @@
     {
       "id": "iam1e2f3g4h5",
       "topicId": 16,
+      "levelId": 3,
       "question": "O que é o IAM Access Analyzer e como ele pode ser útil?",
       "options": [
         { "index": 1, "text": "Uma ferramenta que ajuda a identificar recursos que podem ser acessados de fora da sua organização" },

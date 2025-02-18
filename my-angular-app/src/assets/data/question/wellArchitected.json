@@ -3,6 +3,7 @@
     {
       "id": "wellArchitected1a2b3c4d5",
       "topicId": 11,
+      "levelId": 1,
       "question": "O que é o pilar Excelência operacional no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na proteção de informações e sistemas" },
@@ -15,6 +16,7 @@
     {
       "id": "wellArchitected6e7f8g9h0",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Excelência operacional?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -27,6 +29,7 @@
     {
       "id": "wellArchitected1i2j3k4l5",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Segurança no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -39,6 +42,7 @@
     {
       "id": "wellArchitected6m7n8o9p0",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Segurança?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -51,6 +55,7 @@
     {
       "id": "wellArchitected1q2r3s4t5",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Confiabilidade no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -63,6 +68,7 @@
     {
       "id": "wellArchitected6u7v8w9x0",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Confiabilidade?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -75,6 +81,7 @@
     {
       "id": "wellArchitected2a3b4c5d6",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Eficiência de performance no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -87,6 +94,7 @@
     {
       "id": "wellArchitected3e4f5g6h7",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Eficiência de performance?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -99,6 +107,7 @@
     {
       "id": "wellArchitected4i5j6k7l8",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Otimização de custos no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -111,6 +120,7 @@
     {
       "id": "wellArchitected5m6n7o8p9",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Otimização de custos?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -123,6 +133,7 @@
     {
       "id": "wellArchitected6q7r8s9t0",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Sustentabilidade no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -135,6 +146,7 @@
     {
       "id": "wellArchitected7u8v9w0x1",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Sustentabilidade?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -147,6 +159,7 @@
     {
       "id": "wellArchitected8y9z0a1b2",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Recuperação de falhas no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -159,6 +172,7 @@
     {
       "id": "wellArchitected3c4d5e6f7",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Recuperação de falhas?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -170,6 +184,7 @@
     },    {
       "id": "wellArchitected8a9b0c1d2",
       "topicId": 11,
+      "levelId": 2,
       "question": "Qual é o objetivo principal do AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Fornecer diretrizes para construir sistemas seguros, resilientes, eficientes e de alta performance na nuvem" },
@@ -182,6 +197,7 @@
     {
       "id": "wellArchitected9e0f1g2h3",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os cinco pilares do AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Excelência operacional, Segurança, Confiabilidade, Eficiência de performance, Otimização de custos" },
@@ -194,6 +210,7 @@
     {
       "id": "wellArchitected1i2j3k4l6",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Sustentabilidade no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -206,6 +223,7 @@
     {
       "id": "wellArchitected2m3n4o5p6",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Sustentabilidade?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -218,6 +236,7 @@
     {
       "id": "wellArchitected3q4r5s6t7",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Excelência operacional no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na proteção de informações e sistemas" },
@@ -230,6 +249,7 @@
     {
       "id": "wellArchitected4u5v6w7x8",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Excelência operacional?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -242,6 +262,7 @@
     {
       "id": "wellArchitected5y6z7a8b9",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Segurança no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -254,6 +275,7 @@
     {
       "id": "wellArchitected6c7d8e9f0",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Segurança?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -266,6 +288,7 @@
     {
       "id": "wellArchitected7g8h9i0j1",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Confiabilidade no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -278,6 +301,7 @@
     {
       "id": "wellArchitected8k9l0m1n2",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Confiabilidade?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -290,6 +314,7 @@
     {
       "id": "wellArchitected9o0p1q2r3",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Eficiência de performance no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -302,6 +327,7 @@
     {
       "id": "wellArchitected0s1t2u3v4",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Eficiência de performance?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -314,6 +340,7 @@
     {
       "id": "wellArchitected1w2x3y4z5",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Otimização de custos no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -326,6 +353,7 @@
     {
       "id": "wellArchitected2a3b4c5d7",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Otimização de custos?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -338,6 +366,7 @@
     {
       "id": "wellArchitected3e4f5g6h8",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Sustentabilidade no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -350,6 +379,7 @@
     {
       "id": "wellArchitected4i5j6k7l9",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Sustentabilidade?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
@@ -362,6 +392,7 @@
     {
       "id": "wellArchitected5m6n7o8p0",
       "topicId": 11,
+      "levelId": 2,
       "question": "O que é o pilar Recuperação de falhas no AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos" },
@@ -374,6 +405,7 @@
     {
       "id": "wellArchitected6q7r8s9t0",
       "topicId": 11,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Recuperação de falhas?",
       "options": [
         { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },

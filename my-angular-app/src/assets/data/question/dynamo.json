@@ -3,6 +3,7 @@
     {
       "id": "dynamo1a2b3c4d5",
       "topicId": 6,
+      "levelId": 1,
       "question": "O que é Amazon DynamoDB?",
       "options": [
         {
@@ -27,6 +28,7 @@
     {
       "id": "dynamo6e7f8g9h0",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é a principal característica do Amazon DynamoDB?",
       "options": [
         {
@@ -51,6 +53,7 @@
     {
       "id": "dynamo1i2j3k4l5",
       "topicId": 6,
+      "levelId": 2,
       "question": "Quais tipos de dados são suportados pelo Amazon DynamoDB?",
       "options": [
         {
@@ -75,6 +78,7 @@
     {
       "id": "dynamo6m7n8o9p0",
       "topicId": 6,
+      "levelId": 3,
       "question": "Qual é a vantagem do Amazon DynamoDB Streams?",
       "options": [
         {
@@ -99,6 +103,7 @@
     {
       "id": "dynamo1q2r3s4t5",
       "topicId": 6,
+      "levelId": 3,
       "question": "Qual é a principal característica do Amazon DynamoDB Accelerator (DAX)?",
       "options": [
         {
@@ -123,6 +128,7 @@
     {
       "id": "dynamo6u7v8w9x0",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é a finalidade do Amazon DynamoDB Global Tables?",
       "options": [
         {
@@ -147,6 +153,7 @@
     {
       "id": "dynamo1a2b3c4d5",
       "topicId": 6,
+      "levelId": 1,
       "question": "Qual é o benefício do uso do Amazon DynamoDB para armazenamento de dados?",
       "options": [
         {
@@ -171,6 +178,7 @@
     {
       "id": "dynamo6e7f8g9h0",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é a diferença entre o Amazon DynamoDB e o Amazon RDS?",
       "options": [
         {
@@ -195,6 +203,7 @@
     {
       "id": "dynamo1i2j3k4l5",
       "topicId": 6,
+      "levelId": 3,
       "question": "Qual é o benefício do uso do Amazon DynamoDB Streams?",
       "options": [
         {
@@ -219,6 +228,7 @@
     {
       "id": "dynamo6m7n8o9p0",
       "topicId": 6,
+      "levelId": 3,
       "question": "Qual é a finalidade do Amazon DynamoDB Accelerator (DAX)?",
       "options": [
         {
@@ -243,6 +253,7 @@
     {
       "id": "dynamo1q2r3s4t5",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é a vantagem do uso do Amazon DynamoDB para armazenamento de dados em tempo real?",
       "options": [
         {
@@ -267,6 +278,7 @@
     {
       "id": "dynamo6u7v8w9x0",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é a finalidade do Amazon DynamoDB Global Tables?",
       "options": [
         {
@@ -291,6 +303,7 @@
     {
       "id": "dynamo1c2d3e4f5",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é o propósito do Amazon DynamoDB Auto Scaling?",
       "options": [
         {
@@ -315,6 +328,7 @@
     {
       "id": "dynamo6g7h8i9j0",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é a diferença entre o Amazon DynamoDB e o Amazon S3?",
       "options": [
         {
@@ -339,6 +353,7 @@
     {
       "id": "dynamo1k2l3m4n5",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é o benefício do uso do Amazon DynamoDB para armazenamento de dados em tempo real?",
       "options": [
         {
@@ -363,6 +378,7 @@
     {
       "id": "dynamo6o7p8q9r0",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é a finalidade do Amazon DynamoDB Backup e Restore?",
       "options": [
         {
@@ -387,6 +403,7 @@
     {
       "id": "dynamo1s2t3u4v5",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é o benefício do uso do Amazon DynamoDB para armazenamento de dados em larga escala?",
       "options": [
         {
@@ -411,6 +428,7 @@
     {
       "id": "dynamo6w7x8y9z0",
       "topicId": 6,
+      "levelId": 2,
       "question": "Qual é a diferença entre o Amazon DynamoDB e o Amazon Redshift?",
       "options": [
         {

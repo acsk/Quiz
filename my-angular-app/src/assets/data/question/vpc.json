@@ -2,7 +2,8 @@
   "questions": [
     {
       "id": "wellArchitected8a9b0c1d2",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 1,
       "question": "Qual é o objetivo principal do AWS Well-Architected Framework?",
       "options": [
         {
@@ -26,7 +27,8 @@
     },
     {
       "id": "wellArchitected9e0f1g2h3",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "Quais são os cinco pilares do AWS Well-Architected Framework?",
       "options": [
         {
@@ -50,7 +52,8 @@
     },
     {
       "id": "wellArchitected1i2j3k4l6",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "O que é o pilar Sustentabilidade no AWS Well-Architected Framework?",
       "options": [
         {
@@ -74,7 +77,8 @@
     },
     {
       "id": "wellArchitected2m3n4o5p6",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Sustentabilidade?",
       "options": [
         {
@@ -98,7 +102,8 @@
     },
     {
       "id": "wellArchitected3q4r5s6t7",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "O que é o pilar Excelência operacional no AWS Well-Architected Framework?",
       "options": [
         {
@@ -122,7 +127,8 @@
     },
     {
       "id": "wellArchitected4u5v6w7x8",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Excelência operacional?",
       "options": [
         {
@@ -146,7 +152,8 @@
     },
     {
       "id": "wellArchitected5y6z7a8b9",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "O que é o pilar Segurança no AWS Well-Architected Framework?",
       "options": [
         {
@@ -170,7 +177,8 @@
     },
     {
       "id": "wellArchitected6c7d8e9f0",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Segurança?",
       "options": [
         {
@@ -194,7 +202,8 @@
     },
     {
       "id": "wellArchitected7g8h9i0j1",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "O que é o pilar Confiabilidade no AWS Well-Architected Framework?",
       "options": [
         {
@@ -218,7 +227,8 @@
     },
     {
       "id": "wellArchitected8k9l0m1n2",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Confiabilidade?",
       "options": [
         {
@@ -242,7 +252,8 @@
     },
     {
       "id": "wellArchitected9o0p1q2r3",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "O que é o pilar Eficiência de performance no AWS Well-Architected Framework?",
       "options": [
         {
@@ -266,7 +277,8 @@
     },
     {
       "id": "wellArchitected0s1t2u3v4",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Eficiência de performance?",
       "options": [
         {
@@ -290,7 +302,8 @@
     },
     {
       "id": "wellArchitected1w2x3y4z5",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "O que é o pilar Otimização de custos no AWS Well-Architected Framework?",
       "options": [
         {
@@ -314,7 +327,8 @@
     },
     {
       "id": "wellArchitected2a3b4c5d7",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Otimização de custos?",
       "options": [
         {
@@ -338,7 +352,8 @@
     },
     {
       "id": "wellArchitected3e4f5g6h8",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "O que é o pilar Sustentabilidade no AWS Well-Architected Framework?",
       "options": [
         {
@@ -362,7 +377,8 @@
     },
     {
       "id": "wellArchitected4i5j6k7l9",
-     "topicId": 5,
+      "topicId": 5,
+      "levelId": 2,
       "question": "Quais são os principais tópicos do pilar Sustentabilidade?",
       "options": [
         {

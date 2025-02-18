@@ -3,6 +3,7 @@
     {
       "id": "cloudfront1a2b3c4d5",
       "topicId": 7,
+      "levelId": 1, 
       "question": "O que é Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "Serviço de armazenamento de objetos" },
@@ -15,6 +16,7 @@
     {
       "id": "cloudfront6e7f8g9h0",
       "topicId": 7,
+      "levelId": 2, 
       "question": "Qual é a principal função do Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "Armazenamento de objetos" },
@@ -27,6 +29,7 @@
     {
       "id": "cloudfront1i2j3k4l5",
       "topicId": 7,
+      "levelId": 2, 
       "question": "Qual é a vantagem do Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "Maior custo" },
@@ -39,6 +42,7 @@
     {
       "id": "cloudfront2a3b4c5d6",
       "topicId": 7,
+      "levelId": 3, 
       "question": "O que é uma distribuição no Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "Uma coleção de servidores de banco de dados" },
@@ -51,6 +55,7 @@
     {
       "id": "cloudfront3e4f5g6h7",
       "topicId": 7,
+      "levelId": 1, 
       "question": "Qual é a função de um servidor de borda no Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "Armazenar dados" },
@@ -63,6 +68,7 @@
     {
       "id": "cloudfront4i5j6k7l8",
       "topicId": 7,
+      "levelId": 2, 
       "question": "O que é uma origem no Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "O servidor que armazena o conteúdo original" },
@@ -75,6 +81,7 @@
     {
       "id": "cloudfront5m6n7o8p9",
       "topicId": 7,
+      "levelId": 1, 
       "question": "Qual é a principal vantagem de usar o Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "Reduzir a latência e aumentar a velocidade de entrega de conteúdo" },
@@ -87,6 +94,7 @@
     {
       "id": "cloudfront6q7r8s9t0",
       "topicId": 7,
+      "levelId": 2, 
       "question": "O que é uma distribuição web no Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "Uma distribuição que entrega conteúdo estático e dinâmico" },
@@ -99,6 +107,7 @@
     {
       "id": "cloudfront7u8v9w0x1",
       "topicId": 7,
+      "levelId": 3, 
       "question": "O que é uma distribuição RTMP no Amazon CloudFront?",
       "options": [
         { "index": 1, "text": "Uma distribuição que entrega conteúdo estático" },
@@ -111,6 +120,7 @@
     {
       "id": "cloudfront8y9z0a1b2",
       "topicId": 7,
+      "levelId": 3, 
       "question": "Qual é a função do Amazon CloudFront Signed URLs?",
       "options": [
         { "index": 1, "text": "Proteger o conteúdo entregando apenas para usuários autorizados" },
@@ -123,6 +133,7 @@
     {
       "id": "cloudfront9c0d1e2f3",
       "topicId": 7,
+      "levelId": 2, 
       "question": "O que é o Amazon CloudFront Origin Access Identity (OAI)?",
       "options": [
         { "index": 1, "text": "Uma identidade que permite que o CloudFront acesse o conteúdo privado no Amazon S3" },
@@ -135,6 +146,7 @@
     {
       "id": "cloudfront0g1h2i3j4",
       "topicId": 7,
+      "levelId": 3, 
       "question": "Qual é a função do Amazon CloudFront Field-Level Encryption?",
       "options": [
         { "index": 1, "text": "Criptografar dados sensíveis em campos específicos antes de encaminhá-los para a origem" },

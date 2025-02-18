@@ -3,6 +3,7 @@
     {
       "id": "lambda1a2b3c4d5",
       "topicId": 4,
+      "levelId": 1,
       "question": "O que é AWS Lambda?",
       "options": [
         { "index": 1, "text": "Serviço de armazenamento de objetos" },
@@ -15,6 +16,7 @@
     {
       "id": "lambda6e7f8g9h0",
       "topicId": 4,
+      "levelId": 1,
       "question": "Qual é a principal função do AWS Lambda?",
       "options": [
         { "index": 1, "text": "Armazenamento de objetos" },
@@ -27,6 +29,7 @@
     {
       "id": "lambda1i2j3k4l5",
       "topicId": 4,
+      "levelId": 2,
       "question": "Qual é a vantagem do AWS Lambda?",
       "options": [
         { "index": 1, "text": "Reduzir a latência" },
@@ -39,6 +42,7 @@
     {
       "id": "lambda6m7n8o9p0",
       "topicId": 4,
+      "levelId": 2,
       "question": "Qual é o modelo de pagamento do AWS Lambda?",
       "options": [
         { "index": 1, "text": "Pagamento por instância" },
@@ -51,6 +55,7 @@
     {
       "id": "lambda1q2r3s4t5",
       "topicId": 4,
+      "levelId": 2,
       "question": "Qual é a principal característica do AWS Lambda?",
       "options": [
         { "index": 1, "text": "Gerenciamento automático de recursos de computação" },
@@ -63,6 +68,7 @@
     {
       "id": "lambda6u7v8w9x0",
       "topicId": 4,
+      "levelId": 2,
       "question": "Qual é a finalidade das funções no AWS Lambda?",
       "options": [
         { "index": 1, "text": "Armazenar dados" },
