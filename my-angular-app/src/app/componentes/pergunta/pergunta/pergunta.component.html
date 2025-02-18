@@ -26,17 +26,21 @@
       </li>
     </ul>
     <div class="mt-4 flex justify-between">
-      <div class="flex space-x-2">
-        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex >= filteredQuestions.length - 1" class="px-4 py-2 bg-green-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length - 1}">
-          Próxima<i class="fas fa-arrow-right ml-2"></i>
-        </button>
-        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0" class="px-4 py-2 bg-gray-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
-          <i class="fas fa-arrow-left mr-2"></i>Voltar
-        </button>
-      </div>
       <button (click)="checkAnswer()" [disabled]="selectedOption === null" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': selectedOption === null}">
         <i class="fas fa-check mr-2"></i>Responder
       </button>
+      <div class="flex space-x-2">
+        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0" class="px-4 py-2 bg-gray-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
+          <i class="fas fa-arrow-left mr-2"></i>Voltar
+        </button>
+        <button (click)="nextQuestion()" class="px-4 py-2 bg-yellow-500 text-white rounded">
+          Responder Depois
+        </button>
+        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex >= filteredQuestions.length - 1" class="px-4 py-2 bg-green-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length - 1}">
+          Próxima<i class="fas fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+     
     </div>
   </div> 
 </div>
