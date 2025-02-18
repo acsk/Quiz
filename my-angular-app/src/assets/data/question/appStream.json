@@ -12,6 +12,84 @@
         { "index": 4, "text": "Serviço de computação sem servidor" }
       ],
       "answer": 3
+    },
+    {
+      "id": "appstream2a2b3c4d5",
+      "topicId": 28,
+      "levelId": 1,
+      "question": "Qual das seguintes características é uma vantagem do Amazon AppStream 2.0?",
+      "options": [
+        { "index": 1, "text": "Permite armazenar grandes quantidades de dados" },
+        { "index": 2, "text": "Permite converter aplicações de desktop em SaaS sem reescrever o código" },
+        { "index": 3, "text": "Permite gerenciar identidades e permissões" },
+        { "index": 4, "text": "Permite monitorar a performance de aplicações" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "appstream3a2b3c4d5",
+      "topicId": 28,
+      "levelId": 2,
+      "question": "Quais navegadores são compatíveis com o Amazon AppStream 2.0 para acessar aplicações de desktop?",
+      "options": [
+        { "index": 1, "text": "Google Chrome, Mozilla Firefox, Microsoft Internet Explorer e Microsoft Edge" },
+        { "index": 2, "text": "Safari, Opera, Google Chrome e Mozilla Firefox" },
+        { "index": 3, "text": "Microsoft Edge, Safari, Opera e Google Chrome" },
+        { "index": 4, "text": "Mozilla Firefox, Safari, Opera e Microsoft Internet Explorer" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "appstream4a2b3c4d5",
+      "topicId": 28,
+      "levelId": 2,
+      "question": "Qual é um dos casos de uso do Amazon AppStream 2.0?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de dados em grande escala" },
+        { "index": 2, "text": "Ambientes de aprendizagem" },
+        { "index": 3, "text": "Gerenciamento de identidades" },
+        { "index": 4, "text": "Monitoramento de aplicações" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "appstream5a2b3c4d5",
+      "topicId": 28,
+      "levelId": 3,
+      "question": "Qual é uma das vantagens de usar o Cliente Windows do Amazon AppStream 2.0?",
+      "options": [
+        { "index": 1, "text": "Permite usar monitores duplos e periféricos USB, como mouse 3D, com os aplicativos no AppStream 2.0" },
+        { "index": 2, "text": "Permite armazenar dados de forma segura" },
+        { "index": 3, "text": "Permite gerenciar identidades e permissões" },
+        { "index": 4, "text": "Permite monitorar a performance de aplicações" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "appstream6a2b3c4d5",
+      "topicId": 28,
+      "levelId": 3,
+      "question": "Como o Amazon AppStream 2.0 ajuda a otimizar a utilização de recursos e reduzir custos?",
+      "options": [
+        { "index": 1, "text": "Permite armazenar dados em camadas de armazenamento de baixo custo" },
+        { "index": 2, "text": "Permite provisionar várias sessões de usuário em uma única instância" },
+        { "index": 3, "text": "Permite gerenciar identidades e permissões" },
+        { "index": 4, "text": "Permite monitorar a performance de aplicações" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "appstream7a2b3c4d5",
+      "topicId": 28,
+      "levelId": 2,
+      "question": "Quais são alguns dos casos de uso do Amazon AppStream 2.0?",
+      "options": [
+        { "index": 1, "text": "Treinamento corporativo, Desenvolvimento de software, Ambientes de aprendizagem, Conversão de aplicações para SaaS, Transmissão de aplicações" },
+        { "index": 2, "text": "Armazenamento de dados, Gerenciamento de identidades, Monitoramento de aplicações" },
+        { "index": 3, "text": "Computação sem servidor, Armazenamento de objetos, Banco de dados relacional" },
+        { "index": 4, "text": "Gerenciamento de identidades, Monitoramento de aplicações, Computação sem servidor" }
+      ],
+      "answer": 1
     }
   ]
 }
