@@ -20,6 +20,9 @@ export class PerguntaComponent implements OnInit {
   selectedOptions: { [key: string]: number | null } = {};
   showAnswers: { [key: string]: boolean } = {};
   unansweredQuestions: Set<string> = new Set();
+  showSummary: boolean = false;
+  correctAnswers: number = 0;
+  incorrectAnswers: number = 0;
 
   constructor(private httpQuestionsService: HttpQuestionsService) { }
 
@@ -95,5 +98,18 @@ export class PerguntaComponent implements OnInit {
       counts[question.topicId] = (counts[question.topicId] || 0) + 1;
       return counts;
     }, {});
+  }
+
+  finalizeTest(): void {
+    this.correctAnswers = 0;
+    this.incorrectAnswers = 0;
+    this.filteredQuestions.forEach(question => {
+      if (this.selectedOptions[question.id] === question.answer) {
+        this.correctAnswers++;
+      } else {
+        this.incorrectAnswers++;
+      }
+    });
+    this.showSummary = true;
   }
 }

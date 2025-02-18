@@ -44,5 +44,25 @@
         </button>
       </div>
     </div>
-  </div> 
+  </div>
+  <div class="mt-4">
+    <button (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
+      Finalizar Teste
+    </button>
+  </div>
+  <div *ngIf="showSummary" class="mt-6 p-4 border rounded shadow">
+    <h2 class="text-xl font-semibold mb-4">Resumo do Teste</h2>
+    <div class="flex items-center mb-2">
+      <i class="fas fa-question-circle text-blue-500 mr-2"></i>
+      <p class="text-lg">Total de Perguntas: <span class="font-bold">{{ filteredQuestions.length }}</span></p>
+    </div>
+    <div class="flex items-center mb-2">
+      <i class="fas fa-check-circle text-green-500 mr-2"></i>
+      <p class="text-lg">Corretas: <span class="font-bold">{{ correctAnswers }}</span></p>
+    </div>
+    <div class="flex items-center">
+      <i class="fas fa-times-circle text-red-500 mr-2"></i>
+      <p class="text-lg">Erradas: <span class="font-bold">{{ incorrectAnswers }}</span></p>
+    </div>
+  </div>
 </div>
