@@ -19,7 +19,7 @@
         </select>
       </div>
       <div class="flex space-x-2">
-        <button (click)="startTest()" [disabled]="!canStartTest() || testStarted" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest() || testStarted}">
+        <button *ngIf="!testStarted && !showSummary" (click)="startTest()" [disabled]="!canStartTest()" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest()}">
           Iniciar Teste
         </button>
         <button *ngIf="testStarted" (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
@@ -38,7 +38,7 @@
     <div class="flex justify-between items-center mb-2">
       <h2 class="text-xl font-semibold">
         {{ currentQuestionIndex + 1 }}. {{ currentQuestion.question }}
-        <a [href]="'https://www.google.com/search?q=' + currentQuestion.question" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
+        <a [href]="getGoogleSearchUrl(currentQuestion.question)" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
           <i class="fas fa-search"></i>
         </a>
       </h2>
@@ -58,7 +58,10 @@
           (click)="selectOption(option.index)">
         <input type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-full"
                (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id] === option.index">
-       {{ option.text }}
+        {{ option.text }}
+        <a *ngIf="showAnswer && option.index === currentQuestion.answer" [href]="getGoogleSearchUrl(currentQuestion.question, option.text)" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
+          <i class="fas fa-search"></i>
+        </a>
       </li>
     </ul>
     <div class="mt-4 flex justify-between">

@@ -123,11 +123,12 @@ export class PerguntaComponent implements OnInit {
   }
 
   finalizeTest(): void {
+    this.testStarted = false;
+    this.showSummary = true;
     this.correctAnswers = this.filteredQuestions.filter((question) => 
       this.selectedOptions[question.id] === question.answer
     ).length;
     this.incorrectAnswers = this.filteredQuestions.length - this.correctAnswers;
-    this.showSummary = true;
   }
 
   onTopicsChange(selectedTopics: number[]): void {
@@ -142,6 +143,7 @@ export class PerguntaComponent implements OnInit {
   startTest(): void {
     if (this.canStartTest()) {
       this.testStarted = true;
+      this.showSummary = false;
       this.currentQuestionIndex = 0;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
     }
@@ -159,5 +161,13 @@ export class PerguntaComponent implements OnInit {
     this.showAnswer = false;
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+  }
+
+  getGoogleSearchUrl(question: string, answer?: string): string {
+    let query = question;
+    if (answer) {
+      query += ' ' + answer;
+    }
+    return 'https://www.google.com/search?q=' + encodeURIComponent(query);
   }
 }
