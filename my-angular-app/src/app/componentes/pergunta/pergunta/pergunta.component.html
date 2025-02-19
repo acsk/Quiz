@@ -22,10 +22,10 @@
         <button *ngIf="!testStarted && !showSummary" (click)="startTest()" [disabled]="!canStartTest()" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest()}">
           Iniciar Teste
         </button>
-        <button *ngIf="testStarted" (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
+        <button *ngIf="testStarted" (click)="finalizeTest()" class="px-4 py-2 border border-blue-500 text-blue-500 bg-white rounded">
           Finalizar Teste
         </button>
-        <button *ngIf="showSummary" (click)="resetTest()" class="px-4 py-2 bg-gray-500 text-white rounded">
+        <button *ngIf="showSummary" (click)="resetTest()" class="px-4 py-2 border border-blue-500 text-blue-500 bg-white rounded">
           Refazer Teste
         </button>
       </div>
@@ -69,13 +69,13 @@
         <i class="fas fa-check mr-2"></i>Responder
       </button>
       <div class="flex space-x-2">
-        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0" class="px-4 py-2 bg-gray-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
+        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0" class="px-4 py-2 border border-blue-800 text-white bg-blue-800 rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
           <i class="fas fa-arrow-left mr-2"></i>Voltar
         </button>
-        <button (click)="nextQuestion()" class="px-4 py-2 bg-yellow-500 text-white rounded">
+        <button (click)="nextQuestion()" class="px-4 py-2 border border-blue-500 text-blue-500 bg-white rounded">
           Responder Depois
         </button>
-        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex >= filteredQuestions.length - 1" class="px-4 py-2 bg-green-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length - 1}">
+        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex >= filteredQuestions.length - 1" class="px-4 py-2 border border-blue-800 text-white bg-blue-800 rounded" [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length - 1}">
           Próxima<i class="fas fa-arrow-right ml-2"></i>
         </button>
       </div>

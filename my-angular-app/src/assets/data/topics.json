@@ -144,6 +144,11 @@
       "id": 29,
       "name": "AWS Route 53",
       "description": "Serviço de sistema de nomes de domínio (DNS) escalável e altamente disponível, projetado para oferecer roteamento de usuários finais para aplicativos da Internet."
+    },
+    {
+      "id": 30,
+      "name": "AWS CloudTrail",
+      "description": "Serviço que registra as ações realizadas em uma conta da AWS, permitindo auditorar, monitorar a segurança e solucionar problemas operacionais."
     }
   ]
 }
