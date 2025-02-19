@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpQuestionsService } from '../../../services/http-questions.service';
+import { HttpQuestionsService } from '../../../services/http//http-questions.service';
 
 @Component({
   selector: 'app-pergunta',

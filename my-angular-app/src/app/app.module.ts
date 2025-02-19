@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PerguntaModule } from './componentes/pergunta/pergunta.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SpinnerComponent } from './componentes/spinner/spinner.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    SpinnerComponent,
  
   ],
   imports: [
