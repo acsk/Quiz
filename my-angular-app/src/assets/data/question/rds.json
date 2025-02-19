@@ -142,6 +142,162 @@
         { "index": 4, "text": "Você será cobrado apenas se exceder 1000 horas de instância" }
       ],
       "answer": 1
+    },
+        {
+      "id": "rdsMultiAZ1",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Qual é o objetivo principal das implantações Multi-AZ no Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Alta disponibilidade" },
+        { "index": 2, "text": "Recuperação de desastres e desempenho local" },
+        { "index": 3, "text": "Escalabilidade" },
+        { "index": 4, "text": "Redução de custos" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "rdsMultiRegion1",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Qual é o objetivo principal das implantações de múltiplas regiões no Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Alta disponibilidade" },
+        { "index": 2, "text": "Recuperação de desastres e desempenho local" },
+        { "index": 3, "text": "Escalabilidade" },
+        { "index": 4, "text": "Redução de custos" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "rdsReadReplicas1",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Qual é o objetivo principal das réplicas de leitura no Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Alta disponibilidade" },
+        { "index": 2, "text": "Recuperação de desastres e desempenho local" },
+        { "index": 3, "text": "Escalabilidade" },
+        { "index": 4, "text": "Redução de custos" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "rdsReplication1",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Qual tipo de replicação é usado nas implantações Multi-AZ quando não realizadas com o Aurora?",
+      "options": [
+        { "index": 1, "text": "Replicação síncrona" },
+        { "index": 2, "text": "Replicação assíncrona" },
+        { "index": 3, "text": "Replicação semi-síncrona" },
+        { "index": 4, "text": "Replicação manual" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "rdsReplication2",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Qual tipo de replicação é usado nas implantações de múltiplas regiões no Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Replicação síncrona" },
+        { "index": 2, "text": "Replicação assíncrona" },
+        { "index": 3, "text": "Replicação semi-síncrona" },
+        { "index": 4, "text": "Replicação manual" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "rdsReplication3",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Qual tipo de replicação é usado nas réplicas de leitura no Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Replicação síncrona" },
+        { "index": 2, "text": "Replicação assíncrona" },
+        { "index": 3, "text": "Replicação semi-síncrona" },
+        { "index": 4, "text": "Replicação manual" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "rdsBackup1",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Como são realizados os backups automáticos nas implantações Multi-AZ quando não realizadas com o Aurora?",
+      "options": [
+        { "index": 1, "text": "Usando a instância primária" },
+        { "index": 2, "text": "Usando a instância de espera" },
+        { "index": 3, "text": "Usando a camada de armazenamento compartilhada" },
+        { "index": 4, "text": "Usando uma instância de réplica de leitura" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "rdsBackup2",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Como são realizados os backups automáticos nas implantações Multi-AZ quando realizadas com o Aurora?",
+      "options": [
+        { "index": 1, "text": "Usando a instância primária" },
+        { "index": 2, "text": "Usando a instância de espera" },
+        { "index": 3, "text": "Usando a camada de armazenamento compartilhada" },
+        { "index": 4, "text": "Usando uma instância de réplica de leitura" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "rdsBackup3",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "Como são realizados os backups automáticos nas implantações de múltiplas regiões no Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Usando a instância primária" },
+        { "index": 2, "text": "Usando a instância de espera" },
+        { "index": 3, "text": "Usando a camada de armazenamento compartilhada" },
+        { "index": 4, "text": "Podem ser realizados em cada região" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "rdsFailover1",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "O que acontece durante um failover automático em uma implantação Multi-AZ no Amazon RDS quando não realizada com o Aurora?",
+      "options": [
+        { "index": 1, "text": "A instância primária é promovida para a instância de espera" },
+        { "index": 2, "text": "A instância de espera é promovida para a instância primária" },
+        { "index": 3, "text": "A instância de réplica de leitura é promovida para a instância primária" },
+        { "index": 4, "text": "A instância primária é promovida para a instância de réplica de leitura" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "rdsFailover2",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "O que acontece durante um failover automático em uma implantação Multi-AZ no Amazon RDS quando realizada com o Aurora?",
+      "options": [
+        { "index": 1, "text": "A instância primária é promovida para a instância de espera" },
+        { "index": 2, "text": "A instância de espera é promovida para a instância primária" },
+        { "index": 3, "text": "A instância de réplica de leitura é promovida para a instância primária" },
+        { "index": 4, "text": "A instância primária é promovida para a instância de réplica de leitura" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "rdsFailover3",
+      "topicId": 3,
+      "levelId": 2,
+      "question": "O que acontece durante um failover automático em uma implantação de múltiplas regiões no Amazon RDS quando realizada com o Aurora?",
+      "options": [
+        { "index": 1, "text": "A instância primária é promovida para a instância de espera" },
+        { "index": 2, "text": "A instância de espera é promovida para a instância primária" },
+        { "index": 3, "text": "A instância de réplica de leitura é promovida para a instância primária" },
+        { "index": 4, "text": "Uma região secundária é promovida para ser a principal" }
+      ],
+      "answer": 4
     }
   ]
 }

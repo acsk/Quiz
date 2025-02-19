@@ -749,6 +749,331 @@
                 }
             ],
             "answer": 2
+        },
+        {
+            "id": "ec2ri1",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a principal vantagem das instâncias reservadas (RIs) do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Maior flexibilidade"
+                },
+                {
+                    "index": 2,
+                    "text": "Descontos significativos em comparação à definição de preço sob demanda"
+                },
+                {
+                    "index": 3,
+                    "text": "Maior desempenho"
+                },
+                {
+                    "index": 4,
+                    "text": "Menor custo inicial"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2ri2",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é o benefício das RIs conversíveis do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Oferecem o maior desconto em comparação às RIs padrão"
+                },
+                {
+                    "index": 2,
+                    "text": "Permitem alterar os atributos da RI desde que a mudança resulte na criação de instâncias reservadas de valor igual ou maior"
+                },
+                {
+                    "index": 3,
+                    "text": "Oferecem uma reserva de capacidade para instâncias do EC2"
+                },
+                {
+                    "index": 4,
+                    "text": "Permitem a execução de instâncias em um servidor físico dedicado"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2ri3",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a principal característica das RIs padrão do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Oferecem o maior desconto em comparação às RIs conversíveis"
+                },
+                {
+                    "index": 2,
+                    "text": "Permitem alterar os atributos da RI desde que a mudança resulte na criação de instâncias reservadas de valor igual ou maior"
+                },
+                {
+                    "index": 3,
+                    "text": "Oferecem uma reserva de capacidade para instâncias do EC2"
+                },
+                {
+                    "index": 4,
+                    "text": "Permitem a execução de instâncias em um servidor físico dedicado"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "ec2ri4",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a principal vantagem das RIs programadas do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Oferecem o maior desconto em comparação às RIs padrão"
+                },
+                {
+                    "index": 2,
+                    "text": "Permitem alterar os atributos da RI desde que a mudança resulte na criação de instâncias reservadas de valor igual ou maior"
+                },
+                {
+                    "index": 3,
+                    "text": "Permitem a execução de instâncias em um servidor físico dedicado"
+                },
+                {
+                    "index": 4,
+                    "text": "Permitem a correspondência entre a reserva de capacidade e uma programação recorrente previsível"
+                }
+            ],
+            "answer": 4
+        },
+        {
+            "id": "ec2ri5",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Quais são as opções de pagamento disponíveis para as RIs do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Pagamento adiantado integral, pagamento adiantado parcial e sem pagamento adiantado"
+                },
+                {
+                    "index": 2,
+                    "text": "Pagamento mensal, pagamento trimestral e pagamento anual"
+                },
+                {
+                    "index": 3,
+                    "text": "Pagamento por hora, pagamento por minuto e pagamento por segundo"
+                },
+                {
+                    "index": 4,
+                    "text": "Pagamento por uso, pagamento por reserva e pagamento por assinatura"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "ec2ri6",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a principal diferença entre RIs padrão e RIs conversíveis do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "RIs padrão oferecem maior desconto, enquanto RIs conversíveis permitem alterar os atributos da RI"
+                },
+                {
+                    "index": 2,
+                    "text": "RIs padrão permitem alterar os atributos da RI, enquanto RIs conversíveis oferecem maior desconto"
+                },
+                {
+                    "index": 3,
+                    "text": "RIs padrão são mais caras, enquanto RIs conversíveis são mais baratas"
+                },
+                {
+                    "index": 4,
+                    "text": "RIs padrão são usadas para cargas de trabalho de curto prazo, enquanto RIs conversíveis são usadas para cargas de trabalho de longo prazo"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "ec2ri7",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "O que acontece quando os atributos de uso das instâncias do EC2 correspondem aos atributos de uma RI ativa?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "A instância é automaticamente encerrada"
+                },
+                {
+                    "index": 2,
+                    "text": "A taxa com desconto de RI é aplicada automaticamente"
+                },
+                {
+                    "index": 3,
+                    "text": "A instância é movida para uma zona de disponibilidade diferente"
+                },
+                {
+                    "index": 4,
+                    "text": "A instância é promovida para uma instância de banco de dados autônoma"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2ri8",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a vantagem de especificar uma zona de disponibilidade ao comprar uma RI do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "A RI comprada disponibilizará uma reserva de capacidade e um desconto para uso em instâncias na zona de disponibilidade selecionada"
+                },
+                {
+                    "index": 2,
+                    "text": "A RI comprada permitirá a execução de instâncias em um servidor físico dedicado"
+                },
+                {
+                    "index": 3,
+                    "text": "A RI comprada oferecerá maior flexibilidade para alterar os atributos da RI"
+                },
+                {
+                    "index": 4,
+                    "text": "A RI comprada permitirá a execução de instâncias em várias regiões"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "ec2ri9",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Quais são os tipos de instâncias RI do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "RIs padrão, RIs conversíveis e RIs programadas"
+                },
+                {
+                    "index": 2,
+                    "text": "RIs padrão, RIs dedicadas e RIs spot"
+                },
+                {
+                    "index": 3,
+                    "text": "RIs padrão, RIs flexíveis e RIs reservadas"
+                },
+                {
+                    "index": 4,
+                    "text": "RIs padrão, RIs de longa duração e RIs de curto prazo"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "ec2ri10",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é a principal característica das RIs programadas do Amazon EC2?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Oferecem o maior desconto em comparação às RIs padrão"
+                },
+                {
+                    "index": 2,
+                    "text": "Permitem alterar os atributos da RI desde que a mudança resulte na criação de instâncias reservadas de valor igual ou maior"
+                },
+                {
+                    "index": 3,
+                    "text": "Permitem a execução de instâncias em um servidor físico dedicado"
+                },
+                {
+                    "index": 4,
+                    "text": "Permitem a correspondência entre a reserva de capacidade e uma programação recorrente previsível"
+                }
+            ],
+            "answer": 4
+        },
+        {
+            "id": "ec2purchase1",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual opção de compra de instância EC2 oferece o maior desconto para servidores que precisam ser executados por pelo menos um ano?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Instâncias On-Demand"
+                },
+                {
+                    "index": 2,
+                    "text": "Instâncias Reservadas (Reserved Instances)"
+                },
+                {
+                    "index": 3,
+                    "text": "Instâncias Spot"
+                },
+                {
+                    "index": 4,
+                    "text": "Instâncias T3"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2purchase2",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Quais são as principais vantagens das Instâncias Reservadas (RIs) em comparação com as Instâncias On-Demand?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Preço mais alto, mas maior flexibilidade"
+                },
+                {
+                    "index": 2,
+                    "text": "Descontos significativos em troca de um compromisso de longo prazo"
+                },
+                {
+                    "index": 3,
+                    "text": "Menor disponibilidade e maior risco de interrupção"
+                },
+                {
+                    "index": 4,
+                    "text": "Flexibilidade para alterar os atributos das instâncias a qualquer momento"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "ec2purchase3",
+            "topicId": 1,
+            "levelId": 2,
+            "question": "Qual é o principal benefício de escolher o modelo de pagamento 'Partial Upfront' ao comprar Instâncias Reservadas (RIs)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "O maior desconto possível"
+                },
+                {
+                    "index": 2,
+                    "text": "Pagamento único no final do contrato"
+                },
+                {
+                    "index": 3,
+                    "text": "Desconto razoável com pagamentos mensais menores"
+                },
+                {
+                    "index": 4,
+                    "text": "Sem pagamento adiantado"
+                }
+            ],
+            "answer": 3
         }
     ]
 }
