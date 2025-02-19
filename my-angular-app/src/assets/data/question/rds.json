@@ -77,6 +77,71 @@
         { "index": 4, "text": "Melhorar a interface do usuário" }
       ],
       "answer": 2
+    },
+    {
+      "id": "rdsFreeTier1",
+      "topicId": 3,
+      "levelId": 1,
+      "question": "O que o nível gratuito da AWS para o Amazon RDS oferece?",
+      "options": [
+        { "index": 1, "text": "Uso gratuito de microinstâncias de banco de dados mono-AZ que executam MySQL, MariaDB, PostgreSQL e SQL Server Express Edition" },
+        { "index": 2, "text": "Uso gratuito de instâncias de banco de dados multi-AZ que executam Oracle e MongoDB" },
+        { "index": 3, "text": "Uso gratuito de instâncias de banco de dados de alta disponibilidade" },
+        { "index": 4, "text": "Uso gratuito de instâncias de banco de dados com armazenamento em fita" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "rdsFreeTier2",
+      "topicId": 3,
+      "levelId": 1,
+      "question": "Por quanto tempo o nível gratuito da AWS para o Amazon RDS estará disponível para mim?",
+      "options": [
+        { "index": 1, "text": "Por 6 meses a partir da data de criação da conta AWS" },
+        { "index": 2, "text": "Por 12 meses a partir da data de criação da conta AWS" },
+        { "index": 3, "text": "Por 24 meses a partir da data de criação da conta AWS" },
+        { "index": 4, "text": "Por 36 meses a partir da data de criação da conta AWS" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "rdsFreeTier3",
+      "topicId": 3,
+      "levelId": 1,
+      "question": "Eu posso executar mais de uma instância de banco de dados no nível de uso gratuito da AWS para Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "Sim, mas o uso total combinado não pode exceder 750 horas de instância por mês" },
+        { "index": 2, "text": "Não, apenas uma instância é permitida" },
+        { "index": 3, "text": "Sim, sem qualquer limitação de uso" },
+        { "index": 4, "text": "Sim, mas apenas para instâncias de banco de dados multi-AZ" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "rdsFreeTier4",
+      "topicId": 3,
+      "levelId": 1,
+      "question": "Tenho acesso a 750 horas de instância para cada uma das microinstâncias de banco de dados MySQL, MariaDB, PostgreSQL e SQL Server no nível gratuito da AWS?",
+      "options": [
+        { "index": 1, "text": "Sim, 750 horas de instância para cada tipo de banco de dados" },
+        { "index": 2, "text": "Não, 750 horas de instância no total para todos os tipos de banco de dados combinados" },
+        { "index": 3, "text": "Sim, mas apenas para MySQL e PostgreSQL" },
+        { "index": 4, "text": "Não, apenas 500 horas de instância no total para todos os tipos de banco de dados combinados" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "rdsFreeTier5",
+      "topicId": 3,
+      "levelId": 1,
+      "question": "Como sou cobrado quando o uso de horas de instâncias excede o benefício do nível gratuito?",
+      "options": [
+        { "index": 1, "text": "Você será cobrado pelas horas de instância adicionais com base nas taxas padrão do Amazon RDS" },
+        { "index": 2, "text": "Você será cobrado uma taxa fixa mensal" },
+        { "index": 3, "text": "Você não será cobrado, o uso adicional é gratuito" },
+        { "index": 4, "text": "Você será cobrado apenas se exceder 1000 horas de instância" }
+      ],
+      "answer": 1
     }
   ]
 }
