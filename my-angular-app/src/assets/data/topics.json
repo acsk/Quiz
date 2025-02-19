@@ -139,6 +139,11 @@
       "id": 28,
       "name": "Amazon AppStream 2.0",
       "description": "Serviço que permite transmitir aplicativos de desktop para qualquer dispositivo diretamente do AWS."
+    },
+    {
+      "id": 29,
+      "name": "AWS Route 53",
+      "description": "Serviço de sistema de nomes de domínio (DNS) escalável e altamente disponível, projetado para oferecer roteamento de usuários finais para aplicativos da Internet."
     }
   ]
 }

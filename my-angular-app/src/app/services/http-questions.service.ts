@@ -33,6 +33,7 @@ export class HttpQuestionsService {
   private supportQuestionsUrl = 'assets/data/question/support.json';
   private vpcQuestionsUrl = 'assets/data/question/vpc.json';
   private wellArchitectedQuestionsUrl = 'assets/data/question/wellArchitected.json';
+  private route53QuestionsUrl = 'assets/data/question/route53.json';
 
   constructor(private http: HttpClient) { }
 
@@ -135,6 +136,9 @@ export class HttpQuestionsService {
   getWellArchitectedQuestions(): Observable<any> {
     return this.http.get<any>(this.wellArchitectedQuestionsUrl);
   }
+  getRoute53Questions(): Observable<any> {
+    return this.http.get<any>(this.route53QuestionsUrl);
+  }
 
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
@@ -170,7 +174,8 @@ export class HttpQuestionsService {
       sts: this.getSTSQuestions(),
       support: this.getSupportQuestions(),
       vpc: this.getVPCQuestions(),
-      wellArchitected: this.getWellArchitectedQuestions()
+      wellArchitected: this.getWellArchitectedQuestions(),
+      route53: this.getRoute53Questions()
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -198,7 +203,8 @@ export class HttpQuestionsService {
           ...responses.sts.questions,
           ...responses.support.questions,
           ...responses.vpc.questions,
-          ...responses.wellArchitected.questions
+          ...responses.wellArchitected.questions,
+          ...responses.route53.questions
         ].map((question: any) => ({
           ...question,
           topicName: topicsMap.get(question.topicId)
