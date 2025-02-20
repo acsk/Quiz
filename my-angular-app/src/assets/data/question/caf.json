@@ -1,0 +1,314 @@
+{
+  "questions": [
+    {
+      "id": "caf1",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Introdução ao AWS CAF",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "O que é o AWS Cloud Adoption Framework (AWS CAF)?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Um conjunto de práticas recomendadas para ajudar na transformação digital usando a AWS"
+        },
+        {
+          "index": 2,
+          "text": "Um serviço de banco de dados relacional"
+        },
+        {
+          "index": 3,
+          "text": "Um serviço de armazenamento de objetos"
+        },
+        {
+          "index": 4,
+          "text": "Um serviço de computação sem servidor"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf2",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Perspectivas do AWS CAF",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Quais são as seis perspectivas do AWS Cloud Adoption Framework (AWS CAF)?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Negócios, Pessoas, Governança, Plataforma, Segurança e Operações"
+        },
+        {
+          "index": 2,
+          "text": "Negócios, Tecnologia, Governança, Plataforma, Segurança e Operações"
+        },
+        {
+          "index": 3,
+          "text": "Negócios, Pessoas, Governança, Plataforma, Segurança e Desenvolvimento"
+        },
+        {
+          "index": 4,
+          "text": "Negócios, Pessoas, Governança, Plataforma, Segurança e Marketing"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf3",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Perspectiva de Negócios",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Qual é o foco da perspectiva de Negócios no AWS CAF?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Garantir que os investimentos na nuvem acelerem as ambições de transformação digital e resultados de negócios"
+        },
+        {
+          "index": 2,
+          "text": "Garantir a confidencialidade, integridade e disponibilidade dos dados e workloads na nuvem"
+        },
+        {
+          "index": 3,
+          "text": "Criar uma plataforma de nuvem híbrida, escalável e de nível empresarial"
+        },
+        {
+          "index": 4,
+          "text": "Garantir que os serviços de nuvem sejam entregues em um nível que atenda às necessidades de negócios"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf4",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Perspectiva de Pessoas",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Qual é o foco da perspectiva de Pessoas no AWS CAF?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Servir como uma ponte entre tecnologia e negócios, acelerando a jornada para a nuvem"
+        },
+        {
+          "index": 2,
+          "text": "Garantir a confidencialidade, integridade e disponibilidade dos dados e workloads na nuvem"
+        },
+        {
+          "index": 3,
+          "text": "Criar uma plataforma de nuvem híbrida, escalável e de nível empresarial"
+        },
+        {
+          "index": 4,
+          "text": "Garantir que os serviços de nuvem sejam entregues em um nível que atenda às necessidades de negócios"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf5",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Perspectiva de Governança",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Qual é o foco da perspectiva de Governança no AWS CAF?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Orquestrar iniciativas de nuvem enquanto maximiza os benefícios organizacionais e minimiza os riscos"
+        },
+        {
+          "index": 2,
+          "text": "Garantir a confidencialidade, integridade e disponibilidade dos dados e workloads na nuvem"
+        },
+        {
+          "index": 3,
+          "text": "Criar uma plataforma de nuvem híbrida, escalável e de nível empresarial"
+        },
+        {
+          "index": 4,
+          "text": "Garantir que os serviços de nuvem sejam entregues em um nível que atenda às necessidades de negócios"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf6",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Perspectiva de Plataforma",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Qual é o foco da perspectiva de Plataforma no AWS CAF?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Criar uma plataforma de nuvem híbrida, escalável e de nível empresarial"
+        },
+        {
+          "index": 2,
+          "text": "Garantir a confidencialidade, integridade e disponibilidade dos dados e workloads na nuvem"
+        },
+        {
+          "index": 3,
+          "text": "Orquestrar iniciativas de nuvem enquanto maximiza os benefícios organizacionais e minimiza os riscos"
+        },
+        {
+          "index": 4,
+          "text": "Garantir que os serviços de nuvem sejam entregues em um nível que atenda às necessidades de negócios"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf7",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Perspectiva de Segurança",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Qual é o foco da perspectiva de Segurança no AWS CAF?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Garantir a confidencialidade, integridade e disponibilidade dos dados e workloads na nuvem"
+        },
+        {
+          "index": 2,
+          "text": "Criar uma plataforma de nuvem híbrida, escalável e de nível empresarial"
+        },
+        {
+          "index": 3,
+          "text": "Orquestrar iniciativas de nuvem enquanto maximiza os benefícios organizacionais e minimiza os riscos"
+        },
+        {
+          "index": 4,
+          "text": "Garantir que os serviços de nuvem sejam entregues em um nível que atenda às necessidades de negócios"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf8",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Perspectiva de Operações",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Qual é o foco da perspectiva de Operações no AWS CAF?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Garantir que os serviços de nuvem sejam entregues em um nível que atenda às necessidades de negócios"
+        },
+        {
+          "index": 2,
+          "text": "Criar uma plataforma de nuvem híbrida, escalável e de nível empresarial"
+        },
+        {
+          "index": 3,
+          "text": "Orquestrar iniciativas de nuvem enquanto maximiza os benefícios organizacionais e minimiza os riscos"
+        },
+        {
+          "index": 4,
+          "text": "Garantir a confidencialidade, integridade e disponibilidade dos dados e workloads na nuvem"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf9",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Benefícios do AWS CAF",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Quais são alguns dos benefícios do AWS Cloud Adoption Framework (AWS CAF)?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Reduzir riscos comerciais, melhorar a performance ambiental, social e de governança, aumentar a receita e a eficiência operacional"
+        },
+        {
+          "index": 2,
+          "text": "Reduzir custos de armazenamento, melhorar a escalabilidade de aplicativos, aumentar a segurança e a confiabilidade"
+        },
+        {
+          "index": 3,
+          "text": "Reduzir a complexidade de gerenciamento, melhorar a integração de sistemas, aumentar a flexibilidade e a agilidade"
+        },
+        {
+          "index": 4,
+          "text": "Reduzir a dependência de fornecedores, melhorar a interoperabilidade, aumentar a inovação e a competitividade"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "caf10",
+      "topicId": 33,
+      "levelId": 2,
+      "subject": "Etapas do AWS CAF",
+      "tags": [
+        "AWS CAF",
+        "Transformação Digital",
+        "AWS"
+      ],
+      "question": "Quais são as etapas do AWS Cloud Adoption Framework (AWS CAF)?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Concepção, Alinhar, Lançamento e Dimensione"
+        },
+        {
+          "index": 2,
+          "text": "Planejamento, Implementação, Monitoramento e Otimização"
+        },
+        {
+          "index": 3,
+          "text": "Desenvolvimento, Teste, Implantação e Manutenção"
+        },
+        {
+          "index": 4,
+          "text": "Análise, Design, Construção e Operação"
+        }
+      ],
+      "answer": 1
+    }
+  ]
+}
