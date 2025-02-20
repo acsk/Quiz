@@ -825,6 +825,21 @@
           { "index": 4, "text": "Todos os mencionados acima" }
         ],
         "answer": 4
+      },
+      {
+        "id": "waf26",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Regras Baseadas em Taxa",
+        "tags": ["WAF", "Segurança", "AWS"],
+        "question": "Quais são as regras baseadas em taxa essenciais para proteção no AWS WAF?",
+        "options": [
+          { "index": 1, "text": "Regra Geral, Regra por URI, Regra por IP Malicioso" },
+          { "index": 2, "text": "Regra por URI, Regra por IP Malicioso, Regra por País" },
+          { "index": 3, "text": "Regra Geral, Regra por País, Regra por Dispositivo" },
+          { "index": 4, "text": "Regra por IP Malicioso, Regra por Dispositivo, Regra por País" }
+        ],
+        "answer": 1
       }
     ]
   
