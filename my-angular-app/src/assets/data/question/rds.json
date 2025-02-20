@@ -4,6 +4,8 @@
       "id": "rds1a2b3c4d5",
       "topicId": 3,
       "levelId": 1,
+      "subject": "Introdução ao Amazon RDS",
+      "tags": ["RDS", "Banco de Dados Relacional", "AWS"],
       "question": "O que é Amazon RDS?",
       "options": [
         { "index": 1, "text": "Serviço de armazenamento de objetos" },
@@ -17,6 +19,8 @@
       "id": "rds6e7f8g9h0",
       "topicId": 3,
       "levelId": 1,
+      "subject": "Função do Amazon RDS",
+      "tags": ["RDS", "Banco de Dados Relacional", "AWS"],
       "question": "Qual é a principal função do Amazon RDS?",
       "options": [
         { "index": 1, "text": "Armazenamento de objetos" },
@@ -30,6 +34,8 @@
       "id": "rds1i2j3k4l5",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Bancos de Dados Suportados",
+      "tags": ["RDS", "Banco de Dados Relacional", "AWS"],
       "question": "Quais bancos de dados são suportados pelo Amazon RDS?",
       "options": [
         { "index": 1, "text": "MySQL, PostgreSQL, MariaDB, Oracle, Microsoft SQL Server e Amazon Aurora" },
@@ -43,6 +49,8 @@
       "id": "rds6m7n8o9p0",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Vantagens do Multi-AZ",
+      "tags": ["RDS", "Multi-AZ", "Alta Disponibilidade"],
       "question": "Qual é a vantagem do Amazon RDS Multi-AZ?",
       "options": [
         { "index": 1, "text": "Melhorar a segurança" },
@@ -56,6 +64,8 @@
       "id": "rds1q2r3s4t5",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Amazon Aurora",
+      "tags": ["RDS", "Aurora", "Banco de Dados Relacional"],
       "question": "O que é Amazon Aurora?",
       "options": [
         { "index": 1, "text": "Um serviço de armazenamento de objetos" },
@@ -69,6 +79,8 @@
       "id": "rds6u7v8w9x0",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Read Replicas",
+      "tags": ["RDS", "Read Replicas", "Escalabilidade"],
       "question": "Qual é a principal característica do Amazon RDS Read Replicas?",
       "options": [
         { "index": 1, "text": "Aumentar a segurança" },
@@ -82,6 +94,8 @@
       "id": "rdsFreeTier1",
       "topicId": 3,
       "levelId": 1,
+      "subject": "Nível Gratuito",
+      "tags": ["RDS", "Nível Gratuito", "AWS"],
       "question": "O que o nível gratuito da AWS para o Amazon RDS oferece?",
       "options": [
         { "index": 1, "text": "Uso gratuito de microinstâncias de banco de dados mono-AZ que executam MySQL, MariaDB, PostgreSQL e SQL Server Express Edition" },
@@ -95,6 +109,8 @@
       "id": "rdsFreeTier2",
       "topicId": 3,
       "levelId": 1,
+      "subject": "Duração do Nível Gratuito",
+      "tags": ["RDS", "Nível Gratuito", "AWS"],
       "question": "Por quanto tempo o nível gratuito da AWS para o Amazon RDS estará disponível para mim?",
       "options": [
         { "index": 1, "text": "Por 6 meses a partir da data de criação da conta AWS" },
@@ -108,6 +124,8 @@
       "id": "rdsFreeTier3",
       "topicId": 3,
       "levelId": 1,
+      "subject": "Limitações do Nível Gratuito",
+      "tags": ["RDS", "Nível Gratuito", "AWS"],
       "question": "Eu posso executar mais de uma instância de banco de dados no nível de uso gratuito da AWS para Amazon RDS?",
       "options": [
         { "index": 1, "text": "Sim, mas o uso total combinado não pode exceder 750 horas de instância por mês" },
@@ -121,6 +139,8 @@
       "id": "rdsFreeTier4",
       "topicId": 3,
       "levelId": 1,
+      "subject": "Horas de Instância no Nível Gratuito",
+      "tags": ["RDS", "Nível Gratuito", "AWS"],
       "question": "Tenho acesso a 750 horas de instância para cada uma das microinstâncias de banco de dados MySQL, MariaDB, PostgreSQL e SQL Server no nível gratuito da AWS?",
       "options": [
         { "index": 1, "text": "Sim, 750 horas de instância para cada tipo de banco de dados" },
@@ -134,6 +154,8 @@
       "id": "rdsFreeTier5",
       "topicId": 3,
       "levelId": 1,
+      "subject": "Cobrança Excedente no Nível Gratuito",
+      "tags": ["RDS", "Nível Gratuito", "AWS"],
       "question": "Como sou cobrado quando o uso de horas de instâncias excede o benefício do nível gratuito?",
       "options": [
         { "index": 1, "text": "Você será cobrado pelas horas de instância adicionais com base nas taxas padrão do Amazon RDS" },
@@ -143,10 +165,12 @@
       ],
       "answer": 1
     },
-        {
+    {
       "id": "rdsMultiAZ1",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Implantações Multi-AZ",
+      "tags": ["RDS", "Multi-AZ", "Alta Disponibilidade"],
       "question": "Qual é o objetivo principal das implantações Multi-AZ no Amazon RDS?",
       "options": [
         { "index": 1, "text": "Alta disponibilidade" },
@@ -160,6 +184,8 @@
       "id": "rdsMultiRegion1",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Implantações de Múltiplas Regiões",
+      "tags": ["RDS", "Multi-Region", "Recuperação de Desastres"],
       "question": "Qual é o objetivo principal das implantações de múltiplas regiões no Amazon RDS?",
       "options": [
         { "index": 1, "text": "Alta disponibilidade" },
@@ -173,6 +199,8 @@
       "id": "rdsReadReplicas1",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Réplicas de Leitura",
+      "tags": ["RDS", "Read Replicas", "Escalabilidade"],
       "question": "Qual é o objetivo principal das réplicas de leitura no Amazon RDS?",
       "options": [
         { "index": 1, "text": "Alta disponibilidade" },
@@ -186,6 +214,8 @@
       "id": "rdsReplication1",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Replicação Multi-AZ",
+      "tags": ["RDS", "Multi-AZ", "Replicação"],
       "question": "Qual tipo de replicação é usado nas implantações Multi-AZ quando não realizadas com o Aurora?",
       "options": [
         { "index": 1, "text": "Replicação síncrona" },
@@ -199,6 +229,8 @@
       "id": "rdsReplication2",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Replicação de Múltiplas Regiões",
+      "tags": ["RDS", "Multi-Region", "Replicação"],
       "question": "Qual tipo de replicação é usado nas implantações de múltiplas regiões no Amazon RDS?",
       "options": [
         { "index": 1, "text": "Replicação síncrona" },
@@ -212,6 +244,8 @@
       "id": "rdsReplication3",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Replicação de Réplicas de Leitura",
+      "tags": ["RDS", "Read Replicas", "Replicação"],
       "question": "Qual tipo de replicação é usado nas réplicas de leitura no Amazon RDS?",
       "options": [
         { "index": 1, "text": "Replicação síncrona" },
@@ -225,6 +259,8 @@
       "id": "rdsBackup1",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Backups Automáticos Multi-AZ",
+      "tags": ["RDS", "Multi-AZ", "Backups"],
       "question": "Como são realizados os backups automáticos nas implantações Multi-AZ quando não realizadas com o Aurora?",
       "options": [
         { "index": 1, "text": "Usando a instância primária" },
@@ -238,6 +274,8 @@
       "id": "rdsBackup2",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Backups Automáticos Aurora",
+      "tags": ["RDS", "Aurora", "Backups"],
       "question": "Como são realizados os backups automáticos nas implantações Multi-AZ quando realizadas com o Aurora?",
       "options": [
         { "index": 1, "text": "Usando a instância primária" },
@@ -251,6 +289,8 @@
       "id": "rdsBackup3",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Backups Automáticos Multi-Region",
+      "tags": ["RDS", "Multi-Region", "Backups"],
       "question": "Como são realizados os backups automáticos nas implantações de múltiplas regiões no Amazon RDS?",
       "options": [
         { "index": 1, "text": "Usando a instância primária" },
@@ -264,6 +304,8 @@
       "id": "rdsFailover1",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Failover Multi-AZ",
+      "tags": ["RDS", "Multi-AZ", "Failover"],
       "question": "O que acontece durante um failover automático em uma implantação Multi-AZ no Amazon RDS quando não realizada com o Aurora?",
       "options": [
         { "index": 1, "text": "A instância primária é promovida para a instância de espera" },
@@ -277,6 +319,8 @@
       "id": "rdsFailover2",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Failover Multi-AZ com Aurora",
+      "tags": ["RDS", "Multi-AZ", "Aurora", "Failover"],
       "question": "O que acontece durante um failover automático em uma implantação Multi-AZ no Amazon RDS quando realizada com o Aurora?",
       "options": [
         { "index": 1, "text": "A instância primária é promovida para a instância de espera" },
@@ -290,6 +334,8 @@
       "id": "rdsFailover3",
       "topicId": 3,
       "levelId": 2,
+      "subject": "Failover Multi-Região com Aurora",
+      "tags": ["RDS", "Multi-Região", "Aurora", "Failover"],
       "question": "O que acontece durante um failover automático em uma implantação de múltiplas regiões no Amazon RDS quando realizada com o Aurora?",
       "options": [
         { "index": 1, "text": "A instância primária é promovida para a instância de espera" },
@@ -298,6 +344,81 @@
         { "index": 4, "text": "Uma região secundária é promovida para ser a principal" }
       ],
       "answer": 4
+    },
+    {
+      "id": "rdsFailoverAuto1",
+      "topicId": 3,
+      "levelId": 2,
+      "subject": "Failover Automático Multi-AZ",
+      "tags": ["RDS", "Multi-AZ", "Failover"],
+      "question": "O que acontece durante um failover automático multi-AZ no Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "A instância primária é promovida para a instância de espera." },
+        { "index": 2, "text": "A instância de espera é promovida para a instância primária." },
+        { "index": 3, "text": "A instância de réplica de leitura é promovida para a instância primária." },
+        { "index": 4, "text": "A instância primária é promovida para a instância de réplica de leitura." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "rdsManagedService1",
+      "topicId": 3,
+      "levelId": 1,
+      "subject": "Serviço Gerenciado",
+      "tags": ["RDS", "Serviço Gerenciado", "AWS"],
+      "question": "Qual é a principal função do Amazon RDS como um serviço gerenciado?",
+      "options": [
+        { "index": 1, "text": "Facilitar a configuração, operação e escalabilidade de um banco de dados relacional na nuvem." },
+        { "index": 2, "text": "Facilitar a configuração, operação e escalabilidade de um banco de dados NoSQL na nuvem." },
+        { "index": 3, "text": "Facilitar a configuração, operação e escalabilidade de um serviço de armazenamento de objetos na nuvem." },
+        { "index": 4, "text": "Facilitar a configuração, operação e escalabilidade de um serviço de computação sem servidor na nuvem." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "auroraGlobalDB1",
+      "topicId": 3,
+      "levelId": 2,
+      "subject": "Aurora Global Database - Failover Manual",
+      "tags": ["RDS", "Aurora", "Failover"],
+      "question": "O que permite o Aurora Global Database em termos de failover?",
+      "options": [
+        { "index": 1, "text": "Executar um failover automático para o cluster de banco de dados em uma região secundária." },
+        { "index": 2, "text": "Executar um failover manual para o cluster de banco de dados em uma região secundária." },
+        { "index": 3, "text": "Executar um failover automático para o cluster de banco de dados em uma região primária." },
+        { "index": 4, "text": "Executar um failover manual para o cluster de banco de dados em uma região primária." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "auroraGlobalDB2",
+      "topicId": 3,
+      "levelId": 2,
+      "subject": "Alta Disponibilidade com Aurora Global Database",
+      "tags": ["RDS", "Aurora", "Alta Disponibilidade"],
+      "question": "Como é possível aumentar a disponibilidade das aplicações usando o Aurora Global Database?",
+      "options": [
+        { "index": 1, "text": "Combinando o Aurora Global Database com uma camada de aplicação implementada em várias regiões." },
+        { "index": 2, "text": "Combinando o Aurora Global Database com uma camada de aplicação implementada em uma única região." },
+        { "index": 3, "text": "Combinando o Aurora Global Database com uma camada de aplicação implementada em várias zonas de disponibilidade." },
+        { "index": 4, "text": "Combinando o Aurora Global Database com uma camada de aplicação implementada em uma única zona de disponibilidade." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "rdsHighAvailability1",
+      "topicId": 3,
+      "levelId": 1,
+      "subject": "Ativação de Alta Disponibilidade no Amazon RDS",
+      "tags": ["RDS", "Alta Disponibilidade", "AWS"],
+      "question": "Quais são os passos para ativar a alta disponibilidade no Amazon RDS?",
+      "options": [
+        { "index": 1, "text": "No menu de serviços, clicar em RDS, selecionar a instância que deseja configurar, no painel de detalhes da instância, clicar em 'Modificar', na seção de configuração, selecionar 'Multi-AZ' como opção de disponibilidade." },
+        { "index": 2, "text": "No menu de serviços, clicar em EC2, selecionar a instância que deseja configurar, no painel de detalhes da instância, clicar em 'Modificar', na seção de configuração, selecionar 'Multi-AZ' como opção de disponibilidade." },
+        { "index": 3, "text": "No menu de serviços, clicar em S3, selecionar a instância que deseja configurar, no painel de detalhes da instância, clicar em 'Modificar', na seção de configuração, selecionar 'Multi-AZ' como opção de disponibilidade." },
+        { "index": 4, "text": "No menu de serviços, clicar em Lambda, selecionar a instância que deseja configurar, no painel de detalhes da instância, clicar em 'Modificar', na seção de configuração, selecionar 'Multi-AZ' como opção de disponibilidade." }
+      ],
+      "answer": 1
     }
   ]
 }

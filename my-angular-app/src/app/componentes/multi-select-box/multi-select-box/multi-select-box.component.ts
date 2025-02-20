@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter, HostListener, OnInit } from '@angular/core';
-import { Directive, ElementRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener, OnInit, TemplateRef, ViewChild, ElementRef } from '@angular/core';
+import { Directive } from '@angular/core';
 
 @Component({
   selector: 'app-multi-select-box',
@@ -8,8 +8,10 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class MultiSelectBoxComponent implements OnInit {
   @Input() items: any[] = [];
-  @Input() disabled: boolean = false; // Adicionar a propriedade disabled
-  @Output() selectionChange = new EventEmitter<number[]>();
+  @Input() disabled: boolean = false;
+  @Input() itemTemplate: TemplateRef<any> | null = null;
+  @Output() selectionChange = new EventEmitter<any[]>();
+  @ViewChild('searchInput') searchInput!: ElementRef;
 
   selectedItems: any[] = [];
   dropdownOpen = false;
@@ -19,7 +21,6 @@ export class MultiSelectBoxComponent implements OnInit {
 
   ngOnInit() {
     this.filteredItems = this.items;
-
   }
 
   toggleDropdown() {
@@ -27,6 +28,9 @@ export class MultiSelectBoxComponent implements OnInit {
       this.dropdownOpen = !this.dropdownOpen;
       if (this.dropdownOpen) {
         this.filteredItems = this.items;
+        setTimeout(() => {
+          this.searchInput.nativeElement.focus();
+        }, 0);
       }
     }
   }
@@ -36,7 +40,10 @@ export class MultiSelectBoxComponent implements OnInit {
   }
 
   filterItems() {
-    this.filteredItems = this.items.filter(item => item.name.toLowerCase().includes(this.searchText.toLowerCase()));
+    this.filteredItems = this.items.filter(item => {
+      const itemName = item.name || item; // Use item diretamente se item.name não estiver presente
+      return itemName.toLowerCase().includes(this.searchText.toLowerCase());
+    });
   }
 
   isSelected(item: any): boolean {
@@ -49,7 +56,7 @@ export class MultiSelectBoxComponent implements OnInit {
     } else {
       this.selectedItems.push(item);
     }
-    this.selectionChange.emit(this.selectedItems.map(i => i.id));
+    this.selectionChange.emit(this.selectedItems);
     this.updateSelectAllState();
   }
 
@@ -59,7 +66,7 @@ export class MultiSelectBoxComponent implements OnInit {
     } else {
       this.selectedItems = [...this.items];
     }
-    this.selectionChange.emit(this.selectedItems.map(i => i.id));
+    this.selectionChange.emit(this.selectedItems);
     this.allSelected = !this.allSelected;
   }
 
