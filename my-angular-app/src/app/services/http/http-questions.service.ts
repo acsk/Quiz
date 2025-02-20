@@ -36,6 +36,7 @@ export class HttpQuestionsService {
   private route53QuestionsUrl = 'assets/data/question/route53.json';
   private cloudTrailQuestionsUrl = 'assets/data/question/cloudTrail.json';
   private wafQuestionsUrl = 'assets/data/question/waf.json';
+  private cafQuestionsUrl = 'assets/data/question/caf.json';
 
   constructor(private http: HttpClient) { }
 
@@ -147,6 +148,9 @@ export class HttpQuestionsService {
   getWAFQuestions(): Observable<any> {
     return this.http.get<any>(this.wafQuestionsUrl);
   }
+  getCAFQuestions(): Observable<any> {
+    return this.http.get<any>(this.cafQuestionsUrl);
+  }
 
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
@@ -185,7 +189,8 @@ export class HttpQuestionsService {
       wellArchitected: this.getWellArchitectedQuestions(),
       route53: this.getRoute53Questions(),
       cloudTrail: this.getCloudTrailQuestions(),
-      waf: this.getWAFQuestions() // Adicionado aqui
+      waf: this.getWAFQuestions(),
+      caf: this.getCAFQuestions()
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -216,7 +221,8 @@ export class HttpQuestionsService {
           ...responses.wellArchitected.questions,
           ...responses.route53.questions,
           ...responses.cloudTrail.questions,
-          ...responses.waf.questions // Adicionado aqui
+          ...responses.waf.questions,
+          ...responses.caf.questions
         ].map((question: any) => ({
           ...question,
           topicName: topicsMap.get(question.topicId)
