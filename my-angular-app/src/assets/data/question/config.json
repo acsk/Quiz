@@ -1,0 +1,126 @@
+{
+  "questions": [
+    
+      {
+        "id": "config1",
+        "topicId": 32,
+        "levelId": 2,
+        "subject": "Introdução ao AWS Config",
+        "tags": ["AWS Config", "Segurança", "AWS"],
+        "question": "O que é o AWS Config?",
+        "options": [
+          { "index": 1, "text": "Um serviço que fornece uma visão detalhada da configuração dos recursos AWS em sua conta" },
+          { "index": 2, "text": "Um serviço de banco de dados relacional" },
+          { "index": 3, "text": "Um serviço de armazenamento de objetos" },
+          { "index": 4, "text": "Um serviço de computação sem servidor" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "config2",
+        "topicId": 32,
+        "levelId": 2,
+        "subject": "Considerações",
+        "tags": ["AWS Config", "Segurança", "AWS"],
+        "question": "Quais são os requisitos para usar o AWS Config?",
+        "options": [
+          { "index": 1, "text": "Conta da AWS, bucket do Amazon S3, tópico do Amazon SNS e perfil do IAM" },
+          { "index": 2, "text": "Conta da AWS, bucket do Amazon S3 e instância do EC2" },
+          { "index": 3, "text": "Conta da AWS, tópico do Amazon SNS e banco de dados RDS" },
+          { "index": 4, "text": "Conta da AWS, bucket do Amazon S3 e serviço Lambda" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "config3",
+        "topicId": 32,
+        "levelId": 2,
+        "subject": "Administração de Recursos",
+        "tags": ["AWS Config", "Segurança", "AWS"],
+        "question": "Como o AWS Config ajuda na administração de recursos?",
+        "options": [
+          { "index": 1, "text": "Notificando sempre que recursos forem criados, modificados ou excluídos" },
+          { "index": 2, "text": "Armazenando dados em um banco de dados relacional" },
+          { "index": 3, "text": "Executando código em resposta a eventos" },
+          { "index": 4, "text": "Gerenciando a escalabilidade de aplicativos" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "config4",
+        "topicId": 32,
+        "levelId": 2,
+        "subject": "Auditoria e Compatibilidade",
+        "tags": ["AWS Config", "Segurança", "AWS"],
+        "question": "Como o AWS Config ajuda na auditoria e compatibilidade?",
+        "options": [
+          { "index": 1, "text": "Fornecendo acesso ao histórico de configurações dos recursos" },
+          { "index": 2, "text": "Executando backups automáticos" },
+          { "index": 3, "text": "Gerenciando a escalabilidade de aplicativos" },
+          { "index": 4, "text": "Armazenando dados em um banco de dados relacional" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "config5",
+        "topicId": 32,
+        "levelId": 2,
+        "subject": "Gerenciamento de Alterações",
+        "tags": ["AWS Config", "Segurança", "AWS"],
+        "question": "Como o AWS Config ajuda a gerenciar e solucionar problemas de alteração de configuração?",
+        "options": [
+          { "index": 1, "text": "Mostrando como os recursos estão relacionados e fornecendo histórico de configurações" },
+          { "index": 2, "text": "Executando backups automáticos" },
+          { "index": 3, "text": "Gerenciando a escalabilidade de aplicativos" },
+          { "index": 4, "text": "Armazenando dados em um banco de dados relacional" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "config6",
+        "topicId": 32,
+        "levelId": 2,
+        "subject": "Análise de Segurança",
+        "tags": ["AWS Config", "Segurança", "AWS"],
+        "question": "Como o AWS Config ajuda na análise de segurança?",
+        "options": [
+          { "index": 1, "text": "Fornecendo informações históricas detalhadas sobre as configurações dos recursos" },
+          { "index": 2, "text": "Executando backups automáticos" },
+          { "index": 3, "text": "Gerenciando a escalabilidade de aplicativos" },
+          { "index": 4, "text": "Armazenando dados em um banco de dados relacional" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "config7",
+        "topicId": 32,
+        "levelId": 2,
+        "subject": "Soluções para Parceiros",
+        "tags": ["AWS Config", "Segurança", "AWS"],
+        "question": "Como o AWS Config se integra com soluções de parceiros?",
+        "options": [
+          { "index": 1, "text": "Fazendo parceria com especialistas terceirizados em registro e análise" },
+          { "index": 2, "text": "Executando backups automáticos" },
+          { "index": 3, "text": "Gerenciando a escalabilidade de aplicativos" },
+          { "index": 4, "text": "Armazenando dados em um banco de dados relacional" }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "config8",
+        "topicId": 32,
+        "levelId": 2,
+        "subject": "Atributos do AWS Config",
+        "tags": ["AWS Config", "Segurança", "AWS"],
+        "question": "Quais são alguns dos atributos do AWS Config?",
+        "options": [
+          { "index": 1, "text": "Gerenciamento de recursos, pacotes de regras e conformidade, correção, agregadores e consultas avançadas" },
+          { "index": 2, "text": "Gerenciamento de recursos, execução de código, armazenamento de dados e análise de logs" },
+          { "index": 3, "text": "Gerenciamento de recursos, escalabilidade de aplicativos, execução de código e armazenamento de dados" },
+          { "index": 4, "text": "Gerenciamento de recursos, execução de código, análise de logs e armazenamento de dados" }
+        ],
+        "answer": 1
+      }
+    ]
+  
+}

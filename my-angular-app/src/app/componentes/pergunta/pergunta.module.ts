@@ -8,7 +8,7 @@ import { MultiSelectBoxModule } from '../multi-select-box/multi-select-box.modul
 
 @NgModule({
   declarations: [
-    PerguntaComponent
+    PerguntaComponent,
   ],
   imports: [
     CommonModule,

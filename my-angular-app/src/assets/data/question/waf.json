@@ -1,0 +1,846 @@
+{
+  "questions": [
+    
+      {
+        "id": "waf1",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Introdução ao AWS WAF",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "O que é o AWS WAF?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Um serviço de banco de dados da AWS"
+          },
+          {
+            "index": 2,
+            "text": "Um firewall de aplicativos web que protege contra ataques"
+          },
+          {
+            "index": 3,
+            "text": "Um serviço de armazenamento em nuvem"
+          },
+          {
+            "index": 4,
+            "text": "Um serviço de análise de dados"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf2",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Funcionamento do AWS WAF",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Como o AWS WAF bloqueia ou permite o tráfego?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Ele armazena as solicitações em um banco de dados"
+          },
+          {
+            "index": 2,
+            "text": "Ele envia as solicitações ao AWS WAF para verificar o cumprimento das regras"
+          },
+          {
+            "index": 3,
+            "text": "Ele redireciona as solicitações para um servidor de backup"
+          },
+          {
+            "index": 4,
+            "text": "Ele ignora as solicitações que não cumprem as regras"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf3",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Proteção com AWS WAF",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Como o AWS WAF protege sites ou aplicativos web?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Através de integração com Amazon CloudFront e Application Load Balancer"
+          },
+          {
+            "index": 2,
+            "text": "Usando apenas firewalls tradicionais"
+          },
+          {
+            "index": 3,
+            "text": "Limitando o acesso a usuários registrados"
+          },
+          {
+            "index": 4,
+            "text": "Encriptando todos os dados automaticamente"
+          }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "waf4",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Uso do AWS WAF",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Posso utilizar o AWS WAF para proteger sites que não estão hospedados na AWS?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não, apenas sites hospedados na AWS"
+          },
+          {
+            "index": 2,
+            "text": "Sim, através da integração com o Amazon CloudFront"
+          },
+          {
+            "index": 3,
+            "text": "Apenas se o site usar HTTPS"
+          },
+          {
+            "index": 4,
+            "text": "Somente se o site estiver em uma rede privada"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf5",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Tipos de Ataques",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Que tipos de ataques o AWS WAF pode ajudar a interromper?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Apenas ataques de phishing"
+          },
+          {
+            "index": 2,
+            "text": "Injeção de SQL e cross-site scripting (XSS)"
+          },
+          {
+            "index": 3,
+            "text": "Apenas ataques de negação de serviço (DDoS)"
+          },
+          {
+            "index": 4,
+            "text": "Apenas ataques de força bruta"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf6",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Auditoria e Conformidade",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Posso obter um histórico de todas as chamadas de API do AWS WAF realizadas na minha conta?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não, isso não é possível"
+          },
+          {
+            "index": 2,
+            "text": "Sim, ativando o AWS CloudTrail"
+          },
+          {
+            "index": 3,
+            "text": "Apenas se você usar o Amazon CloudFront"
+          },
+          {
+            "index": 4,
+            "text": "Somente se o site estiver em uma rede privada"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf7",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Compatibilidade com IPv6",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "O AWS WAF é compatível com o IPv6?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não, apenas IPv4"
+          },
+          {
+            "index": 2,
+            "text": "Sim, ele inspeciona solicitações HTTP/S de endereços IPv6 e IPv4"
+          },
+          {
+            "index": 3,
+            "text": "Apenas em regiões específicas"
+          },
+          {
+            "index": 4,
+            "text": "Somente se configurado manualmente"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf8",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Condições de Correspondência",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "A condição de correspondência IPSet de uma regra do AWS WAF é compatível com o IPv6?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não, apenas IPv4"
+          },
+          {
+            "index": 2,
+            "text": "Sim, é possível configurar novas condições de correspondência IPv6"
+          },
+          {
+            "index": 3,
+            "text": "Apenas em WebACLs novos"
+          },
+          {
+            "index": 4,
+            "text": "Somente se o site estiver em uma rede privada"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf9",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Visibilidade de Solicitações",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Posso esperar ver o endereço IPv6 exibido nas solicitações de exemplo do AWS WAF onde for aplicável?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não, apenas IPv4"
+          },
+          {
+            "index": 2,
+            "text": "Sim, as solicitações de exemplo mostrarão o endereço IPv6 onde for aplicável"
+          },
+          {
+            "index": 3,
+            "text": "Apenas se configurado manualmente"
+          },
+          {
+            "index": 4,
+            "text": "Somente em regiões específicas"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf10",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Recursos do AWS WAF",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Posso usar o IPv6 com todos os recursos do AWS WAF?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não, apenas alguns recursos"
+          },
+          {
+            "index": 2,
+            "text": "Sim, todos os recursos atuais são compatíveis com IPv6 e IPv4"
+          },
+          {
+            "index": 3,
+            "text": "Apenas se o site estiver em uma rede privada"
+          },
+          {
+            "index": 4,
+            "text": "Somente em regiões específicas"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf11",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Serviços Compatíveis",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Quais os serviços compatíveis com o AWS WAF?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Apenas Amazon CloudFront"
+          },
+          {
+            "index": 2,
+            "text": "Amazon CloudFront, Application Load Balancer (ALB) e Amazon API Gateway"
+          },
+          {
+            "index": 3,
+            "text": "Apenas Amazon S3"
+          },
+          {
+            "index": 4,
+            "text": "Apenas Amazon EC2"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf12",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Regiões Disponíveis",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Em que regiões o AWS WAF no ALB está disponível?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Apenas na região Leste dos EUA (Norte da Virgínia)"
+          },
+          {
+            "index": 2,
+            "text": "Em todas as regiões da AWS"
+          },
+          {
+            "index": 3,
+            "text": "Apenas em regiões específicas listadas na documentação da AWS"
+          },
+          {
+            "index": 4,
+            "text": "Apenas na região Oeste dos EUA (Oregon)"
+          }
+        ],
+        "answer": 3
+      },
+      {
+        "id": "waf13",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Conformidade com HIPAA",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "O AWS WAF é qualificado pela HIPAA?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não"
+          },
+          {
+            "index": 2,
+            "text": "Sim, ele é um serviço qualificado pela HIPAA"
+          },
+          {
+            "index": 3,
+            "text": "Apenas em regiões específicas"
+          },
+          {
+            "index": 4,
+            "text": "Somente se configurado manualmente"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf14",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Definição de Preço",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Como funciona a definição de preço do AWS WAF?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Com base no número de ACLs da web, regras e solicitações da web"
+          },
+          {
+            "index": 2,
+            "text": "Com base no número de servidores protegidos"
+          },
+          {
+            "index": 3,
+            "text": "Com base no número de usuários finais"
+          },
+          {
+            "index": 4,
+            "text": "Com base no número de regiões utilizadas"
+          }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "waf15",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Regras Baseadas em Taxa",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "O que é a regra baseada em taxa do AWS WAF?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Uma regra que bloqueia automaticamente todos os IPs"
+          },
+          {
+            "index": 2,
+            "text": "Uma regra que permite especificar o número de solicitações web permitidas por IP de cliente em um período de cinco minutos"
+          },
+          {
+            "index": 3,
+            "text": "Uma regra que limita o acesso a usuários registrados"
+          },
+          {
+            "index": 4,
+            "text": "Uma regra que encripta todas as solicitações"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf16",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Diferença entre Regras",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Qual a diferença entre uma regra baseada em taxa e uma regra normal do AWS WAF?",
+        "options": [
+          {
+            "index": 1,
+            "text": "As regras baseadas em taxa não podem bloquear IPs"
+          },
+          {
+            "index": 2,
+            "text": "As regras baseadas em taxa podem configurar um limite baseado em taxa"
+          },
+          {
+            "index": 3,
+            "text": "As regras normais são mais caras"
+          },
+          {
+            "index": 4,
+            "text": "As regras normais não podem ser usadas com o Amazon CloudFront"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf17",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Custo das Regras",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Qual é o custo da regra baseada em taxa?",
+        "options": [
+          {
+            "index": 1,
+            "text": "2 USD por regra por WebACL por mês"
+          },
+          {
+            "index": 2,
+            "text": "1 USD por regra por WebACL por mês"
+          },
+          {
+            "index": 3,
+            "text": "5 USD por regra por WebACL por mês"
+          },
+          {
+            "index": 4,
+            "text": "10 USD por regra por WebACL por mês"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf18",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Casos de Uso",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Quais são os casos de uso da regra baseada em taxa?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Apenas para mitigar ataques de phishing"
+          },
+          {
+            "index": 2,
+            "text": "Para incluir na lista de bloqueio ou contar endereços IP que excedem a taxa limite"
+          },
+          {
+            "index": 3,
+            "text": "Para encriptar todas as solicitações"
+          },
+          {
+            "index": 4,
+            "text": "Para limitar o acesso a usuários registrados"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf19",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Condições de Correspondência",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Existem condições de correspondência atuais compatíveis com a regra baseada em taxa?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não"
+          },
+          {
+            "index": 2,
+            "text": "Sim, as regras baseadas em taxa são compatíveis com as condições de correspondência atuais do AWS WAF"
+          },
+          {
+            "index": 3,
+            "text": "Apenas em regiões específicas"
+          },
+          {
+            "index": 4,
+            "text": "Somente se configurado manualmente"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf20",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Mitigação de Ataques",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Posso usar uma regra baseada em taxa para mitigar ataques DDoS na camada web?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Não"
+          },
+          {
+            "index": 2,
+            "text": "Sim, as regras baseadas em taxa foram criadas para proteger contra casos de uso como ataques DDoS na camada web"
+          },
+          {
+            "index": 3,
+            "text": "Apenas se o site estiver em uma rede privada"
+          },
+          {
+            "index": 4,
+            "text": "Somente em regiões específicas"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf21",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Visibilidade de Regras",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Quais os recursos de visibilidade oferecidos pelas regras baseadas em taxa?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Nenhum"
+          },
+          {
+            "index": 2,
+            "text": "Visibilidade dos endereços IP bloqueados como resultado da regra baseada em taxa"
+          },
+          {
+            "index": 3,
+            "text": "Apenas visibilidade de solicitações HTTP"
+          },
+          {
+            "index": 4,
+            "text": "Somente visibilidade de solicitações HTTPS"
+          }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "waf22",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Configuração de Regras",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Posso usar uma regra baseada em taxa para limitar o acesso a determinadas partes de uma página web?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Sim. Veja um exemplo a seguir. Suponha que você queira limitar as solicitações na página de login em um site. Para fazer isso, você precisa adicionar a seguinte condição de correspondência de string a uma regra baseada em taxa: A parte da solicitação que deve ser filtrada é “URI”. O tipo de correspondência é “Starts with”. O valor a ser correspondido é “/login” (algo que identifique a página de login na parte do URI da solicitação web). Além disso, você pode especificar um limite de taxa de, por exemplo, 15.000 solicitações por cinco minutos. A adição dessa regra baseada em taxa a uma lista de controle de acesso web limitará as solicitações na página de login por endereço IP sem afetar o resto do site."
+          },
+          {
+            "index": 2,
+            "text": "Não, isso não é possível."
+          },
+          {
+            "index": 3,
+            "text": "Apenas se o site estiver em uma rede privada."
+          },
+          {
+            "index": 4,
+            "text": "Somente em regiões específicas."
+          }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "waf23",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Gerenciamento de Regras",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Posso isentar alguns intervalos IP de origem com alto tráfego da inclusão na lista de bloqueio por regras baseadas em taxa?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Sim. Você pode fazer isso com uma condição de lista de permissões de IPs dentro da regra baseada em taxa."
+          },
+          {
+            "index": 2,
+            "text": "Não, isso não é possível."
+          },
+          {
+            "index": 3,
+            "text": "Apenas se o site estiver em uma rede privada."
+          },
+          {
+            "index": 4,
+            "text": "Somente em regiões específicas."
+          }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "waf24",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Precisão do GeoIP",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Qual é a precisão do banco de dados GeoIP?",
+        "options": [
+          {
+            "index": 1,
+            "text": "A precisão do endereço IP para o banco de dados de pesquisa do país varia por região. Com base em testes recentes, nossa precisão geral do endereço IP para mapeamento de país é de 99,8%."
+          },
+          {
+            "index": 2,
+            "text": "A precisão é de 50%."
+          },
+          {
+            "index": 3,
+            "text": "A precisão é de 75%."
+          },
+          {
+            "index": 4,
+            "text": "A precisão é de 90%."
+          }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "waf23",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Gerenciamento de Regras",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Como posso gerenciar regras baseadas em taxa no AWS WAF?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Através do console de gerenciamento da AWS"
+          },
+          {
+            "index": 2,
+            "text": "Usando a API do AWS WAF"
+          },
+          {
+            "index": 3,
+            "text": "Apenas se o site estiver em uma rede privada"
+          },
+          {
+            "index": 4,
+            "text": "Somente em regiões específicas"
+          }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "waf24",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Monitoramento de Regras",
+        "tags": [
+          "WAF",
+          "Segurança",
+          "AWS"
+        ],
+        "question": "Como posso monitorar o desempenho das regras baseadas em taxa no AWS WAF?",
+        "options": [
+          {
+            "index": 1,
+            "text": "Através do console de gerenciamento da AWS"
+          },
+          {
+            "index": 2,
+            "text": "Usando a API do AWS WAF"
+          },
+          {
+            "index": 3,
+            "text": "Apenas se o site estiver em uma rede privada"
+          },
+          {
+            "index": 4,
+            "text": "Somente em regiões específicas"
+          },
+          {
+            "index": 5,
+            "text": "Através de métricas e logs do Amazon CloudWatch"
+          }
+        ],
+        "answer": 5
+      },
+      {
+        "id": "waf25",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Tipos de Ataques",
+        "tags": ["WAF", "Segurança", "AWS"],
+        "question": "Quais tipos de ataques o AWS WAF pode ajudar a bloquear?",
+        "options": [
+          { "index": 1, "text": "Injeção de SQL, cross-site scripting (XSS) e ataques de força bruta" },
+          { "index": 2, "text": "Ataques DDoS e bots automatizados" },
+          { "index": 3, "text": "Ataques Man-in-the-middle" },
+          { "index": 4, "text": "Todos os mencionados acima" }
+        ],
+        "answer": 4
+      },
+      {
+        "id": "waf26",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Regras Baseadas em Taxa",
+        "tags": ["WAF", "Segurança", "AWS"],
+        "question": "Quais são as regras baseadas em taxa essenciais para proteção no AWS WAF?",
+        "options": [
+          { "index": 1, "text": "Regra Geral, Regra por URI, Regra por IP Malicioso" },
+          { "index": 2, "text": "Regra por URI, Regra por IP Malicioso, Regra por País" },
+          { "index": 3, "text": "Regra Geral, Regra por País, Regra por Dispositivo" },
+          { "index": 4, "text": "Regra por IP Malicioso, Regra por Dispositivo, Regra por País" }
+        ],
+        "answer": 1
+      }
+    ]
+  
+}

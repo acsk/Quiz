@@ -1,0 +1,134 @@
+{
+  "questions": [
+    {
+      "id": "route531a2b3c4d5",
+      "topicId": 29,
+      "levelId": 1,
+      "question": "O que é Amazon Route 53?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço de banco de dados relacional" },
+        { "index": 3, "text": "Serviço de DNS (Sistema de Nomes de Domínio) da AWS" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "route532a2b3c4d5",
+      "topicId": 29,
+      "levelId": 1,
+      "question": "Qual das seguintes funcionalidades é oferecida pelo Amazon Route 53?",
+      "options": [
+        { "index": 1, "text": "Gerenciamento de identidades" },
+        { "index": 2, "text": "Registro de domínio" },
+        { "index": 3, "text": "Armazenamento de dados" },
+        { "index": 4, "text": "Computação sem servidor" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "route533a2b3c4d5",
+      "topicId": 29,
+      "levelId": 2,
+      "question": "O que o Amazon Route 53 permite fazer?",
+      "options": [
+        { "index": 1, "text": "Registrar nomes de domínio" },
+        { "index": 2, "text": "Gerenciar o tráfego da web" },
+        { "index": 3, "text": "Verificar a integridade dos recursos" },
+        { "index": 4, "text": "Todas as alternativas acima" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "route534a2b3c4d5",
+      "topicId": 29,
+      "levelId": 2,
+      "question": "Qual das seguintes opções é uma funcionalidade do Amazon Route 53?",
+      "options": [
+        { "index": 1, "text": "Roteamento de failover" },
+        { "index": 2, "text": "Armazenamento de objetos" },
+        { "index": 3, "text": "Gerenciamento de identidades" },
+        { "index": 4, "text": "Computação sem servidor" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "route535a2b3c4d5",
+      "topicId": 29,
+      "levelId": 2,
+      "question": "O Amazon Route 53 oferece roteamento com base em qual das seguintes opções?",
+      "options": [
+        { "index": 1, "text": "Geolocalização" },
+        { "index": 2, "text": "Armazenamento" },
+        { "index": 3, "text": "Computação" },
+        { "index": 4, "text": "Identidades" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "route536a2b3c4d5",
+      "topicId": 29,
+      "levelId": 3,
+      "question": "Qual é uma das vantagens do Amazon Route 53?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de dados em grande escala" },
+        { "index": 2, "text": "Gerenciamento de identidades" },
+        { "index": 3, "text": "Escalabilidade e alta disponibilidade" },
+        { "index": 4, "text": "Computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "route537a2b3c4d5",
+      "topicId": 29,
+      "levelId": 3,
+      "question": "O que o Amazon Route 53 permite fazer com registros DNS?",
+      "options": [
+        { "index": 1, "text": "Criar registros DNS para um novo domínio" },
+        { "index": 2, "text": "Transferir registros DNS para um domínio atual" },
+        { "index": 3, "text": "Ambas as alternativas acima" },
+        { "index": 4, "text": "Nenhuma das alternativas acima" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "route538a2b3c4d5",
+      "topicId": 29,
+      "levelId": 3,
+      "question": "Qual das seguintes funcionalidades é oferecida pelo Amazon Route 53?",
+      "options": [
+        { "index": 1, "text": "Verificação da disponibilidade dos recursos" },
+        { "index": 2, "text": "Armazenamento de objetos" },
+        { "index": 3, "text": "Computação sem servidor" },
+        { "index": 4, "text": "Gerenciamento de identidades" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "route539a2b3c4d5",
+      "topicId": 29,
+      "levelId": 3,
+      "question": "Qual das seguintes opções descreve uma funcionalidade do Amazon Route 53?",
+      "options": [
+        { "index": 1, "text": "Notificações quando um recurso se torna indisponível" },
+        { "index": 2, "text": "Armazenamento de dados em grande escala" },
+        { "index": 3, "text": "Computação sem servidor" },
+        { "index": 4, "text": "Gerenciamento de identidades" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "route5310a2b3c4d5",
+      "topicId": 29,
+      "levelId": 3,
+      "question": "Qual das seguintes opções é um tipo de roteamento oferecido pelo Amazon Route 53?",
+      "options": [
+        { "index": 1, "text": "Roteamento simples" },
+        { "index": 2, "text": "Roteamento ponderado" },
+        { "index": 3, "text": "Ambas as alternativas acima" },
+        { "index": 4, "text": "Nenhuma das alternativas acima" }
+      ],
+      "answer": 3
+    }
+  ]
+}

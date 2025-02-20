@@ -699,6 +699,256 @@
                 }
             ],
             "answer": 1
+        },
+        {
+            "id": "s3standard1",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Qual é a principal característica do S3 Standard?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento de uso geral para qualquer tipo de dados, usado normalmente para dados acessados com frequência"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de dados raramente acessados"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de dados em uma única zona de disponibilidade"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3intelligent1",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Qual é a principal vantagem do S3 Intelligent-Tiering?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Economia automática de custos para dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de dados de alta frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de dados em uma única zona de disponibilidade"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de dados raramente acessados"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3standardIA1",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Para que tipo de dados o S3 Standard - Infrequent Access é ideal?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Dados com retenção de longa duração, acessados com pouca frequência, que precisam de acesso em milissegundos"
+                },
+                {
+                    "index": 2,
+                    "text": "Dados acessados com frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Dados armazenados em uma única zona de disponibilidade"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3onezone1",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Qual é a principal característica do S3 One Zone - Infrequent Access?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento de dados recriáveis e acessados com pouca frequência que precisam de acesso em milissegundos"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de dados de alta frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de dados em várias zonas de disponibilidade"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3glacier1",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Para que tipo de dados o S3 Glacier Instant Retrieval é ideal?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Dados de arquivamentos de longa duração acessados uma vez por trimestre com recuperação instantânea em milissegundos"
+                },
+                {
+                    "index": 2,
+                    "text": "Dados acessados com frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Dados armazenados em uma única zona de disponibilidade"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3glacier2",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Qual é a principal característica do S3 Glacier Flexible Retrieval?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Para backups de longa duração e arquivamentos com opção de recuperação de 1 minuto a 12 horas"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de dados de alta frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de dados em uma única zona de disponibilidade"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3glacier3",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Para que tipo de dados o S3 Glacier Deep Archive é ideal?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Para arquivamento de dados de longa duração, acessados uma ou duas vezes por ano e que podem ser restaurados em até 12 horas"
+                },
+                {
+                    "index": 2,
+                    "text": "Dados acessados com frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Dados armazenados em uma única zona de disponibilidade"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3express1",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Qual é a principal característica do S3 Express One Zone?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Armazenamento de alta performance para dados acessados com mais frequência"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de dados de alta frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de dados em várias zonas de disponibilidade"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3intelligent2",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Qual é a principal vantagem do S3 Intelligent-Tiering Archive Access?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Economia automática de custos para dados raramente acessados com recuperação assíncrona"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de dados de alta frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de dados em uma única zona de disponibilidade"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "s3intelligent3",
+            "topicId": 2,
+            "levelId": 2,
+            "question": "Qual é a principal vantagem do S3 Intelligent-Tiering Deep Archive Access?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Economia automática de custos para dados raramente acessados com recuperação assíncrona de longa duração"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de dados de alta frequência"
+                },
+                {
+                    "index": 3,
+                    "text": "Armazenamento de dados com padrões de acesso desconhecidos ou variáveis"
+                },
+                {
+                    "index": 4,
+                    "text": "Armazenamento de dados em uma única zona de disponibilidade"
+                }
+            ],
+            "answer": 1
         }
     ]
 }

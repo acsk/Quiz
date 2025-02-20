@@ -1,0 +1,128 @@
+{
+  "questions": [
+    {
+      "id": "aws1",
+      "topicId": 34,
+      "levelId": 1,
+      "subject": "Definição de Preço da AWS",
+      "tags": [
+        "AWS",
+        "Preços",
+        "Cloud"
+      ],
+      "question": "Como funciona a definição de preço da AWS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Você paga antecipadamente pelos serviços que pretende usar"
+        },
+        {
+          "index": 2,
+          "text": "A AWS oferece uma abordagem de pagamento conforme o uso, sem contratos de longo prazo"
+        },
+        {
+          "index": 3,
+          "text": "Os serviços da AWS possuem preços fixos para todos os clientes"
+        },
+        {
+          "index": 4,
+          "text": "O preço é determinado pelo tempo mínimo de uso do serviço"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "aws2",
+      "topicId": 34,
+      "levelId": 1,
+      "subject": "Pagamento conforme o uso",
+      "tags": [
+        "AWS",
+        "Pagamento",
+        "Cloud"
+      ],
+      "question": "Qual é a principal vantagem do modelo de pagamento conforme o uso na AWS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Permite previsibilidade total de custos"
+        },
+        {
+          "index": 2,
+          "text": "Elimina a necessidade de contratos de longo prazo e permite ajustes dinâmicos"
+        },
+        {
+          "index": 3,
+          "text": "Reduz custos fixos, mas exige pagamento antecipado"
+        },
+        {
+          "index": 4,
+          "text": "Oferece descontos obrigatórios independentemente do uso"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "aws3",
+      "topicId": 34,
+      "levelId": 2,
+      "subject": "Economia com Compromisso",
+      "tags": [
+        "AWS",
+        "Economia",
+        "Savings Plans"
+      ],
+      "question": "O que são os Savings Plans da AWS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Um programa de descontos baseado no volume de uso"
+        },
+        {
+          "index": 2,
+          "text": "Um plano que oferece economia em troca de um compromisso de uso por 1 ou 3 anos"
+        },
+        {
+          "index": 3,
+          "text": "Um sistema que reduz automaticamente o preço ao longo do tempo"
+        },
+        {
+          "index": 4,
+          "text": "Um método de pagamento único para todos os serviços AWS"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "aws4",
+      "topicId": 34,
+      "levelId": 2,
+      "subject": "Descontos por volume",
+      "tags": [
+        "AWS",
+        "Descontos",
+        "Uso escalável"
+      ],
+      "question": "Como a AWS aplica descontos por volume de uso?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Os preços são reduzidos automaticamente à medida que o consumo aumenta"
+        },
+        {
+          "index": 2,
+          "text": "Os clientes precisam pagar uma taxa fixa para obter descontos"
+        },
+        {
+          "index": 3,
+          "text": "A AWS oferece descontos apenas para contratos anuais"
+        },
+        {
+          "index": 4,
+          "text": "Os preços são fixos independentemente do uso"
+        }
+      ],
+      "answer": 1
+    }
+  ]
+}

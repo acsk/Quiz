@@ -1,0 +1,134 @@
+{
+  "questions": [
+    {
+      "id": "cloudTrail1a2b3c4d5",
+      "topicId": 30,
+      "levelId": 1,
+      "question": "O que é o AWS CloudTrail?",
+      "options": [
+        { "index": 1, "text": "Serviço de armazenamento de objetos" },
+        { "index": 2, "text": "Serviço que registra as ações realizadas em uma conta da AWS" },
+        { "index": 3, "text": "Serviço de banco de dados relacional" },
+        { "index": 4, "text": "Serviço de computação sem servidor" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "cloudTrail6e7f8g9h0",
+      "topicId": 30,
+      "levelId": 1,
+      "question": "O que o AWS CloudTrail registra?",
+      "options": [
+        { "index": 1, "text": "Ações realizadas por usuários, funções ou serviços AWS" },
+        { "index": 2, "text": "Eventos de gerenciamento, como criar ou excluir buckets do Amazon S3" },
+        { "index": 3, "text": "Eventos de dados, como ler ou escrever um objeto do Amazon S3" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "cloudTrail1i2j3k4l5",
+      "topicId": 30,
+      "levelId": 2,
+      "question": "Como o AWS CloudTrail pode ser usado?",
+      "options": [
+        { "index": 1, "text": "Para responder a perguntas como 'Quem fez o quê, onde e quando?'" },
+        { "index": 2, "text": "Para detectar acesso não autorizado" },
+        { "index": 3, "text": "Para analisar logs de atividades" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "cloudTrail6m7n8o9p0",
+      "topicId": 30,
+      "levelId": 2,
+      "question": "Como o AWS CloudTrail pode ser integrado?",
+      "options": [
+        { "index": 1, "text": "Ao CloudWatch Logs para investigar incidentes e eventos fora de conformidade" },
+        { "index": 2, "text": "Ao Amazon RDS para gerenciar bancos de dados relacionais" },
+        { "index": 3, "text": "Ao AWS Lambda para executar código sem provisionar ou gerenciar servidores" },
+        { "index": 4, "text": "Ao Amazon S3 para armazenar objetos" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "cloudTrail1q2r3s4t5",
+      "topicId": 30,
+      "levelId": 2,
+      "question": "O que o AWS CloudTrail Lake faz?",
+      "options": [
+        { "index": 1, "text": "Agrega e consolida eventos de várias fontes" },
+        { "index": 2, "text": "Armazena eventos sujeitos a auditoria de forma imutável" },
+        { "index": 3, "text": "Converte eventos existentes em formato JSON baseado em linhas para o formato Apache ORC" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "cloudTrail6u7v8w9x0",
+      "topicId": 30,
+      "levelId": 2,
+      "question": "Como o AWS CloudTrail ajuda na segurança?",
+      "options": [
+        { "index": 1, "text": "Detectando acesso não autorizado" },
+        { "index": 2, "text": "Analisando logs de atividades" },
+        { "index": 3, "text": "Gerando relatórios de auditoria" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "cloudTrail1a2b3c4d6",
+      "topicId": 30,
+      "levelId": 2,
+      "question": "Para que o AWS CloudTrail pode ser usado?",
+      "options": [
+        { "index": 1, "text": "Para responder com alertas do EventBridge baseados em regras" },
+        { "index": 2, "text": "Para criar fluxos de trabalho automatizados" },
+        { "index": 3, "text": "Para monitorar a segurança e solucionar problemas operacionais" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "cloudTrail6e7f8g9h1",
+      "topicId": 30,
+      "levelId": 2,
+      "question": "Quais tipos de eventos o AWS CloudTrail registra?",
+      "options": [
+        { "index": 1, "text": "Eventos de gerenciamento, como criar ou excluir buckets do Amazon S3" },
+        { "index": 2, "text": "Eventos de dados, como ler ou escrever um objeto do Amazon S3" },
+        { "index": 3, "text": "Eventos de atividade de rede" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "cloudTrail1i2j3k4l6",
+      "topicId": 30,
+      "levelId": 2,
+      "question": "Como o AWS CloudTrail pode ser usado para auditoria?",
+      "options": [
+        { "index": 1, "text": "Para gerar relatórios de auditoria" },
+        { "index": 2, "text": "Para responder a perguntas como 'Quem fez o quê, onde e quando?'" },
+        { "index": 3, "text": "Para analisar logs de atividades" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "cloudTrail6m7n8o9p1",
+      "topicId": 30,
+      "levelId": 2,
+      "question": "Como o AWS CloudTrail pode ser usado para monitorar a segurança?",
+      "options": [
+        { "index": 1, "text": "Para detectar acesso não autorizado" },
+        { "index": 2, "text": "Para analisar logs de atividades" },
+        { "index": 3, "text": "Para gerar relatórios de auditoria" },
+        { "index": 4, "text": "Todas as opções acima" }
+      ],
+      "answer": 4
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpQuestionsService } from '../../../services/http-questions.service';
+import { HttpQuestionsService } from '../../../services/http/http-questions.service';
 
 @Component({
   selector: 'app-pergunta',
@@ -24,6 +24,10 @@ export class PerguntaComponent implements OnInit {
   correctAnswers: number = 0;
   incorrectAnswers: number = 0;
   testStarted: boolean = false;
+  subjects: string[] = [];
+  tags: string[] = [];
+  selectedSubjects: string[] = [];
+  selectedTags: string[] = [];
 
   constructor(private httpQuestionsService: HttpQuestionsService) {}
 
@@ -32,7 +36,10 @@ export class PerguntaComponent implements OnInit {
       this.allQuestions = data;
       this.filteredQuestions = this.allQuestions;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+      this.extractSubjectsAndTags();
       this.countQuestionsByTopic();
+      console.log('Todas as perguntas:', this.allQuestions);
+      console.log('Perguntas filtradas:', this.filteredQuestions);
     });
 
     this.httpQuestionsService.getTopics().subscribe((data) => {
@@ -41,6 +48,25 @@ export class PerguntaComponent implements OnInit {
     });
 
     this.filterQuestionsByTopic();
+  }
+
+  extractSubjectsAndTags(): void {
+    const subjectsSet = new Set<string>();
+    const tagsSet = new Set<string>();
+
+    this.allQuestions.forEach((question) => {
+      if (question.subject) {
+        subjectsSet.add(question.subject);
+      }
+      if (question.tags) {
+        question.tags.forEach((tag: string) => tagsSet.add(tag));
+      }
+    });
+
+    this.subjects = Array.from(subjectsSet);
+    this.tags = Array.from(tagsSet);
+    console.log('Assuntos extraídos:', this.subjects);
+    console.log('Tags extraídas:', this.tags);
   }
 
   get progressPercentage(): number {
@@ -96,11 +122,22 @@ export class PerguntaComponent implements OnInit {
   }
 
   filterQuestionsByTopic(): void {
+    console.log('Filtrando perguntas com os seguintes critérios:');
+    console.log('Tópicos selecionados:', this.selectedTopicIds);
+    console.log('Nível selecionado:', this.selectedLevelId);
+    console.log('Assuntos selecionados:', this.selectedSubjects);
+    console.log('Tags selecionadas:', this.selectedTags);
+
     this.filteredQuestions = this.allQuestions.filter((question) => {
       const matchesTopic = this.selectedTopicIds.length === 0 || this.selectedTopicIds.includes(question.topicId);
       const matchesLevel = this.selectedLevelId === null || question.levelId === this.selectedLevelId;
-      return matchesTopic && matchesLevel;
+      const matchesSubject = this.selectedSubjects.length === 0 || this.selectedSubjects.includes(question.subject);
+      const matchesTags = this.selectedTags.length === 0 || (question.tags && this.selectedTags.some(tag => question.tags.includes(tag)));
+      return matchesTopic && matchesLevel && matchesSubject && matchesTags;
     });
+
+    console.log('Perguntas após aplicação dos filtros:', this.filteredQuestions);
+
     this.countQuestionsByTopic();
     this.currentQuestionIndex = 0;
     if (this.filteredQuestions.length > 0) {
@@ -123,15 +160,29 @@ export class PerguntaComponent implements OnInit {
   }
 
   finalizeTest(): void {
+    this.testStarted = false;
+    this.showSummary = true;
     this.correctAnswers = this.filteredQuestions.filter((question) => 
       this.selectedOptions[question.id] === question.answer
     ).length;
     this.incorrectAnswers = this.filteredQuestions.length - this.correctAnswers;
-    this.showSummary = true;
   }
 
-  onTopicsChange(selectedTopics: number[]): void {
-    this.selectedTopicIds = selectedTopics;
+  onTopicsChange(selectedTopics: any[]): void {
+    this.selectedTopicIds = selectedTopics.map(topic => topic.id); // Extraindo apenas os IDs dos tópicos
+    console.log('Tópicos selecionados:', this.selectedTopicIds);
+    this.filterQuestionsByTopic();
+  }
+
+  onSubjectsChange(selectedSubjects: string[]): void {
+    this.selectedSubjects = selectedSubjects;
+    console.log('Assuntos selecionados:', this.selectedSubjects);
+    this.filterQuestionsByTopic();
+  }
+
+  onTagsChange(selectedTags: string[]): void {
+    this.selectedTags = selectedTags;
+    console.log('Tags selecionadas:', this.selectedTags);
     this.filterQuestionsByTopic();
   }
 
@@ -142,6 +193,7 @@ export class PerguntaComponent implements OnInit {
   startTest(): void {
     if (this.canStartTest()) {
       this.testStarted = true;
+      this.showSummary = false;
       this.currentQuestionIndex = 0;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
     }
@@ -159,5 +211,13 @@ export class PerguntaComponent implements OnInit {
     this.showAnswer = false;
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+  }
+
+  getGoogleSearchUrl(question: string, answer?: string): string {
+    let query = question;
+    if (answer) {
+      query += ' ' + answer;
+    }
+    return 'https://www.google.com/search?q=' + encodeURIComponent(query);
   }
 }

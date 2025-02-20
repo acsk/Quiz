@@ -4,7 +4,7 @@
     <i class="ml-2 fa" [ngClass]="{'fa-chevron-down': !dropdownOpen, 'fa-chevron-up': dropdownOpen}"></i>
   </div>
   <div *ngIf="dropdownOpen" class="absolute mt-1 w-full bg-white border rounded-md shadow-lg z-10">
-    <input type="text" [(ngModel)]="searchText" (input)="filterItems()" placeholder="Pesquisar..." class="w-full p-2 border-b">
+    <input #searchInput type="text" [(ngModel)]="searchText" (input)="filterItems()" placeholder="Pesquisar..." class="w-full p-2 border-b">
     <ul class="max-h-60 overflow-auto">
       <li class="p-2">
         <label class="flex items-center">
@@ -15,7 +15,8 @@
       <li *ngFor="let item of filteredItems" class="p-2">
         <label class="flex items-center">
           <input type="checkbox" [checked]="isSelected(item)" (change)="toggleSelection(item)" class="mr-2">
-          {{ item.name }} 
+          <ng-container *ngIf="itemTemplate; else defaultTemplate" [ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]="{ $implicit: item }"></ng-container>
+          <ng-template #defaultTemplate>{{ item.name || item }}</ng-template>
         </label>
       </li>
     </ul>
