@@ -164,6 +164,11 @@
       "id": 33,
       "name": "AWS Cloud Adoption Framework (AWS CAF)",
       "description": "Conjunto de práticas recomendadas que ajudam na transformação digital e aceleram os resultados de negócios usando a AWS de forma inovadora. O AWS CAF agrupa recursos em seis perspectivas: Negócios, Pessoas, Governança, Plataforma, Segurança e Operações."
+    },
+    {
+      "id": 34,
+      "name": "Definição de Preços",
+      "description": "Informações sobre a estrutura de preços dos serviços da AWS, incluindo modelos de pagamento, custos associados e práticas recomendadas para otimização de custos."
     }
   ]
 }
