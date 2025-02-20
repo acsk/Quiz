@@ -810,6 +810,21 @@
           }
         ],
         "answer": 5
+      },
+      {
+        "id": "waf25",
+        "topicId": 31,
+        "levelId": 2,
+        "subject": "Tipos de Ataques",
+        "tags": ["WAF", "Segurança", "AWS"],
+        "question": "Quais tipos de ataques o AWS WAF pode ajudar a bloquear?",
+        "options": [
+          { "index": 1, "text": "Injeção de SQL, cross-site scripting (XSS) e ataques de força bruta" },
+          { "index": 2, "text": "Ataques DDoS e bots automatizados" },
+          { "index": 3, "text": "Ataques Man-in-the-middle" },
+          { "index": 4, "text": "Todos os mencionados acima" }
+        ],
+        "answer": 4
       }
     ]
   
