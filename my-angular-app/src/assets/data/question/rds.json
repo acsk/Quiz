@@ -205,7 +205,7 @@
       "options": [
         { "index": 1, "text": "Alta disponibilidade" },
         { "index": 2, "text": "Recuperação de desastres e desempenho local" },
-        { "index": 3, "text": "Escalabilidade" },
+        { "index": 3, "text": "Aumentar a disponibilidade, a escalabilidade e a performance das aplicações" },
         { "index": 4, "text": "Redução de custos" }
       ],
       "answer": 3

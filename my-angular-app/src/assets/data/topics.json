@@ -149,6 +149,11 @@
       "id": 30,
       "name": "AWS CloudTrail",
       "description": "Serviço que registra as ações realizadas em uma conta da AWS, permitindo auditorar, monitorar a segurança e solucionar problemas operacionais."
+    },
+    {
+      "id": 31,
+      "name": "AWS WAF",
+      "description": "Serviço de firewall de aplicações Web que ajuda a proteger aplicações Web de ataques ao permitir, bloquear ou monitorar solicitações da Web com base em condições definidas."
     }
   ]
 }

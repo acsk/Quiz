@@ -1,0 +1,155 @@
+{
+    "questions": [
+                {
+          "id": "waf1",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Introdução ao AWS WAF",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "O que é o AWS WAF?",
+          "options": [
+            { "index": 1, "text": "Um serviço de armazenamento de objetos" },
+            { "index": 2, "text": "Um firewall de aplicações Web que ajuda a proteger aplicações Web de ataques" },
+            { "index": 3, "text": "Um serviço de banco de dados relacional" },
+            { "index": 4, "text": "Um serviço de computação sem servidor" }
+          ],
+          "answer": 2
+        },
+        {
+          "id": "waf2",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Funcionamento do AWS WAF",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "Como o AWS WAF bloqueia ou permite o tráfego?",
+          "options": [
+            { "index": 1, "text": "Ele armazena as solicitações em um banco de dados" },
+            { "index": 2, "text": "Ele envia as solicitações ao AWS WAF para verificar o cumprimento das regras" },
+            { "index": 3, "text": "Ele redireciona as solicitações para um servidor de backup" },
+            { "index": 4, "text": "Ele ignora as solicitações que não cumprem as regras" }
+          ],
+          "answer": 2
+        },
+        {
+          "id": "waf3",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Proteção do AWS WAF",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "Como o AWS WAF protege sites ou aplicações Web?",
+          "options": [
+            { "index": 1, "text": "Ele armazena as solicitações em um banco de dados" },
+            { "index": 2, "text": "Ele redireciona as solicitações para um servidor de backup" },
+            { "index": 3, "text": "Ele é integrado ao Amazon CloudFront, Application Load Balancer (ALB), Amazon API Gateway e AWS AppSync" },
+            { "index": 4, "text": "Ele ignora as solicitações que não cumprem as regras" }
+          ],
+          "answer": 3
+        },
+        {
+          "id": "waf4",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Compatibilidade do AWS WAF",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "Posso utilizar o AWS WAF para proteger sites que não estão hospedados na AWS?",
+          "options": [
+            { "index": 1, "text": "Não, o AWS WAF só pode ser usado com serviços da AWS" },
+            { "index": 2, "text": "Sim, o AWS WAF está integrado com o Amazon CloudFront, que comporta origens personalizadas fora da AWS" },
+            { "index": 3, "text": "Sim, mas apenas para sites estáticos" },
+            { "index": 4, "text": "Não, o AWS WAF só pode ser usado com o Amazon S3" }
+          ],
+          "answer": 2
+        },
+        {
+          "id": "waf5",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Tipos de ataques",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "Que tipos de ataques o AWS WAF pode ajudar a interromper?",
+          "options": [
+            { "index": 1, "text": "Injeção de SQL e cross-site scripting (XSS)" },
+            { "index": 2, "text": "Ataques DDoS e phishing" },
+            { "index": 3, "text": "Ataques de força bruta e ransomware" },
+            { "index": 4, "text": "Ataques de malware e spyware" }
+          ],
+          "answer": 1
+        },
+        {
+          "id": "waf6",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Mitigação de bots",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "Quais recursos de mitigação de bot estão disponíveis com AWS WAF?",
+          "options": [
+            { "index": 1, "text": "AWS WAF Bot Control oferece visibilidade e controle sobre o tráfego de bot comum e difundido" },
+            { "index": 2, "text": "AWS WAF Bot Control oferece proteção contra ataques DDoS" },
+            { "index": 3, "text": "AWS WAF Bot Control oferece proteção contra phishing" },
+            { "index": 4, "text": "AWS WAF Bot Control oferece proteção contra ransomware" }
+          ],
+          "answer": 1
+        },
+        {
+          "id": "waf7",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Histórico de chamadas de API",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "Posso obter um histórico de todas as chamadas de API do AWS WAF realizadas na minha conta para fins de auditoria de segurança, operacional ou de conformidade?",
+          "options": [
+            { "index": 1, "text": "Não, o AWS WAF não oferece essa funcionalidade" },
+            { "index": 2, "text": "Sim, ativando o AWS CloudTrail no Console de Gerenciamento da AWS do CloudTrail" },
+            { "index": 3, "text": "Sim, ativando o AWS Config no Console de Gerenciamento da AWS do Config" },
+            { "index": 4, "text": "Não, o AWS WAF só oferece logs em tempo real" }
+          ],
+          "answer": 2
+        },
+        {
+          "id": "waf8",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Compatibilidade com IPv6",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "O AWS WAF é compatível com o IPv6?",
+          "options": [
+            { "index": 1, "text": "Não, o AWS WAF só é compatível com IPv4" },
+            { "index": 2, "text": "Sim, o AWS WAF é compatível com IPv6 e IPv4" },
+            { "index": 3, "text": "Sim, mas apenas para tráfego interno" },
+            { "index": 4, "text": "Não, o AWS WAF só é compatível com IPv6" }
+          ],
+          "answer": 2
+        },
+        {
+          "id": "waf9",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Serviços compatíveis",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "Quais serviços são compatíveis com o AWS WAF?",
+          "options": [
+            { "index": 1, "text": "Amazon CloudFront, Application Load Balancer (ALB), Amazon API Gateway e AWS AppSync" },
+            { "index": 2, "text": "Amazon S3, Amazon RDS, Amazon DynamoDB e Amazon Redshift" },
+            { "index": 3, "text": "Amazon EC2, Amazon ECS, Amazon EKS e AWS Lambda" },
+            { "index": 4, "text": "Amazon VPC, AWS Direct Connect, AWS Transit Gateway e AWS VPN" }
+          ],
+          "answer": 1
+        },
+        {
+          "id": "waf10",
+          "topicId": 31,
+          "levelId": 2,
+          "subject": "Definição de preço",
+          "tags": ["WAF", "Segurança", "AWS"],
+          "question": "Como funciona a definição de preço do AWS WAF? Há algum custo inicial?",
+          "options": [
+            { "index": 1, "text": "A cobrança é feita com base no número de listas de controle de acesso da web (ACLs da web) criadas, no número de regras adicionadas para cada ACL da web e no número de solicitações da web recebidas. Não há compromissos antecipados." },
+            { "index": 2, "text": "A cobrança é feita com base no número de instâncias EC2 usadas. Há um custo inicial." },
+            { "index": 3, "text": "A cobrança é feita com base no número de buckets S3 usados. Não há compromissos antecipados." },
+            { "index": 4, "text": "A cobrança é feita com base no número de funções Lambda usadas. Há um custo inicial." }
+          ],
+          "answer": 1
+        }
+    ]
+
+}
