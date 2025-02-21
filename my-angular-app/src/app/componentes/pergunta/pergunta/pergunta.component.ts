@@ -78,7 +78,7 @@ export class PerguntaComponent implements OnInit {
     this.selectedOptions[this.currentQuestion.id] = index;
     this.unansweredQuestions.add(this.currentQuestion.id);
   }
-
+ 
   checkAnswer(): void {
     this.showAnswer = true;
     this.showAnswers[this.currentQuestion.id] = true;
