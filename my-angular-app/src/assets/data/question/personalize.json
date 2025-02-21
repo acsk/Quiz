@@ -1,0 +1,139 @@
+{
+  "questions": [
+    {
+      "id": "personalize1a2b3c4d5",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Definição do Serviço",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "O que é o Amazon Personalize?",
+      "options": [
+        { "index": 1, "text": "Um serviço de armazenamento de objetos que permite armazenar e recuperar qualquer quantidade de dados a qualquer momento, de qualquer lugar na web." },
+        { "index": 2, "text": "Um serviço de banco de dados relacional que facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem." },
+        { "index": 3, "text": "Um serviço que permite implementar recomendações de usuário hiperpersonalizadas em sites, aplicações e canais de marketing em grande escala com latência ultrabaixa." },
+        { "index": 4, "text": "Um serviço de computação sem servidor que permite executar código sem provisionar ou gerenciar servidores." }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "personalize6e7f8g9h0",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Treinamento de Modelos",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "Como o Amazon Personalize treina seus modelos?",
+      "options": [
+        { "index": 1, "text": "Usando dados de armazenamento de objetos para criar modelos de recomendação, garantindo que os dados sejam armazenados de forma segura e eficiente." },
+        { "index": 2, "text": "Treinando modelos que aprendem com bilhões de interações de usuários com milhões de itens, utilizando inteligência artificial de última geração." },
+        { "index": 3, "text": "Configurando bancos de dados relacionais para armazenar dados de treinamento, permitindo a recuperação e análise de dados em tempo real." },
+        { "index": 4, "text": "Executando código sem servidor para processar dados de treinamento, garantindo a escalabilidade e eficiência do processo." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "personalize1i2j3k4l5",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Configuração",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "Quanto tempo leva para configurar o Amazon Personalize?",
+      "options": [
+        { "index": 1, "text": "Vários dias para configurar a infraestrutura necessária, garantindo que todos os componentes estejam corretamente integrados." },
+        { "index": 2, "text": "Algumas horas para configurar um mecanismo de recomendação totalmente gerenciado, permitindo uma rápida implementação de recomendações personalizadas." },
+        { "index": 3, "text": "Semanas para treinar modelos personalizados, garantindo que os dados sejam processados e analisados de forma eficiente." },
+        { "index": 4, "text": "Meses para implementar recomendações personalizadas, garantindo que todas as funcionalidades estejam corretamente configuradas." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "personalize7m8n9o0p1",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Recomendações em Tempo Real",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "Como o Amazon Personalize fornece recomendações em tempo real?",
+      "options": [
+        { "index": 1, "text": "Usando algoritmos simples que geram recomendações baseadas em regras históricas, garantindo que as recomendações sejam consistentes." },
+        { "index": 2, "text": "Ajustando as recomendações para acomodar as mudanças de comportamento dos clientes em tempo real, utilizando algoritmos sofisticados." },
+        { "index": 3, "text": "Configurando bancos de dados relacionais para armazenar dados de recomendação, permitindo a recuperação e análise de dados em tempo real." },
+        { "index": 4, "text": "Executando código sem servidor para processar dados de recomendação, garantindo a escalabilidade e eficiência do processo." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "personalize2q3r4s5t6",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Integração com Amazon Bedrock",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "Como o Amazon Personalize e o Amazon Bedrock melhoram a segmentação de clientes?",
+      "options": [
+        { "index": 1, "text": "Usando algoritmos simples para gerar recomendações baseadas em regras históricas, garantindo que as recomendações sejam consistentes." },
+        { "index": 2, "text": "Criando variações de conteúdo com maior relevância e engajamento usando IA generativa, permitindo uma segmentação de clientes mais precisa." },
+        { "index": 3, "text": "Configurando bancos de dados relacionais para armazenar dados de segmentação, permitindo a recuperação e análise de dados em tempo real." },
+        { "index": 4, "text": "Executando código sem servidor para processar dados de segmentação, garantindo a escalabilidade e eficiência do processo." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "personalize3a4b5c6d7",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Recomendações de Streaming",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "Como o Amazon Personalize pode ser usado para recomendações de streaming?",
+      "options": [
+        { "index": 1, "text": "Personalizando e classificando recomendações de filmes, programas de TV e músicas de acordo com o que os clientes têm maior probabilidade de se interessar em assistir." },
+        { "index": 2, "text": "Armazenando dados de streaming em um banco de dados relacional, permitindo a recuperação e análise de dados em tempo real." },
+        { "index": 3, "text": "Executando código sem servidor para processar dados de streaming, garantindo a escalabilidade e eficiência do processo." },
+        { "index": 4, "text": "Usando algoritmos simples para gerar recomendações baseadas em regras históricas, garantindo que as recomendações sejam consistentes." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "personalize4e5f6g7h8",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Produtos de Varejo",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "Como o Amazon Personalize pode ser usado para destacar produtos de varejo?",
+      "options": [
+        { "index": 1, "text": "Recomendando itens de varejo que ganham popularidade rapidamente para compradores similares, permitindo uma experiência de compra mais personalizada." },
+        { "index": 2, "text": "Armazenando dados de produtos de varejo em um banco de dados relacional, permitindo a recuperação e análise de dados em tempo real." },
+        { "index": 3, "text": "Executando código sem servidor para processar dados de produtos de varejo, garantindo a escalabilidade e eficiência do processo." },
+        { "index": 4, "text": "Usando algoritmos simples para gerar recomendações baseadas em regras históricas, garantindo que as recomendações sejam consistentes." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "personalize5i6j7k8l9",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Conteúdo de Viagem",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "Como o Amazon Personalize pode ser usado para oferecer conteúdo de viagem?",
+      "options": [
+        { "index": 1, "text": "Classificando as recomendações de hotéis e voos para destacar produtos populares, mercadorias sazonais e ofertas promocionais com prazo determinado." },
+        { "index": 2, "text": "Armazenando dados de viagens em um banco de dados relacional, permitindo a recuperação e análise de dados em tempo real." },
+        { "index": 3, "text": "Executando código sem servidor para processar dados de viagens, garantindo a escalabilidade e eficiência do processo." },
+        { "index": 4, "text": "Usando algoritmos simples para gerar recomendações baseadas em regras históricas, garantindo que as recomendações sejam consistentes." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "personalize6m7n8o9p0",
+      "topicId": 37,
+      "levelId": 1,
+      "subject": "Itens Relacionados",
+      "tags": ["Amazon Personalize", "Recomendações", "AWS"],
+      "question": "Como o Amazon Personalize pode ajudar a recomendar itens relacionados?",
+      "options": [
+        { "index": 1, "text": "Armazenando dados de itens relacionados em um banco de dados relacional, permitindo a recuperação e análise de dados em tempo real." },
+        { "index": 2, "text": "Executando código sem servidor para processar dados de itens relacionados, garantindo a escalabilidade e eficiência do processo." },
+        { "index": 3, "text": "Usando algoritmos simples para gerar recomendações baseadas em regras históricas, garantindo que as recomendações sejam consistentes." },
+        { "index": 4, "text": "Recomendando itens, serviços e conteúdos relacionados na aplicação, ajudando os usuários a descobrir novos produtos ou comparar itens existentes." }
+      ],
+      "answer": 4
+    }
+  ]
+}
