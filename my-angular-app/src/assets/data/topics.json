@@ -179,6 +179,11 @@
       "id": 36,
       "name": "AWS Kendra",
       "description": "Serviço de busca inteligente que permite aos desenvolvedores adicionar capacidades de busca em suas aplicações para encontrar informações em documentos e sites internos."
+    },
+    {
+      "id": 37,
+      "name": "Amazon Personalize",
+      "description": "Serviço que permite implementar recomendações de usuário hiperpersonalizadas em sites, aplicações e canais de marketing em grande escala com latência ultrabaixa. O Amazon Personalize usa inteligência artificial de última geração para fornecer recomendações com baixa latência, ajudando a envolver os usuários com experiências hiperpersonalizadas."
     }
   ]
 }
