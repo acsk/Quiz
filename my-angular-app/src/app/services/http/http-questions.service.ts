@@ -41,6 +41,7 @@ export class HttpQuestionsService {
   private lexQuestionsUrl = 'assets/data/question/lex.json';
   private kendraQuestionsUrl = 'assets/data/question/kendra.json';
   private personalizeQuestionsUrl = 'assets/data/question/personalize.json';
+  private inspectorQuestionsUrl = 'assets/data/question/inspector.json';
 
   constructor(private http: HttpClient) { }
 
@@ -169,6 +170,9 @@ export class HttpQuestionsService {
   getPersonalizeQuestions(): Observable<any> {
     return this.http.get<any>(this.personalizeQuestionsUrl);
   }
+  getInspectorQuestions(): Observable<any> {
+    return this.http.get<any>(this.inspectorQuestionsUrl);
+  }
 
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
@@ -212,7 +216,8 @@ export class HttpQuestionsService {
       preco: this.getPrecostQuestions(),
       lex: this.getLexQuestions(),
       kendra: this.getKendraQuestions(),
-      perisonalize: this.getPersonalizeQuestions()
+      perisonalize: this.getPersonalizeQuestions(),
+      inspector: this.getInspectorQuestions()
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -248,7 +253,8 @@ export class HttpQuestionsService {
           ...responses.preco.questions,
           ...responses.lex.questions,
           ...responses.kendra.questions,
-          ...responses.perisonalize.questions
+          ...responses.perisonalize.questions,
+          ...responses.inspector.questions
           
         ].map((question: any) => ({
           ...question,

@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "id": "inspector1a2b3c4d5",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "O que é o Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "Um serviço de armazenamento de objetos que permite armazenar e recuperar qualquer quantidade de dados a qualquer momento, de qualquer lugar na web." },
+        { "index": 2, "text": "Um serviço de banco de dados relacional que facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem." },
+        { "index": 3, "text": "Um serviço automatizado de gerenciamento de vulnerabilidades que verifica continuamente o Amazon EC2, as funções do AWS Lambda e as imagens de contêiner no Amazon ECR em busca de vulnerabilidades de software e exposição não intencional à rede." },
+        { "index": 4, "text": "Um serviço de computação sem servidor que permite executar código sem provisionar ou gerenciar servidores." }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "inspector6e7f8g9h0",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Quais são os principais benefícios do Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "Maior custo devido à necessidade de gerenciar e manter a infraestrutura subjacente, o que pode resultar em despesas operacionais significativas." },
+        { "index": 2, "text": "Escalabilidade, flexibilidade, criptografia e confiabilidade, permitindo uma comunicação segura e eficiente entre aplicativos e microserviços." },
+        { "index": 3, "text": "Descoberta automatizada e verificação contínua, gerenciamento central, pontuação de risco altamente contextualizada, painel intuitivo, cobertura de avaliação de vulnerabilidades, gerenciamento centralizado de exportações da lista de materiais de software (SBOM), integração com AWS Security Hub e Amazon EventBridge." },
+        { "index": 4, "text": "Menor desempenho em comparação com outras soluções de mensagens, resultando em tempos de resposta mais lentos e menor eficiência operacional." }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "inspector1i2j3k4l5",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Como faço para migrar do Amazon Inspector Classic para o novo Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "Desativar o Amazon Inspector Classic excluindo todos os modelos de avaliação, baixar os resultados como relatórios ou exportá-los usando a API, ativar o novo Amazon Inspector no Console de Gerenciamento da AWS ou usando as novas APIs." },
+        { "index": 2, "text": "Configurar um novo banco de dados relacional para armazenar os dados de avaliação, migrar os dados manualmente e configurar novos modelos de avaliação." },
+        { "index": 3, "text": "Executar código sem servidor para processar os dados de avaliação e configurar novos modelos de avaliação." },
+        { "index": 4, "text": "Armazenar os dados de avaliação em um serviço de armazenamento de objetos e configurar novos modelos de avaliação." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector7m8n9o0p1",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Qual é a diferença entre o Amazon Inspector e o Amazon Inspector Classic?",
+      "options": [
+        { "index": 1, "text": "O novo Amazon Inspector foi reformulado para ser dimensionado e para o ambiente de nuvem dinâmico, suporta imagens de contêiner e funções do Lambda, gerenciamento de várias contas, usa o AWS Systems Manager Agent, verificação automatizada e contínua, pontuação de risco contextualizada, cobertura de avaliação de vulnerabilidades e exportação da lista de materiais de software (SBOM)." },
+        { "index": 2, "text": "O Amazon Inspector Classic é um serviço de armazenamento de objetos que permite armazenar e recuperar qualquer quantidade de dados a qualquer momento, de qualquer lugar na web." },
+        { "index": 3, "text": "O novo Amazon Inspector é um serviço de banco de dados relacional que facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem." },
+        { "index": 4, "text": "O Amazon Inspector Classic é um serviço de computação sem servidor que permite executar código sem provisionar ou gerenciar servidores." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector2q3r4s5t6",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Posso usar o Amazon Inspector e o Amazon Inspector Classic simultaneamente na mesma conta?",
+      "options": [
+        { "index": 1, "text": "Sim, você pode usar os dois simultaneamente na mesma conta." },
+        { "index": 2, "text": "Não, você deve escolher um ou outro." },
+        { "index": 3, "text": "Sim, mas apenas se você configurar um novo banco de dados relacional para armazenar os dados de avaliação." },
+        { "index": 4, "text": "Não, você deve desativar o Amazon Inspector Classic antes de ativar o novo Amazon Inspector." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector8u9v0w1x2",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Como o serviço de verificação de imagens de contêineres do Amazon Inspector para o Amazon ECR difere da solução nativa de verificação de imagens de contêineres Amazon ECR?",
+      "options": [
+        { "index": 1, "text": "O Amazon Inspector oferece verificação contínua e on-push, inteligência de vulnerabilidade aprimorada, descobertas disponíveis nos consoles Amazon Inspector e Amazon ECR, pontuação contextual do Inspector, integrações com AWS Security Hub, AWS Organizations e AWS EventBridge." },
+        { "index": 2, "text": "O Amazon ECR oferece uma solução gerenciada de verificação básica nativa da AWS, identifica vulnerabilidades de software apenas em pacotes de sistema operacional, oferece apenas verificação on-push, fornece apenas informações básicas sobre uma vulnerabilidade de software, descobertas disponíveis no console do Amazon ECR, APIs e SDK do Amazon ECR, fornece apenas pontuações CVSS v3 e v2." },
+        { "index": 3, "text": "O Amazon Inspector é um serviço de armazenamento de objetos que permite armazenar e recuperar qualquer quantidade de dados a qualquer momento, de qualquer lugar na web." },
+        { "index": 4, "text": "O Amazon ECR é um serviço de banco de dados relacional que facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem." }
+      ],
+      "answer": 1
+    },
+    
+    {
+      "id": "inspector9e0f1g2h3",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Há uma avaliação gratuita do Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "Sim, todas as contas novas no Amazon Inspector se qualificam para uma avaliação gratuita de 15 dias para avaliar o serviço e estimar seu custo." },
+        { "index": 2, "text": "Não, o Amazon Inspector não oferece uma avaliação gratuita." },
+        { "index": 3, "text": "Sim, mas apenas para usuários que já utilizam o Amazon Inspector Classic." },
+        { "index": 4, "text": "Não, mas o Amazon Inspector oferece um desconto para novos usuários." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector4i5j6k7l8",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Em quais regiões o Amazon Inspector está disponível?",
+      "options": [
+        { "index": 1, "text": "O Amazon Inspector está disponível globalmente. A disponibilidade específica por região é listada na página de regiões da AWS." },
+        { "index": 2, "text": "O Amazon Inspector está disponível apenas na América do Norte." },
+        { "index": 3, "text": "O Amazon Inspector está disponível apenas na Europa." },
+        { "index": 4, "text": "O Amazon Inspector está disponível apenas na Ásia." }
+      ],
+      "answer": 1
+    }
+  ]
+}
