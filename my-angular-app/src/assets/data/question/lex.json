@@ -1,0 +1,155 @@
+{
+  "questions": [
+
+    {
+      "id": "lex1",
+      "topicId": 35,
+      "levelId": 2,
+      "subject": "Introdução ao Amazon Lex",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "O que é o Amazon Lex?",
+      "options": [
+        { "index": 1, "text": "Um serviço de banco de dados relacional" },
+        { "index": 2, "text": "Um serviço de armazenamento de objetos" },
+        { "index": 3, "text": "Um serviço para a criação de interfaces de conversa em qualquer aplicação usando voz e texto" },
+        { "index": 4, "text": "Um serviço de computação sem servidor" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "lex2",
+      "topicId": 35,
+      "levelId": 2,
+      "subject": "Funcionalidades do Amazon Lex",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "Quais são os principais recursos do Amazon Lex?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de dados, escalabilidade automática, segurança de dados e integração com o Amazon S3" },
+        { "index": 2, "text": "Gerenciamento de usuários, autenticação multifator, controle de acesso baseado em funções e integração com o Amazon Cognito" },
+        { "index": 3, "text": "Monitoramento de desempenho, análise de logs, alertas em tempo real e integração com o Amazon CloudWatch" },
+        { "index": 4, "text": "Reconhecimento de fala e entendimento da linguagem natural de alta qualidade, conversas dinâmicas, solicitações de utilitário, integração com o AWS Lambda, conectividade com sistemas empresariais, implantação do 1-click para várias plataformas, recursos de gerenciamento do ciclo de vida e encadeamento de intenção" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "lex3",
+      "topicId": 35,
+      "levelId": 2,
+      "subject": "Integração com AWS Lambda",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "Como o Amazon Lex se integra com o AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Permite armazenar dados em um banco de dados relacional" },
+        { "index": 2, "text": "Permite criar e gerenciar credenciais temporárias para acessar recursos da AWS" },
+        { "index": 3, "text": "Oferece compatibilidade nativa para recuperação de dados, atualizações e execução da lógica de negócios" },
+        { "index": 4, "text": "Oferece escalabilidade automática para eliminar preocupações com infraestrutura" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "lex4",
+      "topicId": 35,
+      "levelId": 2,
+      "subject": "Implantação do Amazon Lex",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "Como o Amazon Lex facilita a implantação de bots em várias plataformas?",
+      "options": [
+        { "index": 1, "text": "Permite armazenar dados em um banco de dados relacional" },
+        { "index": 2, "text": "Permite criar e gerenciar credenciais temporárias para acessar recursos da AWS" },
+        { "index": 3, "text": "Permite publicar bots em serviços de bate-papo diretamente do console do Amazon Lex" },
+        { "index": 4, "text": "Oferece escalabilidade automática para eliminar preocupações com infraestrutura" }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "lex5",
+      "topicId": 35,
+      "levelId": 2,
+      "subject": "Recursos de gerenciamento do ciclo de vida",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "Quais são os recursos de gerenciamento do ciclo de vida do Amazon Lex?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de dados, escalabilidade automática, segurança de dados e integração com o Amazon S3" },
+        { "index": 2, "text": "Gerenciamento de usuários, autenticação multifator, controle de acesso baseado em funções e integração com o Amazon Cognito" },
+        { "index": 3, "text": "Monitoramento de desempenho, análise de logs, alertas em tempo real e integração com o Amazon CloudWatch" },
+        { "index": 4, "text": "Versionamento para intenções, tipos de slot e bots criados, além de criação de aliases para diferentes versões" }
+      ],
+      "answer": 4
+    },
+    {
+      "id": "lex6",
+      "topicId": 35,
+      "levelId": 1,
+      "subject": "Introdução ao Amazon Lex",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "O que o Amazon Lex permite criar?",
+      "options": [
+        { "index": 1, "text": "Interfaces de conversa usando voz e texto" },
+        { "index": 2, "text": "Serviços de armazenamento de objetos" },
+        { "index": 3, "text": "Serviços de banco de dados relacional" },
+        { "index": 4, "text": "Serviços de computação sem servidor" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "lex7",
+      "topicId": 35,
+      "levelId": 1,
+      "subject": "Funcionalidades do Amazon Lex",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "Qual tecnologia o Amazon Lex utiliza para reconhecimento de fala?",
+      "options": [
+        { "index": 1, "text": "Tecnologia de armazenamento de dados" },
+        { "index": 2, "text": "Tecnologia de aprendizado profundo" },
+        { "index": 3, "text": "Tecnologia de computação sem servidor" },
+        { "index": 4, "text": "Tecnologia de banco de dados relacional" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "lex8",
+      "topicId": 35,
+      "levelId": 1,
+      "subject": "Integração com AWS Lambda",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "Para que o Amazon Lex se integra com o AWS Lambda?",
+      "options": [
+        { "index": 1, "text": "Para criar e gerenciar credenciais temporárias" },
+        { "index": 2, "text": "Para recuperação de dados e execução da lógica de negócios" },
+        { "index": 3, "text": "Para armazenar dados em um banco de dados relacional" },
+        { "index": 4, "text": "Para escalabilidade automática" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "lex9",
+      "topicId": 35,
+      "levelId": 1,
+      "subject": "Implantação do Amazon Lex",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "Como o Amazon Lex facilita a implantação de bots?",
+      "options": [
+        { "index": 1, "text": "Permite criar e gerenciar credenciais temporárias" },
+        { "index": 2, "text": "Permite publicar bots em serviços de bate-papo diretamente do console" },
+        { "index": 3, "text": "Permite armazenar dados em um banco de dados relacional" },
+        { "index": 4, "text": "Oferece escalabilidade automática" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "lex10",
+      "topicId": 35,
+      "levelId": 1,
+      "subject": "Recursos de gerenciamento do ciclo de vida",
+      "tags": ["Amazon Lex", "Reconhecimento de Fala", "AWS"],
+      "question": "O que o Amazon Lex permite aplicar para intenções, tipos de slot e bots criados?",
+      "options": [
+        { "index": 1, "text": "Armazenamento de dados" },
+        { "index": 2, "text": "Autenticação multifator" },
+        { "index": 3, "text": "Monitoramento de desempenho" },
+        { "index": 4, "text": "Versionamento" }
+      ],
+      "answer": 4
+    }
+  ]
+}

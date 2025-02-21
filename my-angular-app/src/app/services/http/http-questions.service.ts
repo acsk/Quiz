@@ -38,6 +38,8 @@ export class HttpQuestionsService {
   private wafQuestionsUrl = 'assets/data/question/waf.json';
   private cafQuestionsUrl = 'assets/data/question/caf.json';
   private precostQuestionsUrl = 'assets/data/question/precos.json';
+  private lexQuestionsUrl = 'assets/data/question/lex.json';
+  private kendraQuestionsUrl = 'assets/data/question/kendra.json';
 
   constructor(private http: HttpClient) { }
 
@@ -155,6 +157,14 @@ export class HttpQuestionsService {
   getPrecostQuestions(): Observable<any> {
     return this.http.get<any>(this.precostQuestionsUrl);
   }
+  getLexQuestions(): Observable<any> {
+    return this.http.get<any>(this.lexQuestionsUrl);
+  }
+
+  getKendraQuestions(): Observable<any> {
+    return this.http.get<any>(this.kendraQuestionsUrl);
+  }
+  
 
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
@@ -195,7 +205,9 @@ export class HttpQuestionsService {
       cloudTrail: this.getCloudTrailQuestions(),
       waf: this.getWAFQuestions(),
       caf: this.getCAFQuestions(),
-      preco: this.getPrecostQuestions()
+      preco: this.getPrecostQuestions(),
+      lex: this.getLexQuestions(),
+      kendra: this.getKendraQuestions()
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -228,7 +240,10 @@ export class HttpQuestionsService {
           ...responses.cloudTrail.questions,
           ...responses.waf.questions,
           ...responses.caf.questions,
-          ...responses.preco.questions
+          ...responses.preco.questions,
+          ...responses.lex.questions,
+          ...responses.kendra.questions
+          
         ].map((question: any) => ({
           ...question,
           topicName: topicsMap.get(question.topicId)

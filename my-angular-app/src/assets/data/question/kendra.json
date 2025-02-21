@@ -1,0 +1,127 @@
+{
+    "questions": [
+        {
+            "id": "kendra1",
+            "topicId": 36,
+            "levelId": 2,
+            "subject": "Amazon Kendra",
+            "tags": [
+                "AWS",
+                "Machine Learning",
+                "Pesquisa Empresarial"
+            ],
+            "question": "O que é o Amazon Kendra?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Um serviço de armazenamento de objetos"
+                },
+                {
+                    "index": 2,
+                    "text": "É um serviço de pesquisa inteligente que usa machine learning (ML) para ajudar a encontrar conteúdo em uma organização"
+                },
+                {
+                    "index": 3,
+                    "text": "Uma ferramenta para gerenciar instâncias do EC2"
+                },
+                {
+                    "index": 4,
+                    "text": "Um serviço de banco de dados relacional gerenciado"
+                }
+            ],
+            "answer": 2
+        },
+        {
+            "id": "kendra2",
+            "topicId": 36,
+            "levelId": 3,
+            "subject": "Amazon Kendra",
+            "tags": [
+                "AWS",
+                "Pesquisa Inteligente",
+                "IA"
+            ],
+            "question": "Qual é a principal vantagem do Amazon Kendra em relação às buscas tradicionais?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Usa machine learning para fornecer respostas mais precisas"
+                },
+                {
+                    "index": 2,
+                    "text": "Armazena grandes volumes de dados na nuvem"
+                },
+                {
+                    "index": 3,
+                    "text": "Garante baixa latência para aplicações de streaming"
+                },
+                {
+                    "index": 4,
+                    "text": "Oferece suporte para bancos de dados relacionais"
+                }
+            ],
+            "answer": 1
+        },
+        {
+            "id": "kendra3",
+            "topicId": 36,
+            "levelId": 2,
+            "subject": "Amazon Kendra",
+            "tags": [
+                "AWS",
+                "Pesquisa Empresarial",
+                "Machine Learning"
+            ],
+            "question": "Quais tipos de fontes de dados podem ser integradas ao Amazon Kendra?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Apenas bancos de dados SQL"
+                },
+                {
+                    "index": 2,
+                    "text": "Apenas documentos em formato PDF"
+                },
+                {
+                    "index": 3,
+                    "text": "Diversas fontes como SharePoint, S3, ServiceNow e bancos de dados"
+                },
+                {
+                    "index": 4,
+                    "text": "Somente arquivos CSV armazenados no Amazon S3"
+                }
+            ],
+            "answer": 3
+        },
+        {
+            "id": "kendra4",
+            "topicId": 36,
+            "levelId": 3,
+            "subject": "Amazon Kendra",
+            "tags": [
+                "AWS",
+                "Pesquisa Inteligente"
+            ],
+            "question": "Como o Amazon Kendra melhora a precisão das buscas?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Apenas ordena resultados por data"
+                },
+                {
+                    "index": 2,
+                    "text": "Utiliza modelos de machine learning treinados para entender o contexto da consulta"
+                },
+                {
+                    "index": 3,
+                    "text": "Indexa apenas palavras-chave sem análise semântica"
+                },
+                {
+                    "index": 4,
+                    "text": "Depende exclusivamente de tags definidas manualmente"
+                }
+            ],
+            "answer": 2
+        }
+    ]
+}

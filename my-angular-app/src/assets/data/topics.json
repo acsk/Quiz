@@ -169,6 +169,16 @@
       "id": 34,
       "name": "Definição de Preços",
       "description": "Informações sobre a estrutura de preços dos serviços da AWS, incluindo modelos de pagamento, custos associados e práticas recomendadas para otimização de custos."
+    },
+    {
+      "id": 35,
+      "name": "Amazon Lex",
+      "description": "Serviço para a criação de interfaces de conversa em qualquer aplicação usando voz e texto, utilizando tecnologias avançadas de reconhecimento automático de fala (ASR) e entendimento da linguagem natural (NLU)."
+    },
+    {
+      "id": 36,
+      "name": "AWS Kendra",
+      "description": "Serviço de busca inteligente que permite aos desenvolvedores adicionar capacidades de busca em suas aplicações para encontrar informações em documentos e sites internos."
     }
   ]
 }
