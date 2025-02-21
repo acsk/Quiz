@@ -185,11 +185,15 @@
       "name": "Amazon Personalize",
       "description": "Serviço que permite implementar recomendações de usuário hiperpersonalizadas em sites, aplicações e canais de marketing em grande escala com latência ultrabaixa. O Amazon Personalize usa inteligência artificial de última geração para fornecer recomendações com baixa latência, ajudando a envolver os usuários com experiências hiperpersonalizadas."
     },
-        {
+    {
       "id": 38,
       "name": "Amazon Inspector",
       "description": "Serviço automatizado de gerenciamento de vulnerabilidades que verifica continuamente o Amazon EC2, as funções do AWS Lambda e as imagens de contêiner no Amazon ECR e em ferramentas de integração e entrega contínuas (CI/CD), quase em tempo real, em busca de vulnerabilidades de software e exposição não intencional à rede."
+    },
+    {
+      "id": 39,
+      "name": "AWS GuardDuty",
+      "description": "Serviço de detecção de ameaças que monitora continuamente atividades maliciosas e comportamento não autorizado para proteger suas contas, cargas de trabalho e dados armazenados no Amazon S3."
     }
-
   ]
 }
