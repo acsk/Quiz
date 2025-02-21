@@ -104,6 +104,136 @@
         { "index": 4, "text": "O Amazon Inspector está disponível apenas na Ásia." }
       ],
       "answer": 1
+    },
+    {
+      "id": "inspector9m0n1o2p3",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "O que é a pontuação de risco contextualizada no Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "Uma métrica que avalia o risco de vulnerabilidades com base no contexto do ambiente, como a exposição à rede e a criticidade dos recursos." },
+        { "index": 2, "text": "Uma pontuação que mede o desempenho do sistema em termos de velocidade e eficiência." },
+        { "index": 3, "text": "Uma avaliação de custo-benefício dos serviços da AWS." },
+        { "index": 4, "text": "Uma métrica que avalia a popularidade de um serviço entre os usuários da AWS." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector5q6r7s8t9",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Como o Amazon Inspector se integra ao AWS Security Hub?",
+      "options": [
+        { "index": 1, "text": "O Amazon Inspector envia descobertas de vulnerabilidades para o AWS Security Hub, permitindo uma visão centralizada da segurança." },
+        { "index": 2, "text": "O Amazon Inspector usa o AWS Security Hub para armazenar dados de avaliação." },
+        { "index": 3, "text": "O AWS Security Hub substitui o Amazon Inspector na verificação de vulnerabilidades." },
+        { "index": 4, "text": "O Amazon Inspector e o AWS Security Hub não possuem integração." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector0u1v2w3x4",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "O que é a lista de materiais de software (SBOM) no contexto do Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "Um inventário detalhado dos componentes de software usados em uma aplicação, incluindo bibliotecas e dependências." },
+        { "index": 2, "text": "Uma lista de preços dos serviços da AWS." },
+        { "index": 3, "text": "Um relatório de desempenho do sistema." },
+        { "index": 4, "text": "Uma lista de usuários com acesso a um recurso da AWS." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector5y6z7a8b9",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Quais tipos de vulnerabilidades o Amazon Inspector pode detectar?",
+      "options": [
+        { "index": 1, "text": "Vulnerabilidades de software, exposição à rede e más configurações de segurança." },
+        { "index": 2, "text": "Apenas vulnerabilidades de hardware." },
+        { "index": 3, "text": "Apenas vulnerabilidades relacionadas a banco de dados." },
+        { "index": 4, "text": "Apenas vulnerabilidades em aplicações web." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector0c1d2e3f4",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Como o Amazon Inspector ajuda na conformidade com padrões de segurança?",
+      "options": [
+        { "index": 1, "text": "Fornecendo relatórios detalhados de vulnerabilidades que podem ser usados para demonstrar conformidade com padrões como CIS, PCI-DSS e outros." },
+        { "index": 2, "text": "Substituindo a necessidade de auditorias externas." },
+        { "index": 3, "text": "Automatizando a correção de todas as vulnerabilidades encontradas." },
+        { "index": 4, "text": "Fornecendo certificados de conformidade automaticamente." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector5g6h7i8j9",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "O que é a verificação contínua no Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "Um processo que verifica automaticamente novos recursos e alterações no ambiente em busca de vulnerabilidades." },
+        { "index": 2, "text": "Uma verificação manual realizada por um administrador de segurança." },
+        { "index": 3, "text": "Uma verificação que ocorre apenas uma vez por dia." },
+        { "index": 4, "text": "Uma verificação que ocorre apenas quando solicitada pelo usuário." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector0k1l2m3n4",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Como o Amazon Inspector trata a privacidade dos dados durante a verificação de vulnerabilidades?",
+      "options": [
+        { "index": 1, "text": "O Amazon Inspector não armazena os dados verificados, garantindo que apenas os resultados das verificações sejam retidos." },
+        { "index": 2, "text": "O Amazon Inspector armazena todos os dados verificados em um banco de dados seguro." },
+        { "index": 3, "text": "O Amazon Inspector compartilha os dados verificados com terceiros para análise." },
+        { "index": 4, "text": "O Amazon Inspector não realiza verificações que possam comprometer a privacidade dos dados." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector5o6p7q8r9",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "O que é necessário para começar a usar o Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "Ativar o serviço no Console de Gerenciamento da AWS e configurar as permissões necessárias." },
+        { "index": 2, "text": "Contratar um especialista em segurança para configurar o serviço." },
+        { "index": 3, "text": "Migrar todos os dados para um novo banco de dados relacional." },
+        { "index": 4, "text": "Desativar todos os outros serviços de segurança da AWS." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector0s1t2u3v4",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "O Amazon Inspector pode ser usado em ambientes híbridos (nuvem e on-premises)?",
+      "options": [
+        { "index": 1, "text": "Sim, o Amazon Inspector pode ser usado para verificar recursos tanto na nuvem quanto em ambientes on-premises, desde que estejam integrados à AWS." },
+        { "index": 2, "text": "Não, o Amazon Inspector só funciona em ambientes totalmente na nuvem." },
+        { "index": 3, "text": "Sim, mas apenas para recursos de armazenamento." },
+        { "index": 4, "text": "Não, o Amazon Inspector só funciona em ambientes on-premises." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "inspector5w6x7y8z9",
+      "topicId": 38,
+      "levelId": 1,
+      "question": "Qual é o papel do AWS Systems Manager Agent (SSM Agent) no Amazon Inspector?",
+      "options": [
+        { "index": 1, "text": "O SSM Agent é usado para coletar dados de segurança e configuração das instâncias EC2, permitindo que o Amazon Inspector realize verificações." },
+        { "index": 2, "text": "O SSM Agent é usado para armazenar os resultados das verificações do Amazon Inspector." },
+        { "index": 3, "text": "O SSM Agent é usado para substituir o Amazon Inspector em verificações de segurança." },
+        { "index": 4, "text": "O SSM Agent não tem relação com o Amazon Inspector." }
+      ],
+      "answer": 1
     }
   ]
 }
