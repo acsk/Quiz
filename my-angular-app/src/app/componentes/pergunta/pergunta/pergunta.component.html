@@ -5,7 +5,7 @@
         <label for="topicSelect" class="block text-sm font-medium text-gray-700">Selecione os Tópicos:</label>
         <app-multi-select-box [items]="topics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted">
           <ng-template let-topic>
-            {{ topic.name }} ({{ questionCounts[topic.id] || 0 }})
+            {{ topic.name }}
           </ng-template>
         </app-multi-select-box>
       </div>
@@ -17,22 +17,6 @@
           <option [ngValue]="2">Nível 2</option>
           <option [ngValue]="3">Nível 3</option>
         </select>
-      </div>
-      <div>
-        <label for="subjectSelect" class="block text-sm font-medium text-gray-700">Selecione os Assuntos:</label>
-        <app-multi-select-box [items]="subjects" (selectionChange)="onSubjectsChange($event)" [disabled]="testStarted" [itemTemplate]="subjectTemplate">
-          <ng-template #subjectTemplate let-subject>
-            {{ subject }}
-          </ng-template>
-        </app-multi-select-box>
-      </div>
-      <div>
-        <label for="tagsSelect" class="block text-sm font-medium text-gray-700">Selecione as Tags:</label>
-        <app-multi-select-box [items]="tags" (selectionChange)="onTagsChange($event)" [disabled]="testStarted" [itemTemplate]="tagTemplate">
-          <ng-template #tagTemplate let-tag>
-            {{ tag }}
-          </ng-template>
-        </app-multi-select-box>
       </div>
       <div class="flex space-x-2">
         <button *ngIf="!testStarted && !showSummary" (click)="startTest()" [disabled]="!canStartTest()" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest()}">

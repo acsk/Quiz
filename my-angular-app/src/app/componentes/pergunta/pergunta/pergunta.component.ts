@@ -7,66 +7,46 @@ import { HttpQuestionsService } from '../../../services/http/http-questions.serv
   styleUrls: ['./pergunta.component.css'],
 })
 export class PerguntaComponent implements OnInit {
-  allQuestions: any[] = [];
-  filteredQuestions: any[] = [];
-  currentQuestionIndex: number = 0;
-  currentQuestion: any;
-  selectedOption: number | null = null;
-  showAnswer: boolean = false;
-  topics: any[] = [];
-  selectedTopicIds: number[] = [];
-  selectedLevelId: number | null = null;
-  questionCounts: { [key: number]: number } = {};
-  selectedOptions: { [key: string]: number | null } = {};
-  showAnswers: { [key: string]: boolean } = {};
-  unansweredQuestions: Set<string> = new Set();
+  testStarted: boolean = false;
   showSummary: boolean = false;
   correctAnswers: number = 0;
   incorrectAnswers: number = 0;
-  testStarted: boolean = false;
-  subjects: string[] = [];
-  tags: string[] = [];
-  selectedSubjects: string[] = [];
-  selectedTags: string[] = [];
+  selectedOptions: { [key: string]: number | null } = {};
+  showAnswers: { [key: string]: boolean } = {};
+  unansweredQuestions: Set<string> = new Set();
+  selectedOption: number | null = null;
+  showAnswer: boolean = false;
+  currentQuestionIndex: number = 0;
+  currentQuestion: any;
+  selectedTopicIds: number[] = [];
+  selectedLevelId: number | null = null;
+  resetMultiSelectBoxes: boolean = false;
+  filteredQuestions: any[] = [];
+  topics: any[] = [];
+  allQuestions: any[] = [];
 
   constructor(private httpQuestionsService: HttpQuestionsService) {}
 
   ngOnInit(): void {
+    this.loadQuestions();
+    this.loadTopics();
+  }
+
+  loadQuestions(): void {
     this.httpQuestionsService.getAllQuestions().subscribe((data) => {
       this.allQuestions = data;
       this.filteredQuestions = this.allQuestions;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.extractSubjectsAndTags();
-      this.countQuestionsByTopic();
       console.log('Todas as perguntas:', this.allQuestions);
       console.log('Perguntas filtradas:', this.filteredQuestions);
     });
+  }
 
+  loadTopics(): void {
     this.httpQuestionsService.getTopics().subscribe((data) => {
       this.topics = data.topics;
       console.log('Tópicos carregados:', this.topics);
     });
-
-    this.filterQuestionsByTopic();
-  }
-
-  extractSubjectsAndTags(): void {
-    const subjectsSet = new Set<string>();
-    const tagsSet = new Set<string>();
-
-    this.allQuestions.forEach((question) => {
-      if (question.subject) {
-        subjectsSet.add(question.subject);
-      }
-      if (question.tags) {
-        question.tags.forEach((tag: string) => tagsSet.add(tag));
-      }
-    });
-
-    this.subjects = Array.from(subjectsSet);
-    this.tags = Array.from(tagsSet);
-    console.log('Assuntos extraídos:', this.subjects);
-    console.log('Tags extraídas:', this.tags);
   }
 
   get progressPercentage(): number {
@@ -78,7 +58,7 @@ export class PerguntaComponent implements OnInit {
     this.selectedOptions[this.currentQuestion.id] = index;
     this.unansweredQuestions.add(this.currentQuestion.id);
   }
- 
+
   checkAnswer(): void {
     this.showAnswer = true;
     this.showAnswers[this.currentQuestion.id] = true;
@@ -125,20 +105,15 @@ export class PerguntaComponent implements OnInit {
     console.log('Filtrando perguntas com os seguintes critérios:');
     console.log('Tópicos selecionados:', this.selectedTopicIds);
     console.log('Nível selecionado:', this.selectedLevelId);
-    console.log('Assuntos selecionados:', this.selectedSubjects);
-    console.log('Tags selecionadas:', this.selectedTags);
 
-    this.filteredQuestions = this.allQuestions.filter((question) => {
+    this.filteredQuestions = this.allQuestions.filter((question: any) => {
       const matchesTopic = this.selectedTopicIds.length === 0 || this.selectedTopicIds.includes(question.topicId);
       const matchesLevel = this.selectedLevelId === null || question.levelId === this.selectedLevelId;
-      const matchesSubject = this.selectedSubjects.length === 0 || this.selectedSubjects.includes(question.subject);
-      const matchesTags = this.selectedTags.length === 0 || (question.tags && this.selectedTags.some(tag => question.tags.includes(tag)));
-      return matchesTopic && matchesLevel && matchesSubject && matchesTags;
+      return matchesTopic && matchesLevel;
     });
 
     console.log('Perguntas após aplicação dos filtros:', this.filteredQuestions);
 
-    this.countQuestionsByTopic();
     this.currentQuestionIndex = 0;
     if (this.filteredQuestions.length > 0) {
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
@@ -151,38 +126,21 @@ export class PerguntaComponent implements OnInit {
     }
   }
 
-  countQuestionsByTopic(): void {
-    this.questionCounts = this.filteredQuestions.reduce((counts, question) => {
-      counts[question.topicId] = (counts[question.topicId] || 0) + 1;
-      return counts;
-    }, {});
-    console.log('Quantidade de perguntas por tópico:', this.questionCounts);
-  }
-
   finalizeTest(): void {
     this.testStarted = false;
     this.showSummary = true;
-    this.correctAnswers = this.filteredQuestions.filter((question) => 
+    this.correctAnswers = this.filteredQuestions.filter((question: any) => 
       this.selectedOptions[question.id] === question.answer
     ).length;
     this.incorrectAnswers = this.filteredQuestions.length - this.correctAnswers;
   }
 
   onTopicsChange(selectedTopics: any[]): void {
-    this.selectedTopicIds = selectedTopics.map(topic => topic.id); // Extraindo apenas os IDs dos tópicos
+    console.log('onTopicsChange - selectedTopics:', selectedTopics);
+    this.selectedTopicIds = selectedTopics
+      .filter(topic => topic && topic.id !== undefined) // Filtrar tópicos válidos
+      .map(topic => topic.id); // Extraindo apenas os IDs dos tópicos
     console.log('Tópicos selecionados:', this.selectedTopicIds);
-    this.filterQuestionsByTopic();
-  }
-
-  onSubjectsChange(selectedSubjects: string[]): void {
-    this.selectedSubjects = selectedSubjects;
-    console.log('Assuntos selecionados:', this.selectedSubjects);
-    this.filterQuestionsByTopic();
-  }
-
-  onTagsChange(selectedTags: string[]): void {
-    this.selectedTags = selectedTags;
-    console.log('Tags selecionadas:', this.selectedTags);
     this.filterQuestionsByTopic();
   }
 
@@ -211,6 +169,20 @@ export class PerguntaComponent implements OnInit {
     this.showAnswer = false;
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+  
+    // Resetar dropdowns
+    this.selectedTopicIds = [];
+    this.selectedLevelId = null;
+  
+    // Emitir evento de reset para os componentes multi-select-box
+    this.resetMultiSelectBoxes = true;
+
+    // Reaplicar os filtros para garantir que todas as perguntas sejam exibidas
+    this.filterQuestionsByTopic();
+  }
+
+  onResetComplete(): void {
+    this.resetMultiSelectBoxes = false;
   }
 
   getGoogleSearchUrl(question: string, answer?: string): string {
