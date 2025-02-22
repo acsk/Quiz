@@ -1,0 +1,58 @@
+@keyframes greenFade {
+  from {
+    background-color: #d1fae5; /* bg-green-200 */
+  }
+  to {
+    background-color: #a7f3d0; /* bg-green-100 */
+  }
+}
+
+.animate-green {
+  animation: greenFade 1s ease-in-out;
+}
+
+@keyframes borderFade {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #10b981; /* bg-green-500 */
+  }
+}
+
+.animate-border {
+  border: 2px solid #10b981; /* bg-green-500 */
+  animation: borderFade 1s ease-in-out;
+}
+
+.fas.fa-check-circle, .fas.fa-times-circle {
+  font-size: 1.5rem; /* Aumenta o tamanho do ícone */
+  width: 1.5rem; /* Define a largura do ícone */
+  height: 1.5rem; /* Define a altura do ícone */
+  display: inline-flex; /* Garante que o ícone não afete o layout */
+  align-items: center; /* Centraliza o ícone verticalmente */
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+  margin-left: 7px; /* Adiciona um espaçamento à esquerda do ícone */
+}
+
+.icon-correct {
+  font-size: 1.5rem; /* Aumenta o tamanho do ícone */
+  width: 1.5rem; /* Define a largura do ícone */
+  height: 1.5rem; /* Define a altura do ícone */
+  color: #10b981; /* Cor do ícone */
+  border-radius: 50%; /* Torna o ícone circular */
+  display: inline-flex; /* Garante que o ícone não afete o layout */
+  align-items: center; /* Centraliza o ícone verticalmente */
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+}
+
+.icon-incorrect {
+  font-size: 1.5rem; /* Aumenta o tamanho do ícone */
+  width: 1.5rem; /* Define a largura do ícone */
+  height: 1.5rem; /* Define a altura do ícone */
+  color: #ef4444; /* Cor do ícone */
+  border-radius: 50%; /* Torna o ícone circular */
+  display: inline-flex; /* Garante que o ícone não afete o layout */
+  align-items: center; /* Centraliza o ícone verticalmente */
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+}
