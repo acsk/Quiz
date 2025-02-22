@@ -194,6 +194,11 @@
       "id": 39,
       "name": "AWS GuardDuty",
       "description": "Serviço de detecção de ameaças que monitora continuamente atividades maliciosas e comportamento não autorizado para proteger suas contas, cargas de trabalho e dados armazenados no Amazon S3."
+    },
+    {
+      "id": 40,
+      "name": "Amazon DocumentDB",
+      "description": "Serviço de banco de dados de documentos compatível com MongoDB, projetado para facilitar a configuração, operação e escalabilidade de bancos de dados de documentos na nuvem."
     }
   ]
 }

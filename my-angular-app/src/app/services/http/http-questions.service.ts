@@ -18,7 +18,6 @@ export class HttpQuestionsService {
   private cognitoQuestionsUrl = 'assets/data/question/cognito.json';
   private deviceFarmQuestionsUrl = 'assets/data/question/deviceFarm.json';
   private disasterRecoveryQuestionsUrl = 'assets/data/question/disasterRecovery.json';
-  private dynamoQuestionsUrl = 'assets/data/question/dynamo.json';
   private ec2QuestionsUrl = 'assets/data/question/ec2.json';
   private ecsQuestionsUrl = 'assets/data/question/ecs.json';
   private iamQuestionsUrl = 'assets/data/question/iam.json';
@@ -43,6 +42,8 @@ export class HttpQuestionsService {
   private personalizeQuestionsUrl = 'assets/data/question/personalize.json';
   private inspectorQuestionsUrl = 'assets/data/question/inspector.json';
   private guardDutyQuestionsUrl = 'assets/data/question/guardDuty.json';
+  private dynamoDBQuestionsUrl = 'assets/data/question/dynamoDB.json';
+  private documentDbQuestionsUrl = 'assets/data/question/documentDB.json';
 
   constructor(private http: HttpClient) { }
 
@@ -86,10 +87,7 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.disasterRecoveryQuestionsUrl);
   }
 
-  getDynamoQuestions(): Observable<any> {
-    return this.http.get<any>(this.dynamoQuestionsUrl);
-  }
-
+ 
   getEC2Questions(): Observable<any> {
     return this.http.get<any>(this.ec2QuestionsUrl);
   }
@@ -178,6 +176,12 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.guardDutyQuestionsUrl);
   }
 
+  getDynamoDBQuestions(): Observable<any> {
+    return this.http.get<any>(this.dynamoDBQuestionsUrl);
+  }
+  getDocumentDbQuestions(): Observable<any> {
+    return this.http.get<any>(this.documentDbQuestionsUrl);
+  }
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -198,7 +202,6 @@ export class HttpQuestionsService {
       cognito: this.getCognitoQuestions(),
       deviceFarm: this.getDeviceFarmQuestions(),
       disasterRecovery: this.getDisasterRecoveryQuestions(),
-      dynamo: this.getDynamoQuestions(),
       ec2: this.getEC2Questions(),
       ecs: this.getECSQuestions(),
       iam: this.getIAMQuestions(),
@@ -222,7 +225,9 @@ export class HttpQuestionsService {
       kendra: this.getKendraQuestions(),
       perisonalize: this.getPersonalizeQuestions(),
       inspector: this.getInspectorQuestions(),
-      guardDuty: this.getGuardDutyQuestions()
+      guardDuty: this.getGuardDutyQuestions(),
+      dynamoDB: this.getDynamoDBQuestions(),
+      documentDb: this.getDocumentDbQuestions()
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -236,8 +241,7 @@ export class HttpQuestionsService {
           ...responses.cognito.questions,
           ...responses.deviceFarm.questions,
           ...responses.disasterRecovery.questions,
-          ...responses.dynamo.questions,
-          ...responses.ec2.questions,
+           ...responses.ec2.questions,
           ...responses.ecs.questions,
           ...responses.iam.questions,
           ...responses.iotCore.questions,
@@ -260,7 +264,9 @@ export class HttpQuestionsService {
           ...responses.kendra.questions,
           ...responses.perisonalize.questions,
           ...responses.inspector.questions,
-          ...responses.guardDuty.questions
+          ...responses.guardDuty.questions,
+          ...responses.dynamoDB.questions,
+          ...responses.documentDb.questions
           
         ].map((question: any) => ({
           ...question,
