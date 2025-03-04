@@ -34,33 +34,55 @@
   <div class="mb-4">
     <p class="text-sm text-gray-700">Total de Perguntas Filtradas: <span class="font-bold">{{ filteredQuestions.length }}</span></p>
   </div>
-  <div *ngIf="testStarted">
-    <div>
-      <h2>{{ currentQuestion.question }}</h2>
-      <ul>
-        <li *ngFor="let option of currentQuestion.options; let i = index">
-          <input
-            type="radio"
-            [id]="'option' + i"
-            [name]="'question' + currentQuestion.id"
-            [value]="i"
-            [checked]="selectedOption === i"
-            (change)="selectOption(i)"
-          />
-          <label [for]="'option' + i">{{ option.text }}</label>
-        </li>
-      </ul>
+  <div *ngIf="testStarted && currentQuestion" class="mb-6 p-4 border rounded shadow">
+    <div class="flex justify-between items-center mb-2">
+      <h2 class="text-xl font-semibold">
+        {{ currentQuestionIndex + 1 }}. {{ currentQuestion.question }}
+        <a [href]="getGoogleSearchUrl(currentQuestion.question)" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
+          <i class="fas fa-search"></i>
+        </a>
+      </h2>
+      <span class="bg-blue-500 text-white text-sm font-semibold px-2 py-1 rounded">{{ currentQuestion.topicName }}</span>
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+      <div class="bg-blue-500 h-2.5 rounded-full" [style.width.%]="progressPercentage"></div>
+    </div>
+    <ul class="list-none pl-0">
+      <li *ngFor="let option of currentQuestion.options" class="mb-1 flex items-center p-2 rounded cursor-pointer hover:bg-gray-200"
+          [ngClass]="{
+            'bg-green-200': selectedOptions[currentQuestion.id] === option.index && showAnswer && option.index === currentQuestion.answer,
+            'bg-red-200': selectedOptions[currentQuestion.id] === option.index && showAnswer && option.index !== currentQuestion.answer,
+            'bg-gray-100': !showAnswer,
+            'bg-green-100': showAnswer && option.index === currentQuestion.answer && selectedOptions[currentQuestion.id] !== option.index
+          }"
+          (click)="selectOption(option.index)">
+        <input type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-full"
+               (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id] === option.index">
+        {{ option.text }}
+        <i *ngIf="showAnswer && option.index === currentQuestion.answer" class="fas fa-check-circle icon-correct"></i>
+        <i *ngIf="showAnswer && option.index !== currentQuestion.answer && selectedOptions[currentQuestion.id] === option.index" class="fas fa-times-circle icon-incorrect"></i>
+        <a *ngIf="showAnswer && option.index === currentQuestion.answer" [href]="getGoogleSearchUrl(currentQuestion.question, option.text)" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
+          <i class="fas fa-search"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="mt-4 flex justify-between">
       <button (click)="checkAnswer()" [disabled]="selectedOption === null" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': selectedOption === null}">
         <i class="fas fa-check mr-2"></i>Responder
       </button>
-      <button (click)="nextQuestion()" class="px-4 py-2 bg-green-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length - 1}">
-        Próxima<i class="fas fa-arrow-right ml-2"></i>
-      </button>
-      <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0" class="px-4 py-2 bg-gray-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
-        <i class="fas fa-arrow-left mr-2"></i>Voltar
-      </button>
+      <div class="flex space-x-2">
+        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0" class="px-4 py-2 bg-gray-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
+          <i class="fas fa-arrow-left mr-2"></i>Voltar
+        </button>
+        <button (click)="nextQuestion()" class="px-4 py-2 bg-yellow-500 text-white rounded">
+          Responder Depois
+        </button>
+        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex >= filteredQuestions.length - 1" class="px-4 py-2 bg-green-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length - 1}">
+          Próxima<i class="fas fa-arrow-right ml-2"></i>
+        </button>
+      </div>
     </div>
-    <div *ngIf="showAnswer" class="mt-4">
+        <div *ngIf="showAnswer" class="mt-4 p-4 bg-white  border border-gray-300 rounded-lg shadow">
       <p><strong>Explicação:</strong> {{ currentQuestion.explanation }}</p>
     </div>
   </div>
