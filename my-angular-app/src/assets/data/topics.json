@@ -219,6 +219,11 @@
       "id": 44,
       "name": "Simulado AWS Practitioner 2",
       "description": ""
+    },
+    {
+      "id": 45,
+      "name": "Simulado AWS Practitioner 5",
+      "description": ""
     }
   ]
 }

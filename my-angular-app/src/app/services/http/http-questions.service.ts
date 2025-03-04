@@ -50,6 +50,7 @@ export class HttpQuestionsService {
   private awsPractitioner2QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-2.json';
   private awsPractitioner3QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-3.json';
   private awsPractitioner4QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-4.json';
+  private awsPractitioner5QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-5.json';
 
   constructor(private http: HttpClient) { }
 
@@ -201,6 +202,9 @@ export class HttpQuestionsService {
   getawsPractitioner1Questions(): Observable<any> {
     return this.http.get<any>(this.awsPractitioner1QuestionsUrl);
   }
+  getawsPractitioner5Questions(): Observable<any> {
+    return this.http.get<any>(this.awsPractitioner5QuestionsUrl);
+  }
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -251,6 +255,7 @@ export class HttpQuestionsService {
       awsPractitioner2: this.getawsPractitioner2Questions(),
       awsPractitioner3: this.getawsPractitioner3Questions(),
       awsPractitioner4: this.getawsPractitioner4Questions(),
+      awsPractitioner5: this.getawsPractitioner5Questions(),
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -294,6 +299,7 @@ export class HttpQuestionsService {
           ...responses.awsPractitioner2.questions,
           ...responses.awsPractitioner3.questions,
           ...responses.awsPractitioner4.questions,
+          ...responses.awsPractitioner5.questions,
           
         ].map((question: any) => ({
           ...question,
