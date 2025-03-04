@@ -44,6 +44,8 @@ export class HttpQuestionsService {
   private guardDutyQuestionsUrl = 'assets/data/question/guardDuty.json';
   private dynamoDBQuestionsUrl = 'assets/data/question/dynamoDB.json';
   private documentDbQuestionsUrl = 'assets/data/question/documentDB.json';
+  private awsPractitioner3QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-3.json';
+  private awsPractitioner4QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-4.json';
 
   constructor(private http: HttpClient) { }
 
@@ -182,6 +184,13 @@ export class HttpQuestionsService {
   getDocumentDbQuestions(): Observable<any> {
     return this.http.get<any>(this.documentDbQuestionsUrl);
   }
+
+  getawsPractitioner3Questions(): Observable<any> {
+    return this.http.get<any>(this.awsPractitioner3QuestionsUrl);
+  }
+  getawsPractitioner4Questions(): Observable<any> {
+    return this.http.get<any>(this.awsPractitioner4QuestionsUrl);
+  }
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -227,7 +236,9 @@ export class HttpQuestionsService {
       inspector: this.getInspectorQuestions(),
       guardDuty: this.getGuardDutyQuestions(),
       dynamoDB: this.getDynamoDBQuestions(),
-      documentDb: this.getDocumentDbQuestions()
+      documentDb: this.getDocumentDbQuestions(),
+      awsPractitioner3: this.getawsPractitioner3Questions(),
+      awsPractitioner4: this.getawsPractitioner4Questions(),
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -266,7 +277,9 @@ export class HttpQuestionsService {
           ...responses.inspector.questions,
           ...responses.guardDuty.questions,
           ...responses.dynamoDB.questions,
-          ...responses.documentDb.questions
+          ...responses.documentDb.questions,
+          ...responses.awsPractitioner3.questions,
+          ...responses.awsPractitioner4.questions
           
         ].map((question: any) => ({
           ...question,

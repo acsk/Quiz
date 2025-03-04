@@ -199,6 +199,16 @@
       "id": 40,
       "name": "Amazon DocumentDB",
       "description": "Serviço de banco de dados de documentos compatível com MongoDB, projetado para facilitar a configuração, operação e escalabilidade de bancos de dados de documentos na nuvem."
+    },
+    {
+      "id": 41,
+      "name": "Simulado AWS Practitioner 4",
+      "description": ""
+    },
+    {
+      "id": 42,
+      "name": "Simulado AWS Practitioner 3",
+      "description": ""
     }
   ]
 }

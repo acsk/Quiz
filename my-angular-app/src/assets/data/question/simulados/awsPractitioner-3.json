@@ -1,0 +1,1994 @@
+{
+    "questions": [
+        {
+            "id": "awsPractitioner1",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Sua equipe desenvolveu uma aplicação para enviar um e-mail para os seus clientes avisando sobre atualizações. Qual serviço da AWS é ideal para realizar transferências de dados seguras e eficientes?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon SES",
+                    "explanation": "O Amazon Simple Email Service (SES) é um serviço de e-mail baseado na nuvem que fornece uma maneira econômica de enviar e-mails em massa, transacionais e de marketing."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon SNS",
+                    "explanation": "O Amazon Simple Notification Service (SNS) é um serviço de mensagens totalmente gerenciado para comunicação entre aplicativos e microserviços."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon SQS",
+                    "explanation": "O Amazon Simple Queue Service (SQS) é um serviço de fila de mensagens totalmente gerenciado que permite desacoplar e escalar microsserviços, sistemas distribuídos e aplicativos sem servidor."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon Pinpoint",
+                    "explanation": "O Amazon Pinpoint é um serviço de marketing digital que permite enviar mensagens direcionadas aos seus clientes por e-mail, SMS, push notifications e outros canais."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon Simple Email Service (SES) é um serviço de e-mail baseado na nuvem que fornece uma maneira econômica de enviar e-mails em massa, transacionais e de marketing."
+        },
+        {
+            "id": "awsPractitioner2",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "O que o Amazon EKS adiciona ao Amazon ECS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Suporte para Kubernetes",
+                    "explanation": "O Amazon Elastic Kubernetes Service (EKS) é um serviço gerenciado que facilita a execução do Kubernetes na AWS sem precisar instalar e operar seu próprio plano de controle Kubernetes."
+                },
+                {
+                    "index": 2,
+                    "text": "Suporte para Docker",
+                    "explanation": "O Amazon ECS já oferece suporte para Docker, permitindo que você execute e gerencie contêineres Docker em um cluster de instâncias EC2."
+                },
+                {
+                    "index": 3,
+                    "text": "Suporte para contêineres",
+                    "explanation": "Tanto o Amazon ECS quanto o Amazon EKS oferecem suporte para contêineres, mas o EKS adiciona suporte específico para Kubernetes."
+                },
+                {
+                    "index": 4,
+                    "text": "Suporte para VMs",
+                    "explanation": "O Amazon ECS e o Amazon EKS são serviços de orquestração de contêineres e não oferecem suporte direto para VMs."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon Elastic Kubernetes Service (EKS) é um serviço gerenciado que facilita a execução do Kubernetes na AWS sem precisar instalar e operar seu próprio plano de controle Kubernetes."
+        },
+        {
+            "id": "awsPractitioner3",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço que coleta dados de monitoramento e operações na forma de logs, métricas e eventos?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon CloudWatch",
+                    "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS CloudTrail",
+                    "explanation": "O AWS CloudTrail é um serviço que registra as chamadas de API feitas na sua conta da AWS, fornecendo um histórico de atividades de API para auditoria e conformidade."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço que permite avaliar, auditar e avaliar as configurações dos recursos da AWS de forma contínua."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS X-Ray",
+                    "explanation": "O AWS X-Ray é um serviço que ajuda a depurar e analisar aplicativos distribuídos, como aqueles criados usando uma arquitetura de microsserviços."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+        },
+        {
+            "id": "awsPractitioner4",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "A utilização de 750h por mês do EC2 faz parte de qual tipo de uso do nível gratuito da AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Uso contínuo",
+                    "explanation": "O uso contínuo refere-se ao uso ininterrupto de um serviço, mas não é um termo específico do nível gratuito da AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "Uso esporádico",
+                    "explanation": "O uso esporádico refere-se ao uso ocasional de um serviço, mas não é um termo específico do nível gratuito da AWS."
+                },
+                {
+                    "index": 3,
+                    "text": "Uso limitado",
+                    "explanation": "O uso limitado refere-se a uma quantidade restrita de uso, mas não é um termo específico do nível gratuito da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "Uso mensal",
+                    "explanation": "O nível gratuito da AWS inclui 750 horas de uso de instâncias EC2 por mês durante os primeiros 12 meses, permitindo que você execute uma instância continuamente durante todo o mês."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O nível gratuito da AWS inclui 750 horas de uso de instâncias EC2 por mês durante os primeiros 12 meses, permitindo que você execute uma instância continuamente durante todo o mês."
+        },
+        {
+            "id": "awsPractitioner5",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Você iniciou um trabalho de estimativa de custos de uma infraestrutura que precisa ser escalável. Qual serviço da AWS você deve usar para estimar esses custos?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator permite que você estime os custos de uma infraestrutura escalável na AWS, fornecendo uma interface fácil de usar para calcular os custos de diferentes serviços da AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite visualizar, entender e gerenciar os custos e o uso da AWS ao longo do tempo, mas não é especificamente uma ferramenta de estimativa de custos."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost and Usage Report",
+                    "explanation": "O AWS Cost and Usage Report fornece informações detalhadas sobre o uso e os custos da AWS, mas não é especificamente uma ferramenta de estimativa de custos."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O AWS Pricing Calculator permite que você estime os custos de uma infraestrutura escalável na AWS, fornecendo uma interface fácil de usar para calcular os custos de diferentes serviços da AWS."
+        },
+        {
+            "id": "awsPractitioner6",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Quais dos seguintes bancos de dados são totalmente gerenciados pela AWS? (Escolha 3 alternativas)",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Aurora",
+                    "explanation": "Amazon Aurora é um banco de dados relacional compatível com MySQL e PostgreSQL, totalmente gerenciado pela AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon Redshift",
+                    "explanation": "Amazon Redshift é um serviço de data warehouse totalmente gerenciado pela AWS."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon DynamoDB",
+                    "explanation": "Amazon DynamoDB é um banco de dados NoSQL totalmente gerenciado pela AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "MySQL",
+                    "explanation": "MySQL é um banco de dados de código aberto que pode ser gerenciado manualmente ou através do Amazon RDS, mas não é totalmente gerenciado pela AWS por si só."
+                }
+            ],
+            "answer": [
+                1,
+                2,
+                3
+            ],
+            "explanation": "Amazon Aurora, Amazon Redshift e Amazon DynamoDB são bancos de dados totalmente gerenciados pela AWS, enquanto o MySQL é um banco de dados de código aberto que pode ser gerenciado manualmente ou através do Amazon RDS."
+        },
+        {
+            "id": "awsPractitioner7",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço que monitora os aplicativos e que ajusta automaticamente a capacidade de instâncias para manter um desempenho constante e previsível pelo menor custo possível?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Auto Scaling",
+                    "explanation": "O AWS Auto Scaling monitora seus aplicativos e ajusta automaticamente a capacidade de instâncias para manter um desempenho constante e previsível pelo menor custo possível."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Elastic Beanstalk",
+                    "explanation": "O AWS Elastic Beanstalk é um serviço que facilita a implantação e o dimensionamento de aplicativos e serviços web desenvolvidos com Java, .NET, PHP, Node.js, Python, Ruby, Go e Docker."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Lambda",
+                    "explanation": "O AWS Lambda é um serviço de computação sem servidor que executa código em resposta a eventos e gerencia automaticamente os recursos de computação subjacentes."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Fargate",
+                    "explanation": "O AWS Fargate é um mecanismo de computação sem servidor para contêineres que funciona com o Amazon ECS e o Amazon EKS."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O AWS Auto Scaling monitora seus aplicativos e ajusta automaticamente a capacidade de instâncias para manter um desempenho constante e previsível pelo menor custo possível."
+        },
+        {
+            "id": "awsPractitioner8",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Quais mecanismos de segurança são usados para controlar o tráfego de entrada e saída de instâncias EC2, permitindo definir regras específicas para aumentar a proteção contra acessos não autorizados?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Security Groups",
+                    "explanation": "Os Security Groups atuam como firewalls virtuais para instâncias EC2, controlando o tráfego de entrada e saída com base em regras específicas."
+                },
+                {
+                    "index": 2,
+                    "text": "IAM Policies",
+                    "explanation": "As IAM Policies são usadas para gerenciar permissões de acesso aos recursos da AWS, mas não controlam diretamente o tráfego de rede."
+                },
+                {
+                    "index": 3,
+                    "text": "NACLs",
+                    "explanation": "As Network Access Control Lists (NACLs) são usadas para controlar o tráfego de entrada e saída em sub-redes dentro de uma VPC."
+                },
+                {
+                    "index": 4,
+                    "text": "VPC Peering",
+                    "explanation": "O VPC Peering permite conectar duas VPCs para que possam se comunicar entre si, mas não controla diretamente o tráfego de rede."
+                }
+            ],
+            "answer": 1,
+            "explanation": "Os Security Groups atuam como firewalls virtuais para instâncias EC2, controlando o tráfego de entrada e saída com base em regras específicas."
+        },
+        {
+            "id": "awsPractitioner9",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "No modelo de responsabilidade compartilhada, qual dos itens abaixo não é papel da AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Gerenciamento de permissão de acesso a dados de aplicativos dos clientes",
+                    "explanation": "No modelo de responsabilidade compartilhada, a AWS é responsável pela segurança da nuvem, enquanto os clientes são responsáveis pela segurança dos dados e aplicativos que colocam na nuvem."
+                },
+                {
+                    "index": 2,
+                    "text": "Gerenciamento de patches",
+                    "explanation": "A AWS é responsável pelo gerenciamento de patches para a infraestrutura subjacente que suporta os serviços da AWS."
+                },
+                {
+                    "index": 3,
+                    "text": "Gerenciamento de configuração",
+                    "explanation": "A AWS é responsável pelo gerenciamento da configuração da infraestrutura subjacente que suporta os serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "Segurança física dos data centers",
+                    "explanation": "A AWS é responsável pela segurança física dos data centers que hospedam a infraestrutura da AWS."
+                }
+            ],
+            "answer": 1,
+            "explanation": "No modelo de responsabilidade compartilhada, a AWS é responsável pela segurança da nuvem, enquanto os clientes são responsáveis pela segurança dos dados e aplicativos que colocam na nuvem."
+        },
+        {
+            "id": "awsPractitioner10",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Seu website vem apresentando indisponibilidades devido a ataques DDoS que tem sofrido com frequência. Quais serviços listados abaixo podem ser utilizados para evitá-los? (selecione 2 alternativas)",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Shield",
+                    "explanation": "O AWS Shield é um serviço gerenciado que protege contra ataques DDoS, disponível em duas versões: Standard e Advanced."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS WAF",
+                    "explanation": "O AWS WAF é um firewall de aplicação web que ajuda a proteger seus aplicativos web contra exploits comuns que podem afetar a disponibilidade, comprometer a segurança ou consumir recursos em excesso."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS GuardDuty",
+                    "explanation": "O AWS GuardDuty é um serviço de detecção de ameaças que monitora continuamente atividades maliciosas e comportamentos anômalos para proteger suas contas e cargas de trabalho da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Detective",
+                    "explanation": "O AWS Detective é um serviço que facilita a análise e investigação de possíveis problemas de segurança ou atividades suspeitas em suas contas da AWS."
+                }
+            ],
+            "answer": [
+                1,
+                2
+            ],
+            "explanation": "O AWS Shield e o AWS WAF são serviços projetados para proteger contra ataques DDoS. O AWS Shield oferece proteção contra ataques DDoS, enquanto o AWS WAF permite criar regras para filtrar tráfego malicioso."
+        },
+        {
+            "id": "awsPractitioner11",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite aos desenvolvedores se concentrarem apenas na lógica de negócios, sem se preocupar com a infraestrutura subjacente?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon EC2",
+                    "explanation": "O Amazon EC2 é um serviço de computação em nuvem que permite a criação de instâncias de máquinas virtuais, mas requer a gestão da infraestrutura subjacente."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Lambda",
+                    "explanation": "O AWS Lambda é um serviço de computação sem servidor que permite executar código em resposta a eventos, sem a necessidade de gerenciar servidores."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon RDS",
+                    "explanation": "O Amazon RDS é um serviço de banco de dados relacional gerenciado, mas não é um serviço de computação sem servidor."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon S3",
+                    "explanation": "O Amazon S3 é um serviço de armazenamento de objetos, não um serviço de computação sem servidor."
+                }
+            ],
+            "answer": 2,
+            "explanation": "O AWS Lambda é um serviço de computação sem servidor que permite executar código em resposta a eventos, sem a necessidade de gerenciar servidores."
+        },
+        {
+            "id": "awsPractitioner12",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Uma fintech deseja implementar um sistema crítico de processamento financeiro utilizando instâncias EC2. Qual é a melhor prática para garantir a alta disponibilidade e a menor latência de comunicação entre elas?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Distribuir as instâncias em diferentes regiões",
+                    "explanation": "Distribuir as instâncias em diferentes regiões pode aumentar a latência devido à distância geográfica."
+                },
+                {
+                    "index": 2,
+                    "text": "Distribuir as instâncias em diferentes zonas de disponibilidade dentro da mesma região",
+                    "explanation": "Distribuir as instâncias em diferentes zonas de disponibilidade dentro da mesma região garante alta disponibilidade e baixa latência de comunicação."
+                },
+                {
+                    "index": 3,
+                    "text": "Utilizar instâncias spot",
+                    "explanation": "Instâncias spot são econômicas, mas não garantem alta disponibilidade, pois podem ser interrompidas a qualquer momento."
+                },
+                {
+                    "index": 4,
+                    "text": "Utilizar instâncias reservadas",
+                    "explanation": "Instâncias reservadas oferecem economia de custo, mas não garantem alta disponibilidade por si só."
+                }
+            ],
+            "answer": 2,
+            "explanation": "Distribuir as instâncias em diferentes zonas de disponibilidade dentro da mesma região garante alta disponibilidade e baixa latência de comunicação."
+        },
+        {
+            "id": "awsPractitioner13",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Uma empresa lançou um piloto de uma aplicação e ainda não tem uma estimativa precisa do tráfego que ela receberá. O piloto está programado para durar três meses. Em termos de pagamento, qual seria o plano mais apropriado para este cenário?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "On-Demand",
+                    "explanation": "O plano On-Demand oferece flexibilidade máxima sem compromissos antecipados, ideal para cenários com incerteza de tráfego."
+                },
+                {
+                    "index": 2,
+                    "text": "Reserved",
+                    "explanation": "O plano Reserved é mais econômico para uso contínuo e previsível, mas requer um compromisso antecipado."
+                },
+                {
+                    "index": 3,
+                    "text": "Spot",
+                    "explanation": "O plano Spot oferece preços reduzidos, mas sem garantias de disponibilidade contínua, sendo mais adequado para cargas de trabalho que podem ser interrompidas."
+                },
+                {
+                    "index": 4,
+                    "text": "Dedicated Host",
+                    "explanation": "O Dedicated Host oferece isolamento físico e é ideal para necessidades de conformidade e licenciamento específico, mas pode ser mais caro e menos flexível."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O plano On-Demand oferece flexibilidade máxima sem compromissos antecipados, ideal para cenários com incerteza de tráfego."
+        },
+        {
+            "id": "awsPractitioner14",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Quais são as principais funcionalidades do Amazon SageMaker? (selecione duas alternativas)",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Treinamento de modelos de machine learning",
+                    "explanation": "O Amazon SageMaker oferece ferramentas para treinar modelos de machine learning de forma escalável e gerenciada."
+                },
+                {
+                    "index": 2,
+                    "text": "Armazenamento de objetos",
+                    "explanation": "O armazenamento de objetos é uma funcionalidade do Amazon S3, não do Amazon SageMaker."
+                },
+                {
+                    "index": 3,
+                    "text": "Implantação de modelos de machine learning",
+                    "explanation": "O Amazon SageMaker facilita a implantação de modelos de machine learning em produção."
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciamento de bancos de dados relacionais",
+                    "explanation": "O gerenciamento de bancos de dados relacionais é uma funcionalidade do Amazon RDS, não do Amazon SageMaker."
+                }
+            ],
+            "answer": [
+                1,
+                3
+            ],
+            "explanation": "O Amazon SageMaker oferece ferramentas para treinar e implantar modelos de machine learning de forma escalável e gerenciada."
+        },
+        {
+            "id": "awsPractitioner15",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a opção abaixo que faz uso da infraestrutura das Redes de Borda (EdgeLocations) e melhora a entrega de conteúdo para os usuários finais?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon CloudFront",
+                    "explanation": "O Amazon CloudFront é uma rede de distribuição de conteúdo (CDN) que utiliza EdgeLocations para entregar conteúdo com baixa latência aos usuários finais."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon RDS",
+                    "explanation": "O Amazon RDS é um serviço de banco de dados relacional gerenciado, não uma rede de distribuição de conteúdo."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon S3",
+                    "explanation": "O Amazon S3 é um serviço de armazenamento de objetos, não uma rede de distribuição de conteúdo."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Lambda",
+                    "explanation": "O AWS Lambda é um serviço de computação sem servidor, não uma rede de distribuição de conteúdo."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon CloudFront é uma rede de distribuição de conteúdo (CDN) que utiliza EdgeLocations para entregar conteúdo com baixa latência aos usuários finais."
+        },
+        {
+            "id": "awsPractitioner16",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Uma desenvolvedora criou um workflow orientado a eventos e deseja que uma função sem servidor registre um log em um banco de dados ao concluir o processo. Qual serviço é mais apropriado para atender a essa finalidade?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon EC2",
+                    "explanation": "O Amazon EC2 é um serviço de computação em nuvem que permite a criação de instâncias de máquinas virtuais, mas não é um serviço sem servidor."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Lambda",
+                    "explanation": "O AWS Lambda é um serviço de computação sem servidor que permite executar código em resposta a eventos, ideal para workflows orientados a eventos."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon RDS",
+                    "explanation": "O Amazon RDS é um serviço de banco de dados relacional gerenciado, mas não é um serviço sem servidor."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon S3",
+                    "explanation": "O Amazon S3 é um serviço de armazenamento de objetos, não um serviço de computação sem servidor."
+                }
+            ],
+            "answer": 2,
+            "explanation": "O AWS Lambda é um serviço de computação sem servidor que permite executar código em resposta a eventos, ideal para workflows orientados a eventos."
+        },
+        {
+            "id": "awsPractitioner17",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Uma organização precisa de uma aplicação que requer 10 instâncias EC2 ativas para suportar diversos usuários logados. Qual serviço da AWS oferece um mecanismo para distribuir as requisições de forma equilibrada entre essas instâncias?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Route 53",
+                    "explanation": "O Amazon Route 53 é um serviço de DNS gerenciado que roteia o tráfego do usuário para diferentes endpoints, mas não é um balanceador de carga."
+                },
+                {
+                    "index": 2,
+                    "text": "Security Groups",
+                    "explanation": "Security Groups são conjuntos de regras que controlam o tráfego de entrada e saída das instâncias EC2, mas não distribuem requisições."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Elastic Load Balancing (ELB)",
+                    "explanation": "O AWS Elastic Load Balancing (ELB) oferece um mecanismo para distribuir as requisições de forma equilibrada entre as instâncias EC2."
+                },
+                {
+                    "index": 4,
+                    "text": "Auto Scaling Group",
+                    "explanation": "Um Auto Scaling Group é um recurso da AWS que permite ajustar automaticamente o número de instâncias EC2, mas não distribui requisições."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O AWS Elastic Load Balancing (ELB) oferece um mecanismo para distribuir as requisições de forma equilibrada entre as instâncias EC2."
+        },
+        {
+            "id": "awsPractitioner18",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço AWS é ideal para armazenar dados que raramente precisam ser acessados, mas ainda requerem durabilidade a longo prazo e custo baixo?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon EC2",
+                    "explanation": "O Amazon EC2 é um serviço de computação em nuvem, não um serviço de armazenamento de dados."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon DynamoDB",
+                    "explanation": "O Amazon DynamoDB é um serviço de banco de dados NoSQL, não um serviço de armazenamento de dados a longo prazo."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon S3 Standard",
+                    "explanation": "O Amazon S3 Standard é ideal para dados que precisam ser acessados com frequência, não para dados raramente acessados."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon S3 Glacier",
+                    "explanation": "O Amazon S3 Glacier é a melhor opção para armazenar dados que raramente precisam ser acessados, mas ainda requerem durabilidade a longo prazo e custo baixo."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon S3 Glacier é a melhor opção para armazenar dados que raramente precisam ser acessados, mas ainda requerem durabilidade a longo prazo e custo baixo."
+        },
+        {
+            "id": "awsPractitioner19",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço da AWS faz recomendações para a otimização de segurança dos seus recursos?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Security Groups",
+                    "explanation": "Security Groups atuam como firewalls virtuais para instâncias EC2, controlando o tráfego de entrada e saída, mas não fazem recomendações de segurança."
+                },
+                {
+                    "index": 2,
+                    "text": "IAM",
+                    "explanation": "IAM (Identity and Access Management) é um serviço da AWS que gerencia permissões e acesso a recursos, mas não faz recomendações de segurança."
+                },
+                {
+                    "index": 3,
+                    "text": "MFA",
+                    "explanation": "MFA (Autenticação Multifator) é um recurso de segurança que adiciona uma camada extra de proteção, mas não faz recomendações de segurança."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Trusted Advisor",
+                    "explanation": "O AWS Trusted Advisor fornece recomendações em tempo real para otimizar segurança, desempenho, tolerância a falhas e redução de custos."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O AWS Trusted Advisor fornece recomendações em tempo real para otimizar segurança, desempenho, tolerância a falhas e redução de custos."
+        },
+        {
+            "id": "awsPractitioner20",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "A AWS é uma infraestrutura cloud global segura, escalável e confiável que oferece diversos serviços em muitos países ao redor do mundo. Sobre sua distribuição global, podemos afirmar que:",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Cada Região AWS contém várias Zonas de Disponibilidade que oferecem resiliência a falhas.",
+                    "explanation": "Cada Região AWS contém várias Zonas de Disponibilidade (AZs) que oferecem resiliência a falhas, garantindo alta disponibilidade."
+                },
+                {
+                    "index": 2,
+                    "text": "Cada Zona de Disponibilidade contém várias Regiões.",
+                    "explanation": "As AZs fazem parte de uma Região, e não o contrário. Regiões são áreas geográficas que contêm várias AZs."
+                },
+                {
+                    "index": 3,
+                    "text": "A AWS opera em uma única Região global.",
+                    "explanation": "A AWS opera em várias Regiões ao redor do mundo, garantindo maior proximidade com os clientes e resiliência a falhas."
+                },
+                {
+                    "index": 4,
+                    "text": "Todas as Regiões têm o mesmo número de Zonas de Disponibilidade.",
+                    "explanation": "O número de Zonas de Disponibilidade pode variar entre Regiões, dependendo das necessidades e da infraestrutura local."
+                }
+            ],
+            "answer": 1,
+            "explanation": "Cada Região AWS contém várias Zonas de Disponibilidade (AZs) que oferecem resiliência a falhas, garantindo alta disponibilidade."
+        },
+        {
+            "id": "awsPractitioner21",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite criar uma imagem a partir de uma EC2 configurada para ser utilizada em serviços como Auto Scaling, DR, entre outros?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Image",
+                    "explanation": "O AWS Image não é um serviço existente na AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Workspaces",
+                    "explanation": "O AWS Workspaces é um serviço que fornece desktops windows e linux de forma virtualizada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço para gerenciar e monitorar as configurações de diversos serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AMI",
+                    "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+                }
+            ],
+            "answer": 4,
+            "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+        },
+        {
+            "id": "awsPractitioner22",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Athena",
+                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon ElasticSearchService",
+                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon ElasticCache",
+                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon CloudSearch",
+                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+        },
+        {
+            "id": "awsPractitioner23",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço da AWS é ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Elastic Cache",
+                    "explanation": "Com o Amazon ElastiCache, você pode configurar, executar e escalar repositórios de dados na memória compatíveis com código aberto na nuvem, melhorando a performance de aplicações com alta taxa de transferência e baixa latência. É ideal para casos de uso em tempo real, como armazenamento em cache, sessões, jogos, serviços geoespaciais, análises em tempo real e filas."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon DynamoDB",
+                    "explanation": "O Amazon DynamoDB é um banco de dados de valores-chave e documentos que oferece desempenho rápido e previsível com escalabilidade perfeita."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EC2",
+                    "explanation": "O Amazon Elastic Compute Cloud (Amazon EC2) é um serviço Web que disponibiliza capacidade de computação redimensionável na nuvem."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon S3",
+                    "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+        },
+        {
+            "id": "awsPractitioner24",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a forma de pagamento de instâncias EC2 que pode ser utilizada quando estima-se a utilização das instâncias por mais de 1 ano e que pode gerar uma economia de mais de 72% comparada ao on-demand (sob demanda)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "On-Demand",
+                    "explanation": "On-Demand é pago pelo uso, não precisa de reserva, é o modelo mais caro."
+                },
+                {
+                    "index": 2,
+                    "text": "Dedicated Host",
+                    "explanation": "O Dedicated Host pode chegar a 70% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 3,
+                    "text": "Spot",
+                    "explanation": "O Spot pode chegar a 90% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 4,
+                    "text": "Reserved",
+                    "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+        },
+        {
+            "id": "awsPractitioner25",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "No modelo de responsabilidade compartilhada, qual é o papel do cliente?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Proteger e configurar instâncias EC2 contra invasões",
+                    "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+                },
+                {
+                    "index": 2,
+                    "text": "Proteger os dispositivos de hardware",
+                    "explanation": "Proteger os dispositivos de hardware é responsabilidade da AWS."
+                },
+                {
+                    "index": 3,
+                    "text": "Proteger os softwares de base da infraestrutura geral",
+                    "explanation": "Proteger os softwares de base da infraestrutura geral é responsabilidade da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciar a segurança física dos data centers",
+                    "explanation": "Gerenciar a segurança física dos data centers é responsabilidade da AWS."
+                }
+            ],
+            "answer": 1,
+            "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+        },
+        {
+            "id": "awsPractitioner26",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Ao hospedar 10 instâncias EC2, qual serviço da AWS você deve utilizar para monitorar o desempenho e a saúde dessas instâncias?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon CloudWatch",
+                    "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS CloudTrail",
+                    "explanation": "O AWS CloudTrail é um serviço que registra as chamadas de API feitas na sua conta da AWS, fornecendo um histórico de atividades de API para auditoria e conformidade."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço que permite avaliar, auditar e avaliar as configurações dos recursos da AWS de forma contínua."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS X-Ray",
+                    "explanation": "O AWS X-Ray é um serviço que ajuda a depurar e analisar aplicativos distribuídos, como aqueles criados usando uma arquitetura de microsserviços."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+        },
+        {
+            "id": "awsPractitioner27",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço permite configurar múltiplos orçamentos para monitorar e controlar os custos da AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite visualizar, entender e gerenciar os custos e o uso da AWS ao longo do tempo, mas não é especificamente uma ferramenta de configuração de orçamentos."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator permite que você estime os custos de uma infraestrutura escalável na AWS, fornecendo uma interface fácil de usar para calcular os custos de diferentes serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost and Usage Report",
+                    "explanation": "O AWS Cost and Usage Report fornece informações detalhadas sobre o uso e os custos da AWS, mas não é especificamente uma ferramenta de configuração de orçamentos."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+        },
+        {
+            "id": "awsPractitioner28",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a plataforma líder do setor para processamento de big data, análise interativa e machine learning na nuvem, que utiliza estruturas de código aberto na AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon DMS",
+                    "explanation": "O Amazon DMS é o serviço para migração de bancos de dados."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon Redshift",
+                    "explanation": "O Amazon Redshift é o serviço de data warehouse voltado para BI."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EMR",
+                    "explanation": "O Amazon Elastic MapReduce (EMR) é um serviço de big data da AWS, líder do setor, que simplifica o processamento e análise de grandes conjuntos de dados. Ele utiliza frameworks como Hadoop e Spark para distribuir e processar tarefas em clusters de máquinas virtuais. O EMR é ideal para tarefas de processamento intensivo, mineração de dados e análises avançadas, permitindo dimensionamento flexível e eficiente."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon DataSync",
+                    "explanation": "O AWS DataSync é um serviço de transferência de dados on-line que simplifica, automatiza e acelera a movimentação de dados entre os sistemas de armazenamento on-premises e os serviços de armazenamento da AWS."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O Amazon Elastic MapReduce (EMR) é um serviço de big data da AWS, líder do setor, que simplifica o processamento e análise de grandes conjuntos de dados. Ele utiliza frameworks como Hadoop e Spark para distribuir e processar tarefas em clusters de máquinas virtuais. O EMR é ideal para tarefas de processamento intensivo, mineração de dados e análises avançadas, permitindo dimensionamento flexível e eficiente."
+        },
+        {
+            "id": "awsPractitioner29",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Sua empresa estimou um gasto de US$ 12.000,00 por mês com infraestrutura AWS. Qual é o serviço que te auxilia, enviando mensagem, quando o consumo estiver atingindo um percentual pré-configurado deste valor?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Organizations",
+                    "explanation": "O AWS Organizations é utilizado para agrupar contas para a integração de serviços e gestão de custo."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator é utilizado para estimar custo de uma infraestrutura que será implementada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets ajuda a monitorar os gastos com infraestrutura AWS e envia notificações quando o consumo atinge um percentual pré-configurado do orçamento. Ele permite definir orçamentos específicos e configurar alertas por e-mail ou SMS para acompanhar e gerenciar os custos de forma eficiente."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite que você acompanhe os custos no detalhe, entretanto não tem a função e orçamentos e envio de email."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O AWS Budgets ajuda a monitorar os gastos com infraestrutura AWS e envia notificações quando o consumo atinge um percentual pré-configurado do orçamento. Ele permite definir orçamentos específicos e configurar alertas por e-mail ou SMS para acompanhar e gerenciar os custos de forma eficiente."
+        },
+        {
+            "id": "awsPractitioner30",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite criar uma imagem a partir de uma EC2 configurada para ser utilizada em serviços como Auto Scaling, DR, entre outros?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Image",
+                    "explanation": "O AWS Image não é um serviço existente na AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Workspaces",
+                    "explanation": "O AWS Workspaces é um serviço que fornece desktops windows e linux de forma virtualizada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço para gerenciar e monitorar as configurações de diversos serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AMI",
+                    "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+                }
+            ],
+            "answer": 4,
+            "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+        },
+        {
+            "id": "awsPractitioner31",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite criar uma imagem a partir de uma EC2 configurada para ser utilizada em serviços como Auto Scaling, DR, entre outros?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Image",
+                    "explanation": "O AWS Image não é um serviço existente na AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Workspaces",
+                    "explanation": "O AWS Workspaces é um serviço que fornece desktops windows e linux de forma virtualizada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço para gerenciar e monitorar as configurações de diversos serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AMI",
+                    "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+                }
+            ],
+            "answer": 4,
+            "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+        },
+        {
+            "id": "awsPractitioner32",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Athena",
+                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon ElasticSearchService",
+                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon ElasticCache",
+                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon CloudSearch",
+                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+        },
+        {
+            "id": "awsPractitioner33",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço da AWS é ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Elastic Cache",
+                    "explanation": "Com o Amazon ElastiCache, você pode configurar, executar e escalar repositórios de dados na memória compatíveis com código aberto na nuvem, melhorando a performance de aplicações com alta taxa de transferência e baixa latência. É ideal para casos de uso em tempo real, como armazenamento em cache, sessões, jogos, serviços geoespaciais, análises em tempo real e filas."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon DynamoDB",
+                    "explanation": "O Amazon DynamoDB é um banco de dados de valores-chave e documentos que oferece desempenho rápido e previsível com escalabilidade perfeita."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EC2",
+                    "explanation": "O Amazon Elastic Compute Cloud (Amazon EC2) é um serviço Web que disponibiliza capacidade de computação redimensionável na nuvem."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon S3",
+                    "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+        },
+        {
+            "id": "awsPractitioner34",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a forma de pagamento de instâncias EC2 que pode ser utilizada quando estima-se a utilização das instâncias por mais de 1 ano e que pode gerar uma economia de mais de 72% comparada ao on-demand (sob demanda)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "On-Demand",
+                    "explanation": "On-Demand é pago pelo uso, não precisa de reserva, é o modelo mais caro."
+                },
+                {
+                    "index": 2,
+                    "text": "Dedicated Host",
+                    "explanation": "O Dedicated Host pode chegar a 70% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 3,
+                    "text": "Spot",
+                    "explanation": "O Spot pode chegar a 90% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 4,
+                    "text": "Reserved",
+                    "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+        },
+        {
+            "id": "awsPractitioner35",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "No modelo de responsabilidade compartilhada, qual é o papel do cliente?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Proteger e configurar instâncias EC2 contra invasões",
+                    "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+                },
+                {
+                    "index": 2,
+                    "text": "Proteger os dispositivos de hardware",
+                    "explanation": "Proteger os dispositivos de hardware é responsabilidade da AWS."
+                },
+                {
+                    "index": 3,
+                    "text": "Proteger os softwares de base da infraestrutura geral",
+                    "explanation": "Proteger os softwares de base da infraestrutura geral é responsabilidade da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciar a segurança física dos data centers",
+                    "explanation": "Gerenciar a segurança física dos data centers é responsabilidade da AWS."
+                }
+            ],
+            "answer": 1,
+            "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+        },
+        {
+            "id": "awsPractitioner36",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Ao hospedar 10 instâncias EC2, qual serviço da AWS você deve utilizar para monitorar o desempenho e a saúde dessas instâncias?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon CloudWatch",
+                    "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS CloudTrail",
+                    "explanation": "O AWS CloudTrail é um serviço que registra as chamadas de API feitas na sua conta da AWS, fornecendo um histórico de atividades de API para auditoria e conformidade."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço que permite avaliar, auditar e avaliar as configurações dos recursos da AWS de forma contínua."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS X-Ray",
+                    "explanation": "O AWS X-Ray é um serviço que ajuda a depurar e analisar aplicativos distribuídos, como aqueles criados usando uma arquitetura de microsserviços."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+        },
+        {
+            "id": "awsPractitioner37",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço permite configurar múltiplos orçamentos para monitorar e controlar os custos da AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite visualizar, entender e gerenciar os custos e o uso da AWS ao longo do tempo, mas não é especificamente uma ferramenta de configuração de orçamentos."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator permite que você estime os custos de uma infraestrutura escalável na AWS, fornecendo uma interface fácil de usar para calcular os custos de diferentes serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost and Usage Report",
+                    "explanation": "O AWS Cost and Usage Report fornece informações detalhadas sobre o uso e os custos da AWS, mas não é especificamente uma ferramenta de configuração de orçamentos."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+        },
+        {
+            "id": "awsPractitioner38",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a plataforma líder do setor para processamento de big data, análise interativa e machine learning na nuvem, que utiliza estruturas de código aberto na AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon DMS",
+                    "explanation": "O Amazon DMS é o serviço para migração de bancos de dados."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon Redshift",
+                    "explanation": "O Amazon Redshift é o serviço de data warehouse voltado para BI."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EMR",
+                    "explanation": "O Amazon Elastic MapReduce (EMR) é um serviço de big data da AWS, líder do setor, que simplifica o processamento e análise de grandes conjuntos de dados. Ele utiliza frameworks como Hadoop e Spark para distribuir e processar tarefas em clusters de máquinas virtuais. O EMR é ideal para tarefas de processamento intensivo, mineração de dados e análises avançadas, permitindo dimensionamento flexível e eficiente."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon DataSync",
+                    "explanation": "O AWS DataSync é um serviço de transferência de dados on-line que simplifica, automatiza e acelera a movimentação de dados entre os sistemas de armazenamento on-premises e os serviços de armazenamento da AWS."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O Amazon Elastic MapReduce (EMR) é um serviço de big data da AWS, líder do setor, que simplifica o processamento e análise de grandes conjuntos de dados. Ele utiliza frameworks como Hadoop e Spark para distribuir e processar tarefas em clusters de máquinas virtuais. O EMR é ideal para tarefas de processamento intensivo, mineração de dados e análises avançadas, permitindo dimensionamento flexível e eficiente."
+        },
+        {
+            "id": "awsPractitioner39",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Sua empresa estimou um gasto de US$ 12.000,00 por mês com infraestrutura AWS. Qual é o serviço que te auxilia, enviando mensagem, quando o consumo estiver atingindo um percentual pré-configurado deste valor?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Organizations",
+                    "explanation": "O AWS Organizations é utilizado para agrupar contas para a integração de serviços e gestão de custo."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator é utilizado para estimar custo de uma infraestrutura que será implementada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets ajuda a monitorar os gastos com infraestrutura AWS e envia notificações quando o consumo atinge um percentual pré-configurado do orçamento. Ele permite definir orçamentos específicos e configurar alertas por e-mail ou SMS para acompanhar e gerenciar os custos de forma eficiente."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite que você acompanhe os custos no detalhe, entretanto não tem a função e orçamentos e envio de email."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O AWS Budgets ajuda a monitorar os gastos com infraestrutura AWS e envia notificações quando o consumo atinge um percentual pré-configurado do orçamento. Ele permite definir orçamentos específicos e configurar alertas por e-mail ou SMS para acompanhar e gerenciar os custos de forma eficiente."
+        },
+        {
+            "id": "awsPractitioner40",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite criar uma imagem a partir de uma EC2 configurada para ser utilizada em serviços como Auto Scaling, DR, entre outros?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Image",
+                    "explanation": "O AWS Image não é um serviço existente na AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Workspaces",
+                    "explanation": "O AWS Workspaces é um serviço que fornece desktops windows e linux de forma virtualizada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço para gerenciar e monitorar as configurações de diversos serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AMI",
+                    "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+                }
+            ],
+            "answer": 4,
+            "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+        },
+        {
+            "id": "awsPractitioner41",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a forma de pagamento de instâncias EC2 que pode ser utilizada quando estima-se a utilização das instâncias por mais de 1 ano e que pode gerar uma economia de mais de 72% comparada ao on-demand (sob demanda)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "On-Demand",
+                    "explanation": "On-Demand é pago pelo uso, não precisa de reserva, é o modelo mais caro."
+                },
+                {
+                    "index": 2,
+                    "text": "Dedicated Host",
+                    "explanation": "O Dedicated Host pode chegar a 70% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 3,
+                    "text": "Spot",
+                    "explanation": "O Spot pode chegar a 90% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 4,
+                    "text": "Reserved",
+                    "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+        },
+        {
+            "id": "awsPractitioner42",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "No modelo de responsabilidade compartilhada, qual é o papel do cliente?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Proteger e configurar instâncias EC2 contra invasões",
+                    "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+                },
+                {
+                    "index": 2,
+                    "text": "Proteger os dispositivos de hardware",
+                    "explanation": "Proteger os dispositivos de hardware é responsabilidade da AWS."
+                },
+                {
+                    "index": 3,
+                    "text": "Proteger os softwares de base da infraestrutura geral",
+                    "explanation": "Proteger os softwares de base da infraestrutura geral é responsabilidade da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciar a segurança física dos data centers",
+                    "explanation": "Gerenciar a segurança física dos data centers é responsabilidade da AWS."
+                }
+            ],
+            "answer": 1,
+            "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+        },
+        {
+            "id": "awsPractitioner43",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Ao hospedar 10 instâncias EC2, qual serviço da AWS você deve utilizar para monitorar o desempenho e a saúde dessas instâncias?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon CloudWatch",
+                    "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS CloudTrail",
+                    "explanation": "O AWS CloudTrail é um serviço que registra as chamadas de API feitas na sua conta da AWS, fornecendo um histórico de atividades de API para auditoria e conformidade."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço que permite avaliar, auditar e avaliar as configurações dos recursos da AWS de forma contínua."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS X-Ray",
+                    "explanation": "O AWS X-Ray é um serviço que ajuda a depurar e analisar aplicativos distribuídos, como aqueles criados usando uma arquitetura de microsserviços."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+        },
+        {
+            "id": "awsPractitioner44",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço permite configurar múltiplos orçamentos para monitorar e controlar os custos da AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite visualizar, entender e gerenciar os custos e o uso da AWS ao longo do tempo, mas não é especificamente uma ferramenta de configuração de orçamentos."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator permite que você estime os custos de uma infraestrutura escalável na AWS, fornecendo uma interface fácil de usar para calcular os custos de diferentes serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost and Usage Report",
+                    "explanation": "O AWS Cost and Usage Report fornece informações detalhadas sobre o uso e os custos da AWS, mas não é especificamente uma ferramenta de configuração de orçamentos."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+        },
+        {
+            "id": "awsPractitioner45",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a plataforma líder do setor para processamento de big data, análise interativa e machine learning na nuvem, que utiliza estruturas de código aberto na AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon DMS",
+                    "explanation": "O Amazon DMS é o serviço para migração de bancos de dados."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon Redshift",
+                    "explanation": "O Amazon Redshift é o serviço de data warehouse voltado para BI."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EMR",
+                    "explanation": "O Amazon Elastic MapReduce (EMR) é um serviço de big data da AWS, líder do setor, que simplifica o processamento e análise de grandes conjuntos de dados. Ele utiliza frameworks como Hadoop e Spark para distribuir e processar tarefas em clusters de máquinas virtuais. O EMR é ideal para tarefas de processamento intensivo, mineração de dados e análises avançadas, permitindo dimensionamento flexível e eficiente."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon DataSync",
+                    "explanation": "O AWS DataSync é um serviço de transferência de dados on-line que simplifica, automatiza e acelera a movimentação de dados entre os sistemas de armazenamento on-premises e os serviços de armazenamento da AWS."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O Amazon Elastic MapReduce (EMR) é um serviço de big data da AWS, líder do setor, que simplifica o processamento e análise de grandes conjuntos de dados. Ele utiliza frameworks como Hadoop e Spark para distribuir e processar tarefas em clusters de máquinas virtuais. O EMR é ideal para tarefas de processamento intensivo, mineração de dados e análises avançadas, permitindo dimensionamento flexível e eficiente."
+        },
+        {
+            "id": "awsPractitioner46",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Sua empresa estimou um gasto de US$ 12.000,00 por mês com infraestrutura AWS. Qual é o serviço que te auxilia, enviando mensagem, quando o consumo estiver atingindo um percentual pré-configurado deste valor?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Organizations",
+                    "explanation": "O AWS Organizations é utilizado para agrupar contas para a integração de serviços e gestão de custo."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator é utilizado para estimar custo de uma infraestrutura que será implementada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets ajuda a monitorar os gastos com infraestrutura AWS e envia notificações quando o consumo atinge um percentual pré-configurado do orçamento. Ele permite definir orçamentos específicos e configurar alertas por e-mail ou SMS para acompanhar e gerenciar os custos de forma eficiente."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite que você acompanhe os custos no detalhe, entretanto não tem a função e orçamentos e envio de email."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O AWS Budgets ajuda a monitorar os gastos com infraestrutura AWS e envia notificações quando o consumo atinge um percentual pré-configurado do orçamento. Ele permite definir orçamentos específicos e configurar alertas por e-mail ou SMS para acompanhar e gerenciar os custos de forma eficiente."
+        },
+        {
+            "id": "awsPractitioner47",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite criar uma imagem a partir de uma EC2 configurada para ser utilizada em serviços como Auto Scaling, DR, entre outros?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Image",
+                    "explanation": "O AWS Image não é um serviço existente na AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Workspaces",
+                    "explanation": "O AWS Workspaces é um serviço que fornece desktops windows e linux de forma virtualizada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço para gerenciar e monitorar as configurações de diversos serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AMI",
+                    "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+                }
+            ],
+            "answer": 4,
+            "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+        },
+        {
+            "id": "awsPractitioner48",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Athena",
+                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon ElasticSearchService",
+                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon ElasticCache",
+                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon CloudSearch",
+                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+        },
+        {
+            "id": "awsPractitioner49",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço da AWS é ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Elastic Cache",
+                    "explanation": "Com o Amazon ElastiCache, você pode configurar, executar e escalar repositórios de dados na memória compatíveis com código aberto na nuvem, melhorando a performance de aplicações com alta taxa de transferência e baixa latência. É ideal para casos de uso em tempo real, como armazenamento em cache, sessões, jogos, serviços geoespaciais, análises em tempo real e filas."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon DynamoDB",
+                    "explanation": "O Amazon DynamoDB é um banco de dados de valores-chave e documentos que oferece desempenho rápido e previsível com escalabilidade perfeita."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EC2",
+                    "explanation": "O Amazon Elastic Compute Cloud (Amazon EC2) é um serviço Web que disponibiliza capacidade de computação redimensionável na nuvem."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon S3",
+                    "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+        },
+        {
+            "id": "awsPractitioner50",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a forma de pagamento de instâncias EC2 que pode ser utilizada quando estima-se a utilização das instâncias por mais de 1 ano e que pode gerar uma economia de mais de 72% comparada ao on-demand (sob demanda)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "On-Demand",
+                    "explanation": "On-Demand é pago pelo uso, não precisa de reserva, é o modelo mais caro."
+                },
+                {
+                    "index": 2,
+                    "text": "Dedicated Host",
+                    "explanation": "O Dedicated Host pode chegar a 70% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 3,
+                    "text": "Spot",
+                    "explanation": "O Spot pode chegar a 90% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 4,
+                    "text": "Reserved",
+                    "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+        },
+        {
+            "id": "awsPractitioner51",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite criar uma imagem a partir de uma EC2 configurada para ser utilizada em serviços como Auto Scaling, DR, entre outros?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Image",
+                    "explanation": "O AWS Image não é um serviço existente na AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Workspaces",
+                    "explanation": "O AWS Workspaces é um serviço que fornece desktops windows e linux de forma virtualizada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço para gerenciar e monitorar as configurações de diversos serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AMI",
+                    "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+                }
+            ],
+            "answer": 4,
+            "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+        },
+        {
+            "id": "awsPractitioner52",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Athena",
+                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon ElasticSearchService",
+                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon ElasticCache",
+                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon CloudSearch",
+                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+        },
+        {
+            "id": "awsPractitioner53",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço da AWS é ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Elastic Cache",
+                    "explanation": "Com o Amazon ElastiCache, você pode configurar, executar e escalar repositórios de dados na memória compatíveis com código aberto na nuvem, melhorando a performance de aplicações com alta taxa de transferência e baixa latência. É ideal para casos de uso em tempo real, como armazenamento em cache, sessões, jogos, serviços geoespaciais, análises em tempo real e filas."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon DynamoDB",
+                    "explanation": "O Amazon DynamoDB é um banco de dados de valores-chave e documentos que oferece desempenho rápido e previsível com escalabilidade perfeita."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EC2",
+                    "explanation": "O Amazon Elastic Compute Cloud (Amazon EC2) é um serviço Web que disponibiliza capacidade de computação redimensionável na nuvem."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon S3",
+                    "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+        },
+        {
+            "id": "awsPractitioner54",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a forma de pagamento de instâncias EC2 que pode ser utilizada quando estima-se a utilização das instâncias por mais de 1 ano e que pode gerar uma economia de mais de 72% comparada ao on-demand (sob demanda)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "On-Demand",
+                    "explanation": "On-Demand é pago pelo uso, não precisa de reserva, é o modelo mais caro."
+                },
+                {
+                    "index": 2,
+                    "text": "Dedicated Host",
+                    "explanation": "O Dedicated Host pode chegar a 70% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 3,
+                    "text": "Spot",
+                    "explanation": "O Spot pode chegar a 90% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 4,
+                    "text": "Reserved",
+                    "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+        },
+        {
+            "id": "awsPractitioner55",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "No modelo de responsabilidade compartilhada, qual é o papel do cliente?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Proteger e configurar instâncias EC2 contra invasões",
+                    "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+                },
+                {
+                    "index": 2,
+                    "text": "Proteger os dispositivos de hardware",
+                    "explanation": "Proteger os dispositivos de hardware é responsabilidade da AWS."
+                },
+                {
+                    "index": 3,
+                    "text": "Proteger os softwares de base da infraestrutura geral",
+                    "explanation": "Proteger os softwares de base da infraestrutura geral é responsabilidade da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciar a segurança física dos data centers",
+                    "explanation": "Gerenciar a segurança física dos data centers é responsabilidade da AWS."
+                }
+            ],
+            "answer": 1,
+            "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+        },
+        {
+            "id": "awsPractitioner56",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Ao hospedar 10 instâncias EC2, qual serviço da AWS você deve utilizar para monitorar o desempenho e a saúde dessas instâncias?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon CloudWatch",
+                    "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS CloudTrail",
+                    "explanation": "O AWS CloudTrail é um serviço que registra as chamadas de API feitas na sua conta da AWS, fornecendo um histórico de atividades de API para auditoria e conformidade."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço que permite avaliar, auditar e avaliar as configurações dos recursos da AWS de forma contínua."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS X-Ray",
+                    "explanation": "O AWS X-Ray é um serviço que ajuda a depurar e analisar aplicativos distribuídos, como aqueles criados usando uma arquitetura de microsserviços."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+        },
+        {
+            "id": "awsPractitioner57",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço permite configurar múltiplos orçamentos para monitorar e controlar os custos da AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite visualizar, entender e gerenciar os custos e o uso da AWS ao longo do tempo, mas não é especificamente uma ferramenta de configuração de orçamentos."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator permite que você estime os custos de uma infraestrutura escalável na AWS, fornecendo uma interface fácil de usar para calcular os custos de diferentes serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost and Usage Report",
+                    "explanation": "O AWS Cost and Usage Report fornece informações detalhadas sobre o uso e os custos da AWS, mas não é especificamente uma ferramenta de configuração de orçamentos."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O AWS Budgets permite que você defina orçamentos personalizados que enviam alertas quando o uso ou os custos excedem (ou tendem a exceder) o valor orçado."
+        },
+        {
+            "id": "awsPractitioner58",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a plataforma líder do setor para processamento de big data, análise interativa e machine learning na nuvem, que utiliza estruturas de código aberto na AWS?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon DMS",
+                    "explanation": "O Amazon DMS é o serviço para migração de bancos de dados."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon Redshift",
+                    "explanation": "O Amazon Redshift é o serviço de data warehouse voltado para BI."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EMR",
+                    "explanation": "O Amazon Elastic MapReduce (EMR) é um serviço de big data da AWS, líder do setor, que simplifica o processamento e análise de grandes conjuntos de dados. Ele utiliza frameworks como Hadoop e Spark para distribuir e processar tarefas em clusters de máquinas virtuais. O EMR é ideal para tarefas de processamento intensivo, mineração de dados e análises avançadas, permitindo dimensionamento flexível e eficiente."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon DataSync",
+                    "explanation": "O AWS DataSync é um serviço de transferência de dados on-line que simplifica, automatiza e acelera a movimentação de dados entre os sistemas de armazenamento on-premises e os serviços de armazenamento da AWS."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O Amazon Elastic MapReduce (EMR) é um serviço de big data da AWS, líder do setor, que simplifica o processamento e análise de grandes conjuntos de dados. Ele utiliza frameworks como Hadoop e Spark para distribuir e processar tarefas em clusters de máquinas virtuais. O EMR é ideal para tarefas de processamento intensivo, mineração de dados e análises avançadas, permitindo dimensionamento flexível e eficiente."
+        },
+        {
+            "id": "awsPractitioner59",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Sua empresa estimou um gasto de US$ 12.000,00 por mês com infraestrutura AWS. Qual é o serviço que te auxilia, enviando mensagem, quando o consumo estiver atingindo um percentual pré-configurado deste valor?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Organizations",
+                    "explanation": "O AWS Organizations é utilizado para agrupar contas para a integração de serviços e gestão de custo."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Pricing Calculator",
+                    "explanation": "O AWS Pricing Calculator é utilizado para estimar custo de uma infraestrutura que será implementada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Budgets",
+                    "explanation": "O AWS Budgets ajuda a monitorar os gastos com infraestrutura AWS e envia notificações quando o consumo atinge um percentual pré-configurado do orçamento. Ele permite definir orçamentos específicos e configurar alertas por e-mail ou SMS para acompanhar e gerenciar os custos de forma eficiente."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS Cost Explorer",
+                    "explanation": "O AWS Cost Explorer permite que você acompanhe os custos no detalhe, entretanto não tem a função e orçamentos e envio de email."
+                }
+            ],
+            "answer": 3,
+            "explanation": "O AWS Budgets ajuda a monitorar os gastos com infraestrutura AWS e envia notificações quando o consumo atinge um percentual pré-configurado do orçamento. Ele permite definir orçamentos específicos e configurar alertas por e-mail ou SMS para acompanhar e gerenciar os custos de forma eficiente."
+        },
+        {
+            "id": "awsPractitioner60",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite criar uma imagem a partir de uma EC2 configurada para ser utilizada em serviços como Auto Scaling, DR, entre outros?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Image",
+                    "explanation": "O AWS Image não é um serviço existente na AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Workspaces",
+                    "explanation": "O AWS Workspaces é um serviço que fornece desktops windows e linux de forma virtualizada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço para gerenciar e monitorar as configurações de diversos serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AMI",
+                    "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+                }
+            ],
+            "answer": 4,
+            "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+        },
+        {
+            "id": "awsPractitioner60",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço da AWS que permite criar uma imagem a partir de uma EC2 configurada para ser utilizada em serviços como Auto Scaling, DR, entre outros?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "AWS Image",
+                    "explanation": "O AWS Image não é um serviço existente na AWS."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS Workspaces",
+                    "explanation": "O AWS Workspaces é um serviço que fornece desktops windows e linux de forma virtualizada."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço para gerenciar e monitorar as configurações de diversos serviços da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "AMI",
+                    "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+                }
+            ],
+            "answer": 4,
+            "explanation": "Com o AMI você pode salvar imagens de suas instância EC2 configuradas para fazer uso em Auto Scalling, DR, entre outros. A AWS Amazon Machine Image (AMI) é uma imagem pré-configurada usada para criar instâncias de máquinas virtuais na nuvem."
+        },
+        {
+            "id": "awsPractitioner61",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Athena",
+                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon ElasticSearchService",
+                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon ElasticCache",
+                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon CloudSearch",
+                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+        },
+        {
+            "id": "awsPractitioner62",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual serviço da AWS é ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon Elastic Cache",
+                    "explanation": "Com o Amazon ElastiCache, você pode configurar, executar e escalar repositórios de dados na memória compatíveis com código aberto na nuvem, melhorando a performance de aplicações com alta taxa de transferência e baixa latência. É ideal para casos de uso em tempo real, como armazenamento em cache, sessões, jogos, serviços geoespaciais, análises em tempo real e filas."
+                },
+                {
+                    "index": 2,
+                    "text": "Amazon DynamoDB",
+                    "explanation": "O Amazon DynamoDB é um banco de dados de valores-chave e documentos que oferece desempenho rápido e previsível com escalabilidade perfeita."
+                },
+                {
+                    "index": 3,
+                    "text": "Amazon EC2",
+                    "explanation": "O Amazon Elastic Compute Cloud (Amazon EC2) é um serviço Web que disponibiliza capacidade de computação redimensionável na nuvem."
+                },
+                {
+                    "index": 4,
+                    "text": "Amazon S3",
+                    "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O Amazon S3 (Simple Storage Service) é o serviço da AWS ideal para armazenar grandes volumes de dados não estruturados, como arquivos de dados, filmes e música, em um formato de objeto, oferecendo escalabilidade, durabilidade e acessibilidade."
+        },
+        {
+            "id": "awsPractitioner63",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Qual é a forma de pagamento de instâncias EC2 que pode ser utilizada quando estima-se a utilização das instâncias por mais de 1 ano e que pode gerar uma economia de mais de 72% comparada ao on-demand (sob demanda)?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "On-Demand",
+                    "explanation": "On-Demand é pago pelo uso, não precisa de reserva, é o modelo mais caro."
+                },
+                {
+                    "index": 2,
+                    "text": "Dedicated Host",
+                    "explanation": "O Dedicated Host pode chegar a 70% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 3,
+                    "text": "Spot",
+                    "explanation": "O Spot pode chegar a 90% de desconto se comparado com o OnDemand."
+                },
+                {
+                    "index": 4,
+                    "text": "Reserved",
+                    "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+                }
+            ],
+            "answer": 4,
+            "explanation": "O modelo Reserved apresenta mais de 72% de economia em relação ao On-Demand, muito utilizado quando se tem previsibilidade de uso."
+        },
+        {
+            "id": "awsPractitioner64",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "No modelo de responsabilidade compartilhada, qual é o papel do cliente?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Proteger e configurar instâncias EC2 contra invasões",
+                    "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+                },
+                {
+                    "index": 2,
+                    "text": "Proteger os dispositivos de hardware",
+                    "explanation": "Proteger os dispositivos de hardware é responsabilidade da AWS."
+                },
+                {
+                    "index": 3,
+                    "text": "Proteger os softwares de base da infraestrutura geral",
+                    "explanation": "Proteger os softwares de base da infraestrutura geral é responsabilidade da AWS."
+                },
+                {
+                    "index": 4,
+                    "text": "Gerenciar a segurança física dos data centers",
+                    "explanation": "Gerenciar a segurança física dos data centers é responsabilidade da AWS."
+                }
+            ],
+            "answer": 1,
+            "explanation": "Proteger e configurar instâncias EC2 contra invasões é responsabilidade do cliente no modelo de responsabilidade compartilhada."
+        },
+        {
+            "id": "awsPractitioner65",
+            "topicId": 42,
+            "levelId": 1,
+            "question": "Ao hospedar 10 instâncias EC2, qual serviço da AWS você deve utilizar para monitorar o desempenho e a saúde dessas instâncias?",
+            "options": [
+                {
+                    "index": 1,
+                    "text": "Amazon CloudWatch",
+                    "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+                },
+                {
+                    "index": 2,
+                    "text": "AWS CloudTrail",
+                    "explanation": "O AWS CloudTrail é um serviço que registra as chamadas de API feitas na sua conta da AWS, fornecendo um histórico de atividades de API para auditoria e conformidade."
+                },
+                {
+                    "index": 3,
+                    "text": "AWS Config",
+                    "explanation": "O AWS Config é um serviço que permite avaliar, auditar e avaliar as configurações dos recursos da AWS de forma contínua."
+                },
+                {
+                    "index": 4,
+                    "text": "AWS X-Ray",
+                    "explanation": "O AWS X-Ray é um serviço que ajuda a depurar e analisar aplicativos distribuídos, como aqueles criados usando uma arquitetura de microsserviços."
+                }
+            ],
+            "answer": 1,
+            "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observabilidade que coleta dados de monitoramento e operações na forma de logs, métricas e eventos."
+        }
+    ]
+}
