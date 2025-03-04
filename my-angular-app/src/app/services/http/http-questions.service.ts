@@ -9,41 +9,45 @@ import { map } from 'rxjs/operators';
 export class HttpQuestionsService {
 
   private topicsUrl = 'assets/data/topics.json';
-  private amplifyQuestionsUrl = 'assets/data/question/amplify.json';
-  private appFlowQuestionsUrl = 'assets/data/question/appFlow.json';
-  private appStreamQuestionsUrl = 'assets/data/question/appStream.json';
-  private appSyncQuestionsUrl = 'assets/data/question/appSync.json';
-  private backupQuestionsUrl = 'assets/data/question/backup.json';
-  private cloudfrontQuestionsUrl = 'assets/data/question/cloudfront.json';
-  private cognitoQuestionsUrl = 'assets/data/question/cognito.json';
-  private deviceFarmQuestionsUrl = 'assets/data/question/deviceFarm.json';
-  private disasterRecoveryQuestionsUrl = 'assets/data/question/disasterRecovery.json';
-  private ec2QuestionsUrl = 'assets/data/question/ec2.json';
-  private ecsQuestionsUrl = 'assets/data/question/ecs.json';
-  private iamQuestionsUrl = 'assets/data/question/iam.json';
-  private iotCoreQuestionsUrl = 'assets/data/question/iotCore.json';
-  private lambdaQuestionsUrl = 'assets/data/question/lambda.json';
-  private rdsQuestionsUrl = 'assets/data/question/rds.json';
-  private s3QuestionsUrl = 'assets/data/question/s3.json';
-  private snsQuestionsUrl = 'assets/data/question/sns.json';
-  private sqsQuestionsUrl = 'assets/data/question/sqs.json';
-  private stepFunctionsQuestionsUrl = 'assets/data/question/stepFunctions.json';
-  private stsQuestionsUrl = 'assets/data/question/sts.json';
-  private supportQuestionsUrl = 'assets/data/question/support.json';
-  private vpcQuestionsUrl = 'assets/data/question/vpc.json';
-  private wellArchitectedQuestionsUrl = 'assets/data/question/wellArchitected.json';
-  private route53QuestionsUrl = 'assets/data/question/route53.json';
-  private cloudTrailQuestionsUrl = 'assets/data/question/cloudTrail.json';
-  private wafQuestionsUrl = 'assets/data/question/waf.json';
-  private cafQuestionsUrl = 'assets/data/question/caf.json';
-  private precostQuestionsUrl = 'assets/data/question/precos.json';
-  private lexQuestionsUrl = 'assets/data/question/lex.json';
-  private kendraQuestionsUrl = 'assets/data/question/kendra.json';
-  private personalizeQuestionsUrl = 'assets/data/question/personalize.json';
-  private inspectorQuestionsUrl = 'assets/data/question/inspector.json';
-  private guardDutyQuestionsUrl = 'assets/data/question/guardDuty.json';
-  private dynamoDBQuestionsUrl = 'assets/data/question/dynamoDB.json';
-  private documentDbQuestionsUrl = 'assets/data/question/documentDB.json';
+  // private amplifyQuestionsUrl = 'assets/data/question/amplify.json';
+  // private appFlowQuestionsUrl = 'assets/data/question/appFlow.json';
+  // private appStreamQuestionsUrl = 'assets/data/question/appStream.json';
+  // private appSyncQuestionsUrl = 'assets/data/question/appSync.json';
+  // private backupQuestionsUrl = 'assets/data/question/backup.json';
+  // private cloudfrontQuestionsUrl = 'assets/data/question/cloudfront.json';
+  // private cognitoQuestionsUrl = 'assets/data/question/cognito.json';
+  // private deviceFarmQuestionsUrl = 'assets/data/question/deviceFarm.json';
+  // private disasterRecoveryQuestionsUrl = 'assets/data/question/disasterRecovery.json';
+  // private ec2QuestionsUrl = 'assets/data/question/ec2.json';
+  // private ecsQuestionsUrl = 'assets/data/question/ecs.json';
+  // private iamQuestionsUrl = 'assets/data/question/iam.json';
+  // private iotCoreQuestionsUrl = 'assets/data/question/iotCore.json';
+  // private lambdaQuestionsUrl = 'assets/data/question/lambda.json';
+  // private rdsQuestionsUrl = 'assets/data/question/rds.json';
+  // private s3QuestionsUrl = 'assets/data/question/s3.json';
+  // private snsQuestionsUrl = 'assets/data/question/sns.json';
+  // private sqsQuestionsUrl = 'assets/data/question/sqs.json';
+  // private stepFunctionsQuestionsUrl = 'assets/data/question/stepFunctions.json';
+  // private stsQuestionsUrl = 'assets/data/question/sts.json';
+  // private supportQuestionsUrl = 'assets/data/question/support.json';
+  // private vpcQuestionsUrl = 'assets/data/question/vpc.json';
+  // private wellArchitectedQuestionsUrl = 'assets/data/question/wellArchitected.json';
+  // private route53QuestionsUrl = 'assets/data/question/route53.json';
+  // private cloudTrailQuestionsUrl = 'assets/data/question/cloudTrail.json';
+  // private wafQuestionsUrl = 'assets/data/question/waf.json';
+  // private cafQuestionsUrl = 'assets/data/question/caf.json';
+  // private precostQuestionsUrl = 'assets/data/question/precos.json';
+  // private lexQuestionsUrl = 'assets/data/question/lex.json';
+  // private kendraQuestionsUrl = 'assets/data/question/kendra.json';
+  // private personalizeQuestionsUrl = 'assets/data/question/personalize.json';
+  // private inspectorQuestionsUrl = 'assets/data/question/inspector.json';
+  // private guardDutyQuestionsUrl = 'assets/data/question/guardDuty.json';
+  // private dynamoDBQuestionsUrl = 'assets/data/question/dynamoDB.json';
+  // private documentDbQuestionsUrl = 'assets/data/question/documentDB.json';
+
+  /**FORMATO SIMULADOS */
+  private awsPractitioner1QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-1.json';
+  private awsPractitioner2QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-2.json';
   private awsPractitioner3QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-3.json';
   private awsPractitioner4QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-4.json';
 
@@ -53,143 +57,149 @@ export class HttpQuestionsService {
     return this.http.get<any>(this.topicsUrl);
   }
 
-  getAmplifyQuestions(): Observable<any> {
-    return this.http.get<any>(this.amplifyQuestionsUrl);
-  }
+  // getAmplifyQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.amplifyQuestionsUrl);
+  // }
 
-  getAppFlowQuestions(): Observable<any> {
-    return this.http.get<any>(this.appFlowQuestionsUrl);
-  }
+  // getAppFlowQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.appFlowQuestionsUrl);
+  // }
 
-  getAppStreamQuestions(): Observable<any> {
-    return this.http.get<any>(this.appStreamQuestionsUrl);
-  }
+  // getAppStreamQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.appStreamQuestionsUrl);
+  // }
 
-  getAppSyncQuestions(): Observable<any> {
-    return this.http.get<any>(this.appSyncQuestionsUrl);
-  }
+  // getAppSyncQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.appSyncQuestionsUrl);
+  // }
 
-  getBackupQuestions(): Observable<any> {
-    return this.http.get<any>(this.backupQuestionsUrl);
-  }
+  // getBackupQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.backupQuestionsUrl);
+  // }
 
-  getCloudFrontQuestions(): Observable<any> {
-    return this.http.get<any>(this.cloudfrontQuestionsUrl);
-  }
+  // getCloudFrontQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.cloudfrontQuestionsUrl);
+  // }
 
-  getCognitoQuestions(): Observable<any> {
-    return this.http.get<any>(this.cognitoQuestionsUrl);
-  }
+  // getCognitoQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.cognitoQuestionsUrl);
+  // }
 
-  getDeviceFarmQuestions(): Observable<any> {
-    return this.http.get<any>(this.deviceFarmQuestionsUrl);
-  }
+  // getDeviceFarmQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.deviceFarmQuestionsUrl);
+  // }
 
-  getDisasterRecoveryQuestions(): Observable<any> {
-    return this.http.get<any>(this.disasterRecoveryQuestionsUrl);
-  }
+  // getDisasterRecoveryQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.disasterRecoveryQuestionsUrl);
+  // }
 
  
-  getEC2Questions(): Observable<any> {
-    return this.http.get<any>(this.ec2QuestionsUrl);
-  }
+  // getEC2Questions(): Observable<any> {
+  //   return this.http.get<any>(this.ec2QuestionsUrl);
+  // }
 
-  getECSQuestions(): Observable<any> {
-    return this.http.get<any>(this.ecsQuestionsUrl);
-  }
+  // getECSQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.ecsQuestionsUrl);
+  // }
 
-  getIAMQuestions(): Observable<any> {
-    return this.http.get<any>(this.iamQuestionsUrl);
-  }
+  // getIAMQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.iamQuestionsUrl);
+  // }
 
-  getIoTCoreQuestions(): Observable<any> {
-    return this.http.get<any>(this.iotCoreQuestionsUrl);
-  }
+  // getIoTCoreQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.iotCoreQuestionsUrl);
+  // }
 
-  getLambdaQuestions(): Observable<any> {
-    return this.http.get<any>(this.lambdaQuestionsUrl);
-  }
+  // getLambdaQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.lambdaQuestionsUrl);
+  // }
 
-  getRDSQuestions(): Observable<any> {
-    return this.http.get<any>(this.rdsQuestionsUrl);
-  }
+  // getRDSQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.rdsQuestionsUrl);
+  // }
 
-  getS3Questions(): Observable<any> {
-    return this.http.get<any>(this.s3QuestionsUrl);
-  }
+  // getS3Questions(): Observable<any> {
+  //   return this.http.get<any>(this.s3QuestionsUrl);
+  // }
 
-  getSNSQuestions(): Observable<any> {
-    return this.http.get<any>(this.snsQuestionsUrl);
-  }
+  // getSNSQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.snsQuestionsUrl);
+  // }
 
-  getSQSQuestions(): Observable<any> {
-    return this.http.get<any>(this.sqsQuestionsUrl);
-  }
+  // getSQSQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.sqsQuestionsUrl);
+  // }
 
-  getStepFunctionsQuestions(): Observable<any> {
-    return this.http.get<any>(this.stepFunctionsQuestionsUrl);
-  }
+  // getStepFunctionsQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.stepFunctionsQuestionsUrl);
+  // }
 
-  getSTSQuestions(): Observable<any> {
-    return this.http.get<any>(this.stsQuestionsUrl);
-  }
+  // getSTSQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.stsQuestionsUrl);
+  // }
 
-  getSupportQuestions(): Observable<any> {
-    return this.http.get<any>(this.supportQuestionsUrl);
-  }
+  // getSupportQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.supportQuestionsUrl);
+  // }
 
-  getVPCQuestions(): Observable<any> {
-    return this.http.get<any>(this.vpcQuestionsUrl);
-  }
+  // getVPCQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.vpcQuestionsUrl);
+  // }
 
-  getWellArchitectedQuestions(): Observable<any> {
-    return this.http.get<any>(this.wellArchitectedQuestionsUrl);
-  }
-  getRoute53Questions(): Observable<any> {
-    return this.http.get<any>(this.route53QuestionsUrl);
-  }
-  getCloudTrailQuestions(): Observable<any> {
-    return this.http.get<any>(this.cloudTrailQuestionsUrl);
-  }
-  getWAFQuestions(): Observable<any> {
-    return this.http.get<any>(this.wafQuestionsUrl);
-  }
-  getCAFQuestions(): Observable<any> {
-    return this.http.get<any>(this.cafQuestionsUrl);
-  }
-  getPrecostQuestions(): Observable<any> {
-    return this.http.get<any>(this.precostQuestionsUrl);
-  }
-  getLexQuestions(): Observable<any> {
-    return this.http.get<any>(this.lexQuestionsUrl);
-  }
+  // getWellArchitectedQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.wellArchitectedQuestionsUrl);
+  // }
+  // getRoute53Questions(): Observable<any> {
+  //   return this.http.get<any>(this.route53QuestionsUrl);
+  // }
+  // getCloudTrailQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.cloudTrailQuestionsUrl);
+  // }
+  // getWAFQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.wafQuestionsUrl);
+  // }
+  // getCAFQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.cafQuestionsUrl);
+  // }
+  // getPrecostQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.precostQuestionsUrl);
+  // }
+  // getLexQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.lexQuestionsUrl);
+  // }
 
-  getKendraQuestions(): Observable<any> {
-    return this.http.get<any>(this.kendraQuestionsUrl);
-  }
+  // getKendraQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.kendraQuestionsUrl);
+  // }
   
-  getPersonalizeQuestions(): Observable<any> {
-    return this.http.get<any>(this.personalizeQuestionsUrl);
-  }
-  getInspectorQuestions(): Observable<any> {
-    return this.http.get<any>(this.inspectorQuestionsUrl);
-  }
-  getGuardDutyQuestions(): Observable<any> {
-    return this.http.get<any>(this.guardDutyQuestionsUrl);
-  }
+  // getPersonalizeQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.personalizeQuestionsUrl);
+  // }
+  // getInspectorQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.inspectorQuestionsUrl);
+  // }
+  // getGuardDutyQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.guardDutyQuestionsUrl);
+  // }
 
-  getDynamoDBQuestions(): Observable<any> {
-    return this.http.get<any>(this.dynamoDBQuestionsUrl);
-  }
-  getDocumentDbQuestions(): Observable<any> {
-    return this.http.get<any>(this.documentDbQuestionsUrl);
-  }
+  // getDynamoDBQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.dynamoDBQuestionsUrl);
+  // }
+  // getDocumentDbQuestions(): Observable<any> {
+  //   return this.http.get<any>(this.documentDbQuestionsUrl);
+  // }
 
   getawsPractitioner3Questions(): Observable<any> {
     return this.http.get<any>(this.awsPractitioner3QuestionsUrl);
   }
   getawsPractitioner4Questions(): Observable<any> {
     return this.http.get<any>(this.awsPractitioner4QuestionsUrl);
+  }
+  getawsPractitioner2Questions(): Observable<any> {
+    return this.http.get<any>(this.awsPractitioner2QuestionsUrl);
+  }
+  getawsPractitioner1Questions(): Observable<any> {
+    return this.http.get<any>(this.awsPractitioner1QuestionsUrl);
   }
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
@@ -237,6 +247,8 @@ export class HttpQuestionsService {
       // guardDuty: this.getGuardDutyQuestions(),
       // dynamoDB: this.getDynamoDBQuestions(),
       // documentDb: this.getDocumentDbQuestions(),
+      awsPractitioner1: this.getawsPractitioner1Questions(),
+      awsPractitioner2: this.getawsPractitioner2Questions(),
       awsPractitioner3: this.getawsPractitioner3Questions(),
       awsPractitioner4: this.getawsPractitioner4Questions(),
     }).pipe(
@@ -278,8 +290,10 @@ export class HttpQuestionsService {
           // ...responses.guardDuty.questions,
           // ...responses.dynamoDB.questions,
           // ...responses.documentDb.questions,
+          ...responses.awsPractitioner1.questions,
+          ...responses.awsPractitioner2.questions,
           ...responses.awsPractitioner3.questions,
-          ...responses.awsPractitioner4.questions
+          ...responses.awsPractitioner4.questions,
           
         ].map((question: any) => ({
           ...question,

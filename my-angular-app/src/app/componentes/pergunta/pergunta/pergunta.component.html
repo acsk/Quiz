@@ -50,24 +50,26 @@
     <ul class="list-none pl-0">
       <li *ngFor="let option of currentQuestion.options" class="mb-1 flex items-center p-2 rounded cursor-pointer hover:bg-gray-200"
           [ngClass]="{
-            'bg-green-200': selectedOptions[currentQuestion.id] === option.index && showAnswer && option.index === currentQuestion.answer,
-            'bg-red-200': selectedOptions[currentQuestion.id] === option.index && showAnswer && option.index !== currentQuestion.answer,
+            'bg-green-200': selectedOptions[currentQuestion.id]?.includes(option.index) && showAnswer && currentQuestion.answer.includes(option.index),
+            'bg-red-200': selectedOptions[currentQuestion.id]?.includes(option.index) && showAnswer && !currentQuestion.answer.includes(option.index),
             'bg-gray-100': !showAnswer,
-            'bg-green-100': showAnswer && option.index === currentQuestion.answer && selectedOptions[currentQuestion.id] !== option.index
+            'bg-green-100': showAnswer && currentQuestion.answer.includes(option.index) && !selectedOptions[currentQuestion.id]?.includes(option.index)
           }"
           (click)="selectOption(option.index)">
-        <input type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-full"
-               (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id] === option.index">
+        <input *ngIf="currentQuestion.answer.length > 1" type="checkbox" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+               (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)">
+        <input *ngIf="currentQuestion.answer.length === 1" type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-full"
+               (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)">
         {{ option.text }}
-        <i *ngIf="showAnswer && option.index === currentQuestion.answer" class="fas fa-check-circle icon-correct"></i>
-        <i *ngIf="showAnswer && option.index !== currentQuestion.answer && selectedOptions[currentQuestion.id] === option.index" class="fas fa-times-circle icon-incorrect"></i>
-        <a *ngIf="showAnswer && option.index === currentQuestion.answer" [href]="getGoogleSearchUrl(currentQuestion.question, option.text)" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
+        <i *ngIf="showAnswer && currentQuestion.answer.includes(option.index)" class="fas fa-check-circle icon-correct"></i>
+        <i *ngIf="showAnswer && !currentQuestion.answer.includes(option.index) && selectedOptions[currentQuestion.id]?.includes(option.index)" class="fas fa-times-circle icon-incorrect"></i>
+        <a *ngIf="showAnswer && currentQuestion.answer.includes(option.index)" [href]="getGoogleSearchUrl(currentQuestion.question, option.text)" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
           <i class="fas fa-search"></i>
         </a>
       </li>
     </ul>
     <div class="mt-4 flex justify-between">
-      <button (click)="checkAnswer()" [disabled]="selectedOption === null" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': selectedOption === null}">
+      <button (click)="checkAnswer()" [disabled]="selectedOption.length === 0" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': selectedOption.length === 0}">
         <i class="fas fa-check mr-2"></i>Responder
       </button>
       <div class="flex space-x-2">
@@ -82,7 +84,7 @@
         </button>
       </div>
     </div>
-        <div *ngIf="showAnswer" class="mt-4 p-4 bg-white  border border-gray-300 rounded-lg shadow">
+    <div *ngIf="showAnswer" class="mt-4 p-4 bg-white border border-gray-300 rounded-lg shadow">
       <p><strong>Explicação:</strong> {{ currentQuestion.explanation }}</p>
     </div>
   </div>

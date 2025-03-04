@@ -11,10 +11,10 @@ export class PerguntaComponent implements OnInit {
   showSummary: boolean = false;
   correctAnswers: number = 0;
   incorrectAnswers: number = 0;
-  selectedOptions: { [key: string]: number | null } = {};
+  selectedOptions: { [key: string]: number[] } = {};
   showAnswers: { [key: string]: boolean } = {};
   unansweredQuestions: Set<string> = new Set();
-  selectedOption: number | null = null;
+  selectedOption: number[] = [];
   showAnswer: boolean = false;
   currentQuestionIndex: number = 0;
   currentQuestion: any;
@@ -54,8 +54,16 @@ export class PerguntaComponent implements OnInit {
   }
 
   selectOption(index: number): void {
-    this.selectedOption = index;
-    this.selectedOptions[this.currentQuestion.id] = index;
+    if (this.currentQuestion.answer.length > 1) {
+      if (this.selectedOption.includes(index)) {
+        this.selectedOption = this.selectedOption.filter((i) => i !== index);
+      } else {
+        this.selectedOption.push(index);
+      }
+    } else {
+      this.selectedOption = [index];
+    }
+    this.selectedOptions[this.currentQuestion.id] = this.selectedOption;
     this.unansweredQuestions.add(this.currentQuestion.id);
   }
 
@@ -63,7 +71,9 @@ export class PerguntaComponent implements OnInit {
     this.showAnswer = true;
     this.showAnswers[this.currentQuestion.id] = true;
     this.unansweredQuestions.delete(this.currentQuestion.id);
-    if (this.selectedOptions[this.currentQuestion.id] === this.currentQuestion.answer) {
+    const correct = this.currentQuestion.answer.every((ans: number) => this.selectedOptions[this.currentQuestion.id].includes(ans)) &&
+                    this.selectedOptions[this.currentQuestion.id].length === this.currentQuestion.answer.length;
+    if (correct) {
       this.correctAnswers++;
     } else {
       this.incorrectAnswers++;
@@ -76,27 +86,27 @@ export class PerguntaComponent implements OnInit {
   }
 
   nextQuestion(): void {
-    if (this.selectedOption !== null && !this.showAnswer) {
+    if (this.selectedOption.length > 0 && !this.showAnswer) {
       alert('Você marcou uma resposta, mas não clicou em "Responder". Por favor, responda antes de continuar.');
       return;
     }
     if (this.currentQuestionIndex < this.filteredQuestions.length - 1) {
       this.currentQuestionIndex++;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
+      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || [];
       this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
     }
   }
 
   previousQuestion(): void {
-    if (this.selectedOption !== null && !this.showAnswer) {
+    if (this.selectedOption.length > 0 && !this.showAnswer) {
       alert('Você marcou uma resposta, mas não clicou em "Responder". Por favor, responda antes de continuar.');
       return;
     }
     if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
+      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || [];
       this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
     }
   }
@@ -117,11 +127,11 @@ export class PerguntaComponent implements OnInit {
     this.currentQuestionIndex = 0;
     if (this.filteredQuestions.length > 0) {
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || null;
+      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || [];
       this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
     } else {
       this.currentQuestion = null;
-      this.selectedOption = null;
+      this.selectedOption = [];
       this.showAnswer = false;
     }
   }
@@ -130,7 +140,8 @@ export class PerguntaComponent implements OnInit {
     this.testStarted = false;
     this.showSummary = true;
     this.correctAnswers = this.filteredQuestions.filter((question: any) => 
-      this.selectedOptions[question.id] === question.answer
+      this.currentQuestion.answer.every((ans: number) => this.selectedOptions[question.id].includes(ans)) &&
+      this.selectedOptions[question.id].length === this.currentQuestion.answer.length
     ).length;
     this.incorrectAnswers = this.filteredQuestions.length - this.correctAnswers;
   }
@@ -165,7 +176,7 @@ export class PerguntaComponent implements OnInit {
     this.selectedOptions = {};
     this.showAnswers = {};
     this.unansweredQuestions.clear();
-    this.selectedOption = null;
+    this.selectedOption = [];
     this.showAnswer = false;
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
