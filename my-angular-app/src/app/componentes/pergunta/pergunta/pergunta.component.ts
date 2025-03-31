@@ -34,8 +34,9 @@ export class PerguntaComponent implements OnInit {
 
   loadQuestions(): void {
     this.httpQuestionsService.getAllQuestions().subscribe((data) => {
+      const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
       this.allQuestions = data;
-      this.filteredQuestions = this.allQuestions;
+      this.filteredQuestions = this.allQuestions.filter((question: any) => !answeredQuestions.includes(question.id));
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
       console.log('Todas as perguntas:', this.allQuestions);
       console.log('Perguntas filtradas:', this.filteredQuestions);
@@ -71,6 +72,7 @@ export class PerguntaComponent implements OnInit {
     this.showAnswer = true;
     this.showAnswers[this.currentQuestion.id] = true;
     this.unansweredQuestions.delete(this.currentQuestion.id);
+
     const correct = this.currentQuestion.answer.every((ans: number) => this.selectedOptions[this.currentQuestion.id].includes(ans)) &&
                     this.selectedOptions[this.currentQuestion.id].length === this.currentQuestion.answer.length;
     if (correct) {
@@ -78,6 +80,9 @@ export class PerguntaComponent implements OnInit {
     } else {
       this.incorrectAnswers++;
     }
+
+    // Salvar a pergunta como respondida
+    this.saveAnsweredQuestion(this.currentQuestion.id);
 
     // Verificar se é a última pergunta e finalizar o teste
     if (this.currentQuestionIndex >= this.filteredQuestions.length - 1) {
@@ -202,5 +207,35 @@ export class PerguntaComponent implements OnInit {
       query += ' ' + answer;
     }
     return 'https://www.google.com/search?q=' + encodeURIComponent(query);
+  }
+
+  copyQuestionToClipboard(): void {
+    if (this.currentQuestion && this.currentQuestion.options) {
+      const questionText = `Pergunta: ${this.currentQuestion.question}\n\nOpções:\n` +
+        this.currentQuestion.options.map((option: { text: string }, index: number) => `${index + 1}. ${option.text}`).join('\n');
+      
+      navigator.clipboard.writeText(questionText).then(() => {
+        alert('Pergunta e opções copiadas para a área de transferência!');
+      }).catch(err => {
+        console.error('Erro ao copiar para a área de transferência:', err);
+      });
+    } else {
+      console.error('Erro: Dados da pergunta ou opções estão ausentes.');
+      alert('Não foi possível copiar. Verifique se a pergunta e as opções estão carregadas corretamente.');
+    }
+  }
+
+  saveAnsweredQuestion(questionId: string): void {
+    const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
+    if (!answeredQuestions.includes(questionId)) {
+      answeredQuestions.push(questionId);
+      localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
+    }
+  }
+
+  clearAnsweredQuestions(): void {
+    localStorage.removeItem('answeredQuestions');
+    alert('Perguntas respondidas foram limpas!');
+    this.loadQuestions(); // Recarregar perguntas
   }
 }

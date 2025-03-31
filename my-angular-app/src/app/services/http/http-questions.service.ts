@@ -9,41 +9,7 @@ import { map } from 'rxjs/operators';
 export class HttpQuestionsService {
 
   private topicsUrl = 'assets/data/topics.json';
-  // private amplifyQuestionsUrl = 'assets/data/question/amplify.json';
-  // private appFlowQuestionsUrl = 'assets/data/question/appFlow.json';
-  // private appStreamQuestionsUrl = 'assets/data/question/appStream.json';
-  // private appSyncQuestionsUrl = 'assets/data/question/appSync.json';
-  // private backupQuestionsUrl = 'assets/data/question/backup.json';
-  // private cloudfrontQuestionsUrl = 'assets/data/question/cloudfront.json';
-  // private cognitoQuestionsUrl = 'assets/data/question/cognito.json';
-  // private deviceFarmQuestionsUrl = 'assets/data/question/deviceFarm.json';
-  // private disasterRecoveryQuestionsUrl = 'assets/data/question/disasterRecovery.json';
-  // private ec2QuestionsUrl = 'assets/data/question/ec2.json';
-  // private ecsQuestionsUrl = 'assets/data/question/ecs.json';
-  // private iamQuestionsUrl = 'assets/data/question/iam.json';
-  // private iotCoreQuestionsUrl = 'assets/data/question/iotCore.json';
-  // private lambdaQuestionsUrl = 'assets/data/question/lambda.json';
-  // private rdsQuestionsUrl = 'assets/data/question/rds.json';
-  // private s3QuestionsUrl = 'assets/data/question/s3.json';
-  // private snsQuestionsUrl = 'assets/data/question/sns.json';
-  // private sqsQuestionsUrl = 'assets/data/question/sqs.json';
-  // private stepFunctionsQuestionsUrl = 'assets/data/question/stepFunctions.json';
-  // private stsQuestionsUrl = 'assets/data/question/sts.json';
-  // private supportQuestionsUrl = 'assets/data/question/support.json';
-  // private vpcQuestionsUrl = 'assets/data/question/vpc.json';
-  // private wellArchitectedQuestionsUrl = 'assets/data/question/wellArchitected.json';
-  // private route53QuestionsUrl = 'assets/data/question/route53.json';
-  // private cloudTrailQuestionsUrl = 'assets/data/question/cloudTrail.json';
-  // private wafQuestionsUrl = 'assets/data/question/waf.json';
-  // private cafQuestionsUrl = 'assets/data/question/caf.json';
-  // private precostQuestionsUrl = 'assets/data/question/precos.json';
-  // private lexQuestionsUrl = 'assets/data/question/lex.json';
-  // private kendraQuestionsUrl = 'assets/data/question/kendra.json';
-  // private personalizeQuestionsUrl = 'assets/data/question/personalize.json';
-  // private inspectorQuestionsUrl = 'assets/data/question/inspector.json';
-  // private guardDutyQuestionsUrl = 'assets/data/question/guardDuty.json';
-  // private dynamoDBQuestionsUrl = 'assets/data/question/dynamoDB.json';
-  // private documentDbQuestionsUrl = 'assets/data/question/documentDB.json';
+
 
   /**FORMATO SIMULADOS */
   private awsPractitioner1QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-1.json';
@@ -53,143 +19,15 @@ export class HttpQuestionsService {
   private awsPractitioner5QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-5.json';
   private awsPractitioner6QuestionsUrl = 'assets/data/question/simulados/awsPractitioner-6.json';
 
+  private awsSAAC03QuestionsUrl_1 = 'assets/data/question/simulados/awsSAAC03-1.json';
+  private awsSAAC03QuestionsUrl_2 = 'assets/data/question/simulados/awsSAAC03-2.json';
+
   constructor(private http: HttpClient) { }
 
   getTopics(): Observable<any> {
     return this.http.get<any>(this.topicsUrl);
   }
 
-  // getAmplifyQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.amplifyQuestionsUrl);
-  // }
-
-  // getAppFlowQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.appFlowQuestionsUrl);
-  // }
-
-  // getAppStreamQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.appStreamQuestionsUrl);
-  // }
-
-  // getAppSyncQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.appSyncQuestionsUrl);
-  // }
-
-  // getBackupQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.backupQuestionsUrl);
-  // }
-
-  // getCloudFrontQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.cloudfrontQuestionsUrl);
-  // }
-
-  // getCognitoQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.cognitoQuestionsUrl);
-  // }
-
-  // getDeviceFarmQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.deviceFarmQuestionsUrl);
-  // }
-
-  // getDisasterRecoveryQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.disasterRecoveryQuestionsUrl);
-  // }
-
- 
-  // getEC2Questions(): Observable<any> {
-  //   return this.http.get<any>(this.ec2QuestionsUrl);
-  // }
-
-  // getECSQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.ecsQuestionsUrl);
-  // }
-
-  // getIAMQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.iamQuestionsUrl);
-  // }
-
-  // getIoTCoreQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.iotCoreQuestionsUrl);
-  // }
-
-  // getLambdaQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.lambdaQuestionsUrl);
-  // }
-
-  // getRDSQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.rdsQuestionsUrl);
-  // }
-
-  // getS3Questions(): Observable<any> {
-  //   return this.http.get<any>(this.s3QuestionsUrl);
-  // }
-
-  // getSNSQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.snsQuestionsUrl);
-  // }
-
-  // getSQSQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.sqsQuestionsUrl);
-  // }
-
-  // getStepFunctionsQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.stepFunctionsQuestionsUrl);
-  // }
-
-  // getSTSQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.stsQuestionsUrl);
-  // }
-
-  // getSupportQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.supportQuestionsUrl);
-  // }
-
-  // getVPCQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.vpcQuestionsUrl);
-  // }
-
-  // getWellArchitectedQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.wellArchitectedQuestionsUrl);
-  // }
-  // getRoute53Questions(): Observable<any> {
-  //   return this.http.get<any>(this.route53QuestionsUrl);
-  // }
-  // getCloudTrailQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.cloudTrailQuestionsUrl);
-  // }
-  // getWAFQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.wafQuestionsUrl);
-  // }
-  // getCAFQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.cafQuestionsUrl);
-  // }
-  // getPrecostQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.precostQuestionsUrl);
-  // }
-  // getLexQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.lexQuestionsUrl);
-  // }
-
-  // getKendraQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.kendraQuestionsUrl);
-  // }
-  
-  // getPersonalizeQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.personalizeQuestionsUrl);
-  // }
-  // getInspectorQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.inspectorQuestionsUrl);
-  // }
-  // getGuardDutyQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.guardDutyQuestionsUrl);
-  // }
-
-  // getDynamoDBQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.dynamoDBQuestionsUrl);
-  // }
-  // getDocumentDbQuestions(): Observable<any> {
-  //   return this.http.get<any>(this.documentDbQuestionsUrl);
-  // }
 
   getawsPractitioner3Questions(): Observable<any> {
     return this.http.get<any>(this.awsPractitioner3QuestionsUrl);
@@ -209,6 +47,13 @@ export class HttpQuestionsService {
   getawsPractitioner6Questions(): Observable<any> {
     return this.http.get<any>(this.awsPractitioner6QuestionsUrl);
   }
+
+  getawsSAAC03Questions_1(): Observable<any> {
+    return this.http.get<any>(this.awsSAAC03QuestionsUrl_1);
+  }
+  getawsSAAC03Questions_2(): Observable<any> {
+    return this.http.get<any>(this.awsSAAC03QuestionsUrl_2);
+  }
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -220,93 +65,32 @@ export class HttpQuestionsService {
   getAllQuestions(): Observable<any> {
     return forkJoin({
       topics: this.getTopics(),
-      // amplify: this.getAmplifyQuestions(),
-      // appFlow: this.getAppFlowQuestions(),
-      // appStream: this.getAppStreamQuestions(),
-      // appSync: this.getAppSyncQuestions(),
-      // backup: this.getBackupQuestions(),
-      // cloudfront: this.getCloudFrontQuestions(),
-      // cognito: this.getCognitoQuestions(),
-      // deviceFarm: this.getDeviceFarmQuestions(),
-      // disasterRecovery: this.getDisasterRecoveryQuestions(),
-      // ec2: this.getEC2Questions(),
-      // ecs: this.getECSQuestions(),
-      // iam: this.getIAMQuestions(),
-      // iotCore: this.getIoTCoreQuestions(),
-      // lambda: this.getLambdaQuestions(),
-      // rds: this.getRDSQuestions(),
-      // s3: this.getS3Questions(),
-      // sns: this.getSNSQuestions(),
-      // sqs: this.getSQSQuestions(),
-      // stepFunctions: this.getStepFunctionsQuestions(),
-      // sts: this.getSTSQuestions(),
-      // support: this.getSupportQuestions(),
-      // vpc: this.getVPCQuestions(),
-      // wellArchitected: this.getWellArchitectedQuestions(),
-      // route53: this.getRoute53Questions(),
-      // cloudTrail: this.getCloudTrailQuestions(),
-      // waf: this.getWAFQuestions(),
-      // caf: this.getCAFQuestions(),
-      // preco: this.getPrecostQuestions(),
-      // lex: this.getLexQuestions(),
-      // kendra: this.getKendraQuestions(),
-      // perisonalize: this.getPersonalizeQuestions(),
-      // inspector: this.getInspectorQuestions(),
-      // guardDuty: this.getGuardDutyQuestions(),
-      // dynamoDB: this.getDynamoDBQuestions(),
-      // documentDb: this.getDocumentDbQuestions(),
+     
+      //PRACTITIONER
       awsPractitioner1: this.getawsPractitioner1Questions(),
       awsPractitioner2: this.getawsPractitioner2Questions(),
       awsPractitioner3: this.getawsPractitioner3Questions(),
       awsPractitioner4: this.getawsPractitioner4Questions(),
       awsPractitioner5: this.getawsPractitioner5Questions(),
       awsPractitioner6: this.getawsPractitioner6Questions(),
+      
+      //SAAC03
+      awsSAAC031: this.getawsSAAC03Questions_1(),
+      awsSAAC032: this.getawsSAAC03Questions_2(),
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
         const allQuestions = [
-          // ...responses.amplify.questions,
-          // ...responses.appFlow.questions,
-          // ...responses.appStream.questions,
-          // ...responses.appSync.questions,
-          // ...responses.backup.questions,
-          // ...responses.cloudfront.questions,
-          // ...responses.cognito.questions,
-          // ...responses.deviceFarm.questions,
-          // ...responses.disasterRecovery.questions,
-          //  ...responses.ec2.questions,
-          // ...responses.ecs.questions,
-          // ...responses.iam.questions,
-          // ...responses.iotCore.questions,
-          // ...responses.lambda.questions,
-          // ...responses.rds.questions,
-          // ...responses.s3.questions,
-          // ...responses.sns.questions,
-          // ...responses.sqs.questions,
-          // ...responses.stepFunctions.questions,
-          // ...responses.sts.questions,
-          // ...responses.support.questions,
-          // ...responses.vpc.questions,
-          // ...responses.wellArchitected.questions,
-          // ...responses.route53.questions,
-          // ...responses.cloudTrail.questions,
-          // ...responses.waf.questions,
-          // ...responses.caf.questions,
-          // ...responses.preco.questions,
-          // ...responses.lex.questions,
-          // ...responses.kendra.questions,
-          // ...responses.perisonalize.questions,
-          // ...responses.inspector.questions,
-          // ...responses.guardDuty.questions,
-          // ...responses.dynamoDB.questions,
-          // ...responses.documentDb.questions,
+         
           ...responses.awsPractitioner1.questions,
           ...responses.awsPractitioner2.questions,
           ...responses.awsPractitioner3.questions,
           ...responses.awsPractitioner4.questions,
           ...responses.awsPractitioner5.questions,
           ...responses.awsPractitioner6.questions,
-          
+          ...responses.awsSAAC031.questions,
+          ...responses.awsSAAC032.questions,
+
         ].map((question: any) => ({
           ...question,
           topicName: topicsMap.get(question.topicId)

@@ -42,7 +42,9 @@
           <i class="fas fa-search"></i>
         </a>
       </h2>
-      <span class="bg-blue-500 text-white text-sm font-semibold px-2 py-1 rounded">{{ currentQuestion.topicName }}</span>
+      <button (click)="copyQuestionToClipboard()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        <i class="fas fa-copy mr-2"></i>Copiar
+      </button>
     </div>
     <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
       <div class="bg-blue-500 h-2.5 rounded-full" [style.width.%]="progressPercentage"></div>
@@ -84,9 +86,12 @@
         </button>
       </div>
     </div>
-    <div *ngIf="showAnswer" class="mt-4 p-4 bg-white border border-gray-300 rounded-lg shadow">
+    <div *ngIf="showAnswer && currentQuestion.explanation.length > 0" class="mt-4 p-4 bg-white border border-gray-300 rounded-lg shadow">
       <p><strong>Explicação:</strong> {{ currentQuestion.explanation }}</p>
     </div>
+    <button (click)="clearAnsweredQuestions()" class="px-4 py-2 bg-red-500 text-white rounded">
+      Limpar Perguntas Respondidas
+    </button>
   </div>
   <div *ngIf="showSummary" class="mt-6 p-4 border rounded shadow">
     <h2 class="text-xl font-semibold mb-4">Resumo do Teste</h2>
