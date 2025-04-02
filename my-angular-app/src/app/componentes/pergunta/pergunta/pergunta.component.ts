@@ -36,7 +36,12 @@ export class PerguntaComponent implements OnInit {
     this.httpQuestionsService.getAllQuestions().subscribe((data) => {
       const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
       this.allQuestions = data;
+
+      // Filtrar perguntas que não foram respondidas
       this.filteredQuestions = this.allQuestions.filter((question: any) => !answeredQuestions.includes(question.id));
+
+      // Configurar a pergunta atual
+      this.currentQuestionIndex = 0;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
       console.log('Todas as perguntas:', this.allQuestions);
       console.log('Perguntas filtradas:', this.filteredQuestions);
@@ -117,28 +122,19 @@ export class PerguntaComponent implements OnInit {
   }
 
   filterQuestionsByTopic(): void {
-    console.log('Filtrando perguntas com os seguintes critérios:');
-    console.log('Tópicos selecionados:', this.selectedTopicIds);
-    console.log('Nível selecionado:', this.selectedLevelId);
+    const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
 
+    // Filtrar perguntas com base nos tópicos, níveis e perguntas respondidas
     this.filteredQuestions = this.allQuestions.filter((question: any) => {
       const matchesTopic = this.selectedTopicIds.length === 0 || this.selectedTopicIds.includes(question.topicId);
       const matchesLevel = this.selectedLevelId === null || question.levelId === this.selectedLevelId;
-      return matchesTopic && matchesLevel;
+      const notAnswered = !answeredQuestions.includes(question.id);
+      return matchesTopic && matchesLevel && notAnswered;
     });
 
-    console.log('Perguntas após aplicação dos filtros:', this.filteredQuestions);
-
+    // Atualizar a pergunta atual
     this.currentQuestionIndex = 0;
-    if (this.filteredQuestions.length > 0) {
-      this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || [];
-      this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
-    } else {
-      this.currentQuestion = null;
-      this.selectedOption = [];
-      this.showAnswer = false;
-    }
+    this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
   }
 
   finalizeTest(): void {
@@ -237,5 +233,10 @@ export class PerguntaComponent implements OnInit {
     localStorage.removeItem('answeredQuestions');
     alert('Perguntas respondidas foram limpas!');
     this.loadQuestions(); // Recarregar perguntas
+  }
+
+  get totalFilteredQuestions(): number {
+    const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
+    return this.allQuestions.filter((question: any) => !answeredQuestions.includes(question.id)).length;
   }
 }
