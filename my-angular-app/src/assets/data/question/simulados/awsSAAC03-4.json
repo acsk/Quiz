@@ -1,0 +1,1865 @@
+{
+  "questions": [
+    {
+      "id": "question1",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja executar aplicativos em contêineres na AWS Cloud. Esses aplicativos são sem estado e podem tolerar interrupções na infraestrutura subjacente. A empresa precisa de uma solução que minimize custos e a sobrecarga operacional. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar Instâncias Spot em um grupo de Auto Scaling do Amazon EC2 para executar os contêineres de aplicativos."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar Instâncias Spot em um grupo de nós gerenciados pelo Amazon Elastic Kubernetes Service (Amazon EKS)."
+        },
+        {
+          "index": 3,
+          "text": "C. Utilizar Instâncias On-Demand em um grupo de Auto Scaling do Amazon EC2 para executar os contêineres de aplicativos."
+        },
+        {
+          "index": 4,
+          "text": "D. Utilizar Instâncias On-Demand em um grupo de nós gerenciados pelo Amazon Elastic Kubernetes Service (Amazon EKS)."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A: O ECS (Elastic Container Service) pode ser implementado através de instância EC2 ou pelo Fargate. Como os aplicativos são sem estado, a implementação do ECS em instâncias EC2 Stop atendem a necessidade de custos e sobrecarga Respostas Incorretas: B: O EKS (Elastic Kubernets Service) é um orquestrador de conteineres que opera nos padrões do Kubernetes. O EKS operada de uma maneira um pouco diferente do ECS, porem ambos são orquestradores de conteineres. Essa opção poderia muito bem ser utilizada se houvesse a especificação do kubernetes. C e D: Utilizar Instâncias On-Damand não atenderiam os requisitos de custo, pois é o tipo mais caro de instância."
+    },
+    {
+      "id": "question2",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "A equipe de relatórios recebe arquivos diariamente em um bucket do Amazon S3. A equipe de relatórios revisa e copia manualmente os arquivos desse bucket inicial para um bucket de análise todos os dias, no mesmo horário, para uso com o Amazon QuickSight. Outras equipes estão começando a enviar mais arquivos de tamanhos maiores para o bucket inicial do S3. A equipe de relatórios deseja mover automaticamente os arquivos para o bucket de análise assim que eles entrarem no bucket inicial do S3. A equipe de relatórios também deseja usar funções Lambda da AWS para executar código de correspondência de padrões nos dados copiados. Além disso, a equipe de relatórios deseja enviar os arquivos de dados para um pipeline no Amazon SageMaker Pipelines. O que um arquiteto de soluções deve fazer para atender a esses requisitos com o MÍNIMO overhead operacional?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar uma função Lambda para copiar os arquivos para o bucket de análise do S3. Criar uma notificação de evento S3 para o bucket de análise do S3. Configurar Lambda e SageMaker Pipelines como destinos da notificação de evento. Configurar s3:ObjectCreated:Put como o tipo de evento."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar uma função Lambda para copiar os arquivos para o bucket de análise do S3. Configurar o bucket de análise do S3 para enviar notificações de eventos para o Amazon EventBridge (Amazon CloudWatch Events). Configurar uma regra ObjectCreated no EventBridge (CloudWatch Events). Configurar Lambda e SageMaker Pipelines como destinos para a regra."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar replicação S3 entre os buckets S3. Criar uma notificação de evento S3 para o bucket de análise do S3. Configurar Lambda e SageMaker Pipelines como destinos da notificação de evento. Configurar s3:ObjectCreated:Put como o tipo de evento."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar replicação S3 entre os buckets S3. Configurar o bucket de análise do S3 para enviar notificações de eventos para o Amazon EventBridge (Amazon CloudWatch Events). Configurar uma regra ObjectCreated no EventBridge (CloudWatch Events). Configurar Lambda e SageMaker Pipelines como destinos para a regra."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta Correta: D Motivo da Resposta Correta: A opção D propõe a configuração da replicação S3 entre os buckets S3, garantindo que os arquivos sejam automaticamente copiados para o bucket de análise. Além disso, utiliza o Amazon EventBridge (CloudWatch Events) para acionar funções Lambda e SageMaker Pipelines quando novos arquivos são criados no bucket de análise. Isso atende aos requisitos com o mínimo de overhead operacional. Explicações das outras alternativas: A. A opção A envolve a configuração de notificações de eventos S3, mas não inclui a replicação automática dos arquivos. Isso requer uma ação manual para copiar os arquivos inicialmente. B. A opção B envolve o uso do Amazon EventBridge, mas não inclui a replicação automática dos arquivos. Isso requer uma ação manual para copiar os arquivos inicialmente. C. A opção C envolve a replicação S3, mas não inclui a configuração de um evento para acionar funções Lambda e SageMaker Pipelines quando novos arquivos são criados no bucket de análise. Isso exigiria a configuração manual ou automação adicional."
+    },
+    {
+      "id": "question3",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa possui um trabalho de processamento em lote altamente dinâmico que utiliza várias instâncias Amazon EC2 para concluí-lo. O trabalho é de natureza stateless, pode ser iniciado e interrompido a qualquer momento sem impacto negativo e normalmente leva mais de 60 minutos para ser concluído. A empresa solicitou a um arquiteto de soluções para projetar uma solução escalável e econômica que atenda aos requisitos do trabalho. O que o arquiteto de soluções deveria recomendar?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Implementar instâncias EC2 Spot"
+        },
+        {
+          "index": 2,
+          "text": "B. Comprar instâncias EC2 Reserved"
+        },
+        {
+          "index": 3,
+          "text": "C. Implementar instâncias EC2 On-Demand"
+        },
+        {
+          "index": 4,
+          "text": "D. Implementar o processamento no AWS Lambda"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A: EC2 Spot Instances são instâncias que permitem que você use a capacidade de computação não utilizada da AWS a preços significativamente mais baixos do que as instâncias On-Demand. Dado que o trabalho é stateless e pode ser interrompido sem impacto negativo, as instâncias Spot são uma escolha eficaz e econômica para cargas de trabalho que podem ser interrompidas e retomadas. Respostas Incorretas: B: EC2 Reserved Instances são mais apropriadas para cargas de trabalho consistentes e previsíveis em termos de uso. C: EC2 On-Demand Instances são prontamente disponíveis, mas podem ser mais caras do que as instâncias Spot. D: AWS Lambda poderia ser uma opção dependendo da natureza do trabalho, mas se o trabalho leva mais de 60 minutos para ser concluído, e dado que a empresa já está usando instâncias EC2, pode não ser a melhor escolha para esta situação específica."
+    },
+    {
+      "id": "question4",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa tem uma aplicação web dinâmica hospedada em duas instâncias Amazon EC2. A empresa possui seu próprio certificado SSL, que está em cada instância para realizar a terminação SSL. Houve um aumento no tráfego recentemente, e a equipe de operações determinou que a criptografia e descriptografia SSL estão levando a capacidade de computação dos servidores web ao seu limite máximo. O que um arquiteto de soluções deve fazer para aumentar o desempenho da aplicação?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar um novo certificado SSL usando o AWS Certificate Manager (ACM) e instalar o certificado ACM em cada instância."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar um bucket Amazon S3, migrar o certificado SSL para o bucket S3 e configurar as instâncias EC2 para referenciar o bucket para a terminação SSL."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar outra instância EC2 como um servidor proxy, migrar o certificado SSL para a nova instância e configurá-la para direcionar conexões para as instâncias EC2 existentes."
+        },
+        {
+          "index": 4,
+          "text": "D. Importar o certificado SSL para o AWS Certificate Manager (ACM), criar um Application Load Balancer com um listener HTTPS que usa o certificado SSL do ACM."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta Correta: D: A opção D propõe o uso do AWS Certificate Manager (ACM) e a criação de um Application Load Balancer (ALB) para gerenciar a terminação SSL. Isso é uma prática recomendada para lidar com o aumento de tráfego e melhorar o desempenho, pois o ALB pode distribuir o tráfego entre as instâncias EC2 de forma mais eficiente. O ACM simplifica a gestão de certificados SSL, e o ALB oferece a capacidade de lidar com o aumento de carga distribuindo o tráfego entre as instâncias. Respostas Incorretas: As outras opções (A, B, C) não abordam diretamente a necessidade de melhorar o desempenho da aplicação em termos de capacidade de computação e gestão de tráfego."
+    },
+    {
+      "id": "question5",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja construir uma infraestrutura de gerenciamento de chaves escalável para apoiar os desenvolvedores que precisam criptografar dados em suas aplicações. O que um arquiteto de soluções deve fazer para reduzir a carga operacional?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar autenticação multifatorial (MFA) para proteger as chaves de criptografia."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar o AWS Key Management Service (AWS KMS) para proteger as chaves de criptografia."
+        },
+        {
+          "index": 3,
+          "text": "C. Utilizar o AWS Certificate Manager (ACM) para criar, armazenar e atribuir as chaves de criptografia."
+        },
+        {
+          "index": 4,
+          "text": "D. Utilizar uma política do IAM para limitar o escopo de usuários que têm permissões de acesso para proteger as chaves de criptografia."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B: o AWS Key Management Service (AWS KMS), é uma solução gerenciada pela AWS que simplifica significativamente o processo de criação, rotação e gerenciamento de chaves de criptografia. Isso reduz a carga operacional, pois a AWS cuida de muitos aspectos relacionados à segurança e manutenção das chaves. Respostas Incorretas: A: MFA é uma medida adicional de segurança, mas não se concentra diretamente na simplificação da gestão de chaves. C: O AWS Certificate Manager (ACM) é usado para gerenciar certificados SSL/TLS, mas não diretamente para gerenciar chaves de criptografia. D:O uso de políticas do IAM é uma prática recomendada para controlar o acesso, mas o gerenciamento direto de chaves geralmente é mais eficaz com serviços especializados como o AWS KMS."
+    },
+    {
+      "id": "question6",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa implementou uma solução de DNS auto-gerenciada em três instâncias Amazon EC2 atrás de um Network Load Balancer (NLB) na região us-west-2. A maioria dos usuários da empresa está localizada nos Estados Unidos e na Europa. A empresa deseja melhorar o desempenho e a disponibilidade da solução. A empresa lança e configura três instâncias EC2 na região eu-west-1 e as adiciona como destinos para um novo NLB. Qual solução a empresa pode usar para direcionar o tráfego para todas as instâncias EC2?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar uma política de roteamento de geolocalização do Amazon Route 53 para direcionar solicitações para um dos dois NLBs. Criar uma distribuição Amazon CloudFront. Usar o registro do Route 53 como origem da distribuição."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar um acelerador padrão no AWS Global Accelerator. Criar grupos de extremidades em us-west-2 e eu-west-1. Adicionar os dois NLBs como extremidades para os grupos de extremidades."
+        },
+        {
+          "index": 3,
+          "text": "C. Anexar endereços IP elásticos às seis instâncias EC2. Criar uma política de roteamento de geolocalização do Amazon Route 53 para direcionar solicitações para uma das seis instâncias EC2. Criar uma distribuição Amazon CloudFront. Usar o registro do Route 53 como origem da distribuição."
+        },
+        {
+          "index": 4,
+          "text": "D. Substituir os dois NLBs por dois Application Load Balancers (ALBs). Criar uma política de roteamento de latência do Amazon Route 53 para direcionar solicitações para um dos dois ALBs. Criar uma distribuição Amazon CloudFront. Usar o registro do Route 53 como origem da distribuição."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Alternativa Correta: B AWS Global Accelerator: Esta é uma solução global da AWS projetada para melhorar a disponibilidade e o desempenho de aplicativos. Ao criar um acelerador padrão, você obtém um Anycast IP global que encaminha o tráfego para as extremidades mais próximas com base em políticas de roteamento configuradas. Isso ajuda a otimizar o desempenho e a disponibilidade. Grupos de Extremidades: Ao criar grupos de extremidades em diferentes regiões (us-west-2 e eu-west-1 neste caso) e adicionar os NLBs como extremidades nesses grupos, o Global Accelerator pode encaminhar o tráfego para a região mais próxima e saudável automaticamente. Respostas Incorretas: A. Roteamento de geolocalização do Route 53 e CloudFront: Isso pode direcionar tráfego com base na localização geográfica, mas não oferece a mesma otimização de desempenho global que o AWS Global Accelerator proporciona. C. Adicionar endereços IP elásticos e usar roteamento de geolocalização: Isso adiciona complexidade desnecessária e não é tão eficiente quanto a solução do AWS Global Accelerator. D. Substituir NLBs por ALBs e usar roteamento de latência do Route 53: Esta opção não aproveita a infraestrutura global do AWS Global Accelerator e, embora o roteamento de latência possa ser eficaz, ainda não oferece a mesma eficiência global de roteamento fornecida pelo Global Accelerator."
+    },
+    {
+      "id": "question7",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "A empresa global hospeda sua aplicação web em instâncias Amazon EC2 atrás de um Balanceador de Carga de Aplicativos (ALB). A aplicação web possui dados estáticos e dados dinâmicos. A empresa armazena seus dados estáticos em um bucket Amazon S3. A empresa deseja melhorar o desempenho e reduzir a latência para os dados estáticos e dinâmicos. A empresa está usando seu próprio nome de domínio registrado no Amazon Route 53. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar uma distribuição do Amazon CloudFront que tenha o bucket S3 e o ALB como origens. Configurar o Route 53 para direcionar o tráfego para a distribuição do CloudFront."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar uma distribuição do Amazon CloudFront que tenha o ALB como origem. Criar um acelerador global da AWS (AWS Global Accelerator) comum que tenha o bucket S3 como um ponto de extremidade. Configurar o Route 53 para direcionar o tráfego para a distribuição do CloudFront."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar uma distribuição do Amazon CloudFront que tenha o bucket S3 como origem. Criar um acelerador global da AWS (AWS Global Accelerator) comum que tenha o ALB e a distribuição do CloudFront como pontos de extremidade. Criar um nome de domínio personalizado que aponte para o nome DNS do acelerador. Usar o nome de domínio personalizado como um ponto de extremidade para a aplicação web."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar uma distribuição do Amazon CloudFront que tenha o ALB como origem. Criar um acelerador global da AWS (AWS Global Accelerator) comum que tenha o bucket S3 como um ponto de extremidade. Criar dois nomes de domínio. Apontar um nome de domínio para o nome DNS do CloudFront para conteúdo dinâmico. Apontar o outro nome de domínio para o nome DNS do acelerador para conteúdo estático. Usar os nomes de domínio como pontos de extremidade para a aplicação web."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Explicação geral Alternativa correta: C:A criação de uma distribuição do Amazon CloudFront para dados estáticos (com o bucket S3 como origem) ajuda a melhorar o desempenho e reduzir a latência para esses dados, pois o CloudFront distribui esses dados para pontos de presença globalmente. A criação de um acelerador global da AWS (AWS Global Accelerator) comum que tenha o ALB e a distribuição do CloudFront como pontos de extremidade permite otimizar o roteamento do tráfego, melhorando assim o desempenho global. Ao criar um nome de domínio personalizado que aponte para o nome DNS do acelerador, você utiliza um único ponto de entrada para a aplicação web, simplificando a configuração e facilitando a gestão. Alternativas incorretas: A: Esta alternativa usa o CloudFront para dados estáticos e dinâmicos. No entanto, isso pode não ser eficiente, pois o CloudFront é idealmente usado para dados estáticos. Usar o ALB como origem do CloudFront pode não otimizar totalmente o desempenho para dados dinâmicos. B: Nesta alternativa, a configuração propõe usar o ALB como origem do CloudFront, mas também inclui o bucket S3 como ponto de extremidade do AWS Global Accelerator. Isso pode não ser eficiente para dados estáticos, pois o AWS Global Accelerator é mais apropriado para tráfego de aplicativos dinâmicos. D: Esta alternativa é complexa e pode introduzir redundâncias desnecessárias. A criação de dois nomes de domínio para conteúdo estático e dinâmico pode complicar a configuração e a gestão da aplicação web."
+    },
+    {
+      "id": "question8",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa global está usando o Amazon API Gateway para projetar APIs REST para seus usuários do clube de fidelidade nas regiões us-east-1 e ap-southeast-2. Um arquiteto de soluções deve projetar uma solução para proteger essas APIs REST gerenciadas pelo API Gateway em várias contas contra ataques de injeção de SQL e scripting entre sites (cross-site scripting). Qual solução atenderá a esses requisitos com o MÍNIMO esforço administrativo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar o AWS WAF em ambas as regiões. Associar ACLs web regionais a um estágio da API."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar o AWS Firewall Manager em ambas as regiões. Configurar centralmente as regras do AWS WAF."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar o AWS Shield em ambas as regiões. Associar ACLs web regionais a um estágio da API."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar o AWS Shield em uma das regiões. Associar ACLs web regionais a um estágio da API."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Alternativa Correta: A: O AWS WAF é uma solução projetada para proteger aplicativos da web contra ataques comuns, incluindo injeção de SQL e ataques de scripting entre sites (cross-site scripting). Ao configurar o AWS WAF em ambas as regiões, você pode aplicar regras de segurança específicas para proteger as APIs gerenciadas pelo Amazon API Gateway. Associar ACLs web regionais a um estágio da API permite aplicar essas regras de segurança em um nível granular, protegendo as APIs em diferentes etapas do seu ciclo de vida. Alternativas Incorretas: B: O AWS Firewall Manager é uma ferramenta para gerenciar regras de segurança, mas não é o mais adequado para proteger APIs específicas do API Gateway. Ele é mais focado em políticas de segurança abrangentes em nível de conta. C: O AWS Shield é um serviço de proteção contra DDoS (negação de serviço distribuída), não sendo a principal escolha para proteção contra injeção de SQL ou ataques de scripting entre sites. D: Semelhante à opção C, o AWS Shield não é o serviço mais adequado para proteger contra injeção de SQL ou ataques de scripting entre sites."
+    },
+    {
+      "id": "question9",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "A empresa está construindo uma aplicação web executada em instâncias Amazon EC2 em várias Zonas de Disponibilidade. A aplicação web fornecerá acesso a um repositório de documentos de texto totalizando cerca de 900 TB. A empresa prevê que a aplicação web enfrentará períodos de alta demanda. Um arquiteto de soluções deve garantir que o componente de armazenamento para os documentos de texto possa escalar para atender à demanda da aplicação o tempo todo. A empresa está preocupada com o custo total da solução. Qual solução de armazenamento atende a esses requisitos de forma MAIS eficiente em termos de custo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Amazon Elastic Block Store (Amazon EBS)"
+        },
+        {
+          "index": 2,
+          "text": "B. Amazon Elastic File System (Amazon EFS)"
+        },
+        {
+          "index": 3,
+          "text": "C. Amazon Elasticsearch Service (Amazon ES)"
+        },
+        {
+          "index": 4,
+          "text": "D. Amazon S3"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Alternativa Correta: D: Amazon S3 (Simple Storage Service) é uma solução altamente escalável e durável, projetada para armazenar e recuperar grandes quantidades de dados de forma eficiente. É adequado para armazenamento de objetos, como documentos de texto, e é capaz de escalar automaticamente para atender a demandas crescentes. Alternativas incorretas: A: Amazon EBS (Elastic Block Store): É mais apropriado para volumes de armazenamento associados a instâncias EC2, mas não oferece a mesma escalabilidade e durabilidade inerentes ao Amazon S3. B: Amazon EFS (Elastic File System): Pode ser uma escolha mais cara para grandes volumes de dados e pode não ser tão otimizada para acesso a objetos de texto como o Amazon S3. C: Amazon Elasticsearch Service: É uma solução para pesquisa e análise de dados, não necessariamente para armazenamento massivo de documentos, e pode não ser a opção mais econômica para esse caso específico."
+    },
+    {
+      "id": "question10",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa armazena os registros de aplicativos em um grupo de logs do Amazon CloudWatch Logs. Uma nova política exige que a empresa armazene todos os registros de aplicativos no Amazon OpenSearch Service (Amazon Elasticsearch Service) em tempo quase real. Qual solução atenderá a esse requisito com o MENOR esforço operacional?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar uma assinatura do CloudWatch Logs para transmitir os logs para o Amazon OpenSearch Service (Amazon Elasticsearch Service)."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar uma função AWS Lambda. Usar o grupo de logs para invocar a função e gravar os logs no Amazon OpenSearch Service (Amazon Elasticsearch Service)."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar um fluxo de entrega do Amazon Kinesis Data Firehose. Configurar o grupo de logs como a origem do fluxo de entrega. Configurar o Amazon OpenSearch Service (Amazon Elasticsearch Service) como o destino do fluxo de entrega."
+        },
+        {
+          "index": 4,
+          "text": "D. Instalar e configurar o Amazon Kinesis Agent em cada servidor de aplicativos para entregar os logs ao Amazon Kinesis Data Streams. Configurar o Kinesis Data Streams para entregar os logs ao Amazon OpenSearch Service (Amazon Elasticsearch Service)."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta correta: A. Configurar uma assinatura do CloudWatch Logs para transmitir os logs para o Amazon OpenSearch Service (Amazon Elasticsearch Service). Motivo: A opção A permite configurar uma assinatura do CloudWatch Logs para transmitir logs diretamente para o Amazon OpenSearch Service (Amazon Elasticsearch Service), proporcionando uma solução eficiente e com baixa sobrecarga operacional. As outras opções envolvem a introdução de componentes adicionais, como funções Lambda, fluxos de entrega do Kinesis ou agentes do Kinesis, o que pode aumentar a complexidade e a sobrecarga operacional. Alternativas Incorretas: B. Criar uma função AWS Lambda. Usar o grupo de logs para invocar a função e gravar os logs no Amazon OpenSearch Service (Amazon Elasticsearch Service): Esta opção adiciona complexidade ao introduzir uma função Lambda, e a gestão e manutenção dessa função podem aumentar a sobrecarga operacional. C. Criar um fluxo de entrega do Amazon Kinesis Data Firehose. Configurar o log group como a fonte do fluxo de entrega. Configurar o Amazon OpenSearch Service (Amazon Elasticsearch Service) como o destino do fluxo de entrega: Essa opção adiciona uma camada adicional com o Kinesis Data Firehose, aumentando a complexidade sem uma vantagem significativa para o requisito específico. D. Instalar e configurar o Amazon Kinesis Agent em cada servidor de aplicativos para entregar os logs para o Amazon Kinesis Data Streams. Configurar o Kinesis Data Streams para entregar os logs ao Amazon OpenSearch Service (Amazon Elasticsearch Service): Introduzir o Amazon Kinesis Agent e Kinesis Data Streams é desnecessário para a exigência de streaming em tempo quase real para o Amazon OpenSearch Service (Amazon Elasticsearch Service), tornando a solução mais complexa do que o necessário."
+    },
+    {
+      "id": "question11",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa utiliza um sistema de gerenciamento de conteúdo (CMS) popular para seu site corporativo. No entanto, a aplicação de patches e a manutenção necessária são onerosas. A empresa está redesenhando seu site e deseja uma nova solução. O site será atualizado quatro vezes por ano e não precisa ter conteúdo dinâmico disponível. A solução deve oferecer alta escalabilidade e segurança aprimorada. Quais combinações de alterações atenderão a esses requisitos com o MENOR esforço operacional? (Escolha duas.)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Implementar um AWS WAF (Web Application Firewall) ACL na frente do site para fornecer funcionalidade HTTPS."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar e implementar uma função AWS Lambda para gerenciar e fornecer o conteúdo do site."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar o novo site e um bucket do Amazon S3. Implementar o site no bucket do S3 com hospedagem de site estático habilitada."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar o novo site. Implementar o site usando um grupo de dimensionamento automático de instâncias Amazon EC2 atrás de um Application Load Balancer."
+        }
+      ],
+      "answer": [
+        1,
+        3
+      ],
+      "explanation": "Explicação geral Alternativas corretas: A: Implementar um AWS WAF ACL oferece segurança adicional, especialmente em relação a ataques na camada de aplicação, como injeção de SQL e cross-site scripting. Além disso, fornece funcionalidade HTTPS, o que contribui para a segurança durante a transmissão de dados. C: Ao hospedar o site no Amazon S3 com hospedagem de site estático habilitada, você elimina a necessidade de gerenciar instâncias EC2, reduzindo significativamente a complexidade operacional. Alternativas Incorretas: B: Essa alternativa não atende o requisito de MENOR esforço operacional. D: Como os sites são estáticos (não dinâmico), não há necessidade do uso do EC2."
+    },
+    {
+      "id": "question12",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa de registros médicos está hospedando uma aplicação em instâncias Amazon EC2. A aplicação processa arquivos de dados do cliente armazenados no Amazon S3. As instâncias EC2 estão hospedadas em sub-redes públicas. As instâncias EC2 acessam o Amazon S3 pela internet, mas não requerem nenhum outro acesso à rede. Um novo requisito determina que o tráfego de rede para transferências de arquivos siga uma rota privada e não seja enviado pela internet. Que alteração na arquitetura de rede um arquiteto de soluções deve recomendar para atender a esse requisito?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar um gateway NAT. Configurar a tabela de roteamento para as sub-redes públicas para enviar o tráfego para o Amazon S3 por meio do gateway NAT."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar o grupo de segurança das instâncias EC2 para restringir o tráfego de saída, permitindo apenas tráfego para a lista de prefixos do S3."
+        },
+        {
+          "index": 3,
+          "text": "C. Mover as instâncias EC2 para sub-redes privadas. Criar um endpoint VPC para o Amazon S3 e vincular o endpoint à tabela de roteamento para as sub-redes privadas."
+        },
+        {
+          "index": 4,
+          "text": "D. Remover o gateway da internet da VPC. Configurar uma conexão AWS Direct Connect e rotear o tráfego para o Amazon S3 pela conexão Direct Connect."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Explicação geral Alternativa Correta: C: Ao mover as instâncias EC2 para sub-redes privadas, você garante que as instâncias não tenham acesso direto à internet. Criar um VPC endpoint para o Amazon S3 permite que as instâncias EC2 acessem o S3 diretamente da rede interna sem precisar passar pela internet. Alternativas Incorretas: A: A criação de um gateway NAT seria útil se as instâncias precisassem acessar a internet, mas, neste caso, o requisito é manter as transferências de arquivos em uma rota privada sem a internet. Portanto, essa opção não atende ao requisito. B: Configurar o grupo de segurança pode ajudar a restringir o tráfego de saída, mas não garante uma rota privada para o Amazon S3. Além disso, limitar o tráfego para a lista de prefixos do S3 pode ser desafiador e pode não ser uma solução prática ou segura. D: Configurar uma conexão AWS Direct Connect seria uma opção para acesso privado, mas é uma solução mais complexa e envolve custos adicionais. Além disso, mover para o Direct Connect não garante uma rota privada direta para o Amazon S3; a criação de um endpoint VPC para o S3 é uma abordagem mais direta e específica para esse caso de uso."
+    },
+    {
+      "id": "question13",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa criou um aplicativo de análise de imagens no qual os usuários podem fazer upload de fotos e adicionar molduras às suas imagens. Os usuários fazem upload de imagens e metadados para indicar quais molduras desejam adicionar às suas imagens. O aplicativo utiliza uma única instância Amazon EC2 e o Amazon DynamoDB para armazenar os metadados. O aplicativo está se tornando mais popular, e o número de usuários está aumentando. A empresa espera que o número de usuários simultâneos varie significativamente, dependendo da hora do dia e do dia da semana. A empresa deve garantir que o aplicativo possa escalar para atender às necessidades da crescente base de usuários. Qual solução atende a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar o AWS Lambda para processar as fotos. Armazenar as fotos e metadados no DynamoDB."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar o Amazon Kinesis Data Firehose para processar as fotos e armazenar as fotos e metadados."
+        },
+        {
+          "index": 3,
+          "text": "C. Utilizar o AWS Lambda para processar as fotos. Armazenar as fotos no Amazon S3. Manter o DynamoDB para armazenar os metadados."
+        },
+        {
+          "index": 4,
+          "text": "D. Aumentar o número de instâncias EC2 para três. Utilizar volumes do Amazon Elastic Block Store (Amazon EBS) Provisioned IOPS SSD (io2) para armazenar as fotos e metadados."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Explicação geral Resposta Correta: C: AWS Lambda para processar as fotos: O uso do AWS Lambda para processar as fotos permite uma abordagem serverless, escalável e baseada em eventos. O Lambda pode ser acionado pelo upload de fotos e executar o processamento necessário. Armazenar as fotos no Amazon S3: O Amazon S3 é um serviço de armazenamento de objetos altamente escalável, durável e eficiente para armazenar grandes volumes de dados, como fotos. Ele é adequado para armazenar dados binários, como imagens. Manter o DynamoDB para armazenar os metadados: O DynamoDB é uma opção adequada para armazenar metadados, fornecendo um acesso rápido e escalabilidade automática conforme a carga de trabalho aumenta. Respostas incorretas: A: Armazenar as fotos no DynamoDB não é uma escolha eficiente, pois o DynamoDB é mais adequado para armazenar dados estruturados e pequenos, não para grandes objetos binários, como imagens. B: O Kinesis Data Firehose é ideal para ingestão e processamento de dados em tempo real, mas, neste caso, a necessidade é lidar com o processamento de imagens, que pode não ser uma correspondência ideal para o serviço. D: Aumentar o número de instâncias EC2 e gerenciar volumes EBS adiciona complexidade operacional e pode não ser tão escalável e eficiente quanto soluções mais gerenciadas, como o uso do AWS Lambda e Amazon S3."
+    },
+    {
+      "id": "question14",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "A empresa hospeda uma aplicação web contêinerizada em um conjunto de servidores locais que processam solicitações recebidas. O número de solicitações está aumentando rapidamente. Os servidores locais não conseguem lidar com o aumento do número de solicitações. A empresa deseja migrar a aplicação para a AWS com o mínimo de alterações de código e o mínimo de esforço de desenvolvimento. Qual solução atenderá a esses requisitos com o MÍNIMO esforço operacional?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Use o AWS Fargate no Amazon Elastic Container Service (Amazon ECS) para executar a aplicação web contêinerizada com o Service Auto Scaling. Use um Application Load Balancer para distribuir as solicitações recebidas."
+        },
+        {
+          "index": 2,
+          "text": "B. Use duas instâncias do Amazon EC2 para hospedar a aplicação web contêinerizada. Use um Application Load Balancer para distribuir as solicitações recebidas."
+        },
+        {
+          "index": 3,
+          "text": "C. Use o AWS Lambda com um novo código que utilize uma das linguagens suportadas. Crie várias funções do Lambda para dar suporte à carga. Use o Amazon API Gateway como ponto de entrada para as funções do Lambda."
+        },
+        {
+          "index": 4,
+          "text": "D. Use uma solução de computação de alto desempenho (HPC), como o AWS ParallelCluster, para estabelecer um cluster HPC que possa processar as solicitações recebidas na escala apropriada."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A: AWS Fargate no Amazon ECS: O Fargate permite a execução de contêineres sem a necessidade de gerenciar a infraestrutura subjacente. Com o Service Auto Scaling, a AWS pode ajustar automaticamente o número de tarefas de contêiner conforme a demanda. Application Load Balancer: O ALB distribui o tráfego de entrada entre as instâncias em execução. Isso garante uma distribuição uniforme das solicitações e permite escalar horizontalmente a aplicação de forma eficiente. Respostas Incorretas: B:Envolve a gestão manual de instâncias EC2, o que aumenta a carga operacional. Não aproveita os benefícios do AWS Fargate, que oferece uma abordagem mais gerenciada para executar contêineres sem a necessidade de gerenciar instâncias. C:Mudança significativa na arquitetura da aplicação, pois o AWS Lambda é orientado a eventos e não é apropriado para todas as cargas de trabalho. Pode exigir uma reescrita significativa do código existente para se adequar ao modelo de execução de funções Lambda. D:Solução voltada para cargas de trabalho de alto desempenho, como computação científica, e não é otimizada para hospedar aplicativos web convencionais. Introduz complexidade desnecessária para os requisitos específicos de uma aplicação web."
+    },
+    {
+      "id": "question15",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa de mídia social permite que os usuários façam upload de imagens para seu site. O site é executado em instâncias Amazon EC2. Durante as solicitações de upload, o site redimensiona as imagens para um tamanho padrão e armazena as imagens redimensionadas no Amazon S3. Os usuários estão enfrentando lentidão nas solicitações de upload para o site. A empresa precisa reduzir o acoplamento dentro da aplicação e melhorar o desempenho do site. Um arquiteto de soluções deve projetar o processo mais operacionalmente eficiente para uploads de imagens. Quais combinações de ações o arquiteto de soluções deve tomar para atender a esses requisitos? (Escolha duas opções.)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar a aplicação para fazer upload de imagens no S3 Glacier."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar o servidor web para fazer upload das imagens originais no Amazon S3."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar a aplicação para fazer upload de imagens diretamente do navegador de cada usuário para o Amazon S3 por meio do uso de uma URL de pré-autorização."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar Notificações de Eventos S3 para invocar uma função AWS Lambda quando uma imagem for carregada. Usar a função para redimensionar a imagem."
+        },
+        {
+          "index": 5,
+          "text": "E. Criar uma regra do Amazon EventBridge (Eventos do Amazon CloudWatch) que invoque uma função AWS Lambda em um cronograma para redimensionar as imagens enviadas."
+        }
+      ],
+      "answer": [
+        3,
+        4
+      ],
+      "explanation": "Explicação geral Alternativas Corretas: C: A opção C propõe configurar a aplicação para permitir que os usuários façam upload diretamente de suas imagens para o Amazon S3, sem passar pela infraestrutura do EC2. Isso reduz o acoplamento e a carga no servidor EC2, melhorando a eficiência do upload. D: opção D sugere configurar Notificações de Eventos no S3 para acionar uma função AWS Lambda quando uma imagem é carregada. A função Lambda pode ser usada para redimensionar a imagem. Isso também ajuda a reduzir a carga no servidor EC2, tornando o processo mais eficiente. Alternativas Incorretas: A: O Amazon S3 Glacier é um serviço de armazenamento de baixo custo e otimizado para arquivamento de dados a longo prazo. No entanto, não é apropriado para o upload de imagens em tempo real devido à latência mais alta associada à recuperação de dados no Glacier. Além disso, não aborda diretamente a lentidão nas solicitações de upload. B: Essa opção envolve o servidor web fazendo diretamente o upload das imagens originais no Amazon S3. No entanto, isso não reduz o acoplamento nem melhora a eficiência do upload. Além disso, pode aumentar a carga no servidor web, resultando em desempenho subótimo. E: Esta opção propõe uma abordagem agendada para redimensionar imagens, o que não aborda diretamente a lentidão nas solicitações de upload. Além disso, não reduz o acoplamento e pode não ser uma solução operacionalmente eficiente para o requisito de redimensionamento imediato durante o upload."
+    },
+    {
+      "id": "question16",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa recentemente migrou um sistema de processamento de mensagens para a AWS. O sistema recebe mensagens em uma fila Amazon MQ executada em uma instância Amazon EC2. As mensagens são processadas por uma aplicação consumidora em execução em uma instância Amazon EC2. A aplicação consumidora processa as mensagens e escreve os resultados em um banco de dados MySQL em execução em uma instância Amazon EC2. A empresa deseja que essa aplicação tenha alta disponibilidade com baixa complexidade operacional. Qual arquitetura oferece a MAIOR disponibilidade?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Adicione um segundo servidor Amazon MQ a outra Zona de Disponibilidade. Adicione uma instância EC2 consumidora adicional em outra Zona de Disponibilidade. Replicar o banco de dados MySQL para outra Zona de Disponibilidade."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilize o Amazon MQ com brokers ativo/standby configurados em duas Zonas de Disponibilidade. Adicione uma instância EC2 consumidora adicional em outra Zona de Disponibilidade. Replicar o banco de dados MySQL para outra Zona de Disponibilidade."
+        },
+        {
+          "index": 3,
+          "text": "C. Utilize o Amazon MQ com brokers ativo/standby configurados em duas Zonas de Disponibilidade. Adicione uma instância EC2 consumidora adicional em outra Zona de Disponibilidade. Utilize o Amazon RDS para MySQL com Multi-AZ ativado."
+        },
+        {
+          "index": 4,
+          "text": "D. Utilize o Amazon MQ com brokers ativo/standby configurados em duas Zonas de Disponibilidade. Adicione um grupo de Auto Scaling para as instâncias EC2 consumidoras em duas Zonas de Disponibilidade. Utilize o Amazon RDS para MySQL com Multi-AZ ativado."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Alternativa Correta: D: Instâncias do Amazon MQ em standby ficam constantemente monitorando a instância ativa. Caso ela fique indisponível, a Standby de outra Zona de Disponibilidade assume como a principal. O Grupo de Auto Scaling pode possuir regras de escalonamento, podendo aumentar o número de instâncias se necessário, e manter o mínimo de instâncias ativas, o que no caso seria 2. Ele também consegue distribuir as instâncias em diferentes zonas de disponibilidade. Utilizar o Amazon RDS para Multi-AZ garante que a replicação dos dados ocorram de forma síncrona, e em caso de indisponibilidade, não haverá qualquer perda de dados. Alternativas Incorretas: A: O ActiveMQ não é gerenciado automaticamente pela AWS, e adicionar um segundo servidor manualmente pode aumentar a complexidade operacional. A replicação, mesmo que de forma sincrona, não mantem a redundância do banco de dados. O mesmo precisaria trabalhar em Multi-AZ. B: A alternativa B ainda não resolve a disponibilidade do MySQL. C: A alternativa C resolveria o problema. Porem a alternativa D fornece MAIOR disponibilidade, devido ao grupo de auto scaling."
+    },
+    {
+      "id": "question17",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "A aplicação contêinerizada de uma empresa é executada em uma instância Amazon EC2. A aplicação precisa baixar certificados de segurança antes de poder se comunicar com outras aplicações de negócios. A empresa deseja uma solução altamente segura para criptografar e descriptografar os certificados em tempo quase real. A solução também precisa armazenar os dados em um armazenamento altamente disponível após a criptografia. Qual solução atenderá a esses requisitos com o MÍNIMO esforço operacional?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar segredos no AWS Secrets Manager para certificados criptografados. Atualizar manualmente os certificados conforme necessário. Controlar o acesso aos dados usando acesso IAM detalhado."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar uma função AWS Lambda que utiliza a biblioteca de criptografia Python para receber e realizar operações de criptografia. Armazenar a função em um bucket Amazon S3."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar uma chave gerenciada pelo cliente no AWS Key Management Service (AWS KMS). Permitir que a função EC2 use a chave KMS para operações de criptografia. Armazenar os dados criptografados no Amazon S3."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar uma chave gerenciada pelo cliente no AWS Key Management Service (AWS KMS). Permitir que a função EC2 use a chave KMS para operações de criptografia. Armazenar os dados criptografados nos volumes do Amazon Elastic Block Store (Amazon EBS)."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Explicação geral Resposta correta: C. Criar uma chave gerenciada pelo cliente no AWS Key Management Service (AWS KMS). Permitir que a função EC2 use a chave KMS para operações de criptografia. Armazenar os dados criptografados no Amazon S3. Motivo: A opção C utiliza o AWS Key Management Service (KMS) para gerenciar uma chave criptográfica e permite que a função EC2 utilize essa chave para operações de criptografia, proporcionando segurança na manipulação dos certificados. Além disso, armazenar os dados criptografados no Amazon S3 oferece alta disponibilidade e durabilidade. Explicações das outras alternativas: A. A opção A envolve a criação de segredos no AWS Secrets Manager, mas a atualização manual dos certificados pode aumentar o esforço operacional e potencialmente introduzir erros humanos. B. A opção B propõe o uso de uma função AWS Lambda para operações de criptografia, mas essa abordagem pode introduzir complexidade desnecessária e não menciona o armazenamento dos dados após a criptografia. D. A opção D sugere armazenar os dados criptografados nos volumes do Amazon EBS, o que pode ser mais complexo e menos eficiente do que usar o Amazon S3 para esse fim. Além disso, não menciona a descriptografia em tempo quase real."
+    },
+    {
+      "id": "question18",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Um arquiteto de soluções está projetando uma VPC com sub-redes públicas e privadas. A VPC e as sub-redes utilizam blocos CIDR IPv4. Há uma sub-rede pública e uma sub-rede privada em cada uma das três Zonas de Disponibilidade (AZs) para alta disponibilidade. Um gateway de internet é utilizado para fornecer acesso à internet para as sub-redes públicas. As sub-redes privadas necessitam de acesso à internet para permitir que as instâncias do Amazon EC2 baixem atualizações de software. O que o arquiteto de soluções deve fazer para habilitar o acesso à Internet para as sub-redes privadas?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar três gateways NAT, um para cada sub-rede pública em cada AZ. Criar uma tabela de roteamento privada para cada AZ que encaminhe o tráfego não pertencente à VPC para o gateway NAT em sua AZ."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar três instâncias NAT, uma para cada sub-rede privada em cada AZ. Criar uma tabela de roteamento privada para cada AZ que encaminhe o tráfego não pertencente à VPC para a instância NAT em sua AZ."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar um segundo gateway de internet em uma das sub-redes privadas. Atualizar a tabela de roteamento das sub-redes privadas que encaminha o tráfego não pertencente à VPC para o gateway de internet privado."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar um gateway de internet apenas de saída em uma das sub-redes públicas. Atualizar a tabela de roteamento das sub-redes privadas que encaminha o tráfego não pertencente à VPC para o gateway de internet apenas de saída."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta correta: A. Criar três gateways NAT, um para cada sub-rede pública em cada AZ. Criar uma tabela de roteamento privada para cada AZ que encaminhe o tráfego não pertencente à VPC para o gateway NAT em sua AZ. Motivo: A opção A é a correta porque utiliza Gateways NAT (Network Address Translation) para permitir que as instâncias em sub-redes privadas acessem a internet de forma segura. Criar um gateway NAT em cada sub-rede pública em cada Zona de Disponibilidade (AZ) garante alta disponibilidade e confiabilidade. Explicações das outras alternativas: B. A opção B sugere o uso de instâncias NAT, o que pode ser uma solução, mas geralmente o uso de Gateways NAT gerenciados pelo AWS é mais eficiente e requer menos administração. C. A opção C propõe a criação de um segundo gateway de internet em uma sub-rede privada, o que não é uma prática comum e pode introduzir complexidade desnecessária. D. A opção D propõe a criação de um gateway de internet apenas de saída em uma sub-rede pública, o que não é a abordagem correta para fornecer acesso à internet para sub-redes privadas. O gateway de internet é geralmente usado para sub-redes públicas. O uso de Gateways NAT para sub-redes privadas é mais apropriado."
+    },
+    {
+      "id": "question19",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja migrar um data center local para a AWS. O data center hospeda um servidor SFTP que armazena seus dados em um sistema de arquivos baseado em NFS. O servidor contém 200 GB de dados que precisam ser transferidos. O servidor deve ser hospedado em uma instância Amazon EC2 que utiliza um sistema de arquivos Amazon Elastic File System (Amazon EFS). Quais etapas combinadas um arquiteto de soluções deve seguir para automatizar essa tarefa? (Selecione DUAS opções)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Iniciar a instância EC2 na mesma Zona de Disponibilidade que o sistema de arquivos EFS."
+        },
+        {
+          "index": 2,
+          "text": "B. Instalar um agente AWS DataSync no data center local."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar um volume secundário Amazon Elastic Block Store (Amazon EBS) na instância EC2 para os dados."
+        },
+        {
+          "index": 4,
+          "text": "D. Usar manualmente um comando de cópia do sistema operacional para enviar os dados para a instância EC2."
+        },
+        {
+          "index": 5,
+          "text": "E. Usar o AWS DataSync para criar uma configuração de local (location) adequada para o servidor SFTP local."
+        }
+      ],
+      "answer": [
+        2,
+        5
+      ],
+      "explanation": "Explicação geral Resposta Correta: B e E Motivo: Opção B (Instalar um agente AWS DataSync no data center local): O AWS DataSync é uma ferramenta eficaz para transferência de dados para a AWS, incluindo transferências de e para o Amazon EFS. Instalar um agente AWS DataSync no data center local facilita a transferência automatizada dos dados para o Amazon EFS. Opção E (Usar o AWS DataSync para criar uma configuração de local adequada para o servidor SFTP local): O AWS DataSync permite criar configurações de local que especificam as origens e destinos dos dados. Configurar corretamente a localização para o servidor SFTP local permitirá que o AWS DataSync automatize a transferência de dados para o Amazon EFS. Explicações das outras alternativas: A. Iniciar a instância EC2 na mesma Zona de Disponibilidade que o sistema de arquivos EFS: Essa opção não está diretamente relacionada à automação da transferência de dados. C. Criar um volume secundário Amazon Elastic Block Store (Amazon EBS) na instância EC2 para os dados: O Amazon EBS não está relacionado diretamente à transferência de dados para o Amazon EFS. D. Usar manualmente um comando de cópia do sistema operacional para enviar os dados para a instância EC2: Automatizar tarefas é mais eficiente do que executá-las manualmente. Essa opção envolve uma abordagem manual."
+    },
+    {
+      "id": "question20",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa possui um trabalho de extração, transformação e carga (ETL) no AWS Glue que é executado todos os dias no mesmo horário. O trabalho processa dados XML que estão em um bucket do Amazon S3. Novos dados são adicionados ao bucket do S3 todos os dias. Um arquiteto de soluções percebe que o AWS Glue está processando todos os dados a cada execução. O que o arquiteto de soluções deve fazer para evitar que o AWS Glue reprocesse dados antigos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Editar o trabalho para usar bookmarks de trabalho."
+        },
+        {
+          "index": 2,
+          "text": "B. Editar o trabalho para excluir dados após o processamento."
+        },
+        {
+          "index": 3,
+          "text": "C. Editar o trabalho configurando o campo NumberOfWorkers para 1."
+        },
+        {
+          "index": 4,
+          "text": "D. Usar uma transformação de aprendizado de máquina (ML) FindMatches."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A Motivo: Opção A (Editar o trabalho para usar bookmarks de trabalho): Bookmarks de trabalho no AWS Glue permitem que o processo ETL mantenha o controle das alterações nos dados. Isso evita o reprocesse de dados antigos, pois o AWS Glue pode começar a processar do ponto onde parou na última execução. Explicações das outras alternativas: B. Editar o trabalho para excluir dados após o processamento: Excluir dados após o processamento não evita o reprocesse de dados antigos; na verdade, isso resultaria na perda desses dados. C. Editar o trabalho configurando o campo NumberOfWorkers para 1: Configurar o número de workers não está diretamente relacionado à prevenção de reprocesse de dados antigos. D. Usar uma transformação de aprendizado de máquina (ML) FindMatches: A transformação FindMatches é usada para identificar registros duplicados em conjuntos de dados. Isso não está relacionado à prevenção de reprocesse de dados antigos no contexto do AWS Glue ETL job."
+    },
+    {
+      "id": "question21",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Um arquiteto de soluções deve projetar uma infraestrutura altamente disponível para um site. O site é alimentado por servidores web do Windows que são executados em instâncias Amazon EC2. O arquiteto de soluções deve implementar uma solução que possa mitigar um ataque DDoS em grande escala originado de milhares de endereços IP. A interrupção do serviço não é aceitável para o site. Quais ações o arquiteto de soluções deve tomar para proteger o site contra tal ataque? (Selecione DUAS opções.)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Usar o AWS Shield Advanced para interromper o ataque DDoS."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar o Amazon GuardDuty para bloquear automaticamente os atacantes."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar o site para usar o Amazon CloudFront tanto para conteúdo estático quanto dinâmico."
+        },
+        {
+          "index": 4,
+          "text": "D. Utilizar uma função AWS Lambda para adicionar automaticamente os endereços IP dos atacantes às ACLs de rede da VPC."
+        },
+        {
+          "index": 5,
+          "text": "E. Usar instâncias EC2 Spot em um grupo de Auto Scaling com uma política de dimensionamento de rastreamento de destino configurada para 80% de utilização de CPU."
+        }
+      ],
+      "answer": [
+        1,
+        3
+      ],
+      "explanation": "Explicação geral Alternativas Corretas: O AWS Shield Advanced é um serviço de mitigação avançada de DDoS da AWS, projetado para proteger aplicativos contra ataques DDoS sofisticados. Ele pode ajudar a detectar e mitigar ataques automaticamente. O Amazon CloudFront é um serviço de entrega de conteúdo global que inclui recursos de proteção contra DDoS. Ele distribui o tráfego para pontos de presença globais, ajudando a reduzir a carga nos servidores de origem e fornecendo uma camada adicional de proteção. Alternativas Incorretas: O Amazon GuardDuty é um serviço de detecção de ameaças que não bloqueia automaticamente os atacantes. Ele fornece alertas e informações sobre atividades suspeitas, mas não tem a capacidade de tomar medidas de bloqueio. Adicionar automaticamente os endereços IP dos atacantes às ACLs de rede pode ser uma abordagem, mas não é a solução mais eficaz para mitigar um ataque DDoS em grande escala. As ACLs podem se tornar muito extensas e difíceis de gerenciar. Além disso, as ACLs não proporcionam uma defesa eficaz contra ataques DDoS. Usar instância EC2 Spot, não é uma solução direcionada para a mitigação de ataques DDoS."
+    },
+    {
+      "id": "question22",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa está se preparando para implantar uma nova carga de trabalho sem servidor. Um arquiteto de soluções deve usar o princípio do menor privilégio para configurar permissões que serão usadas para executar uma função AWS Lambda. Uma regra do Amazon EventBridge (Amazon CloudWatch Events) irá invocar a função. Qual solução atende a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Adicionar uma função de execução à função com a ação lambda:InvokeFunction e * como o principal."
+        },
+        {
+          "index": 2,
+          "text": "B. Adicionar uma função de execução à função com a ação lambda:InvokeFunction e Service:amazonaws.com como o principal."
+        },
+        {
+          "index": 3,
+          "text": "C. Adicionar uma política baseada em recursos à função com a ação lambda:'* e Service:events.amazonaws.com como o principal."
+        },
+        {
+          "index": 4,
+          "text": "D. Adicionar uma política baseada em recursos à função com a ação lambda:InvokeFunction e Service:events.amazonaws.com como o principal."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta Correta: D Motivo: Opção D (Adicionar uma política baseada em recursos à função com a ação lambda:InvokeFunction e Service:events.amazonaws.com como o principal): Essa opção segue o princípio do menor privilégio, concedendo apenas as permissões necessárias para a ação específica de invocação da função pelo Amazon EventBridge. Explicações das outras alternativas: A. Adicionar uma função de execução à função com a ação lambda:InvokeFunction e * como o principal: Isso concede privilégios excessivos, já que * como o principal significa qualquer origem, o que é mais amplo do que o necessário. B. Adicionar uma função de execução à função com a ação lambda:InvokeFunction e Service:amazonaws.com como o principal: Isso também é muito abrangente, pois permite a invocação da função por qualquer serviço da AWS, não apenas pelo Amazon EventBridge. C. Adicionar uma política baseada em recursos à função com a ação lambda:'* e Service:events.amazonaws.com como o principal: Isso é excessivamente permissivo, pois concede permissões genéricas de ação '*' (todos) e não é restrito apenas à ação necessária."
+    },
+    {
+      "id": "question23",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa está se preparando para armazenar dados confidenciais no Amazon S3. Por motivos de conformidade, os dados devem ser criptografados em repouso. O uso das chaves de criptografia deve ser registrado para fins de auditoria. As chaves devem ser rotacionadas anualmente. Qual solução atende a esses requisitos e é a MAIS operacionalmente eficiente?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criptografia do lado do servidor com chaves fornecidas pelo cliente (SSE-C)."
+        },
+        {
+          "index": 2,
+          "text": "B. Criptografia do lado do servidor com chaves gerenciadas pelo Amazon S3 (SSE-S3)."
+        },
+        {
+          "index": 3,
+          "text": "C. Criptografia do lado do servidor com chaves mestras do cliente (CMKs) AWS KMS (SSE-KMS) com rotação manual."
+        },
+        {
+          "index": 4,
+          "text": "D. Criptografia do lado do servidor com chaves mestras do cliente (CMKs) AWS KMS (SSE-KMS) com rotação automática."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Alternativa correta: SSE-KMS (Server-Side Encryption with AWS Key Management Service): Esta opção utiliza o AWS Key Management Service (KMS) para gerenciar as chaves de criptografia. O KMS permite a rotação automática de chaves, o que atende ao requisito de rotação anual das chaves. Rotação automática: A rotação automática de chaves fornece uma solução operacionalmente eficiente, pois elimina a necessidade de intervenção manual para a rotação. Isso garante que a rotação seja realizada de forma consistente e sem interrupções. Registro de uso para fins de auditoria: O AWS KMS registra automaticamente o uso das chaves, incluindo informações sobre quem as acessou e quando. Esses registros podem ser usados para fins de auditoria e conformidade. Alternativas Incorretas: A. Criptografia do lado do servidor com chaves fornecidas pelo cliente (SSE-C): Problemas: Não atende ao requisito de registrar o uso das chaves para fins de auditoria, já que as chaves são fornecidas pelo cliente e o Amazon S3 não tem visibilidade sobre elas. Não fornece rotação automática de chaves, o que pode ser uma preocupação operacional. B. Criptografia do lado do servidor com chaves gerenciadas pelo Amazon S3 (SSE-S3): Problemas: Não atende ao requisito de registrar o uso das chaves para fins de auditoria. Não oferece rotação automática de chaves. As chaves são gerenciadas internamente pelo Amazon S3, mas a rotação precisa ser realizada manualmente. C. Criptografia do lado do servidor com chaves mestras do cliente (CMKs) AWS KMS (SSE-KMS) com rotação manual: Problemas: Não atende ao requisito de rotação automática anual das chaves, pois a rotação é manual. Embora o AWS KMS ofereça a capacidade de registrar o uso das chaves, a rotação manual pode introduzir atrasos e riscos operacionais."
+    },
+    {
+      "id": "question24",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa possui um site de vendas de automóveis que armazena suas listagens em um banco de dados no Amazon RDS. Quando um automóvel é vendido, a listagem precisa ser removida do site e os dados devem ser enviados para vários sistemas de destino. Qual design um arquiteto de soluções deve recomendar?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar uma função AWS Lambda acionada quando o banco de dados no Amazon RDS for atualizado para enviar as informações para uma fila do Amazon Simple Queue Service (Amazon SQS) para os destinos consumirem."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar uma função AWS Lambda acionada quando o banco de dados no Amazon RDS for atualizado para enviar as informações para uma fila FIFO do Amazon Simple Queue Service (Amazon SQS) para os destinos consumirem."
+        },
+        {
+          "index": 3,
+          "text": "C. Assinar uma notificação de evento do RDS e enviar para uma fila do Amazon Simple Queue Service (Amazon SQS) distribuída para vários tópicos do Amazon Simple Notification Service (Amazon SNS). Utilizar funções AWS Lambda para atualizar os destinos."
+        },
+        {
+          "index": 4,
+          "text": "D. Assinar uma notificação de evento do RDS e enviar para um tópico do Amazon Simple Notification Service (Amazon SNS) distribuído para várias filas do Amazon Simple Queue Service (Amazon SQS). Utilizar funções AWS Lambda para atualizar os destinos."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta Correta: D: Essa abordagem permite que você assine eventos de atualização no banco de dados RDS e envie notificações para um tópico SNS. O tópico SNS pode distribuir essas notificações para várias filas SQS. As filas SQS podem ser consumidas por funções AWS Lambda, que então atualizariam os sistemas de destino conforme necessário. Alternativas Incorretas: A: Essa opção não considera a necessidade de garantir que os dados sejam enviados para \"múltiplos sistemas de destino\". O envio direto para uma fila SQS pode não ser escalável ou flexível o suficiente para lidar com os diferentes destinos. B: Semelhante à opção A, ela não aborda a necessidade específica de enviar dados para \"múltiplos sistemas de destino\". Além disso, o uso de uma fila FIFO pode ser desnecessário se a ordem de entrega não for crítica para este cenário. C: Esta opção é complexa e pode ser considerada uma sobrecarga desnecessária, pois envolve o uso de tanto filas SQS quanto tópicos SNS. Pode ser uma solução exagerada para o requisito simples apresentado."
+    },
+    {
+      "id": "question25",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa precisa armazenar dados no Amazon S3 e deseja evitar que os dados sejam alterados. A empresa quer que novos objetos enviados ao Amazon S3 permaneçam inalteráveis por um período não específico de tempo até que a empresa decida modificar os objetos. Apenas usuários específicos na conta AWS da empresa devem ter a capacidade de excluir os objetos. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar um cofre S3 Glacier. Aplicar uma política de trava de cofre write-once, read-many (WORM) aos objetos."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar um bucket S3 com S3 Object Lock ativado. Ativar versionamento. Definir um período de retenção de 100 anos. Usar o modo de governança como modo de retenção padrão do bucket S3 para novos objetos."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar um bucket S3. Usar o AWS CloudTrail para rastrear eventos de API S3 que modificam os objetos. Após a notificação, restaurar os objetos modificados a partir de quaisquer versões de backup que a empresa tenha."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar um bucket S3 com S3 Object Lock ativado. Ativar versionamento. Adicionar uma retenção legal aos objetos. Adicionar a permissão s3:PutObjectLegalHold às políticas IAM dos usuários que precisam excluir os objetos."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Alternativa Correta: D: O S3 Object Lock é uma característica do Amazon S3 que permite bloquear objetos contra exclusão ou alteração por um período específico. Ativando o versionamento, você mantém versões anteriores dos objetos, o que é útil para garantir a imutabilidade dos dados. Ao adicionar uma retenção legal, você pode garantir que os objetos não sejam modificados ou excluídos, a menos que a retenção legal seja removida. E a permissão s3:PutObjectLegalHold Pode permitir que alguns usuários especificos possam remover a retenção legal (legal hold). Alternativas Incorretas: A: Criar um cofre S3 Glacier não atende nenhum requisito solicitado. Politica WORM basicameante é aplicar o Object Lock. B: A Alternativa B poderia ser uma alternativa aceitável, se não existisse a alternativa D. Ativar o Object Lock e o Versionamento está ok. Definir um período para o tempo de retenção não faz parte do requisito, mas como não há nada sobre o assunto, definir também não está errado. Modo de Governança impede que os arquivos sejam modificados, mas pessoas com permissões poderiam realizar essa alteração. Diferente do Modo Compliance (Conformidade) que nem mesmo o admin/root pode realizar alteração. Contudo, a alternativa D é a mais adequada, pois trás melhores soluções. C: Essa alternativa permite que a alteração seja feita. Mesmo que ela faça a restauração depois, o ideal é que a alteração não ocorra."
+    },
+    {
+      "id": "question26",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa possui uma aplicação que é executada em instâncias Amazon EC2 e utiliza um banco de dados Amazon Aurora. As instâncias EC2 se conectam ao banco de dados usando nomes de usuário e senhas armazenados localmente em um arquivo. A empresa deseja minimizar a sobrecarga operacional no gerenciamento de credenciais.",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar o AWS Secrets Manager. Ativar a rotação automática."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar o AWS Systems Manager Parameter Store. Ativar a rotação automática."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar um bucket do Amazon S3 para armazenar objetos criptografados com uma chave de criptografia do AWS Key Management Service (AWS KMS). Migrar o arquivo de credenciais para o bucket do S3. Apontar a aplicação para o bucket do S3."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar um volume do Amazon Elastic Block Store (Amazon EBS) criptografado para cada instância EC2. Anexar o novo volume EBS a cada instância EC2. Migrar o arquivo de credenciais para o novo volume EBS. Apontar a aplicação para o novo volume EBS."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Alternativa Correta: A: O AWS Secrets Manager é um serviço que permite armazenar e gerenciar segredos, como nomes de usuário e senhas, de forma segura. Ao utilizar o Secrets Manager, a empresa pode centralizar o armazenamento de credenciais e automatizar a rotação dessas credenciais para aumentar a segurança. Alternativas Incorretas: B: O AWS Systems Manager Parameter Store é um serviço para armazenar configurações e parâmetros, incluindo dados sensíveis como senhas. No entanto, a capacidade de rotação automática diretamente pelo Parameter Store não está disponível. A rotação automática seria algo que você precisaria implementar manualmente ou usar em conjunto com outros serviços. C: Armazenar credenciais diretamente em um bucket do Amazon S3, mesmo que os objetos estejam criptografados, não fornece uma solução segura de gerenciamento de credenciais. Além disso, não oferece funcionalidades integradas para rotação automática de credenciais. D: Essa opção envolve a configuração de volumes EBS criptografados para armazenar as credenciais. No entanto, ela também requer a migração manual de credenciais para os novos volumes EBS e não fornece rotação automática de credenciais."
+    },
+    {
+      "id": "question27",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa hospeda uma aplicação de análise de website em uma única instância Amazon EC2 On-Demand. O software de análise é escrito em PHP e utiliza um banco de dados MySQL. O software de análise, o servidor web que fornece o PHP e o servidor de banco de dados estão todos hospedados na instância EC2. A aplicação está apresentando sinais de degradação de desempenho durante os horários de maior movimento e está gerando erros 5xx. A empresa precisa fazer com que a aplicação escale de forma transparente. Qual solução atenderá a esses requisitos de maneira MAIS eficaz em termos de custo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Migrar o banco de dados para uma instância de banco de dados Amazon RDS para MySQL. Criar uma AMI da aplicação web. Usar a AMI para lançar uma segunda instância EC2 On-Demand. Utilizar um Balanceador de Carga de Aplicativos para distribuir a carga para cada instância EC2."
+        },
+        {
+          "index": 2,
+          "text": "B. Migrar o banco de dados para uma instância de banco de dados Amazon RDS para MySQL. Criar uma AMI da aplicação web. Usar a AMI para lançar uma segunda instância EC2 On-Demand. Utilizar o roteamento ponderado do Amazon Route 53 para distribuir a carga entre as duas instâncias EC2."
+        },
+        {
+          "index": 3,
+          "text": "C. Migrar o banco de dados para uma instância de banco de dados Amazon Aurora para MySQL. Criar uma função AWS Lambda para parar a instância EC2 e alterar o tipo de instância. Criar um alarme Amazon CloudWatch para invocar a função Lambda quando a utilização da CPU ultrapassar 75%."
+        },
+        {
+          "index": 4,
+          "text": "D. Migrar o banco de dados para uma instância de banco de dados Amazon Aurora para MySQL. Criar uma AMI da aplicação web. Aplicar a AMI a um modelo de lançamento. Criar um grupo de dimensionamento automático com o modelo de lançamento. Configurar o modelo de lançamento para usar um Spot Fleet. Anexar um Balanceador de Carga de Aplicativos ao grupo de dimensionamento automático."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta Correta: D. Migrar o banco de dados para uma instância de banco de dados Amazon Aurora para MySQL. Criar uma AMI da aplicação web. Aplicar a AMI a um modelo de lançamento. Criar um grupo de dimensionamento automático com o modelo de lançamento. Configurar o modelo de lançamento para usar um Spot Fleet. Anexar um Balanceador de Carga de Aplicativos ao grupo de dimensionamento automático. Motivo: A opção D é a resposta mais eficaz em termos de custo, pois utiliza o Amazon Aurora para o banco de dados, oferecendo escalabilidade e gerenciamento simplificado. Além disso, a implementação do Auto Scaling Group com Spot Fleet aproveita instâncias Spot, que são mais econômicas. O uso de um Balanceador de Carga de Aplicativos (Application Load Balancer) permite distribuir o tráfego entre as instâncias de forma eficiente. Explicações das outras alternativas: A opção A (Migrar o banco de dados para um RDS para instância de banco de dados MySQL) é uma melhoria, mas não aborda a escalabilidade eficiente da aplicação web. A solução envolvendo o Auto Scaling Group com Spot Fleet na opção D é mais eficaz para escalabilidade dinâmica e econômica. A opção B (Migrar o banco de dados para um RDS para instância de banco de dados MySQL) e usar o Amazon Route 53 para roteamento ponderado não oferece a mesma flexibilidade e eficiência que a opção D, que utiliza Spot Fleet e Auto Scaling. A opção C (Migrar o banco de dados para uma instância de banco de dados Aurora MySQL e usar AWS Lambda para alterar o tipo de instância) envolve uma abordagem mais manual e reativa, não proporcionando a escalabilidade dinâmica e automática oferecida pela opção D com Auto Scaling e Spot Fleet."
+    },
+    {
+      "id": "question28",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa precisa reter arquivos de logs de aplicação para uma aplicação crítica por 10 anos. A equipe da aplicação acessa regularmente os logs do último mês para solução de problemas, mas os logs com mais de 1 mês são raramente acessados. A aplicação gera mais de 10 TB de logs por mês. Qual opção de armazenamento atende a esses requisitos de forma MAIS eficaz em termos de custo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Armazenar os logs no Amazon S3. Utilizar o AWS Backup para mover logs com mais de 1 mês para o S3 Glacier Deep Archive."
+        },
+        {
+          "index": 2,
+          "text": "B. Armazenar os logs no Amazon S3. Utilizar políticas de ciclo de vida do S3 para mover logs com mais de 1 mês para o S3 Glacier Deep Archive."
+        },
+        {
+          "index": 3,
+          "text": "C. Armazenar os logs no Amazon CloudWatch Logs. Utilizar o AWS Backup para mover logs com mais de 1 mês para o S3 Glacier Deep Archive."
+        },
+        {
+          "index": 4,
+          "text": "D. Armazenar os logs no Amazon CloudWatch Logs. Utilizar políticas de ciclo de vida do Amazon S3 para mover logs com mais de 1 mês para o S3 Glacier Deep Archive."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B. Armazenar os logs no Amazon S3. Utilizar políticas de ciclo de vida do S3 para mover logs com mais de 1 mês para o S3 Glacier Deep Archive. Motivo: A opção B é a resposta mais eficaz em termos de custo, pois utiliza o Amazon S3 para armazenar os logs, aproveitando as políticas de ciclo de vida do S3 para mover automaticamente os logs mais antigos para o S3 Glacier Deep Archive, uma opção de armazenamento de baixo custo adequada para dados arquivados a longo prazo. Explicações das outras alternativas: A opção A (Armazenar os logs no Amazon S3 e utilizar o AWS Backup) é menos eficiente, pois o AWS Backup geralmente é utilizado para backup de recursos, enquanto as políticas de ciclo de vida do S3 podem ser configuradas diretamente. A opção C (Armazenar os logs no Amazon CloudWatch Logs e utilizar o AWS Backup) não é uma abordagem comum, e o CloudWatch Logs tem um custo associado que pode ser evitado ao utilizar diretamente o S3 com políticas de ciclo de vida. A opção D (Armazenar os logs no Amazon CloudWatch Logs e utilizar políticas de ciclo de vida do Amazon S3) não é tão eficiente em termos de custo quanto a opção B, pois o CloudWatch Logs tem custos adicionais e utilizar diretamente o S3 com políticas de ciclo de vida é mais direto."
+    },
+    {
+      "id": "question29",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa possui um fluxo de trabalho de ingestão de dados que inclui os seguintes componentes: Um tópico do Amazon Simple Notification Service (Amazon SNS) que recebe notificações sobre novas entregas de dados. Uma função do AWS Lambda que processa e armazena os dados. O fluxo de trabalho de ingestão falha ocasionalmente devido a problemas de conectividade de rede. Quando a falha ocorre, os dados correspondentes não são ingeridos, a menos que a empresa execute manualmente o trabalho novamente. O que um arquiteto de soluções deve fazer para garantir que todas as notificações sejam processadas eventualmente?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar a função Lambda para implantação em várias Zonas de Disponibilidade."
+        },
+        {
+          "index": 2,
+          "text": "B. Modificar a configuração da função Lambda para aumentar as alocações de CPU e memória para a função."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar a estratégia de repetição do tópico SNS para aumentar tanto o número de tentativas quanto o tempo de espera entre as tentativas."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar uma fila do Amazon Simple Queue Service (Amazon SQS) como destino em caso de falha. Modificar a função Lambda para processar mensagens na fila."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta Correta: D. Configurar uma fila do Amazon Simple Queue Service (Amazon SQS) como destino em caso de falha. Modificar a função Lambda para processar mensagens na fila. Motivo: A opção D é a resposta mais apropriada para garantir que todas as notificações sejam processadas eventualmente. Configurar uma fila do Amazon SQS como destino em caso de falha permite armazenar as notificações temporariamente. A função Lambda pode ser modificada para processar mensagens na fila, proporcionando uma maneira mais resiliente de lidar com falhas de conectividade de rede. Explicações das outras alternativas: A opção A (Configurar a função Lambda para implantação em várias Zonas de Disponibilidade) não aborda diretamente o problema de falhas de conectividade de rede e, embora a implantação em várias Zonas de Disponibilidade possa melhorar a resiliência, ela não garante que as notificações perdidas sejam processadas. A opção B (Modificar a configuração da função Lambda para aumentar as alocações de CPU e memória) não resolve o problema subjacente de falhas de conectividade de rede. Alocar mais recursos pode melhorar o desempenho da função, mas não garante a entrega de notificações perdidas. A opção C (Configurar a estratégia de repetição do tópico SNS) pode ajudar na retransmissão de notificações, mas pode não ser suficiente para garantir a entrega bem-sucedida em caso de falhas persistentes de conectividade. Configurar uma fila do SQS oferece uma abordagem mais robusta."
+    },
+    {
+      "id": "question30",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa possui um serviço que gera dados de eventos. A empresa deseja usar a AWS para processar os dados de eventos conforme eles são recebidos. Os dados são gravados em uma ordem específica que deve ser mantida durante todo o processamento. A empresa deseja implementar uma solução que minimize a sobrecarga operacional. Como um arquiteto de soluções deve realizar isso?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar uma fila FIFO (First-In-First-Out) do Amazon Simple Queue Service (Amazon SQS) para armazenar mensagens. Configurar uma função do AWS Lambda para processar mensagens da fila."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar um tópico do Amazon Simple Notification Service (Amazon SNS) para entregar notificações contendo payloads para processar. Configurar uma função do AWS Lambda como assinante."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar uma fila padrão do Amazon Simple Queue Service (Amazon SQS) para armazenar mensagens. Configurar uma função do AWS Lambda para processar mensagens da fila de forma independente."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar um tópico do Amazon Simple Notification Service (Amazon SNS) para entregar notificações contendo payloads para processar. Configurar uma fila do Amazon Simple Queue Service (Amazon SQS) como assinante."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Criar uma fila FIFO (First-In-First-Out) do Amazon Simple Queue Service (Amazon SQS) para armazenar mensagens. Configurar uma função do AWS Lambda para processar mensagens da fila. Motivo: A opção A é a resposta correta, pois uma fila FIFO do Amazon SQS preserva a ordem de chegada das mensagens, garantindo que a ordem específica seja mantida durante todo o processamento. Configurar uma função do AWS Lambda para processar mensagens da fila proporciona uma solução escalável e sem servidor. Explicações das outras alternativas: A opção B (Criar um tópico do Amazon SNS para entregar notificações e configurar uma função do Lambda como assinante) envolve o uso de tópicos e notificações, mas o SNS não garante a ordem de chegada das mensagens, o que é um requisito na questão. A opção C (Criar uma fila padrão do Amazon SQS e configurar uma função do Lambda para processar mensagens de forma independente) não garante a preservação da ordem específica das mensagens, pois filas padrão do SQS não garantem a ordem de chegada. A opção D (Criar um tópico do Amazon SNS para entregar notificações e configurar uma fila do Amazon SQS como assinante) envolve o uso de tópicos e filas, mas a ordem de chegada das mensagens não é garantida com o SNS, tornando essa opção inadequada para o requisito de ordem específica."
+    },
+    {
+      "id": "question31",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa está migrando uma aplicação de servidores locais para instâncias Amazon EC2. Como parte dos requisitos de design da migração, um arquiteto de soluções deve implementar alarmes de métricas de infraestrutura. A empresa não precisa tomar medidas se a utilização da CPU aumentar para mais de 50% por um curto período de tempo. No entanto, se a utilização da CPU ultrapassar 50% e a taxa de IOPS de leitura no disco estiver alta ao mesmo tempo, a empresa precisa agir o mais rápido possível. O arquiteto de soluções também precisa reduzir falsos alarmes. O que o arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar alarmes compostos no Amazon CloudWatch sempre que possível."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar painéis no Amazon CloudWatch para visualizar as métricas e reagir rapidamente a problemas."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar canários de síntese no Amazon CloudWatch Synthetics para monitorar a aplicação e acionar um alarme."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar alarmes de métricas únicas no Amazon CloudWatch com múltiplos limites de métricas sempre que possível."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Criar alarmes compostos no Amazon CloudWatch sempre que possível. Motivo: Alarmes compostos no Amazon CloudWatch permitem combinar múltiplos alarmes usando operadores lógicos. Nesse cenário, você deseja acionar uma ação se a utilização da CPU estiver consistentemente acima de 50% e a taxa de IOPS de leitura no disco estiver alta simultaneamente. Um alarme composto pode ser criado para atender a essa condição. Razões pelas quais as outras opções podem não ser adequadas: Opção B (Criar painéis no Amazon CloudWatch): Painéis são úteis para visualizar métricas, mas não fornecem a capacidade de definir condições complexas ou correlações entre diferentes métricas. É necessário definir uma condição específica que combine tanto a utilização da CPU quanto as IOPS de leitura, o que é melhor abordado usando alarmes compostos. Opção C (Criar canários de síntese no Amazon CloudWatch Synthetics): Canários de síntese são úteis para monitorar e testar endpoints de aplicativos, mas podem não ser a escolha mais adequada para monitorar métricas de infraestrutura, como utilização da CPU e IOPS de leitura no disco. Opção D (Criar alarmes de métricas únicas no Amazon CloudWatch com múltiplos limites de métricas): Embora esta opção permita definir vários limites para um único alarme, pode não ser suficiente para lidar com condições complexas que envolvem várias métricas simultaneamente. Alarmes compostos são projetados para cenários nos quais é necessário avaliar várias condições juntas."
+    },
+    {
+      "id": "question32",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja migrar seu data center local para a AWS. De acordo com os requisitos de conformidade da empresa, ela só pode usar a Região ap-northeast-3. Os administradores da empresa não têm permissão para conectar as VPCs à internet. Quais soluções atenderão a esses requisitos? (Escolha duas.)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Usar o AWS Control Tower para implementar diretrizes de residência de dados que negam acesso à internet e negam acesso a todas as Regiões da AWS, exceto ap-northeast-3."
+        },
+        {
+          "index": 2,
+          "text": "B. Usar regras no AWS WAF para evitar acesso à internet. Negar acesso a todas as Regiões da AWS, exceto ap-northeast-3, nas configurações da conta AWS."
+        },
+        {
+          "index": 3,
+          "text": "C. Usar a AWS Organizations para configurar políticas de controle de serviço (SCPs) que impeçam que as VPCs tenham acesso à internet. Negar acesso a todas as Regiões da AWS, exceto ap-northeast-3."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar uma regra de saída para a ACL de rede em cada VPC para negar todo o tráfego de 0.0.0.0/0. Criar uma política IAM para cada usuário para evitar o uso de qualquer Região da AWS que não seja ap-northeast-3."
+        },
+        {
+          "index": 5,
+          "text": "E. Usar o AWS Config para ativar regras gerenciadas para detectar e alertar para gateways de internet e para detectar e alertar para novos recursos implantados fora de ap-northeast-3."
+        }
+      ],
+      "answer": [
+        1,
+        3
+      ],
+      "explanation": "Explicação geral Resposta Correta: A e C Motivos: Opção A: O AWS Control Tower pode ser usado para implementar diretrizes específicas, incluindo a restrição de acesso à internet e o controle das Regiões permitidas. Isso atende diretamente aos requisitos da empresa. Opção C: As SCPs no AWS Organizations permitem controlar quais serviços AWS os membros da organização podem acessar. Nesse caso, SCPs podem ser configuradas para evitar o acesso à internet e restringir a Região ao ap-northeast-3. Razões pelas quais as outras opções podem não ser adequadas: Opção B: AWS WAF é uma solução de firewall de aplicativos web e não é projetada para controlar o acesso à internet ou Regiões da AWS. Opção D: Configurar regras de ACL e políticas IAM por conta própria pode ser complexo e não fornecer o mesmo nível de controle centralizado oferecido pelo AWS Control Tower e AWS Organizations. Opção E: O AWS Config é útil para avaliar e auditar configurações, mas não é a ferramenta principal para impor restrições de acesso à internet ou Regiões da AWS."
+    },
+    {
+      "id": "question33",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa precisa salvar os resultados de um ensaio médico em um repositório do Amazon S3. O repositório deve permitir que alguns cientistas adicionem novos arquivos e deve restringir todos os outros usuários apenas ao acesso de leitura. Nenhum usuário pode ter a capacidade de modificar ou excluir qualquer arquivo no repositório. A empresa deve manter cada arquivo no repositório por no mínimo 1 ano após a data de criação. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Usar o S3 Object Lock no modo de governança com uma retenção legal de 1 ano."
+        },
+        {
+          "index": 2,
+          "text": "B. Usar o S3 Object Lock no modo de conformidade com um período de retenção de 365 dias."
+        },
+        {
+          "index": 3,
+          "text": "C. Usar uma função IAM para restringir todos os usuários de excluir ou alterar objetos no bucket do S3. Usar uma política de bucket do S3 para permitir apenas a função IAM."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar o bucket do S3 para invocar uma função AWS Lambda sempre que um objeto for adicionado. Configurar a função para rastrear o hash do objeto salvo para que objetos modificados possam ser marcados adequadamente."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B. Usar o S3 Object Lock no modo de conformidade com um período de retenção de 365 dias. Motivo: Opção B: O S3 Object Lock no modo de conformidade permite que você aplique uma política de retenção fixa a objetos para garantir que eles não possam ser excluídos ou modificados por um período específico. Nesse caso, configurar o S3 Object Lock no modo de conformidade com um período de retenção de 365 dias atende à exigência de manter cada arquivo por no mínimo 1 ano. Razões pelas quais as outras opções podem não ser adequadas: Opção A: O S3 Object Lock no modo de governança não atende ao requisito de retenção legal específica, pois não impõe uma retenção fixa. Opção C: Embora o uso de uma função IAM e uma política de bucket do S3 possa fornecer certos controles de acesso, o S3 Object Lock no modo de conformidade oferece uma solução mais específica para garantir a retenção fixa dos objetos. Opção D: Configurar um AWS Lambda para rastrear o hash do objeto não fornece uma solução direta para atender à exigência de retenção específica por um período fixo. O S3 Object Lock no modo de conformidade é mais apropriado para esse cenário."
+    },
+    {
+      "id": "question34",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma grande empresa de mídia hospeda uma aplicação web na AWS. A empresa deseja começar a armazenar em cache arquivos de mídia confidenciais para que usuários ao redor do mundo tenham acesso confiável aos arquivos. O conteúdo é armazenado em buckets do Amazon S3. A empresa deve entregar o conteúdo rapidamente, independentemente da origem geográfica das solicitações. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Usar o AWS DataSync para conectar os buckets do S3 à aplicação web."
+        },
+        {
+          "index": 2,
+          "text": "B. Implementar o AWS Global Accelerator para conectar os buckets do S3 à aplicação web."
+        },
+        {
+          "index": 3,
+          "text": "C. Implementar o Amazon CloudFront para conectar os buckets do S3 aos servidores de borda do CloudFront."
+        },
+        {
+          "index": 4,
+          "text": "D. Usar o Amazon Simple Queue Service (Amazon SQS) para conectar os buckets do S3 à aplicação web."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Explicação geral Resposta Correta: C. Implementar o Amazon CloudFront para conectar os buckets do S3 aos servidores de borda do CloudFront. Motivo: Opção C: O Amazon CloudFront é uma CDN (Content Delivery Network) da AWS que ajuda a entregar conteúdo de maneira rápida e eficiente aos usuários finais, independentemente de sua localização geográfica. Ao conectar os buckets do S3 aos servidores de borda do CloudFront, a empresa pode fornecer acesso rápido e confiável aos arquivos de mídia para usuários em todo o mundo. Razões pelas quais as outras opções podem não ser adequadas: Opção A: O AWS DataSync é projetado para transferência de dados de, para e entre serviços de armazenamento da AWS. Não é uma solução otimizada para cache e entrega rápida de conteúdo a usuários finais em todo o mundo. Opção B: O AWS Global Accelerator é mais adequado para rotear tráfego de aplicativos através da rede global da AWS, mas não é otimizado para a entrega eficiente de conteúdo armazenado em buckets do S3. Opção D: O Amazon SQS é um serviço de fila de mensagens e não é projetado para conectividade direta entre buckets do S3 e aplicativos web para entrega de conteúdo em cache."
+    },
+    {
+      "id": "question35",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa de jogos possui uma aplicação web que exibe pontuações. A aplicação é executada em instâncias Amazon EC2 atrás de um Balanceador de Carga de Aplicativo. A aplicação armazena dados em um banco de dados Amazon RDS para MySQL. Os usuários começaram a enfrentar longos atrasos e interrupções causados pelo desempenho de leitura do banco de dados. A empresa deseja melhorar a experiência do usuário minimizando as alterações na arquitetura da aplicação. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar o Amazon ElastiCache na frente do banco de dados."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar o RDS Proxy entre a aplicação e o banco de dados."
+        },
+        {
+          "index": 3,
+          "text": "C. Migrar a aplicação das instâncias EC2 para o AWS Lambda."
+        },
+        {
+          "index": 4,
+          "text": "D. Migrar o banco de dados do Amazon RDS para MySQL para o Amazon DynamoDB."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B. Utilizar o RDS Proxy entre a aplicação e o banco de dados. Motivo: Opção B (RDS Proxy): O RDS Proxy é uma solução gerenciada que ajuda a melhorar o desempenho e a escalabilidade de aplicativos conectados a bancos de dados do Amazon RDS. Ele gerencia conexões de banco de dados, fornece pooling de conexões, cache de consultas e proteção contra sobrecarga. Essa opção atende aos requisitos de melhorar a experiência do usuário sem exigir grandes alterações na arquitetura da aplicação. Outras opções: Opção A (Amazon ElastiCache): Embora o ElastiCache possa melhorar o desempenho ao fornecer um cache na frente do banco de dados, não aborda diretamente os problemas de leitura do banco de dados mencionados no cenário. Opção C (Migrar para AWS Lambda): Migrar a aplicação para AWS Lambda é uma mudança significativa na arquitetura, e pode não ser apropriado ou eficaz para resolver os problemas específicos de desempenho do banco de dados mencionados. Opção D (Migrar para o Amazon DynamoDB): Migrar para o Amazon DynamoDB envolve uma mudança substancial na tecnologia do banco de dados, e a escolha entre RDS e DynamoDB depende dos requisitos específicos do aplicativo. Neste caso, não há indicação de que a mudança para DynamoDB seja necessária para resolver os problemas de desempenho do banco de dados."
+    },
+    {
+      "id": "question36",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Os dados de backup de uma empresa totalizam 700 terabytes (TB) e estão armazenados em armazenamento conectado em rede (NAS) em seu data center. Esses dados de backup devem estar disponíveis em caso de consultas regulatórias ocasionais e devem ser preservados por um período de sete anos. A organização optou por transferir seus dados de backup de seu data center local para a Amazon Web Services (AWS). Em um mês, a migração deve ser concluída. A conexão de internet pública da empresa fornece 500 Mbps de capacidade dedicada para transporte de dados. O que um arquiteto de soluções deve fazer para garantir que os dados sejam migrados e armazenados com o CUSTO mais BAIXO possível?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Encomendar dispositivos AWS Snowball para transferir os dados. Utilizar uma política de ciclo de vida para transição dos arquivos para o Amazon S3 Glacier Deep Archive."
+        },
+        {
+          "index": 2,
+          "text": "B. Implementar uma conexão VPN entre o data center e a Amazon VPC. Utilizar a AWS CLI para copiar os dados do local para o Amazon S3 Glacier."
+        },
+        {
+          "index": 3,
+          "text": "C. Provisionar uma conexão AWS Direct Connect de 500 Mbps e transferir os dados para o Amazon S3. Utilizar uma política de ciclo de vida para transição dos arquivos para o Amazon S3 Glacier Deep Archive."
+        },
+        {
+          "index": 4,
+          "text": "D. Utilizar o AWS DataSync para transferir os dados e implantar um agente DataSync no local. Utilizar a tarefa DataSync para copiar arquivos do armazenamento NAS no local para o Amazon S3 Glacier."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Encomendar dispositivos AWS Snowball para transferir os dados. Utilizar uma política de ciclo de vida para transição dos arquivos para o Amazon S3 Glacier Deep Archive. Motivo: Opção A (AWS Snowball): O AWS Snowball é uma solução eficiente para transferir grandes volumes de dados para a AWS de maneira rápida e econômica. O uso de dispositivos AWS Snowball para transferir os dados do backup e, em seguida, aplicar uma política de ciclo de vida para mover os arquivos para o Amazon S3 Glacier Deep Archive atende aos requisitos de migração e armazenamento com o menor custo possível. Outras opções: Opção B (VPN com AWS CLI): A transferência de dados através de uma VPN com a AWS CLI pode ser mais lenta e menos eficiente do que o uso de dispositivos AWS Snowball, especialmente para grandes volumes de dados. Opção C (AWS Direct Connect): Provisionar uma conexão AWS Direct Connect pode ser uma opção válida, mas pode envolver custos mais altos em comparação com o uso de dispositivos AWS Snowball. Opção D (AWS DataSync): Embora o AWS DataSync seja uma opção para transferência de dados, o uso de dispositivos AWS Snowball para uma migração rápida e eficiente pode ser mais econômico em termos de custos operacionais e de largura de banda."
+    },
+    {
+      "id": "question37",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja direcionar seus usuários para uma página estática de erro de backup se o site principal da empresa estiver indisponível. Os registros DNS do site principal são hospedados no Amazon Route 53. O domínio aponta para um Balanceador de Carga de Aplicativos (ALB). A empresa precisa de uma solução que minimize alterações e sobrecarga de infraestrutura. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Atualizar os registros do Route 53 para usar uma política de roteamento de latência. Adicionar uma página de erro estática hospedada em um bucket do Amazon S3 aos registros para que o tráfego seja enviado para os pontos de extremidade mais responsivos."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar uma configuração de failover ativo-passivo no Route 53. Direcionar o tráfego para uma página de erro estática hospedada em um bucket do Amazon S3 quando os checks de integridade do Route 53 determinarem que o ponto de extremidade do ALB está indisponível."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar uma configuração ativo-ativo no Route 53 com o ALB e uma instância Amazon EC2 que hospeda uma página de erro estática como pontos de extremidade. Configurar o Route 53 para enviar solicitações para a instância apenas se os checks de integridade falharem para o ALB."
+        },
+        {
+          "index": 4,
+          "text": "D. Atualizar os registros do Route 53 para usar uma política de roteamento de resposta multivalor. Criar um check de integridade. Direcionar o tráfego para o site se o check de integridade for bem-sucedido. Direcionar o tráfego para uma página de erro estática hospedada no Amazon S3 se o check de integridade não for bem-sucedido."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B. Configurar uma configuração de failover ativo-passivo no Route 53. Direcionar o tráfego para uma página de erro estática hospedada em um bucket do Amazon S3 quando os checks de integridade do Route 53 determinarem que o ponto de extremidade do ALB está indisponível. Motivo: Opção B (Failover Ativo-Passivo): Essa abordagem oferece uma solução de failover simples e eficaz. Quando os checks de integridade do Route 53 detectam que o ALB está indisponível, o tráfego é direcionado para a página de erro estática hospedada no Amazon S3. Isso minimiza as alterações necessárias e a sobrecarga de infraestrutura. Outras opções: Opção A (Roteamento de Latência): Essa opção não se alinha completamente com o requisito de direcionar para uma página de erro estática em caso de falha no site principal. Opção C (Ativo-Ativo com EC2): Essa opção envolve maior complexidade e sobrecarga de gerenciamento, não atendendo ao requisito de minimizar a sobrecarga de infraestrutura. Opção D (Roteamento de Resposta Multivalor): Essa opção não fornece uma configuração de failover direto para uma página de erro estática em caso de falha no ALB."
+    },
+    {
+      "id": "question38",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa utiliza uma organização no AWS Organizations para gerenciar contas da AWS que contêm aplicativos. A empresa configura uma conta de monitoramento dedicada na organização. A empresa deseja consultar e visualizar dados de observabilidade em todas as contas usando o Amazon CloudWatch. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Ativar observabilidade intercontas do CloudWatch para a conta de monitoramento. Implantar um modelo AWS CloudFormation fornecido pela conta de monitoramento em cada conta da AWS para compartilhar os dados com a conta de monitoramento."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar um novo usuário IAM na conta de monitoramento. Em cada conta da AWS, configurar uma política IAM para ter acesso a consultar e visualizar os dados do CloudWatch na conta. Anexar a nova política IAM ao novo usuário IAM."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar um novo usuário IAM na conta de monitoramento. Criar políticas IAM intercontas em cada conta da AWS. Anexar as políticas IAM ao novo usuário IAM."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar políticas de controle de serviço (SCPs) para fornecer acesso ao CloudWatch na conta de monitoramento sob a unidade organizacional (OU) raiz da Organizations."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Ativar observabilidade intercontas do CloudWatch para a conta de monitoramento. Implantar um modelo AWS CloudFormation fornecido pela conta de monitoramento em cada conta da AWS para compartilhar os dados com a conta de monitoramento. Motivo: Opção A (CloudWatch cross-account observability): Ao ativar a observabilidade intercontas do CloudWatch, a conta de monitoramento pode implantar um modelo CloudFormation em cada conta da AWS para compartilhar os dados com a conta de monitoramento. Isso permite a consulta e visualização de dados de observabilidade em todas as contas. Outras opções: Opção B (IAM user e IAM policy): Configurar novos usuários IAM e políticas IAM em cada conta pode se tornar difícil de gerenciar à medida que o número de contas aumenta. Opção C (IAM user e cross-account IAM policies): Esta opção é semelhante à opção B e não oferece a mesma facilidade de implementação para consulta e visualização de dados em várias contas. Opção D (Service Control Policies - SCPs): SCPs são usados para definir permissões na camada da organização, mas não são específicos do CloudWatch intercontas. Portanto, essa opção não atende aos requisitos de consulta e visualização de dados específicos do CloudWatch em várias contas."
+    },
+    {
+      "id": "question39",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa global executa seus aplicativos em várias contas da AWS no AWS Organizations. Os aplicativos da empresa usam uploads multipartes para carregar dados em vários buckets do Amazon S3 em Regiões da AWS diferentes. A empresa deseja relatar uploads multipartes incompletos para fins de conformidade com os custos. Qual solução atenderá a esses requisitos com o MÍNIMO de sobrecarga operacional?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar o S3 Storage Lens para relatar a contagem de objetos de upload multipartes incompletos."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar o AWS Config com uma regra para relatar a contagem de objetos de upload multipartes incompletos."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar uma política de controle de serviço (SCP) para relatar a contagem de objetos de upload multipartes incompletos."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar um S3 Multi-Region Access Point para relatar a contagem de objetos de upload multipartes incompletos."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Configurar o S3 Storage Lens para relatar a contagem de objetos de upload multipartes incompletos. Motivo: Opção A (S3 Storage Lens): O S3 Storage Lens fornece métricas, insights e recomendações para otimizar o uso do armazenamento do Amazon S3. Configurar o S3 Storage Lens permite relatar a contagem de objetos de upload multipartes incompletos com facilidade, proporcionando informações úteis para fins de conformidade com os custos. Outras opções: Opção B (AWS Config): Embora o AWS Config possa monitorar e avaliar a configuração dos recursos, não é especificamente projetado para relatar uploads multipartes incompletos. Opção C (SCP): As políticas de controle de serviço (SCPs) são usadas para definir permissões na camada da organização, mas não são específicas para relatórios de uploads multipartes incompletos. Opção D (S3 Multi-Region Access Point): Os Access Points S3 Multi-Region são usados para fornecer acesso uniforme a dados em várias regiões da AWS, mas não são uma solução direta para relatórios de uploads multipartes incompletos."
+    },
+    {
+      "id": "question40",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa executa uma carga de trabalho de computação de alto desempenho (HPC) na AWS. A carga de trabalho requer baixa latência de desempenho de rede e alto throughput de rede com comunicação entre nós fortemente acoplada. As instâncias do Amazon EC2 estão dimensionadas adequadamente para capacidade de computação e armazenamento e são iniciadas usando opções padrão. O que um arquiteto de soluções deveria propor para melhorar o desempenho da carga de trabalho?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Escolher um grupo de colocação de cluster ao lançar instâncias do Amazon EC2."
+        },
+        {
+          "index": 2,
+          "text": "B. Escolher alocação de instância dedicada ao lançar instâncias do Amazon EC2."
+        },
+        {
+          "index": 3,
+          "text": "C. Escolher um acelerador Elastic Inference ao lançar instâncias do Amazon EC2."
+        },
+        {
+          "index": 4,
+          "text": "D. Escolher a reserva de capacidade necessária ao lançar instâncias do Amazon EC2."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Escolher um grupo de colocação de cluster ao lançar instâncias do Amazon EC2. Motivo: Opção A: Ao escolher um grupo de colocação de cluster, as instâncias do EC2 são colocadas em proximidade física umas com as outras, otimizando a latência de rede e melhorando a comunicação entre nós. Isso é benéfico para cargas de trabalho HPC que exigem comunicação de baixa latência entre instâncias. Outras opções: Opção B: A alocação de instância dedicada não tem um impacto significativo na latência de rede ou no throughput de rede para cargas de trabalho HPC. Opção C: Os aceleradores Elastic Inference são usados para inferência de aprendizado de máquina e não são relevantes para melhorar o desempenho de cargas de trabalho HPC em termos de latência e throughput de rede. Opção D: A reserva de capacidade não aborda diretamente as necessidades de latência e throughput de rede para cargas de trabalho HPC."
+    },
+    {
+      "id": "question41",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja utilizar a AWS Cloud para tornar uma aplicação existente altamente disponível e resiliente. A versão atual da aplicação está no data center da empresa. A aplicação recentemente sofreu perda de dados após a falha de um servidor de banco de dados devido a uma queda de energia inesperada. A empresa precisa de uma solução que evite qualquer ponto único de falha. A solução deve fornecer à aplicação a capacidade de escalar para atender à demanda do usuário. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Implante os servidores de aplicação usando instâncias do Amazon EC2 em um grupo de Auto Scaling em várias Zonas de Disponibilidade. Use uma instância de banco de dados Amazon RDS em uma configuração Multi-AZ."
+        },
+        {
+          "index": 2,
+          "text": "B. Implante os servidores de aplicação usando instâncias do Amazon EC2 em um grupo de Auto Scaling em uma única Zona de Disponibilidade. Implante o banco de dados em uma instância EC2. Ative a Recuperação Automática do EC2."
+        },
+        {
+          "index": 3,
+          "text": "C. Implante os servidores de aplicação usando instâncias do Amazon EC2 em um grupo de Auto Scaling em várias Zonas de Disponibilidade. Use uma instância de banco de dados Amazon RDS com uma réplica de leitura em uma única Zona de Disponibilidade. Promova a réplica de leitura para substituir a instância de banco de dados principal se ela falhar."
+        },
+        {
+          "index": 4,
+          "text": "D. Implante os servidores de aplicação usando instâncias do Amazon EC2 em um grupo de Auto Scaling em várias Zonas de Disponibilidade. Implante os servidores de banco de dados primário e secundário em instâncias EC2 em várias Zonas de Disponibilidade. Use o Amazon Elastic Block Store (Amazon EBS) Multi-Attach para criar armazenamento compartilhado entre as instâncias."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Implante os servidores de aplicação usando instâncias do Amazon EC2 em um grupo de Auto Scaling em várias Zonas de Disponibilidade. Use uma instância de banco de dados Amazon RDS em uma configuração Multi-AZ. Motivo: Opção A: Essa opção utiliza instâncias EC2 em um grupo de Auto Scaling distribuídas em várias Zonas de Disponibilidade, o que elimina pontos únicos de falha. Além disso, o uso do Amazon RDS em uma configuração Multi-AZ para o banco de dados proporciona alta disponibilidade e resistência a falhas. Outras opções: Opção B: Ao implantar apenas em uma Zona de Disponibilidade e usar o banco de dados em uma instância EC2, a solução não atende aos requisitos de alta disponibilidade e evitação de pontos únicos de falha. Opção C: Embora envolva várias Zonas de Disponibilidade, a abordagem de réplica de leitura não fornece uma solução Multi-AZ completa para o banco de dados. Opção D: Essa opção envolve o uso do Multi-Attach do Amazon EBS, mas não fornece uma solução Multi-AZ abrangente para garantir alta disponibilidade do banco de dados."
+    },
+    {
+      "id": "question42",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja executar um aplicativo de jogos em instâncias do Amazon EC2 que fazem parte de um grupo de Auto Scaling na AWS Cloud. O aplicativo transmitirá dados usando pacotes UDP. A empresa quer garantir que o aplicativo possa escalar para fora e para dentro conforme o tráfego aumenta e diminui. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Anexar um Network Load Balancer ao grupo de Auto Scaling"
+        },
+        {
+          "index": 2,
+          "text": "B. Anexar um Application Load Balancer ao grupo de Auto Scaling."
+        },
+        {
+          "index": 3,
+          "text": "C. Implantar um conjunto de registros do Amazon Route 53 com uma política ponderada para direcionar o tráfego adequadamente"
+        },
+        {
+          "index": 4,
+          "text": "D. Implantar uma instância NAT configurada com encaminhamento de porta para as instâncias EC2 no grupo de Auto Scaling."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Anexar um Network Load Balancer ao grupo de Auto Scaling Motivo: Opção A: Anexar um Network Load Balancer (NLB) ao grupo de Auto Scaling permite a distribuição do tráfego de maneira eficiente entre as instâncias. O NLB oferece suporte a tráfego UDP, adequado para a transmissão de dados em um aplicativo de jogos. Além disso, permite escalar automaticamente para fora e para dentro conforme necessário. Outras opções: Opção B: Um Application Load Balancer (ALB) é mais adequado para tráfego HTTP/HTTPS e não oferece suporte direto para o tráfego UDP, o que não atende aos requisitos da aplicação de jogos. Opção C: O Route 53 com política ponderada pode direcionar tráfego, mas não fornece a capacidade de distribuir o tráfego entre instâncias conforme elas escalam para fora e para dentro. Opção D: O uso de uma instância NAT não é apropriado para balanceamento de carga e não atende aos requisitos de escalabilidade dinâmica do aplicativo de jogos."
+    },
+    {
+      "id": "question43",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Um arquiteto de soluções está projetando um aplicativo voltado para o cliente para uma empresa. O banco de dados do aplicativo terá um padrão de acesso claramente definido ao longo do ano e terá um número variável de leituras e gravações que dependem da época do ano. A empresa deve reter registros de auditoria para o banco de dados por 7 dias. O objetivo do ponto de recuperação (RPO) deve ser inferior a 5 horas. Qual solução atende a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Usar o Amazon DynamoDB com escalonamento automático. Utilizar backups sob demanda e o Amazon DynamoDB Streams."
+        },
+        {
+          "index": 2,
+          "text": "B. Usar o Amazon Redshift. Configurar escalonamento de concorrência. Ativar o registro de auditoria. Realizar snapshots do banco de dados a cada 4 horas."
+        },
+        {
+          "index": 3,
+          "text": "C. Usar o Amazon RDS com Provisioned IOPS. Ativar o parâmetro de auditoria do banco de dados. Realizar snapshots do banco de dados a cada 5 horas."
+        },
+        {
+          "index": 4,
+          "text": "D. Usar o Amazon Aurora MySQL com escalonamento automático. Ativar o parâmetro de auditoria do banco de dados."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Usar o Amazon DynamoDB com escalonamento automático. Utilizar backups sob demanda e o Amazon DynamoDB Streams. Motivo: Opção A: O Amazon DynamoDB com escalonamento automático oferece a capacidade de lidar com um número variável de leituras e gravações, ajustando automaticamente a capacidade conforme necessário. Os backups sob demanda e o Amazon DynamoDB Streams fornecem recursos para backup e replicação de dados, enquanto atendem aos requisitos de retenção de auditoria e RPO. Outras opções: Opção B: O Amazon Redshift é um banco de dados de análise de dados e não é otimizado para os requisitos de aplicativos de transações com um grande número de leituras e gravações. Os snapshots a cada 4 horas podem não atender ao RPO de menos de 5 horas. Opção C: O Amazon RDS pode ser escalonado conforme necessário, mas a ativação do parâmetro de auditoria pode adicionar complexidade à solução. Além disso, os snapshots a cada 5 horas podem não atender ao RPO de menos de 5 horas. Opção D: O Amazon Aurora MySQL com escalonamento automático é uma opção viável, mas a ativação do parâmetro de auditoria é necessária para atender aos requisitos, e a resposta não menciona backups sob demanda ou streams. Portanto, a Opção A é preferível."
+    },
+    {
+      "id": "question44",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa hospeda um aplicativo de duas camadas em instâncias Amazon EC2 e no Amazon RDS. A demanda do aplicativo varia com base no horário do dia. A carga é mínima após o horário de trabalho e nos fins de semana. As instâncias EC2 são executadas em um grupo de Auto Scaling do EC2 configurado com um mínimo de duas instâncias e um máximo de cinco instâncias. O aplicativo deve estar disponível o tempo todo, mas a empresa está preocupada com o custo geral. Qual solução atende aos requisitos de disponibilidade de maneira MAIS eficiente em termos de custos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Usar todas as instâncias Spot do EC2. Parar o banco de dados RDS quando não estiver em uso."
+        },
+        {
+          "index": 2,
+          "text": "B. Comprar Planos de Economia de Instâncias EC2 para cobrir cinco instâncias EC2. Comprar uma Instância de Banco de Dados Reservada (Reserved DB Instance) do RDS."
+        },
+        {
+          "index": 3,
+          "text": "C. Comprar duas Instâncias EC2 Reservadas. Usar até três instâncias Spot EC2 adicionais conforme necessário. Parar o banco de dados RDS quando não estiver em uso."
+        },
+        {
+          "index": 4,
+          "text": "D. Comprar Planos de Economia de Instâncias EC2 para cobrir duas instâncias EC2. Usar até três instâncias adicionais do EC2 On-Demand conforme necessário. Comprar uma Instância de Banco de Dados Reservada (Reserved DB Instance) do RDS."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Explicação geral Resposta Correta: C. Comprar duas Instâncias EC2 Reservadas. Usar até três instâncias Spot EC2 adicionais conforme necessário. Parar o banco de dados RDS quando não estiver em uso. Motivo: Opção C: A compra de Instâncias EC2 Reservadas fornece uma economia de custos significativa em comparação com as instâncias sob demanda. Além disso, a adição de instâncias Spot EC2 conforme necessário ajuda a gerenciar custos, aproveitando instâncias Spot mais baratas quando a demanda aumenta. Parar o banco de dados RDS quando não estiver em uso contribui para economizar custos quando a aplicação tem carga mínima. Outras opções: Opção A: O uso exclusivo de instâncias Spot EC2 pode ser arriscado para uma aplicação que precisa estar disponível o tempo todo, pois as instâncias Spot podem ser encerradas com pouca antecedência. Parar o banco de dados RDS pode ajudar nos custos, mas impacta a disponibilidade. Opção B: Comprar Instâncias EC2 Savings Plans pode fornecer economia, mas pode não ser tão flexível quanto o uso de instâncias reservadas e Spot conforme necessário. Comprar uma Instância de Banco de Dados Reservada do RDS ajuda nos custos, mas pode não ser tão eficiente quanto parar o banco de dados quando não estiver em uso. Opção D: Comprar Instâncias EC2 Savings Plans para apenas duas instâncias EC2 pode não fornecer flexibilidade suficiente para atender às demandas variáveis. O uso de instâncias adicionais do EC2 On-Demand pode aumentar custos, e a compra de uma Instância de Banco de Dados Reservada do RDS não otimiza totalmente os custos."
+    },
+    {
+      "id": "question45",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa possui um fluxo de trabalho de finalização de compra em um site de comércio eletrônico que grava um pedido em um banco de dados e chama um serviço para processar o pagamento. Os usuários estão enfrentando timeouts durante o processo de finalização da compra. Quando os usuários reenviam o formulário de finalização da compra, vários pedidos únicos são criados para a mesma transação desejada. Como um arquiteto de soluções deve refatorar esse fluxo de trabalho para evitar a criação de vários pedidos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar a aplicação web para enviar uma mensagem de pedido para o Amazon Kinesis Data Firehose. Configurar o serviço de pagamento para recuperar a mensagem do Kinesis Data Firehose e processar o pedido."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar uma regra no AWS CloudTrail para invocar uma função AWS Lambda com base na solicitação de caminho do aplicativo registrada. Usar o Lambda para consultar o banco de dados, chamar o serviço de pagamento e enviar as informações do pedido."
+        },
+        {
+          "index": 3,
+          "text": "C. Armazenar o pedido no banco de dados. Enviar uma mensagem que inclui o número do pedido para o Amazon Simple Notification Service (Amazon SNS). Configurar o serviço de pagamento para consultar o Amazon SNS, recuperar a mensagem e processar o pedido."
+        },
+        {
+          "index": 4,
+          "text": "D. Armazenar o pedido no banco de dados. Enviar uma mensagem que inclui o número do pedido para uma fila FIFO do Amazon Simple Queue Service (Amazon SQS). Configurar o serviço de pagamento para recuperar a mensagem e processar o pedido. Excluir a mensagem da fila."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta Correta: D. Armazenar o pedido no banco de dados. Enviar uma mensagem que inclui o número do pedido para uma fila FIFO do Amazon Simple Queue Service (Amazon SQS). Configurar o serviço de pagamento para recuperar a mensagem e processar o pedido. Excluir a mensagem da fila. Motivo: Opção D: Armazenar o pedido no banco de dados e usar uma fila FIFO do Amazon SQS para enviar uma mensagem garante uma entrega ordenada e única da mensagem ao serviço de pagamento. O serviço de pagamento pode processar cada pedido de forma isolada, evitando a criação de pedidos duplicados. Além disso, a exclusão da mensagem da fila ajuda a garantir que cada mensagem seja processada uma única vez. Outras opções: Opção A: O uso do Amazon Kinesis Data Firehose pode fornecer streaming de dados, mas não oferece garantia de entrega única e ordenada, o que pode resultar na criação de pedidos duplicados. Opção B: A invocação de uma função Lambda com base em eventos do CloudTrail não aborda diretamente a prevenção de pedidos duplicados. Além disso, a consulta direta do banco de dados pela função Lambda pode não ser eficiente. Opção C: Enviar uma mensagem para o Amazon SNS pode resultar em entrega não ordenada, e configurar o serviço de pagamento para consultar o SNS pode não garantir a exclusividade do processamento, podendo resultar em pedidos duplicados."
+    },
+    {
+      "id": "question46",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa opera um banco de dados Oracle localmente. Como parte da migração da empresa para a AWS, a empresa deseja atualizar o banco de dados para a versão mais recente disponível. A empresa também deseja configurar a recuperação de desastres (DR) para o banco de dados. A empresa precisa minimizar a sobrecarga operacional para operações normais e configuração de DR. A empresa também precisa manter o acesso ao sistema operacional subjacente do banco de dados. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Migrar o banco de dados Oracle para uma instância Amazon EC2. Configurar replicação do banco de dados para uma região AWS diferente."
+        },
+        {
+          "index": 2,
+          "text": "B. Migrar o banco de dados Oracle para o Amazon RDS for Oracle. Ativar backups automatizados entre regiões para replicar os snapshots para outra região da AWS."
+        },
+        {
+          "index": 3,
+          "text": "C. Migrar o banco de dados Oracle para o Amazon RDS Custom for Oracle. Criar uma réplica de leitura para o banco de dados em outra região da AWS."
+        },
+        {
+          "index": 4,
+          "text": "D. Migrar o banco de dados Oracle para o Amazon RDS for Oracle. Criar um banco de dados de espera em outra Zona de Disponibilidade."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A Motivo: Ao optar por uma instância Amazon EC2, a empresa terá acesso total ao sistema operacional subjacente. Configurar a replicação do banco de dados para uma região AWS diferente atende aos requisitos de recuperação de desastres (DR). Essa opção proporciona maior controle operacional, incluindo o acesso ao sistema operacional. Explicações das outras alternativas:Alternativas B, C e D sugerem o uso do RDS, contudo, ao utiliza o RDS não temos acesso ao sistema operacional subjacente, sendo assim, não atende o requisito \"A empresa também precisa manter o acesso ao sistema operacional subjacente do banco de dados.\""
+    },
+    {
+      "id": "question47",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa executa seu site de comércio eletrônico em duas camadas na AWS. A camada web consiste em um balanceador de carga que direciona o tráfego para instâncias Amazon EC2. A camada de banco de dados utiliza uma instância de banco de dados Amazon RDS. As instâncias EC2 e a instância de banco de dados RDS não devem ser expostas à internet pública. As instâncias EC2 exigem acesso à internet para concluir o processamento de pagamento de pedidos por meio de um serviço web de terceiros. A aplicação deve ter alta disponibilidade. Qual combinação de opções de configuração atenderá a esses requisitos? (Escolha duas.)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Usar um grupo de Auto Scaling para iniciar as instâncias EC2 em sub-redes privadas. Implementar uma instância de banco de dados RDS Multi-AZ em sub-redes privadas."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar uma VPC com duas sub-redes privadas e dois gateways NAT em duas Zonas de Disponibilidade. Implementar um Balanceador de Carga de Aplicações (Application Load Balancer) nas sub-redes privadas."
+        },
+        {
+          "index": 3,
+          "text": "C. Usar um grupo de Auto Scaling para iniciar as instâncias EC2 em sub-redes públicas em duas Zonas de Disponibilidade. Implementar uma instância de banco de dados RDS Multi-AZ em sub-redes privadas."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar uma VPC com uma sub-rede pública, uma sub-rede privada e dois gateways NAT em duas Zonas de Disponibilidade. Implementar um Balanceador de Carga de Aplicações (Application Load Balancer) na sub-rede pública."
+        },
+        {
+          "index": 5,
+          "text": "E. Configurar uma VPC com duas sub-redes públicas, duas sub-redes privadas e dois gateways NAT em duas Zonas de Disponibilidade. Implementar um Balanceador de Carga de Aplicações (Application Load Balancer) nas sub-redes públicas."
+        }
+      ],
+      "answer": [
+        1,
+        5
+      ],
+      "explanation": "Explicação geral Respostas Corretas: A: A opção A, que propõe a utilização de um grupo de Auto Scaling para iniciar instâncias EC2 em sub-redes privadas e uma instância de banco de dados RDS Multi-AZ em sub-redes privadas, é uma escolha válida para garantir a segurança da infraestrutura enquanto atende aos requisitos de alta disponibilidade. E: Esta opção propõe uma configuração com duas sub-redes públicas e duas sub-redes privadas, em duas zonas diferente. O gateway NAT normalmente fica na subrede publica, e os recurso da subrede privada (EC2) trafegam dados através do NAT Gateway via tabela de roteamento, e o Gateway NAT por sua vez usa o internet Gateway para sair para internet. A função do Gateway NAT é não permitir que o caminho inverso (de fora para dentro) ocorra, garantindo que os recurso da subrede privada possam acessar a internet com segurança. Respostas Incorretas: B: A alternativa B só menciona a criação de subredes privadas. Tendo em vista que o Gateway NAT será usado para acesso a internet, ele precisa estar em uma subrede pública, que não existe nesse cenário. C: Como os recursos de EC2 e Banco de Dados não precisam ter acesso a internet mas não podem estar expostos, cria-los em uma subrede pública não seria adequado. D: A alternativa D só criar 1 subrede publica e privada. Como precisamos levar em consideração a alta disponibilidade, precisariam ser 2 subredes publica e privadas."
+    },
+    {
+      "id": "question48",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Um arquiteto de soluções precisa implementar uma solução para reduzir os custos de armazenamento de uma empresa. Todos os dados da empresa estão na classe de armazenamento Amazon S3 Standard. A empresa deve manter todos os dados por pelo menos 25 anos. Os dados dos últimos 2 anos precisam estar altamente disponíveis e prontamente recuperáveis. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar uma política de ciclo de vida do S3 para transferir objetos para o S3 Glacier Deep Archive imediatamente."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar uma política de ciclo de vida do S3 para transferir objetos para o S3 Glacier Deep Archive após 2 anos."
+        },
+        {
+          "index": 3,
+          "text": "C. Utilizar o S3 Intelligent-Tiering. Ativar a opção de arquivamento para garantir que os dados sejam arquivados no S3 Glacier Deep Archive."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar uma política de ciclo de vida do S3 para transferir objetos para o S3 One Zone-Infrequent Access (S3 One Zone-IA) imediatamente e para o S3 Glacier Deep Archive após 2 anos."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B: Configurar uma política de ciclo de vida do Amazon S3 para transferir objetos para o S3 Glacier Deep Archive após 2 anos permite que a empresa reduza os custos de armazenamento, movendo os dados mais antigos para uma camada de armazenamento mais econômica. Respostas Incorretas: A: A opção A moveria imediatamente os objetos para o S3 Glacier Deep Archive, o que pode não ser apropriado para os dados dos últimos 2 anos que precisam estar altamente disponíveis e prontamente recuperáveis. C: A opção C envolve o uso do S3 Intelligent-Tiering, que move os arquivos para diferentes Tiering confome o seu uso. 30 dias sem uso o arquivo é movido para o modo Infrequent Access, 90 dias para o modo e Archive instante, e assim por diante. Se um arquivo passar mais de 180 dias (6 meses) sem uso, ele vai para Glacier Deep Archive, o que não não atender o objetivo de manter os dados dos últimos 2 anos altamente disponíveis. D: A opção D propõe a transição imediata para o S3 One Zone-IA, que é uma camada de armazenamento de baixo custo para acessos infrequentes, o que não atende o requisito de manter os dados dos últimos 2 anos altamente disponíveis."
+    },
+    {
+      "id": "question49",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa de mídia está avaliando a possibilidade de mover seus sistemas para a AWS Cloud. A empresa precisa de pelo menos 10 TB de armazenamento com o desempenho máximo possível de I/O para processamento de vídeo, 300 TB de armazenamento muito durável para armazenar conteúdo de mídia, e 900 TB de armazenamento para atender aos requisitos de mídia arquivada que não está mais em uso. Qual conjunto de serviços um arquiteto de soluções deve recomendar para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Amazon EBS para desempenho máximo, Amazon S3 para armazenamento durável de dados, e Amazon S3 Glacier para armazenamento de arquivo."
+        },
+        {
+          "index": 2,
+          "text": "B. Amazon EBS para desempenho máximo, Amazon EFS para armazenamento durável de dados e Amazon S3 Glacier para armazenamento de arquivo."
+        },
+        {
+          "index": 3,
+          "text": "C. Armazenamento de instância do Amazon EC2 para desempenho máximo, Amazon EFS para armazenamento durável de dados e Amazon S3 para armazenamento de arquivo."
+        },
+        {
+          "index": 4,
+          "text": "D. Armazenamento de instância do Amazon EC2 para desempenho máximo, Amazon S3 para armazenamento durável de dados, e Amazon S3 Glacier para armazenamento de arquivo."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A: O Amazon EBS (Elastic Block Store) é indicado para máximo desempenho de I/O, sendo adequado para as necessidades de processamento de vídeo. O Amazon S3 (Simple Storage Service) é uma opção durável para armazenamento de dados e o Amazon S3 Glacier é uma escolha apropriada para armazenamento de arquivo devido à sua durabilidade e custo mais baixo, ideal para dados arquivados que não estão mais em uso. Respostas Incorretas: B: Essa opção propõe o uso do Amazon EBS para máximo desempenho de I/O, o que é apropriado. No entanto, sugere o uso do Amazon EFS (Elastic File System) para armazenamento durável, que é um sistema de arquivos compartilhado e pode não ser tão adequado para máximo desempenho individual. Além disso, propõe o Amazon S3 Glacier para armazenamento de arquivo, o que é apropriado. C: Essa opção propõe o uso do armazenamento de instância do Amazon EC2 (Instance Store) para desempenho máximo, mas esse tipo de armazenamento é volátil e não é persistente, o que pode não ser adequado para os requisitos de armazenamento durável. Propõe também o Amazon EFS para armazenamento durável, o que é mais indicado para armazenamento compartilhado. Para armazenamento de arquivo, propõe o Amazon S3, o que é apropriado. D: Essa opção propõe o uso do armazenamento de instância do Amazon EC2 para desempenho máximo, mas, como mencionado anteriormente, esse tipo de armazenamento não é persistente. Propõe também o Amazon S3 para armazenamento durável, o que é uma escolha adequada. Para armazenamento de arquivo, propõe o Amazon S3 Glacier, que é apropriado."
+    },
+    {
+      "id": "question50",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja executar aplicativos em contêineres na AWS Cloud. Esses aplicativos são sem estado e podem tolerar interrupções na infraestrutura subjacente. A empresa precisa de uma solução que minimize custos e a sobrecarga operacional. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar Instâncias Spot em um grupo de Auto Scaling do Amazon EC2 para executar os contêineres de aplicativos."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar Instâncias Spot em um grupo de nós gerenciados pelo Amazon Elastic Kubernetes Service (Amazon EKS)."
+        },
+        {
+          "index": 3,
+          "text": "C. Utilizar Instâncias On-Demand em um grupo de Auto Scaling do Amazon EC2 para executar os contêineres de aplicativos."
+        },
+        {
+          "index": 4,
+          "text": "D. Utilizar Instâncias On-Demand em um grupo de nós gerenciados pelo Amazon Elastic Kubernetes Service (Amazon EKS)."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A: O ECS (Elastic Container Service) pode ser implementado através de instância EC2 ou pelo Fargate. Como os aplicativos são sem estado, a implementação do ECS em instâncias EC2 Stop atendem a necessidade de custos e sobrecarga. Respostas Incorretas: B: O EKS (Elastic Kubernets Service) é um orquestrador de conteineres que opera nos padrões do Kubernetes. O EKS operada de uma maneira um pouco diferente do ECS, porem ambos são orquestradores de conteineres. Essa opção poderia muito bem ser utilizada se houvesse a especificação do kubernetes. C e D: Utilizar Instâncias On-Damand não atenderiam os requisitos de custo, pois é o tipo mais caro de instância."
+    },
+    {
+      "id": "question51",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa está executando uma aplicação web de várias camadas em suas instalações físicas. A aplicação web está containerizada e roda em vários hosts Linux conectados a um banco de dados PostgreSQL que contém registros de usuários. A sobrecarga operacional de manter a infraestrutura e o planejamento de capacidade está limitando o crescimento da empresa. Um arquiteto de soluções deve melhorar a infraestrutura da aplicação. Quais combinações de ações o arquiteto de soluções deve tomar para alcançar isso? (Escolha duas.)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Migrar o banco de dados PostgreSQL para o Amazon Aurora."
+        },
+        {
+          "index": 2,
+          "text": "B. Migrar a aplicação web para ser hospedada em instâncias Amazon EC2."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar uma distribuição Amazon CloudFront para o conteúdo da aplicação web."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar o Amazon ElastiCache entre a aplicação web e o banco de dados PostgreSQL."
+        },
+        {
+          "index": 5,
+          "text": "E. Migrar a aplicação web para ser hospedada no AWS Fargate com o Amazon Elastic Container Service (Amazon ECS)"
+        }
+      ],
+      "answer": [
+        1,
+        5
+      ],
+      "explanation": "Explicação geral Resposta Correta: A: O Amazon Aurora é um serviço de banco de dados totalmente gerenciado pela AWS que oferece desempenho e escalabilidade aprimorados em comparação com o PostgreSQL tradicional. E: O AWS Fargate é um serviço que permite executar contêineres sem a necessidade de gerenciar instâncias de servidor. Ao usar o Amazon ECS com o Fargate, você elimina a necessidade de gerenciar a infraestrutura subjacente, simplificando assim a operação e o dimensionamento da aplicação. Respostas Incorretas: B: Embora migrar para o Amazon EC2 seja uma opção viável e muitas vezes necessária, esta alternativa não aborda diretamente a sobrecarga operacional e o planejamento de capacidade mencionados como problemas. A empresa ainda teria que gerenciar manualmente as instâncias EC2 e realizar o planejamento de capacidade. C: Configurar o Amazon CloudFront para distribuir conteúdo estático e dinâmico pode melhorar o desempenho e a escalabilidade, mas não resolve diretamente a sobrecarga operacional ou o planejamento de capacidade. CloudFront é mais voltado para a entrega de conteúdo de maneira eficiente e rápida para os usuários finais. D: O Amazon ElastiCache é utilizado para armazenamento em cache e pode melhorar o desempenho ao reduzir a carga no banco de dados. No entanto, não aborda diretamente a sobrecarga operacional ou o planejamento de capacidade mencionados. Além disso, é importante notar que o ElastiCache é frequentemente usado para armazenamento em cache, e não como uma camada intermediária entre a aplicação e o banco de dados."
+    },
+    {
+      "id": "question52",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa realiza manutenção mensal em sua infraestrutura da AWS. Durante essas atividades de manutenção, a empresa precisa rotacionar as credenciais para seus bancos de dados Amazon RDS for MySQL em várias Regiões da AWS. Qual solução atenderá a esses requisitos com o MÍNIMO de sobrecarga operacional?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Armazenar as credenciais como segredos no AWS Secrets Manager. Usar replicação de segredos multi-Região para as Regiões necessárias. Configurar o Secrets Manager para rotacionar os segredos em um cronograma."
+        },
+        {
+          "index": 2,
+          "text": "B. Armazenar as credenciais como segredos no AWS Systems Manager, criando um parâmetro de string seguro. Usar replicação de segredos multi-Região para as Regiões necessárias. Configurar o Systems Manager para rotacionar os segredos em um cronograma."
+        },
+        {
+          "index": 3,
+          "text": "C. Armazenar as credenciais em um bucket do Amazon S3 com criptografia do lado do servidor (SSE) ativada. Usar o Amazon EventBridge (Amazon CloudWatch Events) para invocar uma função AWS Lambda para rotacionar as credenciais."
+        },
+        {
+          "index": 4,
+          "text": "D. Criptografar as credenciais como segredos usando chaves gerenciadas pelo cliente multi-Região do AWS Key Management Service (AWS KMS). Armazenar os segredos em uma tabela global do Amazon DynamoDB. Usar uma função AWS Lambda para recuperar os segredos do DynamoDB. Usar a API RDS para rotacionar os segredos."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A: Esta opção utiliza o AWS Secrets Manager, que é projetado para gerenciar e rotacionar automaticamente segredos, como credenciais de banco de dados. Ao usar a replicação de segredos multi-Região, você pode garantir que as credenciais sejam replicadas em várias Regiões da AWS. Além disso, o Secrets Manager permite a configuração de rotação automática de segredos em intervalos regulares, reduzindo assim a sobrecarga operacional. Respostas Incorretas: B: O AWS Systems Manager é uma ferramenta poderosa, mas não é especificamente projetado para gerenciamento de segredos e rotação automática. O AWS Secrets Manager é uma escolha mais adequada para esse tipo de requisito. C: Essa abordagem envolve mais etapas manuais e requer a configuração de eventos no CloudWatch. Além disso, o Amazon S3 não é o serviço mais indicado para armazenar credenciais sensíveis. D: Embora essa opção use o AWS KMS para criptografar as credenciais, ela envolve mais complexidade, incluindo o uso do DynamoDB e a criação manual de uma lógica de rotação usando a API RDS. O AWS Secrets Manager oferece uma solução mais integrada para o gerenciamento e rotação automática de segredos."
+    },
+    {
+      "id": "question53",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma aplicação é executada em instâncias do Amazon EC2 em várias Zonas de Disponibilidade. As instâncias são executadas em um grupo de Auto Scaling do Amazon EC2 atrás de um Balanceador de Carga de Aplicativo. A aplicação tem melhor desempenho quando a utilização da CPU das instâncias do EC2 está próxima de 40%. O que um arquiteto de soluções deve fazer para manter o desempenho desejado em todas as instâncias do grupo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar uma política de dimensionamento simples para dimensionar dinamicamente o grupo de Auto Scaling."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar uma política de rastreamento de destino para dimensionar dinamicamente o grupo de Auto Scaling."
+        },
+        {
+          "index": 3,
+          "text": "C. Utilizar uma função AWS Lambda para atualizar a capacidade desejada do grupo de Auto Scaling."
+        },
+        {
+          "index": 4,
+          "text": "D. Utilizar ações de dimensionamento agendadas para aumentar e diminuir o grupo de Auto Scaling."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B: Ao usar uma política de rastreamento de destino, você pode configurar o Auto Scaling group para manter uma métrica específica (como a utilização da CPU) em um valor-alvo desejado, como os mencionados 40%. O Auto Scaling group então ajustará automaticamente o número de instâncias para atingir e manter essa métrica-alvo, ajudando a garantir o desempenho desejado para a aplicação. Respostas Incorretas: A: A política de dimensionamento simples baseia-se em ajustes manuais, como adicionar ou remover um número fixo de instâncias em resposta a eventos específicos. Essa abordagem não é tão adaptável para manter a utilização da CPU próxima a um valor específico e não é tão automática quanto outras opções. C: Embora seja possível criar uma função Lambda para atualizar a capacidade desejada do grupo de Auto Scaling, isso requer mais gerenciamento manual e não oferece a mesma automação que uma política de rastreamento de destino. A abordagem com Lambda seria mais customizada e menos orientada a métricas dinâmicas. D: Ações de dimensionamento agendadas são mais adequadas para situações previsíveis, como aumentar a capacidade antes de um evento conhecido. No entanto, para manter a utilização da CPU próxima a 40%, é preferível uma abordagem dinâmica e automatizada, como a oferecida por uma política de rastreamento de destino."
+    },
+    {
+      "id": "question54",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa está desenvolvendo uma aplicação de compartilhamento de arquivos que utilizará um bucket Amazon S3 para armazenamento. A empresa deseja disponibilizar todos os arquivos por meio de uma distribuição Amazon CloudFront. A empresa não quer que os arquivos sejam acessíveis por meio de navegação direta para a URL do S3. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Escrever políticas individuais para cada bucket S3 para conceder permissão de leitura apenas para acesso via CloudFront."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar um usuário IAM. Conceder permissão de leitura ao usuário para objetos no bucket S3. Atribuir o usuário ao CloudFront."
+        },
+        {
+          "index": 3,
+          "text": "C. Escrever uma política de bucket S3 que atribui o ID da distribuição CloudFront como Principal e atribui o bucket S3 de destino como o Amazon Resource Name (ARN)."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar uma identidade de acesso de origem (OAI). Atribuir a OAI à distribuição CloudFront. Configurar as permissões do bucket S3 para que apenas a OAI tenha permissão de leitura."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta correta: D. Criar uma identidade de acesso de origem (OAI). Atribuir a OAI à distribuição CloudFront. Configurar as permissões do bucket S3 para que apenas a OAI tenha permissão de leitura. Motivo: A criação de uma identidade de acesso de origem (OAI) permite restringir o acesso ao bucket S3 apenas através da distribuição CloudFront, atendendo assim ao requisito de não permitir acesso direto via URL do S3. A OAI é associada à distribuição CloudFront e configurada no bucket S3 para permitir apenas que a OAI tenha permissões de leitura. Isso proporciona uma camada adicional de segurança. Explicações das outras alternativas: A. Escrever políticas individuais para cada bucket S3 pode ser trabalhoso e menos escalável, além de não fornecer uma solução centralizada. B. A criação de um usuário IAM com permissões de leitura e atribuí-lo ao CloudFront não é uma abordagem recomendada para restringir o acesso ao S3 apenas através do CloudFront. C. Embora seja possível usar uma política de bucket S3 para restringir o acesso, a abordagem com uma OAI é mais comumente recomendada para integração com CloudFront."
+    },
+    {
+      "id": "question55",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "O site de uma empresa fornece aos usuários relatórios de desempenho histórico para download. O site precisa de uma solução que escale para atender às demandas globais da empresa. A solução deve ser eficiente em termos de custos, limitar o provisionamento de recursos de infraestrutura e fornecer o tempo de resposta mais rápido possível. Qual combinação um arquiteto de soluções deveria recomendar para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Amazon CloudFront e Amazon S3"
+        },
+        {
+          "index": 2,
+          "text": "B. AWS Lambda e Amazon DynamoDB"
+        },
+        {
+          "index": 3,
+          "text": "C. Balanceador de Carga de Aplicação com Amazon EC2 Auto Scaling"
+        },
+        {
+          "index": 4,
+          "text": "D. Amazon Route 53 com Balanceadores de Carga de Aplicação internos"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Amazon CloudFront e Amazon S3 Motivo: Amazon CloudFront é um serviço de entrega de conteúdo global que fornece uma distribuição eficiente e escalável de conteúdo web. Integrado com o Amazon S3, que é um armazenamento de objetos escalável e altamente durável, essa combinação atende aos requisitos de escalabilidade global, eficiência de custos e resposta rápida. Explicações das outras alternativas: B. AWS Lambda e Amazon DynamoDB: Essa combinação é mais adequada para cargas de trabalho de computação sem servidor e bancos de dados NoSQL, mas não é a melhor escolha para a entrega de conteúdo globalmente. C. Balanceador de Carga de Aplicação com Amazon EC2 Auto Scaling: Embora isso seja eficaz para escalabilidade e distribuição de carga em aplicações web, não aborda diretamente a entrega global de conteúdo e pode envolver mais infraestrutura do que o necessário. D. Amazon Route 53 com Balanceadores de Carga de Aplicação internos: Embora o Amazon Route 53 seja um serviço de sistema de nomes de domínio (DNS), e os Balanceadores de Carga de Aplicação são úteis para roteamento de tráfego, essa combinação não é a melhor escolha para entrega eficiente de conteúdo global."
+    },
+    {
+      "id": "question56",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa recentemente começou a usar o Amazon Aurora como armazenamento de dados para sua aplicação global de comércio eletrônico. Quando relatórios grandes são executados, os desenvolvedores relatam que a aplicação de comércio eletrônico está com desempenho ruim. Após revisar métricas no Amazon CloudWatch, um arquiteto de soluções percebe que as métricas ReadIOPS e CPUUtilization aumentam consideravelmente quando os relatórios mensais são executados. Qual é a solução MAIS eficaz em termos de custo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Migrar os relatórios mensais para o Amazon Redshift."
+        },
+        {
+          "index": 2,
+          "text": "B. Migrar os relatórios mensais para uma Réplica do Aurora."
+        },
+        {
+          "index": 3,
+          "text": "C. Migrar o banco de dados Aurora para uma classe de instância maior."
+        },
+        {
+          "index": 4,
+          "text": "D. Aumentar os IOPS provisionados na instância do Aurora."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B. Migrar os relatórios mensais para uma Réplica do Aurora. Motivo: A opção B é a resposta mais apropriada, pois migrar os relatórios mensais para uma Réplica do Aurora alivia a carga no banco de dados principal. Ao usar uma réplica separada para executar relatórios intensivos, evita-se que a carga de leitura impacte o desempenho do banco de dados principal. Isso oferece uma solução mais eficaz em termos de custo em comparação com as outras opções. Explicações das outras alternativas: A opção A (Migrar os relatórios mensais para o Amazon Redshift) é uma opção válida, pois o Redshift é otimizado para consultas analíticas e relatórios. No entanto, pode ser uma opção mais cara do que a utilização de uma réplica do Aurora, dependendo da quantidade de dados e da frequência dos relatórios. A opção C (Migrar o banco de dados Aurora para uma classe de instância maior) pode ajudar a aumentar a capacidade geral do banco de dados, mas não aborda especificamente o problema de desempenho causado pelos relatórios mensais. Além disso, pode ser uma solução mais cara. A opção D (Aumentar os IOPS provisionados na instância do Aurora) pode melhorar o desempenho do banco de dados, mas, novamente, não resolve diretamente o problema causado pelos relatórios mensais e pode resultar em custos adicionais."
+    },
+    {
+      "id": "question57",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja migrar sua aplicação para uma solução sem servidor. A solução sem servidor precisa analisar dados existentes e novos usando o Amazon S3. A empresa armazena os dados em um bucket do Amazon S3. Os dados exigem criptografia e devem ser replicados para uma região AWS diferente com a mesma chave mestre. Qual solução atenderá a esses requisitos com o MÍNIMO de sobrecarga operacional?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar um novo bucket S3. Carregar os dados no novo bucket S3. Usar a Replicação Cross-Region do S3 (CRR) para replicar objetos criptografados para um bucket S3 em outra região. Usar a criptografia do lado do servidor com chaves multi-região do AWS KMS (SSE-KMS). Usar o Amazon Athena para consultar os dados."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar um novo bucket S3. Carregar os dados no novo bucket S3. Usar a Replicação Cross-Region do S3 (CRR) para replicar objetos criptografados para um bucket S3 em outra região. Usar a criptografia do lado do servidor com chaves multi-região do AWS KMS (SSE-KMS). Usar o Amazon RDS para consultar os dados."
+        },
+        {
+          "index": 3,
+          "text": "C. Carregar os dados no bucket S3 existente. Usar a Replicação Cross-Region do S3 (CRR) para replicar objetos criptografados para um bucket S3 em outra região. Usar a criptografia do lado do servidor com chaves de criptografia gerenciadas pelo Amazon S3 (SSE-S3). Usar o Amazon Athena para consultar os dados."
+        },
+        {
+          "index": 4,
+          "text": "D. Carregar os dados no bucket S3 existente. Usar a Replicação Cross-Region do S3 (CRR) para replicar objetos criptografados para um bucket S3 em outra região. Usar a criptografia do lado do servidor com chaves de criptografia gerenciadas pelo Amazon S3 (SSE-S3). Usar o Amazon RDS para consultar os dados."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Criar um novo bucket S3. Carregar os dados no novo bucket S3. Usar a Replicação Cross-Region do S3 (CRR) para replicar objetos criptografados para um bucket S3 em outra região. Usar a criptografia do lado do servidor com chaves multi-região do AWS KMS (SSE-KMS). Usar o Amazon Athena para consultar os dados. Motivo: Essa solução utiliza a criptografia do lado do servidor com chaves multi-região do AWS KMS, garantindo a segurança dos dados. Além disso, a Replicação Cross-Region do S3 (CRR) permite replicar os objetos para outro bucket em uma região AWS diferente. O uso do Amazon Athena para consulta de dados sem servidor ajuda a minimizar a sobrecarga operacional. Explicações das outras alternativas: B. O uso do Amazon RDS introduz uma infraestrutura gerenciada adicional, que pode aumentar a sobrecarga operacional, tornando esta opção menos eficiente. C. A opção utiliza chaves de criptografia gerenciadas pelo Amazon S3 (SSE-S3), mas não atende ao requisito de usar chaves multi-região do AWS KMS, tornando-a menos adequada para replicação em diferentes regiões AWS. D. Similar à opção C, o uso do Amazon RDS introduz uma camada adicional de gerenciamento de infraestrutura, tornando a opção menos eficiente em termos de sobrecarga operacional mínima."
+    },
+    {
+      "id": "question58",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa está migrando seu banco de dados PostgreSQL local para o Amazon Aurora PostgreSQL. O banco de dados local deve permanecer online e acessível durante a migração. O banco de dados Aurora deve permanecer sincronizado com o banco de dados local. Quais combinações de ações um arquiteto de soluções deve tomar para atender a esses requisitos? (Escolha duas.)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Criar uma tarefa de replicação contínua."
+        },
+        {
+          "index": 2,
+          "text": "B. Criar um backup do banco de dados local."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar um servidor de replicação do AWS Database Migration Service (AWS DMS)."
+        },
+        {
+          "index": 4,
+          "text": "D. Converter o esquema do banco de dados usando a AWS Schema Conversion Tool (AWS SCT)."
+        },
+        {
+          "index": 5,
+          "text": "E. Criar uma regra do Amazon EventBridge (Amazon CloudWatch Events) para monitorar o banco de dados."
+        }
+      ],
+      "answer": [
+        1,
+        3
+      ],
+      "explanation": "Explicação geral Resposta Correta: A e C. Motivo: A. Criar uma tarefa de replicação contínua usando o AWS Database Migration Service (AWS DMS) permite a replicação contínua de dados do banco de dados local para o Amazon Aurora PostgreSQL. Isso garante que as alterações feitas no banco de dados local sejam sincronizadas com o banco de dados Aurora durante a migração. C. Criar um servidor de replicação do AWS DMS é necessário para facilitar a tarefa de replicação. O servidor de replicação gerencia o processo de replicação de dados entre o banco de dados local e o banco de dados Aurora. Explicações das outras alternativas: B. Criar um backup do banco de dados local é uma prática útil para fins de backup e recuperação, mas não lida diretamente com a sincronização contínua durante a migração. D. Converter o esquema do banco de dados usando a AWS Schema Conversion Tool (AWS SCT) é um passo relacionado à conversão de esquema, mas não aborda diretamente os requisitos de sincronização contínua durante a migração. E. Criar uma regra do Amazon EventBridge para monitorar o banco de dados é útil para monitoramento e alertas, mas não lida diretamente com a replicação contínua e a sincronização durante a migração."
+    },
+    {
+      "id": "question59",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa utiliza a AWS Organizations para criar contas AWS dedicadas para cada unidade de negócios, permitindo que cada unidade de negócios gerencie sua conta de forma independente mediante solicitação. O destinatário do email raiz (root) perdeu uma notificação que foi enviada para o endereço de email do usuário raiz de uma conta. A empresa deseja garantir que todas as notificações futuras não sejam perdidas. As notificações futuras devem ser limitadas aos administradores de conta. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar o servidor de email da empresa para encaminhar mensagens de email de notificação enviadas para o endereço de email do usuário raiz da conta AWS para todos os usuários na organização."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar todos os endereços de email do usuário raiz da conta AWS como listas de distribuição que vão para alguns administradores que podem responder a alertas. Configurar contatos alternativos da conta AWS no console da AWS Organizations ou programaticamente."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar todas as mensagens de email do usuário raiz da conta AWS para serem enviadas a um administrador responsável por monitorar alertas e encaminhar esses alertas para os grupos apropriados."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar todas as contas AWS existentes e todas as contas recém-criadas para usar o mesmo endereço de email do usuário raiz. Configurar contatos alternativos da conta AWS no console da AWS Organizations ou programaticamente."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B. Configurar todos os endereços de email do usuário raiz da conta AWS como listas de distribuição que vão para alguns administradores que podem responder a alertas. Configurar contatos alternativos da conta AWS no console da AWS Organizations ou programaticamente. Motivo: B. Esta opção cria listas de distribuição para os endereços de email do usuário raiz, enviando notificações apenas para alguns administradores. Configurar contatos alternativos da conta AWS garante que os administradores responsáveis por responder aos alertas sejam notificados. Explicação das demais alternativas: A. Configurar o servidor de email para encaminhar mensagens de notificação para todos os usuários na organização pode resultar em excesso de notificações e não limita efetivamente a entrega a apenas administradores de conta. C. Enviar todas as mensagens de email do usuário raiz para um único administrador pode criar um ponto único de falha e não distribui efetivamente a responsabilidade de resposta a alertas. D. Configurar todas as contas AWS para usar o mesmo endereço de email do usuário raiz pode causar confusão e dificultar a identificação da origem das notificações. Configurar contatos alternativos da conta AWS é uma boa prática, mas a abordagem de listas de distribuição é mais eficaz para limitar as notificações aos administradores designados."
+    },
+    {
+      "id": "question60",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa executa sua aplicação de comércio eletrônico na AWS. Cada novo pedido é publicado como uma mensagem em uma fila RabbitMQ que é executada em uma instância Amazon EC2 em uma única Zona de Disponibilidade. Essas mensagens são processadas por uma aplicação diferente que é executada em uma instância EC2 separada. Essa aplicação armazena os detalhes em um banco de dados PostgreSQL em outra instância EC2. Todas as instâncias EC2 estão na mesma Zona de Disponibilidade. A empresa precisa redesenhar sua arquitetura para fornecer a maior disponibilidade com o menor overhead operacional. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Migrar a fila para um par redundante (ativo/standby) de instâncias RabbitMQ no Amazon MQ. Criar um grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam a aplicação. Criar outro grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam o banco de dados PostgreSQL."
+        },
+        {
+          "index": 2,
+          "text": "B. Migrar a fila para um par redundante (ativo/standby) de instâncias RabbitMQ no Amazon MQ. Criar um grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam a aplicação. Migrar o banco de dados para ser executado em uma implantação Multi-AZ do Amazon RDS para PostgreSQL."
+        },
+        {
+          "index": 3,
+          "text": "C. Criar um grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam a fila RabbitMQ. Criar outro grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam a aplicação. Migrar o banco de dados para ser executado em uma implantação Multi-AZ do Amazon RDS para PostgreSQL."
+        },
+        {
+          "index": 4,
+          "text": "D. Criar um grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam a fila RabbitMQ. Criar outro grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam a aplicação. Criar um terceiro grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam o banco de dados PostgreSQL."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Explicação geral Resposta Correta: B. Migrar a fila para um par redundante (ativo/standby) de instâncias RabbitMQ no Amazon MQ. Criar um grupo de dimensionamento automático Multi-AZ para as instâncias EC2 que hospedam a aplicação. Migrar o banco de dados para ser executado em uma implantação Multi-AZ do Amazon RDS para PostgreSQL. Motivo: Amazon MQ com instâncias RabbitMQ redundantes: Usar o Amazon MQ com um par redundante de instâncias RabbitMQ assegura alta disponibilidade e tolerância a falhas para a fila de mensagens. A configuração ativo/standby ajuda a manter o processamento de mensagens mesmo se uma instância falhar. Grupo de dimensionamento automático Multi-AZ para instâncias EC2 da aplicação: Implantar a aplicação em um grupo de dimensionamento automático Multi-AZ garante alta disponibilidade e tolerância a falhas. Novas instâncias podem ser lançadas automaticamente em diferentes Zonas de Disponibilidade em caso de falhas ou aumento na demanda. Migrar o banco de dados para o Amazon RDS para PostgreSQL em uma implantação Multi-AZ: Migrar o banco de dados para o Amazon RDS em uma configuração Multi-AZ assegura uma solução de banco de dados altamente disponível e gerenciada. A implantação Multi-AZ oferece failover automático para uma instância de espera em caso de falha da instância principal. Explicação das Outras Opções: A. Migrar a fila para o Amazon MQ é uma boa escolha, mas a opção não aborda diretamente a migração do banco de dados para uma solução gerenciada como o Amazon RDS. C. Criar grupos de dimensionamento automático Multi-AZ para RabbitMQ e a aplicação é uma abordagem válida, mas a migração do banco de dados para o Amazon RDS é uma prática recomendada para reduzir o overhead operacional. D. Criar grupos de dimensionamento automático separados para RabbitMQ, a aplicação e o banco de dados pode aumentar a complexidade operacional. Além disso, a opção não menciona a migração para o Amazon RDS, o que seria preferível para gerenciamento simplificado do banco de dados."
+    },
+    {
+      "id": "question61",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa executa uma aplicação de comércio eletrônico em instâncias Amazon EC2, localizadas atrás de um Balanceador de Carga de Aplicativos. As instâncias operam em um grupo de dimensionamento automático do Amazon EC2 em várias Zonas de Disponibilidade. O grupo de dimensionamento automático ajusta a escala com base nas métricas de utilização da CPU. A aplicação de comércio eletrônico armazena os dados de transação em um banco de dados MySQL 8.0 hospedado em uma grande instância EC2. O desempenho do banco de dados degrada rapidamente à medida que a carga da aplicação aumenta. A aplicação lida com mais solicitações de leitura do que transações de gravação. A empresa deseja uma solução que dimensione automaticamente o banco de dados para atender à demanda de cargas de leitura imprevisíveis, mantendo alta disponibilidade. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar o Amazon Redshift com um nó único para liderança e funcionalidade de computação."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar o Amazon RDS com uma implantação em uma Zona de Disponibilidade única. Configurar o Amazon RDS para adicionar instâncias leitoras em uma Zona de Disponibilidade diferente."
+        },
+        {
+          "index": 3,
+          "text": "C. Utilizar o Amazon Aurora com uma implantação em várias Zonas de Disponibilidade. Configurar o Dimensionamento Automático do Aurora com Réplicas do Aurora."
+        },
+        {
+          "index": 4,
+          "text": "D. Utilizar o Amazon ElastiCache para Memcached com instâncias EC2 Spot."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Explicação geral Resposta Correta: C. Utilizar o Amazon Aurora com uma implantação em várias Zonas de Disponibilidade. Configurar o Dimensionamento Automático do Aurora com Réplicas do Aurora. Motivo: A opção C é a resposta correta, pois o Amazon Aurora é uma opção de banco de dados relacional altamente disponível e dimensionável, especialmente quando configurado com uma implantação em várias Zonas de Disponibilidade. Além disso, ao configurar o Dimensionamento Automático do Aurora com Réplicas do Aurora, é possível atender à demanda de cargas de leitura imprevisíveis, pois as réplicas podem ser automaticamente adicionadas ou removidas conforme necessário. Explicações das outras alternativas: A opção A (Amazon Redshift) é inadequada, pois o Redshift é um banco de dados de análise de data warehouse, não otimizado para transações online e não oferece a mesma escalabilidade em tempo real necessária para a aplicação de comércio eletrônico. A opção B (Amazon RDS com Single-AZ) não atende completamente aos requisitos de alta disponibilidade, pois utiliza apenas uma Zona de Disponibilidade. Adicionar instâncias leitoras em uma Zona de Disponibilidade diferente pode melhorar a escalabilidade de leitura, mas ainda pode não fornecer alta disponibilidade suficiente. A opção D (Amazon ElastiCache para Memcached) é uma solução de cache e não um banco de dados relacional. Além disso, não oferece a persistência de dados necessária para armazenar transações de maneira confiável. EC2 Spot Instances também podem ser menos previsíveis em termos de disponibilidade."
+    },
+    {
+      "id": "question62",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Um arquiteto de soluções precisa ajudar uma empresa a otimizar o custo de executar uma aplicação na AWS. A aplicação utilizará instâncias Amazon EC2, AWS Fargate e AWS Lambda para computação dentro da arquitetura. As instâncias EC2 executarão a camada de ingestão de dados da aplicação. O uso de EC2 será esporádico e imprevisível. As cargas de trabalho que rodam em instâncias EC2 podem ser interrompidas a qualquer momento. A interface da aplicação será executada no Fargate, e o Lambda servirá a camada de API. O uso da interface e da camada de API será previsível ao longo do próximo ano. Qual combinação de opções de compra fornecerá a solução mais econômica para hospedar esta aplicação? (Escolha duas.)",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Utilizar Instâncias Spot para a camada de ingestão de dados."
+        },
+        {
+          "index": 2,
+          "text": "B. Utilizar Instâncias On-Demand para a camada de ingestão de dados."
+        },
+        {
+          "index": 3,
+          "text": "C. Adquirir um Plano de Economia de Computação de 1 ano para a interface e camada de API."
+        },
+        {
+          "index": 4,
+          "text": "D. Adquirir instâncias reservadas All Upfront de 1 ano para a camada de ingestão de dados."
+        },
+        {
+          "index": 5,
+          "text": "E. Adquirir um Plano de Economia de Instâncias EC2 de 1 ano para a interface e camada de API."
+        }
+      ],
+      "answer": [
+        1,
+        3
+      ],
+      "explanation": "Explicação geral Respostas Corretas: A. Utilizar Instâncias Spot para a camada de ingestão de dados. C. Adquirir um Plano de Economia de Computação de 1 ano para a interface e camada de API. Motivos: Instâncias Spot (Opção A): Dada a natureza esporádica e imprevisível da camada de ingestão de dados, o uso de instâncias Spot é uma escolha econômica. No entanto, é importante notar que instâncias Spot podem ser interrompidas, então essa opção é apropriada para cargas de trabalho tolerantes a interrupções. Plano de Economia de Computação de 1 ano (Opção C): Para a interface da aplicação e a camada de API, que têm um uso previsível ao longo do próximo ano, adquirir um Plano de Economia de Computação de 1 ano oferece preços mais baixos em comparação com instâncias On-Demand. Isso é vantajoso quando há previsibilidade e compromisso de uso a longo prazo. Explicações das outras alternativas: A opção B (Instâncias On-Demand para a camada de ingestão de dados) seria mais cara do que a opção Spot, pois as instâncias On-Demand têm um custo mais alto, especialmente para cargas de trabalho esporádicas. A opção D (Instâncias Reservadas All Upfront de 1 ano para a camada de ingestão de dados) é menos flexível do que outras opções de instâncias reservadas, e pode não ser a melhor escolha se a carga de trabalho for interrompida com frequência. A opção E (Plano de Economia de Instâncias EC2 de 1 ano para a interface e camada de API) não é a opção mais eficiente para cargas de trabalho de curto prazo e imprevisíveis, como indicado para a camada de ingestão de dados. É mais adequado para cargas de trabalho de uso constante e previsível."
+    },
+    {
+      "id": "question63",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma aplicação utiliza uma instância de banco de dados Amazon RDS MySQL. O banco de dados RDS está ficando com pouco espaço em disco. Um arquiteto de soluções deseja aumentar o espaço em disco sem tempo de inatividade. Qual solução atende a esses requisitos com o MÍNIMO de esforço?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Ativar o dimensionamento automático de armazenamento no RDS."
+        },
+        {
+          "index": 2,
+          "text": "B. Aumentar o tamanho da instância do banco de dados RDS."
+        },
+        {
+          "index": 3,
+          "text": "C. Alterar o tipo de armazenamento da instância do banco de dados RDS para Provisioned IOPS."
+        },
+        {
+          "index": 4,
+          "text": "D. Fazer backup do banco de dados RDS, aumentar a capacidade de armazenamento, restaurar o banco de dados e interromper a instância anterior."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Explicação geral Resposta Correta: A. Ativar o dimensionamento automático de armazenamento no RDS. Motivo: O dimensionamento automático de armazenamento permite que o Amazon RDS ajuste automaticamente a capacidade de armazenamento conforme necessário, sem exigir intervenção manual. Isso pode ser feito sem tempo de inatividade e com o mínimo de esforço. Explicações das Alternativas Incorretas: B (Aumentar o tamanho da instância): Aumentar o tamanho da instância não aumenta diretamente o espaço em disco; isso está relacionado à capacidade de CPU e memória. C (Alterar o tipo de armazenamento para Provisioned IOPS): Embora isso possa ser uma opção para melhorar o desempenho de I/O, não aborda diretamente o problema de falta de espaço em disco. D (Fazer backup, aumentar capacidade e restaurar): Esta opção envolve tempo de inatividade ao interromper a instância anterior, o que não atende ao requisito de \"sem tempo de inatividade\"."
+    },
+    {
+      "id": "question64",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa de jogos está projetando uma arquitetura altamente disponível. A aplicação é executada em um kernel Linux modificado e suporta apenas tráfego baseado em UDP. A empresa precisa que a camada frontal forneça a melhor experiência do usuário possível. Essa camada deve ter baixa latência, rotear o tráfego para o ponto de presença mais próximo e fornecer endereços IP estáticos para entrada nos pontos de extremidade da aplicação. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Configurar o Amazon Route 53 para encaminhar solicitações para um Balanceador de Carga de Aplicativos. Usar o AWS Lambda para a aplicação no AWS Application Auto Scaling."
+        },
+        {
+          "index": 2,
+          "text": "B. Configurar o Amazon CloudFront para encaminhar solicitações para um Balanceador de Carga de Rede. Usar o AWS Lambda para a aplicação em um grupo de dimensionamento automático do AWS Application Auto Scaling."
+        },
+        {
+          "index": 3,
+          "text": "C. Configurar o AWS Global Accelerator para encaminhar solicitações para um Balanceador de Carga de Rede. Usar instâncias Amazon EC2 para a aplicação em um grupo de dimensionamento automático do EC2."
+        },
+        {
+          "index": 4,
+          "text": "D. Configurar o Amazon API Gateway para encaminhar solicitações para um Balanceador de Carga de Aplicativos. Usar instâncias Amazon EC2 para a aplicação em um grupo de dimensionamento automático do EC2."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Explicação geral Resposta Correta: C. Configurar o AWS Global Accelerator para encaminhar solicitações para um Balanceador de Carga de Rede. Usar instâncias Amazon EC2 para a aplicação em um grupo de dimensionamento automático do EC2. Motivo: A opção C é a resposta correta, pois o AWS Global Accelerator pode ser configurado para rotear o tráfego para o ponto de presença mais próximo, proporcionando baixa latência. O uso de um Balanceador de Carga de Rede é apropriado para tráfego baseado em UDP. Além disso, instâncias EC2 em um grupo de dimensionamento automático fornecem escalabilidade e alta disponibilidade. Explicações das outras alternativas: A opção A (Amazon Route 53 e AWS Lambda com Application Auto Scaling) não é a escolha ideal para tráfego UDP e não aproveita as características específicas do Global Accelerator para baixa latência. A opção B (Amazon CloudFront e AWS Lambda com Application Auto Scaling) não é apropriada para tráfego UDP, e o CloudFront é mais voltado para conteúdo HTTP/S. A opção D (Amazon API Gateway e instâncias EC2 com Auto Scaling) não é a melhor escolha para tráfego UDP, e o API Gateway é mais adequado para APIs HTTP/S."
+    },
+    {
+      "id": "question65",
+      "topicId": 42,
+      "levelId": 1,
+      "question": "Uma empresa deseja migrar sua aplicação monolítica existente em suas instalações para a AWS. A empresa quer manter o máximo possível do código frontend e do código backend. No entanto, a empresa deseja dividir a aplicação em aplicativos menores. Uma equipe diferente gerenciará cada aplicativo. A empresa precisa de uma solução altamente escalável que minimize a sobrecarga operacional. Qual solução atenderá a esses requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A. Hospedar a aplicação no AWS Lambda. Integrar a aplicação com o Amazon API Gateway."
+        },
+        {
+          "index": 2,
+          "text": "B. Hospedar a aplicação com o AWS Amplify. Conectar a aplicação a uma API do Amazon API Gateway integrada ao AWS Lambda."
+        },
+        {
+          "index": 3,
+          "text": "C. Hospedar a aplicação em instâncias Amazon EC2. Configurar um Balanceador de Carga de Aplicativos com instâncias EC2 em um grupo de dimensionamento automático como alvos."
+        },
+        {
+          "index": 4,
+          "text": "D. Hospedar a aplicação no Amazon Elastic Container Service (Amazon ECS). Configurar um Balanceador de Carga de Aplicativos com o Amazon ECS como alvo."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Explicação geral Resposta Correta: D. Hospedar a aplicação no Amazon Elastic Container Service (Amazon ECS). Configurar um Balanceador de Carga de Aplicativos com o Amazon ECS como alvo. Motivo: A opção D é a resposta correta, pois o Amazon ECS permite hospedar aplicativos em contêineres, o que facilita a divisão da aplicação monolítica em componentes menores e independentes. Ao usar o ECS com um Balanceador de Carga de Aplicativos, você pode escalar automaticamente os contêineres e distribuir o tráfego de forma eficiente. Isso proporciona alta escalabilidade e reduz a sobrecarga operacional. Explicações das outras alternativas: A opção A (AWS Lambda com Amazon API Gateway) é mais adequada para cargas de trabalho de função única, e pode não ser a melhor escolha para uma aplicação monolítica que está sendo dividida em componentes menores. A opção B (AWS Amplify com Amazon API Gateway integrado ao AWS Lambda) é mais voltada para aplicativos da web, especialmente aqueles baseados em React, Angular, Vue, etc., e pode não ser a melhor escolha para uma aplicação monolítica existente. A opção C (Amazon EC2 com Balanceador de Carga de Aplicativos) oferece escalabilidade, mas pode envolver mais sobrecarga operacional em comparação com soluções baseadas em contêineres, como ECS."
+    }
+  ]
+}
