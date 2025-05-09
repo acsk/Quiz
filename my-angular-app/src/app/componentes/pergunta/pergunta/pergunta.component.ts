@@ -140,10 +140,13 @@ export class PerguntaComponent implements OnInit {
   finalizeTest(): void {
     this.testStarted = false;
     this.showSummary = true;
+
+    // Corrigir o cálculo de respostas corretas e incorretas
     this.correctAnswers = this.filteredQuestions.filter((question: any) => 
-      this.currentQuestion.answer.every((ans: number) => this.selectedOptions[question.id].includes(ans)) &&
-      this.selectedOptions[question.id].length === this.currentQuestion.answer.length
+      question.answer.every((ans: number) => this.selectedOptions[question.id]?.includes(ans)) &&
+      this.selectedOptions[question.id]?.length === question.answer.length
     ).length;
+
     this.incorrectAnswers = this.filteredQuestions.length - this.correctAnswers;
   }
 
