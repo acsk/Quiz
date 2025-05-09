@@ -21,6 +21,13 @@ export class HttpQuestionsService {
 
   private awsSAAC03QuestionsUrl_1 = 'assets/data/question/simulados/awsSAAC03-1.json';
   private awsSAAC03QuestionsUrl_2 = 'assets/data/question/simulados/awsSAAC03-2.json';
+  private awsSAAC03QuestionsUrl_3 = 'assets/data/question/simulados/awsSAAC03-3.json';
+  private awsSAAC03QuestionsUrl_4 = 'assets/data/question/simulados/awsSAAC03-4.json';
+  private awsSAAC03QuestionsUrl_5 = 'assets/data/question/simulados/awsSAAC03-5.json';
+  
+  //asuntos
+  private vpc = 'assets/data/question/assuntos/awsSAAC03-4.json';
+
 
   constructor(private http: HttpClient) { }
 
@@ -54,6 +61,18 @@ export class HttpQuestionsService {
   getawsSAAC03Questions_2(): Observable<any> {
     return this.http.get<any>(this.awsSAAC03QuestionsUrl_2);
   }
+  getawsSAAC03Questions_3(): Observable<any> {
+    return this.http.get<any>(this.awsSAAC03QuestionsUrl_3);
+  }
+  getawsSAAC03Questions_4(): Observable<any> {
+    return this.http.get<any>(this.awsSAAC03QuestionsUrl_4);
+  }
+  getawsSAAC03Questions_5(): Observable<any> {
+    return this.http.get<any>(this.awsSAAC03QuestionsUrl_5);
+  }
+  getawsVPC(): Observable<any> {
+    return this.http.get<any>(this.vpc);
+  }
   private shuffleArray(array: any[]): any[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -77,6 +96,13 @@ export class HttpQuestionsService {
       //SAAC03
       awsSAAC031: this.getawsSAAC03Questions_1(),
       awsSAAC032: this.getawsSAAC03Questions_2(),
+      awsSAAC033: this.getawsSAAC03Questions_3(),
+      awsSAAC034: this.getawsSAAC03Questions_4(),
+      awsSAAC035: this.getawsSAAC03Questions_5(),
+     
+      //assuntos
+      vpc: this.getawsVPC(),
+    
     }).pipe(
       map((responses: any) => {
         const topicsMap = new Map(responses.topics.topics.map((topic: any) => [topic.id, topic.name]));
@@ -90,6 +116,12 @@ export class HttpQuestionsService {
           ...responses.awsPractitioner6.questions,
           ...responses.awsSAAC031.questions,
           ...responses.awsSAAC032.questions,
+          ...responses.awsSAAC033.questions,
+          ...responses.awsSAAC034.questions,
+          ...responses.awsSAAC035.questions,
+         
+          //assuntos
+          ...responses.vpc.questions,
 
         ].map((question: any) => ({
           ...question,
