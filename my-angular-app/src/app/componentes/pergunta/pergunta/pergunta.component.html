@@ -11,7 +11,9 @@
       </div>
       <div>
         <label for="levelSelect" class="block text-sm font-medium text-gray-700">Selecione o Nível:</label>
-        <select id="levelSelect" [(ngModel)]="selectedLevelId" (change)="filterQuestionsByTopic()" [disabled]="testStarted" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+        <select id="levelSelect" [(ngModel)]="selectedLevelId" (change)="filterQuestionsByTopic()"
+          [disabled]="testStarted"
+          class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
           <option [ngValue]="null">Todos os Níveis</option>
           <option [ngValue]="1">Nível 1</option>
           <option [ngValue]="2">Nível 2</option>
@@ -19,7 +21,8 @@
         </select>
       </div>
       <div class="flex space-x-2">
-        <button *ngIf="!testStarted && !showSummary" (click)="startTest()" [disabled]="!canStartTest()" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest()}">
+        <button *ngIf="!testStarted && !showSummary" (click)="startTest()" [disabled]="!canStartTest()"
+          class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest()}">
           Iniciar Teste
         </button>
         <button *ngIf="testStarted" (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
@@ -36,11 +39,13 @@
       Total de Perguntas Filtradas: <span class="font-bold">{{ filteredQuestions.length }}</span>
     </p>
   </div>
+
   <div *ngIf="testStarted && currentQuestion" class="mb-6 p-4 border rounded shadow">
     <div class="flex justify-between items-center mb-2">
       <h2 class="text-xl font-semibold">
         {{ currentQuestionIndex + 1 }}/{{ filteredQuestions.length }}. {{ currentQuestion.question }}
-        <a [href]="getGoogleSearchUrl(currentQuestion.question)" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
+        <a [href]="getGoogleSearchUrl(currentQuestion.question)" target="_blank"
+          class="ml-2 text-blue-500 hover:text-blue-700">
           <i class="fas fa-search"></i>
         </a>
       </h2>
@@ -52,62 +57,90 @@
       <div class="bg-blue-500 h-2.5 rounded-full" [style.width.%]="progressPercentage"></div>
     </div>
     <ul class="list-none pl-0">
-      <li *ngFor="let option of currentQuestion.options" class="mb-1 flex items-center p-2 rounded cursor-pointer hover:bg-gray-200"
-          [ngClass]="{
-            'bg-green-200': selectedOptions[currentQuestion.id]?.includes(option.index) && showAnswer && currentQuestion.answer.includes(option.index),
-            'bg-red-200': selectedOptions[currentQuestion.id]?.includes(option.index) && showAnswer && !currentQuestion.answer.includes(option.index),
-            'bg-gray-100': !showAnswer,
-            'bg-green-100': showAnswer && currentQuestion.answer.includes(option.index) && !selectedOptions[currentQuestion.id]?.includes(option.index)
-          }"
-          (click)="selectOption(option.index)">
-        <input *ngIf="currentQuestion.answer.length > 1" type="checkbox" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-               (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)">
-        <input *ngIf="currentQuestion.answer.length === 1" type="radio" [name]="'question-' + currentQuestion.id" [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-full"
-               (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)">
+      <li *ngFor="let option of currentQuestion.options"
+        class="mb-1 flex items-center p-2 rounded cursor-pointer hover:bg-gray-200" [ngClass]="{
+            'bg-green-200': showAnswer && currentQuestion.answer.includes(option.index),
+            'bg-red-200': showAnswer && !currentQuestion.answer.includes(option.index) && selectedOptions[currentQuestion.id]?.includes(option.index),
+            'bg-gray-100': !showAnswer
+          }" (click)="selectOption(option.index)">
+        <input *ngIf="currentQuestion.answer.length > 1" type="checkbox" [name]="'question-' + currentQuestion.id"
+          [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)">
+        <input *ngIf="currentQuestion.answer.length === 1" type="radio" [name]="'question-' + currentQuestion.id"
+          [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-full"
+          (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)">
         {{ option.text }}
-        <i *ngIf="showAnswer && currentQuestion.answer.includes(option.index)" class="fas fa-check-circle icon-correct"></i>
-        <i *ngIf="showAnswer && !currentQuestion.answer.includes(option.index) && selectedOptions[currentQuestion.id]?.includes(option.index)" class="fas fa-times-circle icon-incorrect"></i>
-        <a *ngIf="showAnswer && currentQuestion.answer.includes(option.index)" [href]="getGoogleSearchUrl(currentQuestion.question, option.text)" target="_blank" class="ml-2 text-blue-500 hover:text-blue-700">
-          <i class="fas fa-search"></i>
-        </a>
+        <i *ngIf="showAnswer && currentQuestion.answer.includes(option.index)"
+          class="fas fa-check-circle icon-correct"></i>
+        <i *ngIf="showAnswer && !currentQuestion.answer.includes(option.index) && selectedOptions[currentQuestion.id]?.includes(option.index)"
+          class="fas fa-times-circle icon-incorrect"></i>
       </li>
     </ul>
     <div class="mt-4 flex justify-between">
-      <button (click)="checkAnswer()" [disabled]="selectedOption.length === 0" class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': selectedOption.length === 0}">
+      <button (click)="checkAnswer()" [disabled]="selectedOption.length === 0"
+        class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': selectedOption.length === 0}">
         <i class="fas fa-check mr-2"></i>Responder
       </button>
       <div class="flex space-x-2">
-        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0" class="px-4 py-2 bg-gray-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
+        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0"
+          class="px-4 py-2 bg-gray-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
           <i class="fas fa-arrow-left mr-2"></i>Voltar
         </button>
         <button (click)="nextQuestion()" class="px-4 py-2 bg-yellow-500 text-white rounded">
           Responder Depois
         </button>
-        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex >= filteredQuestions.length - 1" class="px-4 py-2 bg-green-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length - 1}">
+        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex >= filteredQuestions.length && wrongQuestionsQueue.length === 0"
+          class="px-4 py-2 bg-green-500 text-white rounded"
+          [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length && wrongQuestionsQueue.length === 0}">
           Próxima<i class="fas fa-arrow-right ml-2"></i>
         </button>
       </div>
     </div>
-    <div *ngIf="showAnswer && currentQuestion.explanation.length > 0" class="mt-4 p-4 bg-white border border-gray-300 rounded-lg shadow">
+
+  
+    <div *ngIf="showAnswer && currentQuestion.explanation.length > 0"
+      class="mt-4 p-4 bg-white border border-gray-300 rounded-lg shadow">
       <p><strong>Explicação:</strong> {{ currentQuestion.explanation }}</p>
     </div>
-    <button (click)="clearAnsweredQuestions()" class="px-4 py-2 bg-red-500 text-white rounded">
-      Limpar Perguntas Respondidas
-    </button>
+
+    <div style="display:flex; justify-content:space-between; margin-top: 20px; gap: 10px;">
+      <button (click)="clearAnsweredQuestions()" class="px-4 py-2 bg-red-500 text-white rounded">
+        Limpar Perguntas Respondidas
+      </button>
+  
+      <button (click)="filterShortQuestions(320)" [disabled]="!filteredQuestions.length"
+        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        Filtrar Questões com até 320 Caracteres
+      </button>
+  
+      <button (click)="toggleRepeatWrongQuestions()" class="px-4 py-2 bg-purple-500 text-white rounded">
+        {{ repeatWrongQuestions ? 'Desativar' : 'Ativar' }} Repetir Perguntas Erradas
+      </button>
+    </div>
+    
+    <div class="mb-4 flex items-center space-x-2">
+      <input type="number" [(ngModel)]="maxQuestionLength" placeholder="Digite o número de caracteres"
+        class="px-2 py-1 border border-gray-300 rounded" />
+      <button (click)="filterShortQuestions(maxQuestionLength)" [disabled]="!maxQuestionLength"
+        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        Filtrar Questões
+      </button>
+    </div>
+    
   </div>
-  <div class="mt-6 p-4 border rounded shadow">
-    <h2 class="text-xl font-semibold mb-4">Resumo do Teste</h2>
-    <div class="flex items-center mb-2">
-      <i class="fas fa-question-circle text-blue-500 mr-2"></i>
-      <p class="text-lg">Total de Perguntas: <span class="font-bold">{{ filteredQuestions.length }}</span></p>
-    </div>
-    <div class="flex items-center mb-2">
-      <i class="fas fa-check-circle text-green-500 mr-2"></i>
-      <p class="text-lg">Corretas: <span class="font-bold">{{ correctAnswers }}</span></p>
-    </div>
-    <div class="flex items-center">
-      <i class="fas fa-times-circle text-red-500 mr-2"></i>
-      <p class="text-lg">Erradas: <span class="font-bold">{{ incorrectAnswers }}</span></p>
-    </div>
+</div>
+<div class="mt-6 p-4 border rounded shadow">
+  <h2 class="text-xl font-semibold mb-4">Resumo do Teste</h2>
+  <div class="flex items-center mb-2">
+    <i class="fas fa-question-circle text-blue-500 mr-2"></i>
+    <p class="text-lg">Total de Perguntas: <span class="font-bold">{{ filteredQuestions.length }}</span></p>
+  </div>
+  <div class="flex items-center mb-2">
+    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+    <p class="text-lg">Corretas: <span class="font-bold">{{ correctAnswers }}</span></p>
+  </div>
+  <div class="flex items-center">
+    <i class="fas fa-times-circle text-red-500 mr-2"></i>
+    <p class="text-lg">Erradas: <span class="font-bold">{{ incorrectAnswers }}</span></p>
   </div>
 </div>

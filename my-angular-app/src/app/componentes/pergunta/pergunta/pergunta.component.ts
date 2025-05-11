@@ -7,6 +7,7 @@ import { HttpQuestionsService } from '../../../services/http/http-questions.serv
   styleUrls: ['./pergunta.component.css'],
 })
 export class PerguntaComponent implements OnInit {
+  maxQuestionLength: number = 320; // Valor padrão para o número de caracteres
   testStarted: boolean = false;
   showSummary: boolean = false;
   correctAnswers: number = 0;
@@ -24,6 +25,9 @@ export class PerguntaComponent implements OnInit {
   filteredQuestions: any[] = [];
   topics: any[] = [];
   allQuestions: any[] = [];
+  repeatWrongQuestions: boolean = false; // Controla o modo de repetição
+  wrongQuestionsQueue: any[] = []; // Fila de perguntas erradas a serem repetidas
+  filterShortQuestionsActive: boolean = false; // Controla o filtro de questões curtas
 
   constructor(private httpQuestionsService: HttpQuestionsService) {}
 
@@ -73,21 +77,40 @@ export class PerguntaComponent implements OnInit {
     this.unansweredQuestions.add(this.currentQuestion.id);
   }
 
+  toggleRepeatWrongQuestions(): void {
+    this.repeatWrongQuestions = !this.repeatWrongQuestions;
+    if (this.repeatWrongQuestions) {
+      this.wrongQuestionsQueue = []; // Limpa a fila ao ativar o modo
+      alert('Modo de repetição de perguntas erradas ativado!');
+    } else {
+      alert('Modo de repetição de perguntas erradas desativado!');
+    }
+  }
+
   checkAnswer(): void {
     this.showAnswer = true;
     this.showAnswers[this.currentQuestion.id] = true;
-    this.unansweredQuestions.delete(this.currentQuestion.id);
 
-    const correct = this.currentQuestion.answer.every((ans: number) => this.selectedOptions[this.currentQuestion.id].includes(ans)) &&
-                    this.selectedOptions[this.currentQuestion.id].length === this.currentQuestion.answer.length;
+    const selectedAnswers = this.selectedOptions[this.currentQuestion.id] || [];
+    const correctAnswers = this.currentQuestion.answer;
+
+    // Verificar se todas as respostas corretas estão selecionadas e se o número de respostas está correto
+    const correct = correctAnswers.every((ans: number) => selectedAnswers.includes(ans)) &&
+                    selectedAnswers.length === correctAnswers.length;
+
     if (correct) {
       this.correctAnswers++;
     } else {
       this.incorrectAnswers++;
+      if (this.repeatWrongQuestions) {
+        // Adiciona a pergunta errada à fila para repetição
+        const questionToRepeat = { ...this.currentQuestion, repeatAfter: this.currentQuestionIndex + 5 };
+        this.wrongQuestionsQueue.push(questionToRepeat);
+      }
     }
 
-    // Salvar a pergunta como respondida
-    this.saveAnsweredQuestion(this.currentQuestion.id);
+    // Não apagar as opções selecionadas, apenas salvar o estado atual
+    this.saveAnsweredQuestion(this.currentQuestion.id, correct);
 
     // Verificar se é a última pergunta e finalizar o teste
     if (this.currentQuestionIndex >= this.filteredQuestions.length - 1) {
@@ -100,12 +123,37 @@ export class PerguntaComponent implements OnInit {
       alert('Você marcou uma resposta, mas não clicou em "Responder". Por favor, responda antes de continuar.');
       return;
     }
-    if (this.currentQuestionIndex < this.filteredQuestions.length - 1) {
-      this.currentQuestionIndex++;
+
+    this.currentQuestionIndex++;
+
+    // Verifica se há perguntas erradas na fila para repetição
+    const nextWrongQuestion = this.wrongQuestionsQueue.find(q => q.repeatAfter === this.currentQuestionIndex);
+    if (nextWrongQuestion) {
+      this.currentQuestion = nextWrongQuestion;
+      this.wrongQuestionsQueue = this.wrongQuestionsQueue.filter(q => q.id !== nextWrongQuestion.id); // Remove da fila
+
+      // Zera as respostas da pergunta repetida
+      this.selectedOptions[this.currentQuestion.id] = [];
+      this.showAnswers[this.currentQuestion.id] = false;
+      this.selectedOption = [];
+      this.showAnswer = false;
+    } else if (this.currentQuestionIndex < this.filteredQuestions.length) {
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || [];
-      this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
+    } else if (this.repeatWrongQuestions && this.wrongQuestionsQueue.length > 0) {
+      // Se o modo de repetição está ativado e há perguntas erradas na fila
+      this.currentQuestion = this.wrongQuestionsQueue.shift(); // Pega a próxima pergunta errada
+      this.selectedOptions[this.currentQuestion.id] = [];
+      this.showAnswers[this.currentQuestion.id] = false;
+      this.selectedOption = [];
+      this.showAnswer = false;
+      this.currentQuestionIndex--; // Mantém o índice para continuar o fluxo
+    } else {
+      // Finaliza o teste se não houver mais perguntas
+      this.finalizeTest();
     }
+
+    this.selectedOption = this.selectedOptions[this.currentQuestion.id] || [];
+    this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
   }
 
   previousQuestion(): void {
@@ -132,9 +180,26 @@ export class PerguntaComponent implements OnInit {
       return matchesTopic && matchesLevel && notAnswered;
     });
 
+    // Aplicar o filtro de questões curtas, se necessário
+    if (this.filterShortQuestionsActive) {
+      this.filteredQuestions = this.filteredQuestions.filter((question: any) => question.question.length <= 320);
+    }
+
     // Atualizar a pergunta atual
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
+  }
+
+
+  filterShortQuestions(maxLength: number): void {
+    this.filterShortQuestionsActive = true; // Ativa o filtro de questões curtas
+    this.filteredQuestions = this.allQuestions.filter((question: any) => question.question.length <= maxLength);
+
+    // Atualizar a pergunta atual
+    this.currentQuestionIndex = 0;
+    this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
+
+    alert(`Foram filtradas ${this.filteredQuestions.length} questões com até ${maxLength} caracteres.`);
   }
 
   finalizeTest(): void {
@@ -224,11 +289,13 @@ export class PerguntaComponent implements OnInit {
     }
   }
 
-  saveAnsweredQuestion(questionId: string): void {
-    const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
-    if (!answeredQuestions.includes(questionId)) {
-      answeredQuestions.push(questionId);
-      localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
+  saveAnsweredQuestion(questionId: string, isCorrect: boolean): void {
+    if (isCorrect) {
+      const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
+      if (!answeredQuestions.includes(questionId)) {
+        answeredQuestions.push(questionId);
+        localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
+      }
     }
   }
 
