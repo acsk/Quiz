@@ -100,16 +100,32 @@ export class PerguntaComponent implements OnInit {
 
     if (correct) {
       this.correctAnswers++;
+
+      // Remover da lista de perguntas erradas, se existir
+      const wrongQuestions = JSON.parse(localStorage.getItem('wrongQuestions') || '[]');
+      const updatedWrongQuestions = wrongQuestions.filter((id: string) => id !== this.currentQuestion.id);
+      localStorage.setItem('wrongQuestions', JSON.stringify(updatedWrongQuestions));
+
+      // Atualizar o contador de respostas incorretas
+      this.incorrectAnswers = updatedWrongQuestions.length;
     } else {
       this.incorrectAnswers++;
+
+      // Adicionar à lista de perguntas erradas no localStorage
+      const wrongQuestions = JSON.parse(localStorage.getItem('wrongQuestions') || '[]');
+      if (!wrongQuestions.includes(this.currentQuestion.id)) {
+        wrongQuestions.push(this.currentQuestion.id);
+        localStorage.setItem('wrongQuestions', JSON.stringify(wrongQuestions));
+      }
+
       if (this.repeatWrongQuestions) {
-        // Adiciona a pergunta errada à fila para repetição
-        const questionToRepeat = { ...this.currentQuestion, repeatAfter: this.currentQuestionIndex + 5 };
+        // Adiciona a pergunta errada à fila para repetição após 2 perguntas
+        const questionToRepeat = { ...this.currentQuestion, repeatAfter: this.currentQuestionIndex + 2 };
         this.wrongQuestionsQueue.push(questionToRepeat);
       }
     }
 
-    // Não apagar as opções selecionadas, apenas salvar o estado atual
+    // Salvar a pergunta como respondida apenas se estiver correta
     this.saveAnsweredQuestion(this.currentQuestion.id, correct);
 
     // Verificar se é a última pergunta e finalizar o teste
@@ -180,22 +196,19 @@ export class PerguntaComponent implements OnInit {
       return matchesTopic && matchesLevel && notAnswered;
     });
 
-    // Aplicar o filtro de questões curtas, se necessário
-    if (this.filterShortQuestionsActive) {
-      this.filteredQuestions = this.filteredQuestions.filter((question: any) => question.question.length <= 320);
-    }
-
     // Atualizar a pergunta atual
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
   }
 
-
   filterShortQuestions(maxLength: number): void {
     this.filterShortQuestionsActive = true; // Ativa o filtro de questões curtas
-    this.filteredQuestions = this.allQuestions.filter((question: any) => question.question.length <= maxLength);
+    this.filterQuestionsByTopic(); // Reaplica o filtro geral com base nos tópicos e níveis selecionados
 
-    // Atualizar a pergunta atual
+    // Filtra as questões com base no número de caracteres
+    this.filteredQuestions = this.filteredQuestions.filter((question: any) => question.question.length <= maxLength);
+
+    // Atualiza a pergunta atual
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
 
@@ -256,7 +269,10 @@ export class PerguntaComponent implements OnInit {
   
     // Emitir evento de reset para os componentes multi-select-box
     this.resetMultiSelectBoxes = true;
-
+  
+    // Limpar lista de perguntas erradas
+    localStorage.removeItem('wrongQuestions');
+  
     // Reaplicar os filtros para garantir que todas as perguntas sejam exibidas
     this.filterQuestionsByTopic();
   }

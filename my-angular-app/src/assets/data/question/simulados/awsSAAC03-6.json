@@ -1416,7 +1416,7 @@
         }
       ],
       "answer": [
-        2
+        4
       ],
       "explanation": "Explicação geral Resposta: B Motivo: Ao trocar a plataforma de Aurora para Amazon DynamoDB e utilizar um cluster DynamoDB Accelerator (DAX), a aplicação pode lidar com grandes volumes de dados de maneira eficiente e escalável. O uso do DAX ajuda a melhorar o desempenho e reduzir a latência ao armazenar dados em cache, proporcionando uma solução mais escalável. Explicações das Alternativas: Opção A (Refatorar o código da função Lambda para código Apache Tomcat que é executado em instâncias Amazon EC2. Conectar o banco de dados usando drivers nativos de Conectividade de Banco de Dados Java (JDBC)): Essa opção introduz uma complexidade desnecessária ao mover para instâncias EC2 e não oferece as vantagens de escalabilidade e gerenciamento automático fornecidas pelos serviços gerenciados como DynamoDB. Opção C (Configurar duas funções Lambda. Configurar uma função para receber as informações. Configurar a outra função para carregar as informações no banco de dados. Integrar as funções Lambda usando o Amazon Simple Notification Service (Amazon SNS)): Essa opção adiciona complexidade ao dividir a lógica em duas funções e usar o Amazon SNS para integração, quando uma solução mais direta pode ser alcançada. Opção D (Configurar duas funções Lambda. Configurar uma função para receber as informações. Configurar a outra função para carregar as informações no banco de dados. Integrar as funções Lambda usando uma fila do Amazon Simple Queue Service (Amazon SQS)): Embora essa opção seja mais escalável do que a opção C, ela ainda adiciona complexidade com a necessidade de gerenciar uma fila SQS. A troca para DynamoDB com DAX oferece uma solução mais gerenciável."
     },

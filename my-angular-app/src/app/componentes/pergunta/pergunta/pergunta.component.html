@@ -108,22 +108,8 @@
         Limpar Perguntas Respondidas
       </button>
   
-      <button (click)="filterShortQuestions(320)" [disabled]="!filteredQuestions.length"
-        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        Filtrar Questões com até 320 Caracteres
-      </button>
-  
       <button (click)="toggleRepeatWrongQuestions()" class="px-4 py-2 bg-purple-500 text-white rounded">
         {{ repeatWrongQuestions ? 'Desativar' : 'Ativar' }} Repetir Perguntas Erradas
-      </button>
-    </div>
-    
-    <div class="mb-4 flex items-center space-x-2">
-      <input type="number" [(ngModel)]="maxQuestionLength" placeholder="Digite o número de caracteres"
-        class="px-2 py-1 border border-gray-300 rounded" />
-      <button (click)="filterShortQuestions(maxQuestionLength)" [disabled]="!maxQuestionLength"
-        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        Filtrar Questões
       </button>
     </div>
     
