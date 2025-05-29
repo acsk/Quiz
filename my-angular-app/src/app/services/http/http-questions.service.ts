@@ -25,6 +25,7 @@ export class HttpQuestionsService {
   private awsSAAC03QuestionsUrl_4 = 'assets/data/question/simulados/awsSAAC03-4.json';
   private awsSAAC03QuestionsUrl_5 = 'assets/data/question/simulados/awsSAAC03-5.json';
   private awsSAAC03QuestionsUrl_6 = 'assets/data/question/simulados/awsSAAC03-6.json';
+  private awsSAAC03QuestionsUrl_7 = 'assets/data/question/simulados/awsSAAC03-7.json';
   
   //asuntos
   private vpc = 'assets/data/question/assuntos/awsSAAC03-4.json';
@@ -74,6 +75,9 @@ export class HttpQuestionsService {
   getawsSAAC03Questions_6(): Observable<any> {
     return this.http.get<any>(this.awsSAAC03QuestionsUrl_6);
   }
+  getawsSAAC03Questions_7(): Observable<any> {
+    return this.http.get<any>(this.awsSAAC03QuestionsUrl_7);
+  }
   getawsVPC(): Observable<any> {
     return this.http.get<any>(this.vpc);
   }
@@ -104,6 +108,7 @@ export class HttpQuestionsService {
       awsSAAC034: this.getawsSAAC03Questions_4(),
       awsSAAC035: this.getawsSAAC03Questions_5(),
       awsSAAC036: this.getawsSAAC03Questions_6(),
+      awsSAAC037: this.getawsSAAC03Questions_7(),
      
       //assuntos
       vpc: this.getawsVPC(),
@@ -125,6 +130,7 @@ export class HttpQuestionsService {
           ...responses.awsSAAC034.questions,
           ...responses.awsSAAC035.questions,
           ...responses.awsSAAC036.questions,
+          ...responses.awsSAAC037.questions,
          
           //assuntos
           ...responses.vpc.questions,
