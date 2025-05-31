@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": "id-hfeedrdzc",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um arquiteto de soluções precisa projetar uma aplicação altamente disponível composta por camadas web, de aplicação e de banco de dados. A entrega de conteúdo HTTPS deve ser o mais próxima possível da borda, com o menor tempo de entrega. Qual solução atende a esses requisitos e é MAIS segura?",
       "options": [
@@ -30,7 +30,7 @@
     },
     {
       "id": "id-a7c3p23pb",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa deseja experimentar com contas AWS individuais para sua equipe de engenheiros. A empresa quer ser notificada assim que o uso de instâncias Amazon EC2 em um determinado mês ultrapassar um limite específico para cada conta. O que um arquiteto de soluções deve fazer para atender a esse requisito da maneira MAIS eficiente em termos de custo?",
       "options": [
@@ -58,7 +58,7 @@
     },
     {
       "id": "id-lv3yh02ad",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma aplicação em execução em uma instância Amazon EC2 na VPC-A precisa acessar arquivos em outra instância EC2 na VPC-B. Ambas as VPCs estão em contas AWS separadas. O administrador de rede precisa projetar uma solução para configurar acesso seguro à instância EC2 na VPC-B a partir da VPC-A. A conectividade não deve ter um único ponto de falha ou preocupações com largura de banda. Qual solução atenderá a esses requisitos?",
       "options": [
@@ -86,7 +86,7 @@
     },
     {
       "id": "id-sgyt8rbyl",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa está utilizando um sistema de gerenciamento de conteúdo que roda em uma única instância Amazon EC2. A instância EC2 contém tanto o servidor web quanto o software de banco de dados. A empresa precisa tornar sua plataforma de website altamente disponível e permitir que o website dimensione para atender à demanda do usuário. O que um arquiteto de soluções deveria recomendar para atender a esses requisitos?",
       "options": [
@@ -114,7 +114,7 @@
     },
     {
       "id": "id-xwgpwuq96",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um laboratório de pesquisa médica produz dados relacionados a um novo estudo. O laboratório deseja disponibilizar os dados com latência mínima para clínicas em todo o país, para uso em suas aplicações baseadas em arquivos no local. Os arquivos de dados estão armazenados em um bucket do Amazon S3 com permissões somente leitura para cada clínica. O que um arquiteto de soluções deveria recomendar para atender a esses requisitos?",
       "options": [
@@ -142,7 +142,7 @@
     },
     {
       "id": "id-en9j6l5d0",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa hospeda sua aplicação web na AWS usando sete instâncias do Amazon EC2. A empresa requer que os endereços IP de todas as instâncias EC2 saudáveis sejam retornados em resposta às consultas DNS. Qual política deve ser usada para atender a esse requisito?",
       "options": [
@@ -170,7 +170,7 @@
     },
     {
       "id": "id-8bco3isid",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa está revisando uma migração recente de uma aplicação de três camadas para uma VPC. A equipe de segurança descobre que o princípio do menor privilégio não está sendo aplicado às regras de entrada e saída de grupos de segurança do Amazon EC2 entre as camadas da aplicação. O que um arquiteto de soluções deve fazer para corrigir esse problema?",
       "options": [
@@ -198,7 +198,7 @@
     },
     {
       "id": "id-6w2u3m3k6",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um arquiteto de soluções criou duas políticas do IAM: Política1 e Política2. Ambas as políticas estão anexadas a um grupo do IAM. Um engenheiro de nuvem é adicionado como um usuário do IAM ao grupo do IAM. Que ação o engenheiro de nuvem poderá realizar?",
       "options": [
@@ -226,7 +226,7 @@
     },
     {
       "id": "id-pf4lm8641",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa lançou recentemente uma variedade de novas cargas de trabalho em instâncias Amazon EC2 em sua conta AWS. A empresa precisa criar uma estratégia para acessar e administrar as instâncias remotamente e com segurança. A empresa precisa implementar um processo repetível que funcione com serviços nativos da AWS e siga o AWS Well-Architected Framework. Qual solução atenderá a esses requisitos com o MENOR esforço operacional?",
       "options": [
@@ -254,7 +254,7 @@
     },
     {
       "id": "id-89fl45lnx",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa está hospedando um site estático no Amazon S3 e está utilizando o Amazon Route 53 para DNS. O site está enfrentando uma demanda crescente de todo o mundo. A empresa precisa diminuir a latência para usuários que acessam o site. Qual solução atende a esses requisitos de forma MAIS eficiente em termos de custo?",
       "options": [
@@ -282,7 +282,7 @@
     },
     {
       "id": "id-ws18kj41n",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "A empresa planeja usar o Amazon ElastiCache para sua aplicação web de vários níveis. Um arquiteto de soluções cria uma VPC de Cache para o cluster ElastiCache e uma VPC de Aplicativo para as instâncias do Amazon EC2 da aplicação. Ambas as VPCs estão na região us-east-1. O arquiteto de soluções deve implementar uma solução para fornecer às instâncias EC2 da aplicação acesso ao cluster ElastiCache. Qual solução atenderá a esses requisitos da maneira mais eficaz em termos de custo?",
       "options": [
@@ -310,7 +310,7 @@
     },
     {
       "id": "id-ykjttp3jx",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa anunciou recentemente a implantação de seu site de varejo para uma audiência global. O site é executado em várias instâncias do Amazon EC2 atrás de um Elastic Load Balancer. As instâncias são executadas em um grupo de dimensionamento automático em várias Zonas de Disponibilidade. A empresa deseja fornecer aos seus clientes diferentes versões de conteúdo com base nos dispositivos que os clientes usam para acessar o site. Qual combinação de ações um arquiteto de soluções deve tomar para atender a esses requisitos? (Escolha duas.)",
       "options": [
@@ -343,7 +343,7 @@
     },
     {
       "id": "id-bqxrokha6",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um arquiteto de soluções criou duas políticas gerenciadas no IAM: Política1 e Política2. Ambas as políticas estão anexadas a um grupo do IAM, e um engenheiro de nuvem foi adicionado como usuário IAM a esse grupo. Sabendo que: Política1 nega a permissão para excluir instâncias do Amazon EC2 e permite visualizar logs do Amazon CloudWatch Logs (somente visualizar, mas não excluir). Política2 concede permissão para excluir instâncias do Amazon EC2, e para excluir logs do Amazon CloudWatch Logs. Nenhuma outra política está anexada ao usuário ou ao grupo. Com base nas permissões concedidas, que ação o engenheiro de nuvem poderá realizar?",
       "options": [
@@ -371,7 +371,7 @@
     },
     {
       "id": "id-2l8gfanmy",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa possui um milhão de usuários que utilizam seu aplicativo móvel. A empresa precisa analisar o uso de dados em tempo quase real. Além disso, a empresa precisa criptografar os dados em tempo quase real e armazená-los em um local centralizado no formato Apache Parquet para processamento adicional. Qual solução atenderá a esses requisitos com o MÍNIMO de operações?",
       "options": [
@@ -399,7 +399,7 @@
     },
     {
       "id": "id-vv30uperr",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa possui uma plataforma de jogos popular executada na AWS. A aplicação é sensível à latência porque a latência pode afetar a experiência do usuário e introduzir vantagens injustas para alguns jogadores. A aplicação está implantada em todas as Regiões da AWS. Ela é executada em instâncias Amazon EC2 que fazem parte de grupos de dimensionamento automático configurados atrás de Balanceadores de Carga de Aplicativos (ALBs). Um arquiteto de soluções precisa implementar um mecanismo para monitorar a saúde da aplicação e redirecionar o tráfego para endpoints saudáveis. Qual solução atende a esses requisitos?",
       "options": [
@@ -427,7 +427,7 @@
     },
     {
       "id": "id-i4zf67rph",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa possui uma API que recebe dados em tempo real de uma frota de dispositivos de monitoramento. A API armazena esses dados em uma instância de banco de dados Amazon RDS para análises posteriores. A quantidade de dados que os dispositivos de monitoramento enviam para a API flutua. Durante períodos de tráfego intenso, a API frequentemente retorna erros de tempo limite. Após uma inspeção nos logs, a empresa determina que o banco de dados não é capaz de processar o volume de tráfego de gravação proveniente da API. Um arquiteto de soluções deve minimizar o número de conexões com o banco de dados e garantir que os dados não sejam perdidos durante períodos de tráfego intenso. Qual solução atenderá a esses requisitos?",
       "options": [
@@ -455,7 +455,7 @@
     },
     {
       "id": "id-fv4e8n2b4",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "A equipe de segurança de uma empresa solicita que o tráfego de rede seja capturado nos VPC Flow Logs. Os logs serão acessados com frequência por 90 dias e, em seguida, acessados de forma intermitente. O que um arquiteto de soluções deve fazer para atender a esses requisitos ao configurar os logs?",
       "options": [
@@ -483,7 +483,7 @@
     },
     {
       "id": "id-bkkznozsm",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um arquiteto de soluções observa que um trabalho de processamento em lote noturno é automaticamente dimensionado para cima por 1 hora antes que a capacidade desejada do Amazon EC2 seja atingida. A capacidade máxima é a mesma todas as noites, e os trabalhos em lote sempre começam às 1h da manhã. O arquiteto de soluções precisa encontrar uma solução custo-eficaz que permita atingir rapidamente a capacidade desejada do EC2 e permita que o grupo de dimensionamento automático diminua após a conclusão dos trabalhos em lote. O que o arquiteto de soluções deve fazer para atender a esses requisitos?",
       "options": [
@@ -511,7 +511,7 @@
     },
     {
       "id": "id-8ivme9mrr",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma aplicação é executada em uma instância Amazon EC2 que possui um endereço Elastic IP na VPC A. A aplicação requer acesso a um banco de dados na VPC B. Ambas as VPCs estão na mesma conta da AWS. Qual solução fornecerá o acesso necessário de maneira MAIS segura?",
       "options": [
@@ -539,7 +539,7 @@
     },
     {
       "id": "id-0iltvsebq",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um arquiteto de soluções criou uma nova conta AWS e precisa garantir o acesso seguro do usuário root da conta AWS.",
       "options": [
@@ -572,7 +572,7 @@
     },
     {
       "id": "id-4sof14twp",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa precisa reter seus registros de logs do AWS CloudTrail por 3 anos. A empresa está aplicando o CloudTrail em um conjunto de contas da AWS usando a AWS Organizations a partir da conta principal. O bucket S3 de destino do CloudTrail está configurado com a versão S3 habilitada. Uma política de ciclo de vida do S3 está em vigor para excluir objetos atuais após 3 anos. Após o quarto ano de uso do bucket S3, as métricas do bucket S3 mostram que o número de objetos continuou a aumentar. No entanto, o número de novos logs do CloudTrail entregues ao bucket S3 permaneceu consistente. Qual solução excluirá objetos com mais de 3 anos da maneira MAIS econômica?",
       "options": [
@@ -600,7 +600,7 @@
     },
     {
       "id": "id-6ln4doz8j",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa gerencia suas próprias instâncias Amazon EC2 que executam bancos de dados MySQL. A empresa está gerenciando manualmente a replicação e a escala conforme a demanda aumenta ou diminui. A empresa precisa de uma nova solução que simplifique o processo de adição ou remoção de capacidade de computação de ou para sua camada de banco de dados conforme necessário. A solução também deve oferecer melhor desempenho, escalabilidade e durabilidade com o mínimo de esforço operacional. Qual solução atende a esses requisitos?",
       "options": [
@@ -628,7 +628,7 @@
     },
     {
       "id": "id-yoplveiin",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa está preocupada que duas instâncias NAT em uso não conseguirão mais suportar o tráfego necessário para a aplicação da empresa. Um arquiteto de soluções deseja implementar uma solução que seja altamente disponível, tolerante a falhas e escalável automaticamente. O que o arquiteto de soluções deveria recomendar?",
       "options": [
@@ -656,7 +656,7 @@
     },
     {
       "id": "id-tqtvve8pp",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa executa um aplicativo em um grupo de instâncias Amazon Linux EC2. Por razões de conformidade, a empresa deve reter todos os arquivos de log do aplicativo por 7 anos. Os arquivos de log serão analisados por uma ferramenta de relatórios que deve ser capaz de acessar todos os arquivos simultaneamente. Qual solução de armazenamento atende a esses requisitos de maneira MAIS eficiente em termos de custo?",
       "options": [
@@ -684,7 +684,7 @@
     },
     {
       "id": "id-oi238kel9",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa contratou um fornecedor externo para realizar trabalho na conta AWS da empresa. O fornecedor utiliza uma ferramenta automatizada hospedada em uma conta AWS de propriedade do fornecedor. O fornecedor não possui acesso IAM à conta AWS da empresa. Como um arquiteto de soluções concederia esse acesso ao fornecedor?",
       "options": [
@@ -712,7 +712,7 @@
     },
     {
       "id": "id-soyg8otkf",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa mantém um repositório pesquisável de itens em seu site. Os dados são armazenados em uma tabela de banco de dados Amazon RDS para MySQL que contém mais de 10 milhões de linhas. O banco de dados possui 2 TB de armazenamento SSD de propósito geral. Existem milhões de atualizações nesses dados todos os dias por meio do site da empresa. A empresa percebeu que algumas operações de inserção estão levando 10 segundos ou mais. A empresa determinou que o desempenho de armazenamento do banco de dados é o problema. Qual solução aborda esse problema de desempenho?",
       "options": [
@@ -740,7 +740,7 @@
     },
     {
       "id": "id-1gtmal3uk",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa implantou um aplicativo Java Spring Boot como um pod que é executado no Amazon Elastic Kubernetes Service (Amazon EKS) em sub-redes privadas. O aplicativo precisa gravar dados em uma tabela do Amazon DynamoDB. Um arquiteto de soluções deve garantir que o aplicativo possa interagir com a tabela do DynamoDB sem expor o tráfego para a internet. Qual combinação de etapas o arquiteto de soluções deve realizar para atingir esse objetivo? (Escolha duas.)",
       "options": [
@@ -773,7 +773,7 @@
     },
     {
       "id": "id-cxudgh1r9",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa possui um site serverless com milhões de objetos em um bucket do Amazon S3. A empresa usa o bucket S3 como origem para uma distribuição do Amazon CloudFront. A empresa não configurou a criptografia no bucket S3 antes do carregamento dos objetos. Um arquiteto de soluções precisa habilitar a criptografia para todos os objetos existentes e para todos os objetos que serão adicionados ao bucket S3 no futuro. Qual solução atenderá a esses requisitos com o MENOR esforço?",
       "options": [
@@ -801,7 +801,7 @@
     },
     {
       "id": "id-6i5jrho55",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um arquiteto de soluções está projetando uma nova API usando o Amazon API Gateway que receberá solicitações de usuários. O volume de solicitações é altamente variável; várias horas podem passar sem receber uma única solicitação. O processamento de dados ocorrerá de forma assíncrona, mas deve ser concluído em poucos segundos após uma solicitação ser feita. Qual serviço de computação o arquiteto de soluções deve ter a API invocar para atender aos requisitos com o menor custo?",
       "options": [
@@ -829,7 +829,7 @@
     },
     {
       "id": "id-jalib4t8p",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa hospeda várias aplicações de produção. Uma das aplicações consiste em recursos do Amazon EC2, AWS Lambda, Amazon RDS, Amazon Simple Notification Service (Amazon SNS) e Amazon Simple Queue Service (Amazon SQS) em várias regiões da AWS. Todos os recursos da empresa estão marcados com um nome de tag \"application\" e um valor que corresponde a cada aplicação. Um arquiteto de soluções deve fornecer a solução mais rápida para identificar todos os componentes marcados. Qual solução atende a esses requisitos?",
       "options": [
@@ -857,7 +857,7 @@
     },
     {
       "id": "id-ychl2ppq3",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "O sistema de relatórios de uma empresa entrega centenas de arquivos .csv para um bucket do Amazon S3 todos os dias. A empresa precisa converter esses arquivos para o formato Apache Parquet e armazená-los em um bucket de dados transformados. Qual solução atenderá a esses requisitos com o MÍNIMO esforço de desenvolvimento?",
       "options": [
@@ -885,7 +885,7 @@
     },
     {
       "id": "id-2fxxms6nq",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "A empresa deseja gerenciar Amazon Machine Images (AMIs). Atualmente, a empresa copia AMIs para a mesma Região da AWS onde as AMIs foram criadas. A empresa precisa projetar uma aplicação que capture chamadas de API da AWS e envie alertas sempre que a operação de API CreateImage do Amazon EC2 for chamada dentro da conta da empresa. Qual solução atenderá a esses requisitos com o MÍNIMO esforço operacional?",
       "options": [
@@ -913,7 +913,7 @@
     },
     {
       "id": "id-h03cfpy9w",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa oferece um serviço de entrega de alimentos que está crescendo rapidamente. Devido ao crescimento, o sistema de processamento de pedidos da empresa está enfrentando problemas de dimensionamento durante as horas de pico de tráfego. A arquitetura atual inclui o seguinte: Um grupo de instâncias Amazon EC2 que são executadas em um grupo de Auto Scaling do Amazon EC2 para coletar pedidos do aplicativo. Outro grupo de instâncias EC2 que são executadas em um grupo de Auto Scaling do Amazon EC2 para atender pedidos. O processo de coleta de pedidos ocorre rapidamente, mas o processo de atendimento de pedidos pode levar mais tempo. Os dados não devem ser perdidos devido a um evento de dimensionamento. Um arquiteto de soluções deve garantir que o processo de coleta de pedidos e o processo de atendimento de pedidos possam ser dimensionados adequadamente durante as horas de pico de tráfego. A solução deve otimizar a utilização dos recursos da AWS da empresa. Qual solução atende a esses requisitos?",
       "options": [
@@ -941,7 +941,7 @@
     },
     {
       "id": "id-b7ev3ycwn",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um usuário IAM realizou várias alterações de configuração nos recursos da AWS na conta de sua empresa durante uma implantação de produção na semana passada. Um arquiteto de soluções descobriu que algumas regras de grupo de segurança não estão configuradas conforme desejado. O arquiteto de soluções deseja confirmar qual usuário IAM foi responsável pelas alterações. Qual serviço o arquiteto de soluções deve usar para encontrar a informação desejada?",
       "options": [
@@ -969,7 +969,7 @@
     },
     {
       "id": "id-3r63f023y",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa está utilizando o roteamento baseado em latência do Amazon Route 53 para direcionar solicitações para sua aplicação baseada em UDP para usuários ao redor do mundo. A aplicação está hospedada em servidores redundantes nos data centers locais da empresa nos Estados Unidos, Ásia e Europa. Os requisitos de conformidade da empresa afirmam que a aplicação deve ser hospedada localmente. A empresa deseja melhorar o desempenho e a disponibilidade da aplicação. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
       "options": [
@@ -997,7 +997,7 @@
     },
     {
       "id": "id-miuq8m3q4",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa executa uma aplicação em instâncias Amazon EC2 Linux em várias Zones de Disponibilidade. A aplicação precisa de uma camada de armazenamento altamente disponível e compatível com o Portable Operating System Interface (POSIX). A camada de armazenamento deve fornecer a máxima durabilidade dos dados e deve ser compartilhável entre as instâncias EC2. Os dados na camada de armazenamento serão acessados frequentemente nos primeiros 30 dias e, após esse período, serão acessados raramente. Qual solução atenderá a esses requisitos da forma mais eficaz em termos de custo?",
       "options": [
@@ -1025,7 +1025,7 @@
     },
     {
       "id": "id-25bs68ytk",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa que hospeda sua aplicação web na AWS deseja garantir que todas as instâncias do Amazon EC2, instâncias de banco de dados do Amazon RDS e clusters do Amazon Redshift sejam configurados com tags. A empresa deseja minimizar o esforço de configurar e operar essa verificação. O que um arquiteto de soluções deve fazer para atingir esse objetivo?",
       "options": [
@@ -1053,7 +1053,7 @@
     },
     {
       "id": "id-pl71yiykm",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa opera uma aplicação que recebe dados de milhares de dispositivos remotos geograficamente dispersos que utilizam o UDP. A aplicação processa os dados imediatamente e envia uma mensagem de volta ao dispositivo, se necessário. Nenhum dado é armazenado. A empresa precisa de uma solução que minimize a latência para a transmissão de dados pelos dispositivos. A solução também deve fornecer failover rápido para outra Região da AWS. Qual solução atenderá a esses requisitos?",
       "options": [
@@ -1081,7 +1081,7 @@
     },
     {
       "id": "id-n0u3coww3",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um hospital está projetando uma nova aplicação que coleta sintomas de pacientes. O hospital decidiu usar o Amazon Simple Queue Service (Amazon SQS) e o Amazon Simple Notification Service (Amazon SNS) na arquitetura. Um arquiteto de soluções está revisando o design da infraestrutura. Os dados devem ser criptografados em repouso e em trânsito. Somente o pessoal autorizado do hospital deve ser capaz de acessar os dados. Qual combinação de etapas o arquiteto de soluções deve tomar para atender a esses requisitos? (Selecione DUAS.)",
       "options": [
@@ -1114,7 +1114,7 @@
     },
     {
       "id": "id-x8ec05wg9",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um arquiteto de soluções está criando um novo design de VPC. Existem duas sub-redes públicas para o balanceador de carga, duas sub-redes privadas para os servidores web e duas sub-redes privadas para o MySQL. Os servidores web usam apenas HTTPS. O arquiteto de soluções já criou um grupo de segurança para o balanceador de carga, permitindo a porta 443 de 0.0.0.0/0. A política da empresa exige que cada recurso tenha o acesso mínimo necessário para ainda ser capaz de realizar suas tarefas. Qual estratégia adicional de configuração o arquiteto de soluções deve usar para atender a esses requisitos?",
       "options": [
@@ -1142,7 +1142,7 @@
     },
     {
       "id": "id-bfm1otl5q",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa implementou recentemente um novo sistema de auditoria para centralizar informações sobre versões do sistema operacional, aplicação de patches e software instalado em instâncias do Amazon EC2. Um arquiteto de soluções deve garantir que todas as instâncias provisionadas por meio de grupos de Auto Scaling do EC2 enviem relatórios para o sistema de auditoria assim que forem lançadas e terminadas. Qual solução alcança esses objetivos de maneira MAIS eficiente?",
       "options": [
@@ -1170,7 +1170,7 @@
     },
     {
       "id": "id-076afneqg",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma equipe de desenvolvimento precisa hospedar um site que será acessado por outras equipes. O conteúdo do site consiste em HTML, CSS, JavaScript do lado do cliente e imagens. Qual método é o MAIS econômico para hospedar o site?",
       "options": [
@@ -1198,7 +1198,7 @@
     },
     {
       "id": "id-yef3d00ru",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa lançou uma instância Amazon RDS para MySQL do tipo db.t6. A maioria das conexões ao banco de dados provém de aplicativos serverless. O tráfego do aplicativo para o banco de dados muda significativamente em intervalos aleatórios. Em momentos de alta demanda, os usuários relatam que seus aplicativos enfrentam erros de rejeição de conexão com o banco de dados. Qual solução resolverá esse problema com o MENOR esforço operacional?",
       "options": [
@@ -1226,7 +1226,7 @@
     },
     {
       "id": "id-lmq7rul4j",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um desenvolvedor possui um aplicativo que utiliza uma função AWS Lambda para fazer upload de arquivos no Amazon S3 e precisa das permissões necessárias para executar essa tarefa. O desenvolvedor já possui um usuário IAM com credenciais IAM válidas necessárias para o Amazon S3. O que um arquiteto de soluções deve fazer para conceder as permissões?",
       "options": [
@@ -1254,7 +1254,7 @@
     },
     {
       "id": "id-by7qi2y9u",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa possui um grande conjunto de dados para seu negócio de publicidade online armazenado em uma instância de banco de dados Amazon RDS para MySQL em uma única Zona de Disponibilidade. A empresa deseja que as consultas de relatórios comerciais sejam executadas sem afetar as operações de gravação na instância de banco de dados de produção. Qual solução atende a esses requisitos?",
       "options": [
@@ -1282,7 +1282,7 @@
     },
     {
       "id": "id-5k2wui2cs",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma startup meteorológica possui uma aplicação web personalizada para vender dados meteorológicos aos seus usuários online. A empresa utiliza o Amazon DynamoDB para armazenar seus dados e deseja construir um novo serviço que envie um alerta aos gerentes de quatro equipes internas sempre que um novo evento meteorológico for registrado. A empresa não quer que o novo serviço afete o desempenho da aplicação atual. O que um arquiteto de soluções deve fazer para atender a esses requisitos com o MÍNIMO de sobrecarga operacional?",
       "options": [
@@ -1310,7 +1310,7 @@
     },
     {
       "id": "id-lpvc2ban1",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa está desenvolvendo um jogo multiplayer em tempo real que utiliza o UDP para comunicação entre o cliente e os servidores. Em um grupo de Auto Scaling, são esperados picos de demanda durante o dia, então a plataforma do servidor de jogo deve se adaptar conforme necessário. Os desenvolvedores desejam armazenar as pontuações dos jogadores e outros dados não relacionais em uma solução de banco de dados que dimensionará sem intervenção. Qual solução um arquiteto de soluções deveria recomendar?",
       "options": [
@@ -1338,7 +1338,7 @@
     },
     {
       "id": "id-25083o1br",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa possui uma aplicação web com padrões de uso esporádicos. Há um uso intenso no início de cada mês, uso moderado no início de cada semana e uso imprevisível durante a semana. A aplicação consiste em um servidor web e um servidor de banco de dados MySQL em execução dentro do data center. A empresa gostaria de mover a aplicação para a AWS Cloud e precisa selecionar uma plataforma de banco de dados custo-eficaz que não exigirá modificações no banco de dados. Qual solução atenderá a esses requisitos?",
       "options": [
@@ -1366,7 +1366,7 @@
     },
     {
       "id": "id-vlulx43iv",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa opera uma aplicação web de mercado online na AWS. A aplicação atende a centenas de milhares de usuários durante as horas de pico. A empresa precisa de uma solução escalável e quase em tempo real para compartilhar os detalhes de milhões de transações financeiras com várias outras aplicações internas. As transações também precisam ser processadas para remover dados sensíveis antes de serem armazenadas em um banco de dados de documentos para recuperação de baixa latência. O que um arquiteto de soluções deve recomendar para atender a esses requisitos?",
       "options": [
@@ -1394,7 +1394,7 @@
     },
     {
       "id": "id-v55g9atfo",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa deseja restringir o acesso ao conteúdo de uma de suas principais aplicações web e proteger o conteúdo usando técnicas de autorização disponíveis na AWS. A empresa deseja implementar uma arquitetura serverless e uma solução de autenticação para menos de 100 usuários. A solução precisa integrar-se à principal aplicação web e servir conteúdo web globalmente. A solução também deve escalar à medida que a base de usuários da empresa cresce, fornecendo a menor latência possível no login.",
       "options": [
@@ -1422,7 +1422,7 @@
     },
     {
       "id": "id-e352de3ku",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa executa uma aplicação web pública de três camadas em uma VPC. A aplicação é executada em instâncias do Amazon EC2 em várias Zonas de Disponibilidade. As instâncias do EC2 que são executadas em sub-redes privadas precisam se comunicar com um servidor de licenças pela internet. A empresa precisa de uma solução gerenciada que minimize a manutenção operacional. Qual solução atende a esses requisitos?",
       "options": [
@@ -1450,7 +1450,7 @@
     },
     {
       "id": "id-1bidl2a9v",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa precisa transferir 600 TB de dados do seu sistema de armazenamento conectado à rede (NAS) local para a AWS Cloud. A transferência de dados deve ser concluída em 2 semanas. Os dados são sensíveis e devem ser criptografados em trânsito. A conexão com a internet da empresa suporta uma velocidade de upload de 100 Mbps. Qual solução atende a esses requisitos de maneira MAIS custo-eficaz?",
       "options": [
@@ -1478,7 +1478,7 @@
     },
     {
       "id": "id-xz6k2z2k7",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa migrou uma aplicação para instâncias Amazon EC2 Linux. Uma dessas instâncias EC2 executa várias tarefas programadas de 1 hora cada. Essas tarefas foram escritas por equipes diferentes e não têm uma linguagem de programação comum. A empresa está preocupada com o desempenho e a escalabilidade enquanto essas tarefas são executadas em uma única instância. Um arquiteto de soluções precisa implementar uma solução para resolver essas preocupações. Qual solução atenderá a esses requisitos com o MÍNIMO de sobrecarga operacional?",
       "options": [
@@ -1506,7 +1506,7 @@
     },
     {
       "id": "id-0rmbkk47w",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa deseja migrar um banco de dados Oracle para a AWS. O banco de dados consiste em uma única tabela que contém milhões de imagens de sistemas de informações geográficas (GIS) em alta resolução, identificadas por um código geográfico. Quando ocorre um desastre natural, dezenas de milhares de imagens são atualizadas a cada poucos minutos. Cada código geográfico tem uma única imagem ou linha associada a ele. A empresa deseja uma solução altamente disponível e escalável durante tais eventos. Qual solução atende a esses requisitos de maneira MAIS eficiente em termos de custo?",
       "options": [
@@ -1534,7 +1534,7 @@
     },
     {
       "id": "id-f3b4w8izy",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um laboratório de pesquisa precisa processar aproximadamente 8 TB de dados. O laboratório requer latências submilissegundo e uma taxa de transferência mínima de 6 GBps para o subsistema de armazenamento. Centenas de instâncias Amazon EC2 executarão o Amazon Linux para distribuir e processar os dados. Qual solução atenderá aos requisitos de desempenho?",
       "options": [
@@ -1562,7 +1562,7 @@
     },
     {
       "id": "id-6ulc4ijq7",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa implementou um serviço de DNS auto-gerenciado na AWS. A solução é composta por: Instâncias Amazon EC2 em diferentes Regiões da AWS Endpoints de um acelerador padrão na AWS Global Accelerator A empresa deseja proteger a solução contra ataques DDoS. O que um arquiteto de soluções deve fazer para atender a esse requisito?",
       "options": [
@@ -1590,7 +1590,7 @@
     },
     {
       "id": "id-e7lya7oal",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "A empresa hospeda suas aplicações de várias camadas na AWS. Para conformidade, governança, auditoria e segurança, a empresa deve rastrear as alterações de configuração em seus recursos da AWS e registrar um histórico das chamadas de API feitas a esses recursos. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
       "options": [
@@ -1618,7 +1618,7 @@
     },
     {
       "id": "id-ymc2xjqhx",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa de jogos está migrando sua pontuação pública de um data center para a AWS Cloud. A empresa utiliza instâncias do Amazon EC2 com Windows Server atrás de um Application Load Balancer para hospedar sua aplicação dinâmica. A empresa precisa de uma solução de armazenamento altamente disponível para a aplicação. A aplicação é composta por arquivos estáticos e código dinâmico no servidor. Qual combinação de etapas um arquiteto de soluções deve seguir para atender a esses requisitos? (Selecione DUAS.)",
       "options": [
@@ -1651,7 +1651,7 @@
     },
     {
       "id": "id-dc1unyqvj",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa hospeda um aplicativo frontend que utiliza um backend de API Amazon API Gateway integrado com o AWS Lambda. Quando a API recebe solicitações, a função Lambda carrega muitas bibliotecas. Em seguida, a função Lambda se conecta a um banco de dados Amazon RDS, processa os dados e retorna os resultados para o aplicativo frontend. A empresa deseja garantir que a latência de resposta seja a mais baixa possível para todos os usuários, com o menor número possível de alterações nas operações da empresa. Qual solução atenderá a esses requisitos?",
       "options": [
@@ -1679,7 +1679,7 @@
     },
     {
       "id": "id-lyc6i1tpp",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "A empresa planeja usar o Amazon ElastiCache para sua aplicação web de vários níveis. Um arquiteto de soluções cria uma Cache VPC para o cluster ElastiCache e uma App VPC para as instâncias do Amazon EC2 da aplicação. Ambas as VPCs estão na região us-east-1. O arquiteto de soluções deve implementar uma solução para fornecer às instâncias EC2 da aplicação acesso ao cluster ElastiCache. Qual solução atenderá a esses requisitos de forma MAIS eficaz em termos de custo?",
       "options": [
@@ -1707,7 +1707,7 @@
     },
     {
       "id": "id-7wlk7ab1r",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "A empresa possui um aplicativo que coloca centenas de arquivos .csv em um bucket do Amazon S3 a cada hora. Os arquivos têm tamanho de 1 GB. Cada vez que um arquivo é carregado, a empresa precisa convertê-lo para o formato Apache Parquet e colocar o arquivo de saída em outro bucket do S3. Qual solução atenderá a esses requisitos com o MENOR esforço operacional?",
       "options": [
@@ -1735,7 +1735,7 @@
     },
     {
       "id": "id-bn7fyj9fl",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa está desenvolvendo um novo aplicativo móvel. A empresa precisa implementar filtragem de tráfego adequada para proteger seu Application Load Balancer (ALB) contra ataques comuns de nível de aplicativo, como scripting entre sites ou injeção de SQL. A empresa possui infraestrutura mínima e equipe operacional limitada. A empresa precisa reduzir sua parcela de responsabilidade na gestão, atualização e segurança de servidores para seu ambiente AWS. O que um arquiteto de soluções deveria recomendar para atender a esses requisitos?",
       "options": [
@@ -1763,7 +1763,7 @@
     },
     {
       "id": "id-7tpjnm0l3",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Um arquiteto de soluções precisa projetar um sistema para armazenar arquivos de casos de clientes. Os arquivos são ativos essenciais da empresa e são importantes. O número de arquivos aumentará ao longo do tempo. Os arquivos devem ser acessíveis simultaneamente a partir de vários servidores de aplicativos que são executados em instâncias Amazon EC2. A solução deve ter redundância incorporada. Qual solução atende a esses requisitos?",
       "options": [
@@ -1791,7 +1791,7 @@
     },
     {
       "id": "id-oa57ponun",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma instância Amazon EC2 está localizada em uma sub-rede privada em uma nova VPC. Esta sub-rede não possui acesso à internet de saída, mas a instância EC2 precisa da capacidade de baixar atualizações de segurança mensais de um fornecedor externo. O que um arquiteto de soluções deve fazer para atender a esses requisitos?",
       "options": [
@@ -1819,7 +1819,7 @@
     },
     {
       "id": "id-mwdg5nd8g",
-      "topicId": 42,
+      "topicId": 54,
       "levelId": 1,
       "question": "Uma empresa de ensino online está migrando para a AWS Cloud. A empresa mantém os registros de seus alunos em um banco de dados PostgreSQL. A empresa precisa de uma solução na qual seus dados estejam disponíveis e online em várias Regiões da AWS o tempo todo. Qual solução atenderá a esses requisitos com o MENOR esforço operacional?",
       "options": [
