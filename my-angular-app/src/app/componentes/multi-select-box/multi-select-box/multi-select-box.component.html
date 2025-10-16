@@ -1,27 +1,68 @@
-<div class="relative" clickOutside (clickOutside)="closeDropdown()">
-  <div class="rounded-md cursor-pointer flex items-center" (click)="toggleDropdown()">
-    <input type="text" class="input-simulated w-full" [value]="selectedItems.length === 0 ? 'Selecione os Tópicos' : selectedItems.length + ' Tópico(s) Selecionado(s)'" readonly>
-    <i class="ml-2 fa" [ngClass]="{'fa-chevron-down': !dropdownOpen, 'fa-chevron-up': dropdownOpen}"></i>
-  </div>
-  <div *ngIf="dropdownOpen" class="absolute mt-1 w-full bg-white border rounded-md shadow-lg z-10">
-    <input #searchInput type="text" [(ngModel)]="searchText" (input)="filterItems()" placeholder="Pesquisar..." class="w-full p-2 border-b">
-    <ul class="max-h-60 overflow-auto">
-      <li class="p-2">
-        <label class="flex items-center">
-          <input type="checkbox" [checked]="allSelected" (change)="toggleSelectAll()" class="mr-2">
-          Selecionar Todos
+<div class="multi-select relative" clickOutside (clickOutside)="closeDropdown()">
+  <button
+    type="button"
+    class="multi-select__trigger"
+    [class.is-open]="dropdownOpen"
+    (click)="toggleDropdown()"
+    [disabled]="disabled"
+    [attr.aria-expanded]="dropdownOpen"
+    aria-haspopup="listbox"
+  >
+    <span class="multi-select__value">{{ displayLabel }}</span>
+    <span *ngIf="selectedItems.length > 0" class="multi-select__badge">{{ selectedItems.length }}</span>
+    <span class="multi-select__chevron" [class.is-open]="dropdownOpen" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 0 1 1.08 1.04l-4.24 4.24a.75.75 0 0 1-1.08 0L5.21 8.25a.75.75 0 0 1 .02-1.04Z"/></svg>
+    </span>
+  </button>
+
+  <div *ngIf="dropdownOpen" class="multi-select__panel" role="listbox" aria-multiselectable="true">
+    <div class="multi-select__search">
+      <svg class="multi-select__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="6" />
+        <line x1="20" y1="20" x2="16.65" y2="16.65" />
+      </svg>
+      <input
+        #searchInput
+        type="text"
+        [(ngModel)]="searchText"
+        (input)="filterItems()"
+        placeholder="Pesquisar tópicos..."
+        class="multi-select__search-input"
+      />
+    </div>
+
+    <ul class="multi-select__list">
+      <li class="multi-select__option multi-select__option--all">
+        <label class="multi-select__option-label" [class.is-active]="allSelected || isPartialSelection">
+          <input
+            type="checkbox"
+            class="multi-select__checkbox"
+            [checked]="allSelected"
+            [indeterminate]="isPartialSelection"
+            (change)="toggleSelectAll()"
+          />
+          <span>Selecionar todos</span>
         </label>
       </li>
-      <li *ngFor="let item of filteredItems" class="p-2">
-        <label class="flex items-center">
-          <input type="checkbox" [checked]="isSelected(item)" (change)="toggleSelection(item)" class="mr-2">
+
+      <li *ngFor="let item of filteredItems; trackBy: trackByItem" class="multi-select__option">
+        <label class="multi-select__option-label" [class.is-active]="isSelected(item)">
+          <input
+            type="checkbox"
+            class="multi-select__checkbox"
+            [checked]="isSelected(item)"
+            (change)="toggleSelection(item)"
+          />
           <ng-container *ngIf="itemTemplate; else defaultTemplate" [ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]="{ $implicit: item }"></ng-container>
           <ng-template #defaultTemplate>{{ item.name || item }}</ng-template>
         </label>
       </li>
+
+      <li *ngIf="filteredItems.length === 0" class="multi-select__empty">Nenhum tópico encontrado.</li>
     </ul>
-    <div class="p-2 border-t">
-      <button (click)="clearAll()" class="w-full text-left text-red-500">Clear All</button>
+
+    <div class="multi-select__footer">
+      <button type="button" class="multi-select__clear" (click)="clearAll()">Limpar seleção</button>
     </div>
   </div>
 </div>

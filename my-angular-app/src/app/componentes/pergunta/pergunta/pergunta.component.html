@@ -1,132 +1,229 @@
-<div class="container mx-auto p-4">
-  <div class="mb-4 p-4 bg-white border border-gray-300 rounded-lg shadow-lg">
-    <div class="flex space-x-4 items-end">
-      <div>
-        <label for="topicSelect" class="block text-sm font-medium text-gray-700">Selecione os Tópicos:</label>
-        <app-multi-select-box [items]="topics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted">
-          <ng-template let-topic>
-            {{ topic.name }}
-          </ng-template>
-        </app-multi-select-box>
+<div class="quiz-page">
+  <div class="quiz-shell">
+    <header class="quiz-header">
+      <div class="quiz-header__inner">
+        <div class="quiz-brand">
+          <span class="quiz-brand__icon">Q</span>
+          <div class="quiz-brand__details">
+            <h1 class="quiz-title">Quiz</h1>
+            <p class="quiz-subtitle">
+              Questão <span>{{ currentQuestionNumber || 1 }}</span> de <span>{{ filteredQuestions.length || 0 }}</span>
+            </p>
+          </div>
+        </div>
+        <div class="quiz-header__actions">
+          <button type="button" class="btn btn-ghost" (click)="toggleDrawer()">
+            <span class="btn__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10.5 6a1.5 1.5 0 0 1 3 0v.621a7.5 7.5 0 0 1 1.865 1.078l.551-.318a1.5 1.5 0 1 1 1.5 2.598l-.551.318c.12.6.12 1.233 0 1.833l.551.318a1.5 1.5 0 1 1-1.5 2.598l-.551-.318A7.5 7.5 0 0 1 13.5 16.88V17.5a1.5 1.5 0 0 1-3 0v-.621a7.5 7.5 0 0 1-1.865-1.078l-.551.318a1.5 1.5 0 1 1-1.5-2.598l.551-.318a6 6 0 0 1 0-1.833l-.551-.318a1.5 1.5 0 1 1 1.5-2.598l.551.318A7.5 7.5 0 0 1 10.5 6.62V6Z" />
+              </svg>
+            </span>
+            Configurações
+          </button>
+        </div>
       </div>
-      <div>
-        <label for="levelSelect" class="block text-sm font-medium text-gray-700">Selecione o Nível:</label>
-        <select id="levelSelect" [(ngModel)]="selectedLevelId" (change)="filterQuestionsByTopic()"
-          [disabled]="testStarted"
-          class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-          <option [ngValue]="null">Todos os Níveis</option>
-          <option [ngValue]="1">Nível 1</option>
-          <option [ngValue]="2">Nível 2</option>
-          <option [ngValue]="3">Nível 3</option>
-        </select>
+      <div class="quiz-progress">
+        <div class="quiz-progress__bar" [style.width.%]="progressPercentage"></div>
       </div>
-      <div class="flex space-x-2">
-        <button *ngIf="!testStarted && !showSummary" (click)="startTest()" [disabled]="!canStartTest()"
-          class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': !canStartTest()}">
-          Iniciar Teste
-        </button>
-        <button *ngIf="testStarted" (click)="finalizeTest()" class="px-4 py-2 bg-red-500 text-white rounded">
-          Finalizar Teste
-        </button>
-        <button *ngIf="showSummary" (click)="resetTest()" class="px-4 py-2 bg-gray-500 text-white rounded">
-          Refazer Teste
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="mb-4">
-    <p class="text-sm text-gray-700">
-      Total de Perguntas Filtradas: <span class="font-bold">{{ filteredQuestions.length }}</span>
-    </p>
+    </header>
+
+    <main class="quiz-main">
+      <section *ngIf="testStarted && hasQuestionLoaded" class="quiz-card">
+        <div class="quiz-card__header">
+          <div class="quiz-card__title">
+            <h2 class="quiz-question">
+              {{ currentQuestionNumber }}. {{ currentQuestion.question }}
+            </h2>
+            <div class="quiz-status-tags" *ngIf="!isCurrentQuestionAnswered || isCurrentQuestionFavorite">
+              <span *ngIf="!isCurrentQuestionAnswered" class="quiz-status-tag quiz-status-tag--pending">
+                <i class="fas fa-clock"></i>
+                Sem resposta
+              </span>
+              <span *ngIf="isCurrentQuestionFavorite" class="quiz-status-tag quiz-status-tag--favorite">
+                <i class="fas fa-star"></i>
+                Favorita
+              </span>
+            </div>
+          </div>
+          <div class="quiz-card__actions">
+            <button
+              type="button"
+              class="quiz-icon-button quiz-icon-button--toggle"
+              (click)="toggleFavoriteCurrent()"
+              [class.is-active]="isCurrentQuestionFavorite"
+              [attr.aria-pressed]="isCurrentQuestionFavorite"
+              [attr.title]="isCurrentQuestionFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'"
+              aria-label="Favoritar pergunta"
+            >
+              <i [ngClass]="isCurrentQuestionFavorite ? 'fas fa-star' : 'far fa-star'"></i>
+            </button>
+            <a
+              class="quiz-icon-button"
+              [href]="getGoogleSearchUrl(currentQuestion.question)"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Pesquisar no Google"
+            >
+              <i class="fas fa-search"></i>
+              <span class="sr-only">Pesquisar no Google</span>
+            </a>
+            <button
+              type="button"
+              class="quiz-icon-button btn-icon"
+              (click)="copyQuestionToClipboard()"
+              aria-label="Copiar pergunta"
+            >
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+        </div>
+
+        <fieldset class="quiz-options" [attr.aria-label]="currentQuestion.question">
+          <div *ngFor="let option of currentQuestion.options; let idx = index" class="quiz-option">
+            <input
+              class="quiz-option__input"
+              [name]="'question-' + currentQuestion.id"
+              [id]="'question-' + currentQuestion.id + '-' + option.index"
+              [value]="option.index"
+              type="checkbox"
+              (change)="onOptionChange($event, option.index)"
+              [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)"
+              [disabled]="showAnswers[currentQuestion.id]"
+            />
+            <label
+              class="quiz-option__label"
+              [for]="'question-' + currentQuestion.id + '-' + option.index"
+              [class.is-selected]="selectedOptions[currentQuestion.id]?.includes(option.index)"
+              [class.is-correct]="showAnswer && currentQuestion.answer.includes(option.index)"
+              [class.is-incorrect]="showAnswer && !currentQuestion.answer.includes(option.index) && selectedOptions[currentQuestion.id]?.includes(option.index)"
+              [class.is-locked]="showAnswers[currentQuestion.id]"
+            >
+              <span class="quiz-option__marker">{{ getOptionLetter(idx) }}.</span>
+              <span class="quiz-option__text">{{ option.text }}</span>
+              <i *ngIf="showAnswer && currentQuestion.answer.includes(option.index)" class="fas fa-check-circle"></i>
+              <i *ngIf="showAnswer && !currentQuestion.answer.includes(option.index) && selectedOptions[currentQuestion.id]?.includes(option.index)" class="fas fa-times-circle"></i>
+            </label>
+          </div>
+        </fieldset>
+
+        <section *ngIf="showAnswer && currentQuestion.explanation.length > 0" class="quiz-explanation">
+          <h3>Explicação</h3>
+          <p>{{ currentQuestion.explanation }}</p>
+        </section>
+      </section>
+
+      <section *ngIf="!testStarted && !showSummary" class="quiz-placeholder">
+        <h2>Configure e inicie seu simulado</h2>
+        <p>Escolha os tópicos para liberar as questões.</p>
+        <div class="quiz-placeholder__controls">
+          <div class="quiz-placeholder__group">
+            <label class="sr-only" for="topicSelectInline">Tópicos</label>
+            <app-multi-select-box
+              id="topicSelectInline"
+              [items]="topics"
+              [value]="selectedTopics"
+              (selectionChange)="onTopicsChange($event)"
+              [disabled]="testStarted"
+            >
+              <ng-template let-topic>
+                {{ topic.name }}
+              </ng-template>
+            </app-multi-select-box>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="startTest()" [disabled]="!canStartTest()">Iniciar Teste</button>
+      </section>
+
+      <section *ngIf="showSummary" class="quiz-summary-card">
+        <h2>Resumo do Teste</h2>
+        <ul class="quiz-summary-card__data">
+          <li><span>Total de Perguntas</span><strong>{{ filteredQuestions.length }}</strong></li>
+          <li><span>Corretas</span><strong>{{ correctAnswers }}</strong></li>
+          <li><span>Erradas</span><strong>{{ incorrectAnswers }}</strong></li>
+        </ul>
+        <div *ngIf="pendingReviewPromptVisible" class="quiz-summary-card__notice">
+          <div class="quiz-summary-card__notice-text">
+            <i class="fas fa-circle-exclamation"></i>
+            <div>
+              <h3>Questões sem resposta detectadas</h3>
+              <p>Você possui {{ unansweredCount }} questão(ões) pendente(s). Deseja revisá-las antes de finalizar?</p>
+            </div>
+          </div>
+          <div class="quiz-summary-card__notice-actions">
+            <button type="button" class="btn btn-secondary" (click)="reviewPendingQuestions()">Rever Pendentes</button>
+            <button type="button" class="btn btn-primary" (click)="finalizeWithoutPending()">Finalizar Mesmo Assim</button>
+          </div>
+        </div>
+        <div class="quiz-summary-card__actions">
+          <button type="button" class="btn btn-primary" (click)="resetTest()">Refazer Teste</button>
+        </div>
+      </section>
+
+      <section class="quiz-stats">
+        <article class="quiz-stat-card">
+          <p class="quiz-stat-card__label">Progresso</p>
+          <p class="quiz-stat-card__value">{{ currentQuestionNumber }}<span>/{{ filteredQuestions.length || 0 }}</span></p>
+        </article>
+        <article class="quiz-stat-card">
+          <p class="quiz-stat-card__label">Corretas</p>
+          <p class="quiz-stat-card__value quiz-stat-card__value--success">{{ correctAnswers }}</p>
+        </article>
+        <article class="quiz-stat-card">
+          <p class="quiz-stat-card__label">Erradas</p>
+          <p class="quiz-stat-card__value quiz-stat-card__value--danger">{{ incorrectAnswers }}</p>
+        </article>
+        <article class="quiz-stat-card">
+          <p class="quiz-stat-card__label">Sem resposta</p>
+          <p class="quiz-stat-card__value quiz-stat-card__value--pending">{{ unansweredCount }}</p>
+        </article>
+        <article class="quiz-stat-card">
+          <p class="quiz-stat-card__label">Favoritas</p>
+          <p class="quiz-stat-card__value quiz-stat-card__value--favorite">{{ favoriteCount }}</p>
+        </article>
+      </section>
+    </main>
   </div>
 
-  <div *ngIf="testStarted && currentQuestion" class="mb-6 p-4 border rounded shadow">
-    <div class="flex justify-between items-center mb-2">
-      <h2 class="text-xl font-semibold">
-        {{ currentQuestionIndex + 1 }}/{{ filteredQuestions.length }}. {{ currentQuestion.question }}
-        <a [href]="getGoogleSearchUrl(currentQuestion.question)" target="_blank"
-          class="ml-2 text-blue-500 hover:text-blue-700">
-          <i class="fas fa-search"></i>
-        </a>
-      </h2>
-      <button (click)="copyQuestionToClipboard()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        <i class="fas fa-copy mr-2"></i>Copiar
-      </button>
-    </div>
-    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
-      <div class="bg-blue-500 h-2.5 rounded-full" [style.width.%]="progressPercentage"></div>
-    </div>
-    <ul class="list-none pl-0">
-      <li *ngFor="let option of currentQuestion.options"
-        class="mb-1 flex items-center p-2 rounded cursor-pointer hover:bg-gray-200" [ngClass]="{
-            'bg-green-200': showAnswer && currentQuestion.answer.includes(option.index),
-            'bg-red-200': showAnswer && !currentQuestion.answer.includes(option.index) && selectedOptions[currentQuestion.id]?.includes(option.index),
-            'bg-gray-100': !showAnswer
-          }" (click)="selectOption(option.index)">
-        <input *ngIf="currentQuestion.answer.length > 1" type="checkbox" [name]="'question-' + currentQuestion.id"
-          [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-          (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)">
-        <input *ngIf="currentQuestion.answer.length === 1" type="radio" [name]="'question-' + currentQuestion.id"
-          [value]="option.index" class="mr-2 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-full"
-          (change)="selectOption(option.index)" [checked]="selectedOptions[currentQuestion.id]?.includes(option.index)">
-        {{ option.text }}
-        <i *ngIf="showAnswer && currentQuestion.answer.includes(option.index)"
-          class="fas fa-check-circle icon-correct"></i>
-        <i *ngIf="showAnswer && !currentQuestion.answer.includes(option.index) && selectedOptions[currentQuestion.id]?.includes(option.index)"
-          class="fas fa-times-circle icon-incorrect"></i>
-      </li>
-    </ul>
-    <div class="mt-4 flex justify-between">
-      <button (click)="checkAnswer()" [disabled]="selectedOption.length === 0"
-        class="px-4 py-2 bg-blue-500 text-white rounded" [ngClass]="{'opacity-50': selectedOption.length === 0}">
-        <i class="fas fa-check mr-2"></i>Responder
-      </button>
-      <div class="flex space-x-2">
-        <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0"
-          class="px-4 py-2 bg-gray-500 text-white rounded" [ngClass]="{'opacity-50': currentQuestionIndex === 0}">
-          <i class="fas fa-arrow-left mr-2"></i>Voltar
-        </button>
-        <button (click)="nextQuestion()" class="px-4 py-2 bg-yellow-500 text-white rounded">
-          Responder Depois
-        </button>
-        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex >= filteredQuestions.length && wrongQuestionsQueue.length === 0"
-          class="px-4 py-2 bg-green-500 text-white rounded"
-          [ngClass]="{'opacity-50': currentQuestionIndex >= filteredQuestions.length && wrongQuestionsQueue.length === 0}">
-          Próxima<i class="fas fa-arrow-right ml-2"></i>
-        </button>
+  <nav *ngIf="testStarted && hasQuestionLoaded" class="quiz-bottom-bar">
+    <div class="quiz-bottom-bar__inner">
+      <div class="quiz-button-group">
+        <button type="button" class="btn btn-secondary" (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0">Voltar</button>
+        <button type="button" class="btn btn-secondary" (click)="nextQuestion()">Pular</button>
+      </div>
+      <div class="quiz-button-group">
+        <button type="button" class="btn btn-outline" (click)="nextQuestion()" [disabled]="showAnswers[currentQuestion?.id]">Responder Depois</button>
+        <button type="button" class="btn btn-primary" (click)="checkAnswer()" [disabled]="canConfirmAnswer">Confirmar Resposta</button>
+        <button type="button" class="btn btn-dark" (click)="nextQuestion()" [disabled]="!hasMoreQuestionsAhead">Próxima</button>
       </div>
     </div>
+  </nav>
 
-  
-    <div *ngIf="showAnswer && currentQuestion.explanation.length > 0"
-      class="mt-4 p-4 bg-white border border-gray-300 rounded-lg shadow">
-      <p><strong>Explicação:</strong> {{ currentQuestion.explanation }}</p>
-    </div>
-
-    <div style="display:flex; justify-content:space-between; margin-top: 20px; gap: 10px;">
-      <button (click)="clearAnsweredQuestions()" class="px-4 py-2 bg-red-500 text-white rounded">
-        Limpar Perguntas Respondidas
-      </button>
-  
-      <button (click)="toggleRepeatWrongQuestions()" class="px-4 py-2 bg-purple-500 text-white rounded">
-        {{ repeatWrongQuestions ? 'Desativar' : 'Ativar' }} Repetir Perguntas Erradas
-      </button>
-    </div>
-    
-  </div>
-</div>
-<div class="mt-6 p-4 border rounded shadow">
-  <h2 class="text-xl font-semibold mb-4">Resumo do Teste</h2>
-  <div class="flex items-center mb-2">
-    <i class="fas fa-question-circle text-blue-500 mr-2"></i>
-    <p class="text-lg">Total de Perguntas: <span class="font-bold">{{ filteredQuestions.length }}</span></p>
-  </div>
-  <div class="flex items-center mb-2">
-    <i class="fas fa-check-circle text-green-500 mr-2"></i>
-    <p class="text-lg">Corretas: <span class="font-bold">{{ correctAnswers }}</span></p>
-  </div>
-  <div class="flex items-center">
-    <i class="fas fa-times-circle text-red-500 mr-2"></i>
-    <p class="text-lg">Erradas: <span class="font-bold">{{ incorrectAnswers }}</span></p>
+  <div class="quiz-drawer" [class.is-open]="isDrawerOpen">
+    <div class="quiz-drawer__backdrop" (click)="closeDrawer()"></div>
+    <aside class="quiz-drawer__panel">
+      <div class="quiz-drawer__header">
+        <h3>Configurações</h3>
+        <button type="button" class="btn btn-ghost" (click)="closeDrawer()">Fechar</button>
+      </div>
+      <div class="quiz-drawer__content">
+        <div class="quiz-form-field">
+          <label class="quiz-form-field__label">Tópicos</label>
+          <app-multi-select-box [items]="topics" [value]="selectedTopics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted">
+            <ng-template let-topic>
+              {{ topic.name }}
+            </ng-template>
+          </app-multi-select-box>
+        </div>
+        <div class="quiz-drawer__actions">
+          <button type="button" class="btn btn-secondary" (click)="clearAnsweredQuestions()">Limpar Respostas</button>
+          <button type="button" class="btn btn-secondary" (click)="toggleRepeatWrongQuestions()">
+            {{ repeatWrongQuestions ? 'Desativar' : 'Ativar' }} Repetir Erradas
+          </button>
+          <button type="button" class="btn btn-outline" (click)="finalizeTest()">Finalizar Teste</button>
+          <button type="button" class="btn btn-primary" (click)="startTest()" [disabled]="!canStartTest()">Iniciar Teste</button>
+        </div>
+        <p class="quiz-drawer__tip">Dica: mantenha o foco nas perguntas e abra este painel apenas quando precisar ajustar o simulado.</p>
+      </div>
+    </aside>
   </div>
 </div>

@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpQuestionsService } from '../../../services/http/http-questions.service';
+import { ModalService } from '../../modal/modal.service';
 
 @Component({
   selector: 'app-pergunta',
   templateUrl: './pergunta.component.html',
   styleUrls: ['./pergunta.component.css'],
 })
-export class PerguntaComponent implements OnInit {
+export class PerguntaComponent implements OnInit, OnDestroy {
   maxQuestionLength: number = 320; // Valor padrão para o número de caracteres
   testStarted: boolean = false;
   showSummary: boolean = false;
@@ -14,13 +15,12 @@ export class PerguntaComponent implements OnInit {
   incorrectAnswers: number = 0;
   selectedOptions: { [key: string]: number[] } = {};
   showAnswers: { [key: string]: boolean } = {};
-  unansweredQuestions: Set<string> = new Set();
   selectedOption: number[] = [];
   showAnswer: boolean = false;
   currentQuestionIndex: number = 0;
   currentQuestion: any;
   selectedTopicIds: number[] = [];
-  selectedLevelId: number | null = null;
+  selectedTopics: any[] = [];
   resetMultiSelectBoxes: boolean = false;
   filteredQuestions: any[] = [];
   topics: any[] = [];
@@ -28,8 +28,13 @@ export class PerguntaComponent implements OnInit {
   repeatWrongQuestions: boolean = false; // Controla o modo de repetição
   wrongQuestionsQueue: any[] = []; // Fila de perguntas erradas a serem repetidas
   filterShortQuestionsActive: boolean = false; // Controla o filtro de questões curtas
+  isDrawerOpen: boolean = false;
+  favoriteQuestionIds: Set<string> = new Set();
+  pendingReviewPromptVisible: boolean = false;
 
-  constructor(private httpQuestionsService: HttpQuestionsService) {}
+  constructor(private httpQuestionsService: HttpQuestionsService, private modalService: ModalService) {
+    this.initializeFavoriteQuestions();
+  }
 
   ngOnInit(): void {
     this.loadQuestions();
@@ -41,12 +46,15 @@ export class PerguntaComponent implements OnInit {
       const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
       this.allQuestions = data;
 
+      this.synchronizeFavoritesWithQuestions();
+
       // Filtrar perguntas que não foram respondidas
       this.filteredQuestions = this.allQuestions.filter((question: any) => !answeredQuestions.includes(question.id));
 
       // Configurar a pergunta atual
       this.currentQuestionIndex = 0;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+      this.hydrateCurrentQuestionState();
       console.log('Todas as perguntas:', this.allQuestions);
       console.log('Perguntas filtradas:', this.filteredQuestions);
     });
@@ -56,34 +64,97 @@ export class PerguntaComponent implements OnInit {
     this.httpQuestionsService.getTopics().subscribe((data) => {
       this.topics = data.topics;
       console.log('Tópicos carregados:', this.topics);
+      this.syncSelectedTopicsFromIds();
     });
   }
 
   get progressPercentage(): number {
+    if (this.filteredQuestions.length === 0) {
+      return 0;
+    }
     return ((this.currentQuestionIndex + 1) / this.filteredQuestions.length) * 100;
   }
 
-  selectOption(index: number): void {
-    if (this.currentQuestion.answer.length > 1) {
-      if (this.selectedOption.includes(index)) {
-        this.selectedOption = this.selectedOption.filter((i) => i !== index);
+  get currentQuestionNumber(): number {
+    return this.filteredQuestions.length ? this.currentQuestionIndex + 1 : 0;
+  }
+
+  get hasQuestionLoaded(): boolean {
+    return !!this.currentQuestion && this.filteredQuestions.length > 0;
+  }
+
+  get hasMoreQuestionsAhead(): boolean {
+    return this.currentQuestionIndex < this.filteredQuestions.length - 1 || (this.repeatWrongQuestions && this.wrongQuestionsQueue.length > 0);
+  }
+
+  get canConfirmAnswer(): boolean {
+    return this.selectedOption.length === 0 || this.showAnswer;
+  }
+
+  getOptionLetter(position: number): string {
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (position < alphabet.length) {
+      return alphabet[position];
+    }
+    return `Opção ${position + 1}`;
+  }
+
+  get isCurrentQuestionFavorite(): boolean {
+    return !!(this.currentQuestion && this.favoriteQuestionIds.has(String(this.currentQuestion.id)));
+  }
+
+  get isCurrentQuestionAnswered(): boolean {
+    return !!(this.currentQuestion && this.showAnswers[this.currentQuestion.id]);
+  }
+
+  get unansweredCount(): number {
+    if (!this.filteredQuestions?.length) {
+      return 0;
+    }
+    return this.filteredQuestions.filter((question: any) => !this.showAnswers[question.id]).length;
+  }
+
+  get favoriteCount(): number {
+    if (!this.filteredQuestions?.length) {
+      return 0;
+    }
+    return this.filteredQuestions.filter((question: any) => this.favoriteQuestionIds.has(String(question.id))).length;
+  }
+
+  onOptionChange(event: Event, index: number): void {
+    if (!this.currentQuestion) {
+      return;
+    }
+
+    if (this.showAnswer || this.showAnswers[this.currentQuestion.id]) {
+      return;
+    }
+
+    const isChecked = (event.target as HTMLInputElement).checked;
+    const isMultiSelect = this.currentQuestion.answer.length > 1;
+    let nextSelection = [...this.selectedOption];
+
+    if (isMultiSelect) {
+      if (isChecked) {
+        nextSelection = Array.from(new Set([...nextSelection, index]));
       } else {
-        this.selectedOption.push(index);
+        nextSelection = nextSelection.filter((i) => i !== index);
       }
     } else {
-      this.selectedOption = [index];
+      nextSelection = isChecked ? [index] : [];
     }
-    this.selectedOptions[this.currentQuestion.id] = this.selectedOption;
-    this.unansweredQuestions.add(this.currentQuestion.id);
+
+    this.selectedOption = [...nextSelection];
+    this.selectedOptions[this.currentQuestion.id] = [...nextSelection];
   }
 
   toggleRepeatWrongQuestions(): void {
     this.repeatWrongQuestions = !this.repeatWrongQuestions;
     if (this.repeatWrongQuestions) {
       this.wrongQuestionsQueue = []; // Limpa a fila ao ativar o modo
-      alert('Modo de repetição de perguntas erradas ativado!');
+      this.modalService.open('Modo de repetição de perguntas erradas ativado!', { type: 'success' });
     } else {
-      alert('Modo de repetição de perguntas erradas desativado!');
+      this.modalService.open('Modo de repetição de perguntas erradas desativado!', { type: 'info' });
     }
   }
 
@@ -135,11 +206,6 @@ export class PerguntaComponent implements OnInit {
   }
 
   nextQuestion(): void {
-    if (this.selectedOption.length > 0 && !this.showAnswer) {
-      alert('Você marcou uma resposta, mas não clicou em "Responder". Por favor, responda antes de continuar.');
-      return;
-    }
-
     this.currentQuestionIndex++;
 
     // Verifica se há perguntas erradas na fila para repetição
@@ -151,8 +217,6 @@ export class PerguntaComponent implements OnInit {
       // Zera as respostas da pergunta repetida
       this.selectedOptions[this.currentQuestion.id] = [];
       this.showAnswers[this.currentQuestion.id] = false;
-      this.selectedOption = [];
-      this.showAnswer = false;
     } else if (this.currentQuestionIndex < this.filteredQuestions.length) {
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
     } else if (this.repeatWrongQuestions && this.wrongQuestionsQueue.length > 0) {
@@ -160,28 +224,21 @@ export class PerguntaComponent implements OnInit {
       this.currentQuestion = this.wrongQuestionsQueue.shift(); // Pega a próxima pergunta errada
       this.selectedOptions[this.currentQuestion.id] = [];
       this.showAnswers[this.currentQuestion.id] = false;
-      this.selectedOption = [];
-      this.showAnswer = false;
       this.currentQuestionIndex--; // Mantém o índice para continuar o fluxo
     } else {
       // Finaliza o teste se não houver mais perguntas
       this.finalizeTest();
+      return;
     }
 
-    this.selectedOption = this.selectedOptions[this.currentQuestion.id] || [];
-    this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
+    this.hydrateCurrentQuestionState();
   }
 
   previousQuestion(): void {
-    if (this.selectedOption.length > 0 && !this.showAnswer) {
-      alert('Você marcou uma resposta, mas não clicou em "Responder". Por favor, responda antes de continuar.');
-      return;
-    }
     if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
-      this.selectedOption = this.selectedOptions[this.currentQuestion.id] || [];
-      this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
+      this.hydrateCurrentQuestionState();
     }
   }
 
@@ -191,14 +248,14 @@ export class PerguntaComponent implements OnInit {
     // Filtrar perguntas com base nos tópicos, níveis e perguntas respondidas
     this.filteredQuestions = this.allQuestions.filter((question: any) => {
       const matchesTopic = this.selectedTopicIds.length === 0 || this.selectedTopicIds.includes(question.topicId);
-      const matchesLevel = this.selectedLevelId === null || question.levelId === this.selectedLevelId;
       const notAnswered = !answeredQuestions.includes(question.id);
-      return matchesTopic && matchesLevel && notAnswered;
+      return matchesTopic && notAnswered;
     });
 
     // Atualizar a pergunta atual
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
+    this.hydrateCurrentQuestionState();
   }
 
   filterShortQuestions(maxLength: number): void {
@@ -211,11 +268,31 @@ export class PerguntaComponent implements OnInit {
     // Atualiza a pergunta atual
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
+    this.hydrateCurrentQuestionState();
 
-    alert(`Foram filtradas ${this.filteredQuestions.length} questões com até ${maxLength} caracteres.`);
+    this.modalService.open(`Foram filtradas ${this.filteredQuestions.length} questões com até ${maxLength} caracteres.`, { type: 'info' });
   }
 
-  finalizeTest(): void {
+  finalizeTest(force: boolean = false, showPendingNotice: boolean = true): void {
+    const pending = this.unansweredCount;
+    if (pending > 0 && !this.pendingReviewPromptVisible && !force) {
+      this.modalService.openWith({
+        title: 'Questões sem resposta detectadas',
+        message: `Você possui ${pending} questão(ões) pendente(s). Deseja revisá-las antes de finalizar?`,
+        confirmText: 'Rever Pendentes',
+        cancelText: 'Finalizar Mesmo Assim',
+        type: 'warning',
+        onConfirm: () => {
+          this.reviewPendingQuestions();
+        },
+        onCancel: () => {
+          this.pendingReviewPromptVisible = false;
+          this.finalizeTest(true, false);
+        }
+      });
+      return;
+    }
+
     this.testStarted = false;
     this.showSummary = true;
 
@@ -226,11 +303,16 @@ export class PerguntaComponent implements OnInit {
     ).length;
 
     this.incorrectAnswers = this.filteredQuestions.length - this.correctAnswers;
+    this.pendingReviewPromptVisible = showPendingNotice && pending > 0;
+    if (!this.pendingReviewPromptVisible) {
+      this.modalService.open('Parabéns! Você concluiu o teste.', { type: 'success', confirmText: 'Fechar' });
+    }
   }
 
   onTopicsChange(selectedTopics: any[]): void {
     console.log('onTopicsChange - selectedTopics:', selectedTopics);
-    this.selectedTopicIds = selectedTopics
+    this.selectedTopics = [...selectedTopics];
+    this.selectedTopicIds = this.selectedTopics
       .filter(topic => topic && topic.id !== undefined) // Filtrar tópicos válidos
       .map(topic => topic.id); // Extraindo apenas os IDs dos tópicos
     console.log('Tópicos selecionados:', this.selectedTopicIds);
@@ -243,10 +325,16 @@ export class PerguntaComponent implements OnInit {
 
   startTest(): void {
     if (this.canStartTest()) {
+      if (this.filteredQuestions.length === 0) {
+        this.modalService.open('Nenhuma pergunta disponível para os filtros selecionados. Ajuste os filtros e tente novamente.', { type: 'warning' });
+        return;
+      }
       this.testStarted = true;
       this.showSummary = false;
       this.currentQuestionIndex = 0;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+      this.closeDrawer();
+      this.hydrateCurrentQuestionState();
     }
   }
 
@@ -257,15 +345,16 @@ export class PerguntaComponent implements OnInit {
     this.incorrectAnswers = 0;
     this.selectedOptions = {};
     this.showAnswers = {};
-    this.unansweredQuestions.clear();
     this.selectedOption = [];
     this.showAnswer = false;
     this.currentQuestionIndex = 0;
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+    this.hydrateCurrentQuestionState();
+    this.pendingReviewPromptVisible = false;
   
     // Resetar dropdowns
     this.selectedTopicIds = [];
-    this.selectedLevelId = null;
+    this.selectedTopics = [];
   
     // Emitir evento de reset para os componentes multi-select-box
     this.resetMultiSelectBoxes = true;
@@ -295,14 +384,53 @@ export class PerguntaComponent implements OnInit {
         this.currentQuestion.options.map((option: { text: string }, index: number) => `${index + 1}. ${option.text}`).join('\n');
       
       navigator.clipboard.writeText(questionText).then(() => {
-        alert('Pergunta e opções copiadas para a área de transferência!');
+        this.modalService.open('Pergunta e opções copiadas para a área de transferência!', { type: 'success' });
       }).catch(err => {
         console.error('Erro ao copiar para a área de transferência:', err);
+        this.modalService.open('Não foi possível copiar. Verifique se a pergunta e as opções estão carregadas corretamente.', { type: 'danger' });
       });
     } else {
       console.error('Erro: Dados da pergunta ou opções estão ausentes.');
-      alert('Não foi possível copiar. Verifique se a pergunta e as opções estão carregadas corretamente.');
+      this.modalService.open('Não foi possível copiar. Verifique se a pergunta e as opções estão carregadas corretamente.', { type: 'danger' });
     }
+  }
+
+  toggleFavoriteCurrent(): void {
+    if (!this.currentQuestion) {
+      return;
+    }
+    this.toggleFavorite(String(this.currentQuestion.id));
+  }
+
+  reviewPendingQuestions(): void {
+    this.pendingReviewPromptVisible = false;
+    if (this.unansweredCount === 0) {
+      this.modalService.open('Não há questões pendentes. Ótimo trabalho!', { type: 'info', confirmText: 'Entendi' });
+      return;
+    }
+
+    const unanswered = this.filteredQuestions
+      .map((question: any, index: number) => ({ question, index }))
+      .filter(({ question }) => !this.showAnswers[question.id]);
+
+    if (!unanswered.length) {
+      this.modalService.open('Não há questões pendentes. Ótimo trabalho!', { type: 'info', confirmText: 'Entendi' });
+      return;
+    }
+
+    const next = unanswered[0];
+    this.showSummary = false;
+    this.testStarted = true;
+    this.currentQuestionIndex = next.index;
+    this.currentQuestion = next.question;
+    this.hydrateCurrentQuestionState();
+    this.closeDrawer();
+    this.pendingReviewPromptVisible = false;
+  }
+
+  finalizeWithoutPending(): void {
+    this.pendingReviewPromptVisible = false;
+    this.modalService.open('Teste finalizado com sucesso!', { type: 'success', confirmText: 'Fechar' });
   }
 
   saveAnsweredQuestion(questionId: string, isCorrect: boolean): void {
@@ -317,12 +445,121 @@ export class PerguntaComponent implements OnInit {
 
   clearAnsweredQuestions(): void {
     localStorage.removeItem('answeredQuestions');
-    alert('Perguntas respondidas foram limpas!');
+    this.modalService.open('Perguntas respondidas foram limpas!', { type: 'success' });
     this.loadQuestions(); // Recarregar perguntas
   }
 
   get totalFilteredQuestions(): number {
     const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
     return this.allQuestions.filter((question: any) => !answeredQuestions.includes(question.id)).length;
+  }
+
+  toggleDrawer(): void {
+    if (this.isDrawerOpen) {
+      this.closeDrawer();
+    } else {
+      this.openDrawer();
+    }
+  }
+
+  openDrawer(): void {
+    this.isDrawerOpen = true;
+    this.lockScroll();
+  }
+
+  closeDrawer(): void {
+    this.isDrawerOpen = false;
+    this.unlockScroll();
+  }
+
+  private hydrateCurrentQuestionState(): void {
+    if (!this.currentQuestion) {
+      this.selectedOption = [];
+      this.showAnswer = false;
+      return;
+    }
+    const storedSelection = this.selectedOptions[this.currentQuestion.id] || [];
+    this.selectedOption = [...storedSelection];
+    this.showAnswer = this.showAnswers[this.currentQuestion.id] || false;
+  }
+
+  private lockScroll(): void {
+    if (typeof document === 'undefined') {
+      return;
+    }
+    document.documentElement.classList.add('no-scroll');
+  }
+
+  private unlockScroll(): void {
+    if (typeof document === 'undefined') {
+      return;
+    }
+    document.documentElement.classList.remove('no-scroll');
+  }
+
+  private initializeFavoriteQuestions(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    try {
+      const stored = localStorage.getItem('favoriteQuestions');
+      if (!stored) {
+        this.favoriteQuestionIds = new Set();
+        return;
+      }
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed)) {
+        this.favoriteQuestionIds = new Set(parsed.map((id: unknown) => String(id)));
+      } else {
+        this.favoriteQuestionIds = new Set();
+      }
+    } catch (error) {
+      console.error('Falha ao carregar favoritos:', error);
+      this.favoriteQuestionIds = new Set();
+    }
+  }
+
+  private synchronizeFavoritesWithQuestions(): void {
+    if (!this.allQuestions?.length || this.favoriteQuestionIds.size === 0) {
+      return;
+    }
+    const validIds = new Set(this.allQuestions.map((question: any) => String(question.id)));
+    const filtered = Array.from(this.favoriteQuestionIds).filter((id) => validIds.has(String(id)));
+    if (filtered.length !== this.favoriteQuestionIds.size) {
+      this.favoriteQuestionIds = new Set(filtered);
+      this.persistFavoriteQuestions();
+    }
+  }
+
+  private toggleFavorite(questionId: string): void {
+    if (!questionId) {
+      return;
+    }
+    const normalizedId = String(questionId);
+    if (this.favoriteQuestionIds.has(normalizedId)) {
+      this.favoriteQuestionIds.delete(normalizedId);
+    } else {
+      this.favoriteQuestionIds.add(normalizedId);
+    }
+    this.persistFavoriteQuestions();
+  }
+
+  private persistFavoriteQuestions(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    localStorage.setItem('favoriteQuestions', JSON.stringify(Array.from(this.favoriteQuestionIds)));
+  }
+
+  ngOnDestroy(): void {
+    this.unlockScroll();
+  }
+
+  private syncSelectedTopicsFromIds(): void {
+    if (!this.selectedTopicIds.length) {
+      this.selectedTopics = [];
+      return;
+    }
+    this.selectedTopics = this.topics.filter(topic => this.selectedTopicIds.includes(topic.id));
   }
 }
