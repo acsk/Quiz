@@ -1,23 +1,24 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PerguntaComponent } from './pergunta/pergunta.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MultiSelectBoxModule } from '../multi-select-box/multi-select-box.module';
+import { PerguntaComponent } from './pergunta/pergunta.component';
 
 
 
 @NgModule({
-  declarations: [
-    PerguntaComponent,
-  ],
   imports: [
     CommonModule,
     FormsModule,
     MultiSelectBoxModule,
     ReactiveFormsModule
   ],
+  declarations: [
+    PerguntaComponent
+  ],
   exports: [
     PerguntaComponent
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PerguntaModule { }

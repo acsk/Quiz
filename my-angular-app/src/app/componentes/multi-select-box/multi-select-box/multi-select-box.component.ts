@@ -174,15 +174,15 @@ export class MultiSelectBoxComponent implements OnInit, OnChanges {
 }
 
 @Directive({
-  selector: '[clickOutside]'
+  selector: '[appClickOutside]'
 })
 export class ClickOutsideDirective {
-  @Output() clickOutside = new EventEmitter<void>();
+  @Output('appClickOutside') readonly clickOutside = new EventEmitter<void>();
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private readonly elementRef: ElementRef) {}
 
   @HostListener('document:click', ['$event.target'])
-  onClick(targetElement: HTMLElement) {
+  onDocumentClick(targetElement: HTMLElement): void {
     const clickedInside = this.elementRef.nativeElement.contains(targetElement);
     if (!clickedInside) {
       this.clickOutside.emit();

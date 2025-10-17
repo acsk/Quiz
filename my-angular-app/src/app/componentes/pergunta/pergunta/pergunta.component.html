@@ -12,6 +12,18 @@
           </div>
         </div>
         <div class="quiz-header__actions">
+          <button
+            type="button"
+            class="btn btn-ghost btn-theme-toggle"
+            (click)="cycleThemePreference()"
+            [attr.aria-pressed]="isDarkModeEnabled"
+            [attr.title]="themeToggleLabel"
+          >
+            <span class="btn__icon" aria-hidden="true">
+              <i [ngClass]="themeToggleIcon"></i>
+            </span>
+            <span class="btn-theme-toggle__label">{{ themeToggleLabel }}</span>
+          </button>
           <button type="button" class="btn btn-ghost" (click)="toggleDrawer()">
             <span class="btn__icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -141,6 +153,28 @@
           <li><span>Corretas</span><strong>{{ correctAnswers }}</strong></li>
           <li><span>Erradas</span><strong>{{ incorrectAnswers }}</strong></li>
         </ul>
+        <div *ngIf="summaryChartAvailable" class="quiz-summary-chart">
+          <div class="quiz-summary-chart__bar" role="img" aria-label="Distribuição de acertos e erros">
+            <span
+              class="quiz-summary-chart__segment quiz-summary-chart__segment--correct"
+              [style.width.%]="summaryCorrectPercentage"
+            ></span>
+            <span
+              class="quiz-summary-chart__segment quiz-summary-chart__segment--incorrect"
+              [style.width.%]="summaryIncorrectPercentage"
+            ></span>
+          </div>
+          <div class="quiz-summary-chart__legend">
+            <div class="quiz-summary-chart__legend-item">
+              <span class="quiz-summary-chart__swatch quiz-summary-chart__swatch--correct"></span>
+              <span>{{ summaryCorrectPercentage }}% acertos</span>
+            </div>
+            <div class="quiz-summary-chart__legend-item">
+              <span class="quiz-summary-chart__swatch quiz-summary-chart__swatch--incorrect"></span>
+              <span>{{ summaryIncorrectPercentage }}% erros</span>
+            </div>
+          </div>
+        </div>
         <div *ngIf="pendingReviewPromptVisible" class="quiz-summary-card__notice">
           <div class="quiz-summary-card__notice-text">
             <i class="fas fa-circle-exclamation"></i>
@@ -160,10 +194,6 @@
       </section>
 
       <section class="quiz-stats">
-        <article class="quiz-stat-card">
-          <p class="quiz-stat-card__label">Progresso</p>
-          <p class="quiz-stat-card__value">{{ currentQuestionNumber }}<span>/{{ filteredQuestions.length || 0 }}</span></p>
-        </article>
         <article class="quiz-stat-card">
           <p class="quiz-stat-card__label">Corretas</p>
           <p class="quiz-stat-card__value quiz-stat-card__value--success">{{ correctAnswers }}</p>
@@ -188,12 +218,13 @@
     <div class="quiz-bottom-bar__inner">
       <div class="quiz-button-group">
         <button type="button" class="btn btn-secondary" (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0">Voltar</button>
-        <button type="button" class="btn btn-secondary" (click)="nextQuestion()">Pular</button>
+        <button type="button" class="btn btn-secondary" (click)="skipQuestion()" [disabled]="!canSkipQuestion">Pular</button>
       </div>
       <div class="quiz-button-group">
-        <button type="button" class="btn btn-outline" (click)="nextQuestion()" [disabled]="showAnswers[currentQuestion?.id]">Responder Depois</button>
-        <button type="button" class="btn btn-primary" (click)="checkAnswer()" [disabled]="canConfirmAnswer">Confirmar Resposta</button>
-        <button type="button" class="btn btn-dark" (click)="nextQuestion()" [disabled]="!hasMoreQuestionsAhead">Próxima</button>
+        <button type="button" class="btn btn-outline" (click)="deferCurrentQuestion()" [disabled]="!canDeferCurrentQuestion">Responder Depois</button>
+        <button type="button" class="btn btn-primary" (click)="handlePrimaryAction()" [disabled]="isPrimaryActionDisabled">
+          {{ primaryActionLabel }}
+        </button>
       </div>
     </div>
   </nav>
@@ -216,6 +247,7 @@
         </div>
         <div class="quiz-drawer__actions">
           <button type="button" class="btn btn-secondary" (click)="clearAnsweredQuestions()">Limpar Respostas</button>
+          <button type="button" class="btn btn-secondary" (click)="clearFavoriteQuestions()" [disabled]="!hasFavoriteQuestions">Limpar Favoritas</button>
           <button type="button" class="btn btn-secondary" (click)="toggleRepeatWrongQuestions()">
             {{ repeatWrongQuestions ? 'Desativar' : 'Ativar' }} Repetir Erradas
           </button>

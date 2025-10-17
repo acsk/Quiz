@@ -30,7 +30,13 @@ export class PerguntaComponent implements OnInit, OnDestroy {
   filterShortQuestionsActive: boolean = false; // Controla o filtro de questões curtas
   isDrawerOpen: boolean = false;
   favoriteQuestionIds: Set<string> = new Set();
+  deferredQuestionIds: Set<string> = new Set();
   pendingReviewPromptVisible: boolean = false;
+  themePreference: 'system' | 'light' | 'dark' = 'system';
+  isDarkModeEnabled: boolean = false;
+  private readonly themePreferenceKey = 'quizThemePreference';
+  private systemDarkMedia?: MediaQueryList;
+  private systemThemeListener?: (event: MediaQueryListEvent | MediaQueryList) => void;
 
   constructor(private httpQuestionsService: HttpQuestionsService, private modalService: ModalService) {
     this.initializeFavoriteQuestions();
@@ -39,9 +45,11 @@ export class PerguntaComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.loadQuestions();
     this.loadTopics();
+    this.initializeTheme();
   }
 
   loadQuestions(): void {
+    this.deferredQuestionIds.clear();
     this.httpQuestionsService.getAllQuestions().subscribe((data) => {
       const answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions') || '[]');
       this.allQuestions = data;
@@ -87,10 +95,6 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     return this.currentQuestionIndex < this.filteredQuestions.length - 1 || (this.repeatWrongQuestions && this.wrongQuestionsQueue.length > 0);
   }
 
-  get canConfirmAnswer(): boolean {
-    return this.selectedOption.length === 0 || this.showAnswer;
-  }
-
   getOptionLetter(position: number): string {
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     if (position < alphabet.length) {
@@ -119,6 +123,90 @@ export class PerguntaComponent implements OnInit, OnDestroy {
       return 0;
     }
     return this.filteredQuestions.filter((question: any) => this.favoriteQuestionIds.has(String(question.id))).length;
+  }
+
+  get hasFavoriteQuestions(): boolean {
+    return this.favoriteQuestionIds.size > 0;
+  }
+
+  get canSkipQuestion(): boolean {
+    return this.filteredQuestions.length > 1;
+  }
+
+  get canDeferCurrentQuestion(): boolean {
+    if (!this.currentQuestion) {
+      return false;
+    }
+    if (this.filteredQuestions.length <= 1) {
+      return false;
+    }
+    const currentId = String(this.currentQuestion.id);
+    if (this.deferredQuestionIds.has(currentId)) {
+      return false;
+    }
+    return !this.showAnswers[currentId];
+  }
+
+  get primaryActionLabel(): string {
+    if (this.showAnswer || (this.currentQuestion && this.showAnswers[this.currentQuestion.id])) {
+      return this.hasMoreQuestionsAhead ? 'Próxima' : 'Finalizar';
+    }
+    return 'Confirmar Resposta';
+  }
+
+  get isPrimaryActionDisabled(): boolean {
+    if (this.showAnswer || (this.currentQuestion && this.showAnswers[this.currentQuestion.id])) {
+      return false;
+    }
+    return this.selectedOption.length === 0;
+  }
+
+  get themeToggleLabel(): string {
+    switch (this.themePreference) {
+      case 'dark':
+        return 'Modo Escuro';
+      case 'light':
+        return 'Modo Claro';
+      default:
+        return 'Modo Automático';
+    }
+  }
+
+  get themeToggleIcon(): string {
+    switch (this.themePreference) {
+      case 'dark':
+        return 'fas fa-moon';
+      case 'light':
+        return 'fas fa-sun';
+      default:
+        return 'fas fa-adjust';
+    }
+  }
+
+  get summaryChartAvailable(): boolean {
+    return this.summaryTotalQuestions > 0;
+  }
+
+  get summaryTotalQuestions(): number {
+    return this.filteredQuestions.length;
+  }
+
+  get summaryCorrectPercentage(): number {
+    const total = this.summaryTotalQuestions;
+    if (total === 0) {
+      return 0;
+    }
+    return Math.round((this.correctAnswers / total) * 100);
+  }
+
+  get summaryIncorrectPercentage(): number {
+    const total = this.summaryTotalQuestions;
+    if (total === 0) {
+      return 0;
+    }
+    const incorrect = Math.round((this.incorrectAnswers / total) * 100);
+    const residual = 100 - this.summaryCorrectPercentage;
+    return Math.min(incorrect, residual);
   }
 
   onOptionChange(event: Event, index: number): void {
@@ -161,6 +249,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
   checkAnswer(): void {
     this.showAnswer = true;
     this.showAnswers[this.currentQuestion.id] = true;
+    this.deferredQuestionIds.delete(String(this.currentQuestion.id));
 
     const selectedAnswers = this.selectedOptions[this.currentQuestion.id] || [];
     const correctAnswers = this.currentQuestion.answer;
@@ -232,6 +321,44 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     }
 
     this.hydrateCurrentQuestionState();
+  }
+
+  skipQuestion(): void {
+    if (!this.canSkipQuestion) {
+      return;
+    }
+    this.nextQuestion();
+  }
+
+  deferCurrentQuestion(): void {
+    if (!this.currentQuestion || !this.canDeferCurrentQuestion) {
+      return;
+    }
+
+    const currentId = String(this.currentQuestion.id);
+    const [deferredQuestion] = this.filteredQuestions.splice(this.currentQuestionIndex, 1);
+    if (!deferredQuestion) {
+      return;
+    }
+    this.filteredQuestions.push(deferredQuestion);
+    this.deferredQuestionIds.add(currentId);
+    this.currentQuestionIndex = Math.max(-1, this.currentQuestionIndex - 1);
+    this.nextQuestion();
+    this.modalService.open('Questão marcada para responder depois.', { type: 'info' });
+  }
+
+  handlePrimaryAction(): void {
+    if (!this.currentQuestion) {
+      return;
+    }
+    if (this.showAnswer || this.showAnswers[this.currentQuestion.id]) {
+      this.nextQuestion();
+      return;
+    }
+    if (this.selectedOption.length === 0) {
+      return;
+    }
+    this.checkAnswer();
   }
 
   previousQuestion(): void {
@@ -333,6 +460,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
       this.showSummary = false;
       this.currentQuestionIndex = 0;
       this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
+      this.deferredQuestionIds.clear();
       this.closeDrawer();
       this.hydrateCurrentQuestionState();
     }
@@ -351,6 +479,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex];
     this.hydrateCurrentQuestionState();
     this.pendingReviewPromptVisible = false;
+    this.deferredQuestionIds.clear();
   
     // Resetar dropdowns
     this.selectedTopicIds = [];
@@ -447,6 +576,27 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     localStorage.removeItem('answeredQuestions');
     this.modalService.open('Perguntas respondidas foram limpas!', { type: 'success' });
     this.loadQuestions(); // Recarregar perguntas
+  }
+
+  clearFavoriteQuestions(): void {
+    if (!this.hasFavoriteQuestions) {
+      this.modalService.open('Nenhuma pergunta favorita para limpar.', { type: 'info' });
+      return;
+    }
+    this.favoriteQuestionIds = new Set();
+    this.persistFavoriteQuestions();
+    this.modalService.open('Perguntas favoritas foram limpas!', { type: 'success' });
+  }
+
+  cycleThemePreference(): void {
+    if (this.themePreference === 'system') {
+      this.themePreference = this.isDarkModeEnabled ? 'light' : 'dark';
+    } else if (this.themePreference === 'dark') {
+      this.themePreference = 'light';
+    } else {
+      this.themePreference = 'system';
+    }
+    this.applyThemeFromPreference(true);
   }
 
   get totalFilteredQuestions(): number {
@@ -553,6 +703,13 @@ export class PerguntaComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.unlockScroll();
+    if (this.systemDarkMedia && this.systemThemeListener) {
+      if (typeof this.systemDarkMedia.removeEventListener === 'function') {
+        this.systemDarkMedia.removeEventListener('change', this.systemThemeListener);
+      } else if (typeof this.systemDarkMedia.removeListener === 'function') {
+        this.systemDarkMedia.removeListener(this.systemThemeListener);
+      }
+    }
   }
 
   private syncSelectedTopicsFromIds(): void {
@@ -561,5 +718,77 @@ export class PerguntaComponent implements OnInit, OnDestroy {
       return;
     }
     this.selectedTopics = this.topics.filter(topic => this.selectedTopicIds.includes(topic.id));
+  }
+
+  private initializeTheme(): void {
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      this.themePreference = 'light';
+      this.isDarkModeEnabled = false;
+      return;
+    }
+
+    const storedPreference = localStorage.getItem(this.themePreferenceKey);
+    if (storedPreference === 'dark' || storedPreference === 'light') {
+      this.themePreference = storedPreference;
+    } else {
+      this.themePreference = 'system';
+    }
+
+    if (typeof window.matchMedia === 'function') {
+      this.systemDarkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+      this.systemThemeListener = (event: MediaQueryListEvent | MediaQueryList) => {
+        if (this.themePreference === 'system') {
+          this.applyThemeMode(event.matches ? 'dark' : 'light');
+        }
+      };
+      if (this.systemDarkMedia) {
+        if (typeof this.systemDarkMedia.addEventListener === 'function') {
+          this.systemDarkMedia.addEventListener('change', this.systemThemeListener);
+        } else if (typeof this.systemDarkMedia.addListener === 'function') {
+          this.systemDarkMedia.addListener(this.systemThemeListener);
+        }
+      }
+    }
+
+    this.applyThemeFromPreference(false);
+  }
+
+  private applyThemeFromPreference(persist: boolean): void {
+    const mode = this.resolveThemeMode();
+    this.applyThemeMode(mode);
+
+    if (!persist) {
+      return;
+    }
+
+    if (this.themePreference === 'system') {
+      localStorage.removeItem(this.themePreferenceKey);
+    } else {
+      localStorage.setItem(this.themePreferenceKey, this.themePreference);
+    }
+  }
+
+  private resolveThemeMode(): 'dark' | 'light' {
+    if (this.themePreference === 'dark') {
+      return 'dark';
+    }
+    if (this.themePreference === 'light') {
+      return 'light';
+    }
+    if (this.systemDarkMedia) {
+      return this.systemDarkMedia.matches ? 'dark' : 'light';
+    }
+    return 'light';
+  }
+
+  private applyThemeMode(mode: 'dark' | 'light'): void {
+    this.isDarkModeEnabled = mode === 'dark';
+    if (typeof document === 'undefined') {
+      return;
+    }
+    const body = document.body;
+    body.classList.toggle('theme-dark', this.isDarkModeEnabled);
+    body.classList.toggle('theme-light', !this.isDarkModeEnabled);
+    document.documentElement.style.setProperty('color-scheme', this.isDarkModeEnabled ? 'dark' : 'light');
   }
 }
