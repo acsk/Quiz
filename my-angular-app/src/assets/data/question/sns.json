@@ -4,12 +4,14 @@
       "id": "sns1a2b3c4d5",
       "topicId": 8,
       "levelId": 1,
+      "subject": "Definição do Serviço",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "O que é Amazon SNS?",
       "options": [
-        { "index": 1, "text": "Serviço de armazenamento de objetos" },
-        { "index": 2, "text": "Serviço de banco de dados relacional" },
-        { "index": 3, "text": "Serviço de mensagens totalmente gerenciado para comunicação entre aplicativos e microserviços" },
-        { "index": 4, "text": "Serviço de computação sem servidor" }
+        { "index": 1, "text": "Um serviço de armazenamento de objetos que permite armazenar e recuperar qualquer quantidade de dados a qualquer momento, de qualquer lugar na web." },
+        { "index": 2, "text": "Um serviço de banco de dados relacional que facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem." },
+        { "index": 3, "text": "Um serviço de mensagens totalmente gerenciado que facilita a comunicação entre aplicativos e microserviços através de um modelo de publicação/inscrição." },
+        { "index": 4, "text": "Um serviço de computação sem servidor que permite executar código sem provisionar ou gerenciar servidores." }
       ],
       "answer": 3
     },
@@ -17,12 +19,14 @@
       "id": "sns6e7f8g9h0",
       "topicId": 8,
       "levelId": 1,
+      "subject": "Função Principal",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "Qual é a principal função do Amazon SNS?",
       "options": [
-        { "index": 1, "text": "Armazenamento de objetos" },
-        { "index": 2, "text": "Computação em nuvem" },
-        { "index": 3, "text": "Comunicação entre aplicativos e microserviços" },
-        { "index": 4, "text": "Computação sem servidor" }
+        { "index": 1, "text": "Armazenar objetos de dados de forma segura e eficiente, permitindo acesso rápido e confiável a qualquer momento." },
+        { "index": 2, "text": "Fornecer uma plataforma de computação em nuvem que permite executar aplicativos e serviços sem a necessidade de gerenciar a infraestrutura subjacente." },
+        { "index": 3, "text": "Facilitar a comunicação entre aplicativos e microserviços através de um modelo de publicação/inscrição, permitindo que mensagens sejam enviadas para múltiplos assinantes simultaneamente." },
+        { "index": 4, "text": "Executar código em resposta a eventos sem a necessidade de provisionar ou gerenciar servidores, permitindo uma escalabilidade automática e eficiente." }
       ],
       "answer": 3
     },
@@ -30,12 +34,14 @@
       "id": "sns1i2j3k4l5",
       "topicId": 8,
       "levelId": 2,
-      "question": "Qual é a vantagem do Amazon SNS?",
+      "subject": "Vantagens do Serviço",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
+      "question": "Quais são as vantagens do Amazon SNS?",
       "options": [
-        { "index": 1, "text": "Maior custo" },
-        { "index": 2, "text": "Escalabilidade e flexibilidade" },
-        { "index": 3, "text": "Menor segurança" },
-        { "index": 4, "text": "Menor desempenho" }
+        { "index": 1, "text": "Maior custo devido à necessidade de gerenciar e manter a infraestrutura subjacente, o que pode resultar em despesas operacionais significativas." },
+        { "index": 2, "text": "Escalabilidade, flexibilidade, criptografia e confiabilidade, permitindo uma comunicação segura e eficiente entre aplicativos e microserviços." },
+        { "index": 3, "text": "Menor segurança devido à falta de mecanismos robustos de criptografia e controle de acesso, o que pode expor dados sensíveis a riscos." },
+        { "index": 4, "text": "Menor desempenho em comparação com outras soluções de mensagens, resultando em tempos de resposta mais lentos e menor eficiência operacional." }
       ],
       "answer": 2
     },
@@ -43,12 +49,14 @@
       "id": "sns7m8n9o0p1",
       "topicId": 8,
       "levelId": 2,
+      "subject": "Tópico",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "O que é um tópico no Amazon SNS?",
       "options": [
-        { "index": 1, "text": "Um serviço de armazenamento de objetos" },
-        { "index": 2, "text": "Um canal de comunicação para enviar mensagens a múltiplos assinantes" },
-        { "index": 3, "text": "Um serviço de banco de dados relacional" },
-        { "index": 4, "text": "Um serviço de computação sem servidor" }
+        { "index": 1, "text": "Um serviço de armazenamento de objetos que permite armazenar e recuperar dados de forma eficiente e segura." },
+        { "index": 2, "text": "Um canal de comunicação que permite enviar mensagens a múltiplos assinantes simultaneamente, facilitando a distribuição de informações em tempo real." },
+        { "index": 3, "text": "Um serviço de banco de dados relacional que facilita a configuração e operação de bancos de dados na nuvem." },
+        { "index": 4, "text": "Um serviço de computação sem servidor que permite executar código em resposta a eventos sem a necessidade de gerenciar servidores." }
       ],
       "answer": 2
     },
@@ -56,12 +64,14 @@
       "id": "sns2q3r4s5t6",
       "topicId": 8,
       "levelId": 2,
+      "subject": "Assinante",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "Qual é a função de um assinante no Amazon SNS?",
       "options": [
-        { "index": 1, "text": "Enviar mensagens para um tópico" },
-        { "index": 2, "text": "Receber mensagens de um tópico" },
-        { "index": 3, "text": "Armazenar dados de forma segura" },
-        { "index": 4, "text": "Gerenciar permissões de usuário" }
+        { "index": 1, "text": "Enviar mensagens para um tópico, permitindo a distribuição de informações para múltiplos destinatários." },
+        { "index": 2, "text": "Receber mensagens de um tópico, permitindo que aplicativos e serviços respondam a eventos em tempo real." },
+        { "index": 3, "text": "Armazenar dados de forma segura e eficiente, garantindo a integridade e disponibilidade das informações." },
+        { "index": 4, "text": "Gerenciar permissões de usuário, garantindo que apenas usuários autorizados possam acessar e modificar dados." }
       ],
       "answer": 2
     },
@@ -69,12 +79,14 @@
       "id": "sns8u9v0w1x2",
       "topicId": 8,
       "levelId": 2,
+      "subject": "Tipos de Endpoints",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "Quais são os tipos de endpoints suportados pelo Amazon SNS?",
       "options": [
-        { "index": 1, "text": "HTTP/HTTPS, Email, SMS, SQS, Lambda" },
-        { "index": 2, "text": "FTP, SFTP, SCP" },
-        { "index": 3, "text": "SMTP, IMAP, POP3" },
-        { "index": 4, "text": "NFS, SMB, CIFS" }
+        { "index": 1, "text": "HTTP/HTTPS, Email, SMS, SQS, Lambda, permitindo uma comunicação flexível e eficiente entre diferentes sistemas e dispositivos." },
+        { "index": 2, "text": "FTP, SFTP, SCP, facilitando a transferência segura de arquivos entre servidores e dispositivos." },
+        { "index": 3, "text": "SMTP, IMAP, POP3, permitindo a comunicação por email entre diferentes sistemas e usuários." },
+        { "index": 4, "text": "NFS, SMB, CIFS, facilitando o compartilhamento de arquivos e recursos entre diferentes sistemas operacionais e dispositivos." }
       ],
       "answer": 1
     },
@@ -82,12 +94,14 @@
       "id": "sns3a4b5c6d7",
       "topicId": 8,
       "levelId": 2,
+      "subject": "Entrega de Mensagens",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "Como o Amazon SNS garante a entrega de mensagens?",
       "options": [
-        { "index": 1, "text": "Usando um protocolo de entrega confiável e reenvio automático em caso de falha" },
-        { "index": 2, "text": "Armazenando mensagens em um banco de dados relacional" },
-        { "index": 3, "text": "Usando um serviço de computação sem servidor" },
-        { "index": 4, "text": "Armazenando mensagens em um serviço de armazenamento de objetos" }
+        { "index": 1, "text": "Usando um protocolo de entrega confiável e reenvio automático em caso de falha, garantindo que as mensagens sejam entregues de forma eficiente e segura." },
+        { "index": 2, "text": "Armazenando mensagens em um banco de dados relacional, permitindo a recuperação e análise de dados em tempo real." },
+        { "index": 3, "text": "Usando um serviço de computação sem servidor, permitindo a execução de código em resposta a eventos sem a necessidade de gerenciar servidores." },
+        { "index": 4, "text": "Armazenando mensagens em um serviço de armazenamento de objetos, garantindo a integridade e disponibilidade das informações." }
       ],
       "answer": 1
     },
@@ -95,12 +109,14 @@
       "id": "sns9e0f1g2h3",
       "topicId": 8,
       "levelId": 2,
+      "subject": "Política de Acesso",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "O que é uma política de acesso no Amazon SNS?",
       "options": [
-        { "index": 1, "text": "Um conjunto de regras que define quem pode publicar ou assinar tópicos" },
-        { "index": 2, "text": "Um conjunto de regras que define como armazenar dados de forma segura" },
-        { "index": 3, "text": "Um conjunto de regras que define como gerenciar permissões de usuário" },
-        { "index": 4, "text": "Um conjunto de regras que define como configurar um serviço de computação sem servidor" }
+        { "index": 1, "text": "Um conjunto de regras que define quem pode publicar ou assinar tópicos, garantindo que apenas usuários autorizados possam enviar e receber mensagens." },
+        { "index": 2, "text": "Um conjunto de regras que define como armazenar dados de forma segura, garantindo a integridade e disponibilidade das informações." },
+        { "index": 3, "text": "Um conjunto de regras que define como gerenciar permissões de usuário, garantindo que apenas usuários autorizados possam acessar e modificar dados." },
+        { "index": 4, "text": "Um conjunto de regras que define como configurar um serviço de computação sem servidor, permitindo a execução de código em resposta a eventos." }
       ],
       "answer": 1
     },
@@ -108,12 +124,14 @@
       "id": "sns4i5j6k7l8",
       "topicId": 8,
       "levelId": 2,
+      "subject": "Diferença entre SNS e SQS",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "Qual é a diferença entre Amazon SNS e Amazon SQS?",
       "options": [
-        { "index": 1, "text": "SNS é um serviço de mensagens public/subscribe, enquanto SQS é um serviço de fila de mensagens" },
-        { "index": 2, "text": "SNS é um serviço de armazenamento de objetos, enquanto SQS é um serviço de banco de dados relacional" },
-        { "index": 3, "text": "SNS é um serviço de computação sem servidor, enquanto SQS é um serviço de mensagens public/subscribe" },
-        { "index": 4, "text": "SNS é um serviço de banco de dados relacional, enquanto SQS é um serviço de armazenamento de objetos" }
+        { "index": 1, "text": "SNS é um serviço de mensagens public/subscribe, permitindo a comunicação entre aplicativos e microserviços através de tópicos, enquanto SQS é um serviço de fila de mensagens que permite o desacoplamento de componentes de sistemas distribuídos." },
+        { "index": 2, "text": "SNS é um serviço de armazenamento de objetos, permitindo o armazenamento e recuperação de dados, enquanto SQS é um serviço de banco de dados relacional que facilita a configuração e operação de bancos de dados na nuvem." },
+        { "index": 3, "text": "SNS é um serviço de computação sem servidor, permitindo a execução de código em resposta a eventos, enquanto SQS é um serviço de mensagens public/subscribe que facilita a comunicação entre aplicativos e microserviços." },
+        { "index": 4, "text": "SNS é um serviço de banco de dados relacional, permitindo a configuração e operação de bancos de dados, enquanto SQS é um serviço de armazenamento de objetos que permite o armazenamento e recuperação de dados." }
       ],
       "answer": 1
     },
@@ -121,12 +139,14 @@
       "id": "sns5m6n7o8p9",
       "topicId": 8,
       "levelId": 2,
+      "subject": "Integração com Lambda",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "Como você pode integrar o Amazon SNS com o AWS Lambda?",
       "options": [
-        { "index": 1, "text": "Criando uma função Lambda que publica mensagens em um tópico SNS" },
-        { "index": 2, "text": "Criando um tópico SNS que invoca uma função Lambda quando uma mensagem é publicada" },
-        { "index": 3, "text": "Armazenando mensagens em um serviço de armazenamento de objetos" },
-        { "index": 4, "text": "Usando um serviço de banco de dados relacional" }
+        { "index": 1, "text": "Criando uma função Lambda que publica mensagens em um tópico SNS, permitindo a comunicação entre diferentes componentes de um sistema distribuído." },
+        { "index": 2, "text": "Criando um tópico SNS que invoca uma função Lambda quando uma mensagem é publicada, permitindo a execução de código em resposta a eventos." },
+        { "index": 3, "text": "Armazenando mensagens em um serviço de armazenamento de objetos, garantindo a integridade e disponibilidade das informações." },
+        { "index": 4, "text": "Usando um serviço de banco de dados relacional, permitindo a configuração e operação de bancos de dados na nuvem." }
       ],
       "answer": 2
     },
@@ -134,14 +154,91 @@
       "id": "sns6q7r8s9t0",
       "topicId": 8,
       "levelId": 2,
+      "subject": "Filtro de Mensagens",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
       "question": "O que é um filtro de mensagens no Amazon SNS?",
       "options": [
-        { "index": 1, "text": "Um mecanismo para armazenar mensagens de forma segura" },
-        { "index": 2, "text": "Um mecanismo para definir regras de roteamento para subnets em um VPC" },
-        { "index": 3, "text": "Um mecanismo para gerenciar permissões de usuário" },
-        { "index": 4, "text": "Um mecanismo para filtrar mensagens com base em atributos específicos antes de entregá-las aos assinantes" }
+        { "index": 1, "text": "Um mecanismo para armazenar mensagens de forma segura, garantindo a integridade e disponibilidade das informações." },
+        { "index": 2, "text": "Um mecanismo para definir regras de roteamento para subnets em um VPC, permitindo a comunicação eficiente entre diferentes componentes de um sistema." },
+        { "index": 3, "text": "Um mecanismo para gerenciar permissões de usuário, garantindo que apenas usuários autorizados possam acessar e modificar dados." },
+        { "index": 4, "text": "Um mecanismo para filtrar mensagens com base em atributos específicos antes de entregá-las aos assinantes, permitindo uma comunicação eficiente e personalizada." }
       ],
       "answer": 4
+    },
+    {
+      "id": "sns7a8b9c0d1",
+      "topicId": 8,
+      "levelId": 1,
+      "subject": "Modelo de Comunicação",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
+      "question": "Qual é o modelo de comunicação do Amazon SNS?",
+      "options": [
+        { "index": 1, "text": "Fila de mensagens assíncronas, permitindo a comunicação eficiente entre diferentes componentes de um sistema distribuído." },
+        { "index": 2, "text": "Comunicação síncrona, garantindo a entrega imediata de mensagens entre diferentes componentes de um sistema." },
+        { "index": 3, "text": "Publicação/inscrição (pub/sub), permitindo que mensagens sejam enviadas para múltiplos assinantes simultaneamente." },
+        { "index": 4, "text": "Comunicação de difusão, permitindo a distribuição de mensagens para um grande número de destinatários ao mesmo tempo." }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "sns8a9b0c1d2",
+      "topicId": 8,
+      "levelId": 1,
+      "subject": "Tipo de Comunicação",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
+      "question": "Qual é o tipo de comunicação do Amazon SNS?",
+      "options": [
+        { "index": 1, "text": "Muitos para muitos (many-to-many), permitindo a comunicação entre múltiplos componentes de um sistema distribuído." },
+        { "index": 2, "text": "Ponto a ponto (one-to-one), garantindo a entrega de mensagens entre dois componentes específicos de um sistema." },
+        { "index": 3, "text": "Um para muitos (one-to-many), permitindo que uma mensagem seja enviada para múltiplos assinantes simultaneamente." },
+        { "index": 4, "text": "Difusão (broadcast), permitindo a distribuição de mensagens para um grande número de destinatários ao mesmo tempo." }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "sns9a0b1c2d3",
+      "topicId": 8,
+      "levelId": 1,
+      "subject": "Entrega de Mensagens",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
+      "question": "Como é feita a entrega de mensagens no Amazon SNS?",
+      "options": [
+        { "index": 1, "text": "Cada mensagem é processada por múltiplos consumidores, garantindo a distribuição eficiente de informações." },
+        { "index": 2, "text": "Cada mensagem é processada por um único consumidor, garantindo a entrega eficiente de informações." },
+        { "index": 3, "text": "Uma mensagem pode ser enviada para vários assinantes ao mesmo tempo, permitindo a distribuição eficiente de informações." },
+        { "index": 4, "text": "As mensagens são entregues em tempo real, garantindo a comunicação imediata entre diferentes componentes de um sistema." }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "sns0a1b2c3d4",
+      "topicId": 8,
+      "levelId": 1,
+      "subject": "Uso Ideal",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
+      "question": "Para que tipo de uso o Amazon SNS é ideal?",
+      "options": [
+        { "index": 1, "text": "Processamentos síncronos, garantindo a entrega imediata de mensagens entre diferentes componentes de um sistema." },
+        { "index": 2, "text": "Filas de tarefas e desacoplamento entre serviços, permitindo a comunicação eficiente entre diferentes componentes de um sistema distribuído." },
+        { "index": 3, "text": "Notificações em tempo real, eventos distribuídos e mensagens de broadcast, permitindo a comunicação eficiente e imediata entre diferentes componentes de um sistema." },
+        { "index": 4, "text": "Armazenamento de dados, garantindo a integridade e disponibilidade das informações." }
+      ],
+      "answer": 3
+    },
+    {
+      "id": "sns1a2b3c4d5",
+      "topicId": 8,
+      "levelId": 1,
+      "subject": "Exemplo de Uso",
+      "tags": ["Amazon SNS", "Mensagens", "AWS"],
+      "question": "Qual é um exemplo de uso do Amazon SNS?",
+      "options": [
+        { "index": 1, "text": "Armazenar dados de usuários, garantindo a integridade e disponibilidade das informações." },
+        { "index": 2, "text": "Publicar eventos de novos pedidos e múltiplos serviços assinarem e reagirem ao evento simultaneamente, permitindo a comunicação eficiente entre diferentes componentes de um sistema." },
+        { "index": 3, "text": "Executar funções de computação sem servidor, permitindo a execução de código em resposta a eventos." },
+        { "index": 4, "text": "Gerenciar infraestrutura de rede, garantindo a comunicação eficiente entre diferentes componentes de um sistema." }
+      ],
+      "answer": 2
     }
   ]
 }

@@ -4,6 +4,8 @@
       "id": "sqs1a2b3c4d5",
       "topicId": 9,
       "levelId": 1,
+      "subject": "Definição do Serviço",
+      "tags": ["Amazon SQS", "Mensagens", "AWS"],
       "question": "O que é Amazon SQS?",
       "options": [
         { "index": 1, "text": "Serviço de armazenamento de objetos" },
@@ -17,6 +19,8 @@
       "id": "sqs6e7f8g9h0",
       "topicId": 9,
       "levelId": 1,
+      "subject": "Função Principal",
+      "tags": ["Amazon SQS", "Mensagens", "AWS"],
       "question": "Qual é a principal função do Amazon SQS?",
       "options": [
         { "index": 1, "text": "Armazenamento de objetos" },
@@ -30,6 +34,8 @@
       "id": "sqs1i2j3k4l5",
       "topicId": 9,
       "levelId": 2,
+      "subject": "Benefícios do Serviço",
+      "tags": ["Amazon SQS", "Mensagens", "AWS"],
       "question": "Quais são os benefícios do Amazon SQS?",
       "options": [
         { "index": 1, "text": "Desacoplar componentes de aplicativos" },
@@ -38,6 +44,81 @@
         { "index": 4, "text": "Todas as opções acima" }
       ],
       "answer": 4
+    },
+    {
+      "id": "sqs2a3b4c5d6",
+      "topicId": 9,
+      "levelId": 1,
+      "subject": "Modelo de Comunicação",
+      "tags": ["Amazon SQS", "Mensagens", "AWS"],
+      "question": "Qual é o modelo de comunicação do Amazon SQS?",
+      "options": [
+        { "index": 1, "text": "Fila de mensagens assíncronas" },
+        { "index": 2, "text": "Comunicação síncrona" },
+        { "index": 3, "text": "Comunicação em tempo real" },
+        { "index": 4, "text": "Comunicação de difusão" }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "sqs3a4b5c6d7",
+      "topicId": 9,
+      "levelId": 1,
+      "subject": "Tipo de Comunicação",
+      "tags": ["Amazon SQS", "Mensagens", "AWS"],
+      "question": "Qual é o tipo de comunicação do Amazon SQS?",
+      "options": [
+        { "index": 1, "text": "Muitos para muitos (many-to-many)" },
+        { "index": 2, "text": "Ponto a ponto (one-to-one)" },
+        { "index": 3, "text": "Um para muitos (one-to-many)" },
+        { "index": 4, "text": "Difusão (broadcast)" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "sqs4a5b6c7d8",
+      "topicId": 9,
+      "levelId": 1,
+      "subject": "Entrega de Mensagens",
+      "tags": ["Amazon SQS", "Mensagens", "AWS"],
+      "question": "Como é feita a entrega de mensagens no Amazon SQS?",
+      "options": [
+        { "index": 1, "text": "Cada mensagem é processada por múltiplos consumidores" },
+        { "index": 2, "text": "Cada mensagem é processada por um único consumidor" },
+        { "index": 3, "text": "As mensagens são armazenadas indefinidamente" },
+        { "index": 4, "text": "As mensagens são entregues em tempo real" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "sqs5a6b7c8d9",
+      "topicId": 9,
+      "levelId": 1,
+      "subject": "Uso Ideal",
+      "tags": ["Amazon SQS", "Mensagens", "AWS"],
+      "question": "Para que tipo de uso o Amazon SQS é ideal?",
+      "options": [
+        { "index": 1, "text": "Processamentos síncronos" },
+        { "index": 2, "text": "Filas de tarefas e desacoplamento entre serviços" },
+        { "index": 3, "text": "Armazenamento de dados" },
+        { "index": 4, "text": "Computação em tempo real" }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "sqs6a7b8c9d0",
+      "topicId": 9,
+      "levelId": 1,
+      "subject": "Exemplo de Uso",
+      "tags": ["Amazon SQS", "Mensagens", "AWS"],
+      "question": "Qual é um exemplo de uso do Amazon SQS?",
+      "options": [
+        { "index": 1, "text": "Armazenar dados de usuários" },
+        { "index": 2, "text": "Processar solicitações de pedidos até que um serviço de processamento possa lidar com elas" },
+        { "index": 3, "text": "Executar funções de computação sem servidor" },
+        { "index": 4, "text": "Gerenciar infraestrutura de rede" }
+      ],
+      "answer": 2
     }
   ]
 }

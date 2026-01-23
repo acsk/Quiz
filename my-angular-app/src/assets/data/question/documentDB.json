@@ -1,0 +1,134 @@
+{
+  "questions": [
+    {
+      "id": "documentdb1a2b3c4d5",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "O que é o Amazon DocumentDB?",
+      "options": [
+        { "index": 1, "text": "Um serviço de banco de dados relacional totalmente gerenciado." },
+        { "index": 2, "text": "Um serviço de banco de dados NoSQL totalmente gerenciado, compatível com MongoDB, que oferece escalabilidade, desempenho e disponibilidade." },
+        { "index": 3, "text": "Um serviço de armazenamento de objetos que permite armazenar e recuperar qualquer quantidade de dados." },
+        { "index": 4, "text": "Um serviço de computação sem servidor que permite executar código sem provisionar ou gerenciar servidores." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb6e7f8g9h0",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "Quais são os principais benefícios do Amazon DocumentDB?",
+      "options": [
+        { "index": 1, "text": "Desempenho lento e escalabilidade limitada." },
+        { "index": 2, "text": "Escalabilidade automática, alta disponibilidade, compatibilidade com MongoDB e gerenciamento simplificado." },
+        { "index": 3, "text": "Apenas suporte para bancos de dados relacionais." },
+        { "index": 4, "text": "Apenas armazenamento de objetos com baixa durabilidade." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb1i2j3k4l5",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "Como o Amazon DocumentDB lida com a escalabilidade?",
+      "options": [
+        { "index": 1, "text": "O DocumentDB não oferece escalabilidade." },
+        { "index": 2, "text": "O DocumentDB escala automaticamente o armazenamento até 64 TB por cluster, com capacidade de leitura escalável através de réplicas." },
+        { "index": 3, "text": "A escalabilidade no DocumentDB requer intervenção manual para ajustar a capacidade." },
+        { "index": 4, "text": "O DocumentDB só escala verticalmente, aumentando o tamanho das instâncias." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb7m8n9o0p1",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "O que é a compatibilidade com MongoDB no Amazon DocumentDB?",
+      "options": [
+        { "index": 1, "text": "O DocumentDB não é compatível com MongoDB." },
+        { "index": 2, "text": "O DocumentDB é compatível com as APIs do MongoDB 3.6, 4.0 e 5.0, permitindo a migração de aplicações existentes sem alterações de código." },
+        { "index": 3, "text": "A compatibilidade com MongoDB é limitada apenas a consultas simples." },
+        { "index": 4, "text": "O DocumentDB só suporta MongoDB em instâncias específicas." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb2q3r4s5t6",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "Como o Amazon DocumentDB garante alta disponibilidade?",
+      "options": [
+        { "index": 1, "text": "O DocumentDB não oferece alta disponibilidade." },
+        { "index": 2, "text": "O DocumentDB replica dados automaticamente em até 15 réplicas de leitura em várias zonas de disponibilidade, garantindo alta disponibilidade e durabilidade." },
+        { "index": 3, "text": "A alta disponibilidade no DocumentDB requer configuração manual de réplicas." },
+        { "index": 4, "text": "O DocumentDB só garante alta disponibilidade em regiões específicas." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb8u9v0w1x2",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "O que é o armazenamento automatizado no Amazon DocumentDB?",
+      "options": [
+        { "index": 1, "text": "Um recurso que permite armazenar dados manualmente em instâncias específicas." },
+        { "index": 2, "text": "Um recurso que escala automaticamente o armazenamento até 64 TB por cluster, sem necessidade de provisionamento manual." },
+        { "index": 3, "text": "Um recurso que limita o armazenamento a apenas 1 TB por cluster." },
+        { "index": 4, "text": "Um recurso que não suporta escalabilidade de armazenamento." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb9e0f1g2h3",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "Como o Amazon DocumentDB cobra pelos serviços?",
+      "options": [
+        { "index": 1, "text": "O DocumentDB cobra apenas pelo armazenamento de dados, sem custos adicionais." },
+        { "index": 2, "text": "O DocumentDB cobra com base no uso de instâncias, armazenamento e I/O, além de opções como backups e réplicas de leitura." },
+        { "index": 3, "text": "O DocumentDB cobra uma taxa fixa mensal, independente do uso." },
+        { "index": 4, "text": "O DocumentDB não cobra pelo uso, apenas pela configuração inicial." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb4i5j6k7l8",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "O que são réplicas de leitura no Amazon DocumentDB?",
+      "options": [
+        { "index": 1, "text": "Instâncias que permitem apenas operações de escrita." },
+        { "index": 2, "text": "Instâncias que permitem operações de leitura, melhorando o desempenho e a disponibilidade do cluster." },
+        { "index": 3, "text": "Instâncias que não suportam operações de leitura ou escrita." },
+        { "index": 4, "text": "Instâncias que limitam o acesso a apenas um usuário específico." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb5m6n7o8p9",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "Como o Amazon DocumentDB lida com backups?",
+      "options": [
+        { "index": 1, "text": "O DocumentDB não oferece suporte a backups." },
+        { "index": 2, "text": "O DocumentDB oferece backups contínuos e sob demanda, permitindo a restauração de dados para qualquer ponto no tempo." },
+        { "index": 3, "text": "Os backups no DocumentDB requerem configuração manual e intervenção do usuário." },
+        { "index": 4, "text": "O DocumentDB só permite backups em regiões específicas." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "documentdb0q1r2s3t4",
+      "topicId": 40,
+      "levelId": 1,
+      "question": "O que é o recurso de restauração pontual no Amazon DocumentDB?",
+      "options": [
+        { "index": 1, "text": "Um recurso que permite restaurar o banco de dados para qualquer ponto no tempo dentro do período de retenção de backups." },
+        { "index": 2, "text": "Um recurso que limita a restauração a apenas um ponto específico definido pelo usuário." },
+        { "index": 3, "text": "Um recurso que não permite restauração de dados." },
+        { "index": 4, "text": "Um recurso que restaura apenas dados excluídos manualmente." }
+      ],
+      "answer": 1
+    }
+  ]
+}

@@ -1,0 +1,1068 @@
+{
+  "questions": [
+    {
+      "id": "id-aws001",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa precisa permitir que suas instâncias EC2 em uma subrede privada baixem atualizações da Internet. As instâncias não devem ser acessíveis diretamente da Internet. Qual configuração atende a esse requisito?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Criar um Internet Gateway e associá-lo diretamente à subrede privada."
+        },
+        {
+          "index": 2,
+          "text": "Criar um NAT Gateway em uma subrede pública e atualizar a tabela de rotas da subrede privada para apontar para o NAT Gateway."
+        },
+        {
+          "index": 3,
+          "text": "Criar um NAT Gateway em uma subrede privada e associá-lo a um Internet Gateway."
+        },
+        {
+          "index": 4,
+          "text": "Criar um Internet Gateway na subrede pública e apontar para ele na rota da subrede privada."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A configuração correta é criar um NAT Gateway em uma subrede pública e atualizar a tabela de rotas da subrede privada para que o tráfego de saída para a Internet passe por ele. Isso permite o acesso à Internet sem exposição direta às instâncias."
+    },
+    {
+      "id": "id-aws002",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa hospeda sua aplicação web em instâncias EC2 localizadas em uma subrede privada. Como garantir que a aplicação acesse APIs públicas sem permitir tráfego de entrada externo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Mover as instâncias EC2 para uma subrede pública e associar um endereço IP público."
+        },
+        {
+          "index": 2,
+          "text": "Usar um NAT Gateway em uma subrede pública e configurar a tabela de rotas da subrede privada para usá-lo."
+        },
+        {
+          "index": 3,
+          "text": "Anexar um Internet Gateway diretamente à subrede privada."
+        },
+        {
+          "index": 4,
+          "text": "Criar um Application Load Balancer e posicioná-lo na subrede privada."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Um NAT Gateway permite que instâncias em subredes privadas iniciem conexões com a Internet sem aceitar conexões de entrada externas, protegendo os recursos internos."
+    },
+    {
+      "id": "id-aws003",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa deseja garantir alta disponibilidade para a saída de Internet de suas instâncias EC2 em múltiplas zonas de disponibilidade privadas. Qual solução é mais adequada?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Criar um NAT Gateway em cada zona de disponibilidade pública e configurar as rotas das subredes privadas para usarem o NAT local."
+        },
+        {
+          "index": 2,
+          "text": "Usar um único NAT Gateway em uma zona de disponibilidade pública e apontar todas as rotas para ele."
+        },
+        {
+          "index": 3,
+          "text": "Criar um Internet Gateway em cada zona de disponibilidade e associá-los às subredes privadas."
+        },
+        {
+          "index": 4,
+          "text": "Configurar o NAT Gateway em uma subrede privada para rotear diretamente para a Internet."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Para alta disponibilidade, deve-se ter um NAT Gateway por zona de disponibilidade, evitando pontos únicos de falha e garantindo resiliência em caso de falhas regionais."
+    },
+    {
+      "id": "id-aws004",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Durante uma revisão de segurança, uma equipe deseja garantir que instâncias em subredes privadas possam fazer atualizações do sistema sem exposição a tráfego de entrada. O que deve ser implementado?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Anexar diretamente um Internet Gateway às subredes privadas."
+        },
+        {
+          "index": 2,
+          "text": "Utilizar um NAT Gateway em uma subrede pública com a tabela de rotas adequada nas subredes privadas."
+        },
+        {
+          "index": 3,
+          "text": "Associar um endereço IP elástico a cada instância privada."
+        },
+        {
+          "index": 4,
+          "text": "Apenas permitir tráfego HTTPS nas Security Groups das instâncias privadas."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O uso de um NAT Gateway em subrede pública permite o acesso à Internet sem aceitar conexões externas, ideal para atualizações seguras."
+    },
+    {
+      "id": "id-aws005",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma organização está implementando uma arquitetura multi-AZ com subredes privadas para instâncias EC2. Como garantir que todas as instâncias possam acessar a Internet de forma segura e escalável?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Criar um NAT Gateway em uma única subrede pública e reutilizá-lo em todas as AZs."
+        },
+        {
+          "index": 2,
+          "text": "Criar um NAT Gateway em cada subrede pública e apontar cada subrede privada localmente."
+        },
+        {
+          "index": 3,
+          "text": "Colocar as instâncias diretamente em subredes públicas com IPs públicos."
+        },
+        {
+          "index": 4,
+          "text": "Associar diretamente um Internet Gateway a cada subrede privada."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A abordagem ideal para multi-AZ é usar um NAT Gateway por zona de disponibilidade pública, garantindo redundância e roteamento local eficiente para cada subrede privada."
+    },
+    {
+      "id": "id-aws001-xyz123",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa está configurando um cluster Redis no Amazon ElastiCache para melhorar o desempenho de sua aplicação web. Qual configuração inicial deve ser feita para garantir alta disponibilidade e escalabilidade?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Criar um cluster Redis com um único nó em uma zona de disponibilidade."
+        },
+        {
+          "index": 2,
+          "text": "Configurar o cluster Redis com múltiplos nós em várias zonas de disponibilidade."
+        },
+        {
+          "index": 3,
+          "text": "Usar o modo de cluster desativado para simplificar a configuração."
+        },
+        {
+          "index": 4,
+          "text": "Associar um Internet Gateway diretamente ao cluster Redis."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Para garantir alta disponibilidade e escalabilidade, é recomendado configurar o cluster Redis com múltiplos nós em várias zonas de disponibilidade."
+    },
+    {
+      "id": "id-aws002-abc456",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa deseja usar o Redis no ElastiCache para armazenar dados de sessão de usuários. Qual é a principal vantagem dessa abordagem?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Reduzir o custo de armazenamento de dados."
+        },
+        {
+          "index": 2,
+          "text": "Melhorar a latência de acesso aos dados de sessão."
+        },
+        {
+          "index": 3,
+          "text": "Simplificar a configuração de segurança."
+        },
+        {
+          "index": 4,
+          "text": "Permitir acesso direto à Internet."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Usar o Redis no ElastiCache para armazenar dados de sessão melhora a latência de acesso aos dados, proporcionando uma experiência de usuário mais rápida e eficiente."
+    },
+    {
+      "id": "id-aws003-def789",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa está configurando um cluster Redis no ElastiCache e deseja garantir que os dados sejam replicados automaticamente para alta disponibilidade. Qual configuração deve ser usada?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Configurar o cluster Redis com um único nó primário sem réplicas."
+        },
+        {
+          "index": 2,
+          "text": "Usar múltiplos nós primários em diferentes zonas de disponibilidade."
+        },
+        {
+          "index": 3,
+          "text": "Configurar o cluster Redis com um nó primário e múltiplas réplicas em diferentes zonas de disponibilidade."
+        },
+        {
+          "index": 4,
+          "text": "Desativar a replicação automática para simplificar a configuração."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Para garantir alta disponibilidade, é recomendado configurar o cluster Redis com um nó primário e múltiplas réplicas em diferentes zonas de disponibilidade."
+    },
+    {
+      "id": "id-aws004-ghi012",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa está usando o Redis no ElastiCache para gerenciar filas de mensagens em um sistema distribuído. Qual é a principal vantagem dessa abordagem?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Reduzir o custo de armazenamento de dados."
+        },
+        {
+          "index": 2,
+          "text": "Melhorar a latência de processamento de mensagens."
+        },
+        {
+          "index": 3,
+          "text": "Simplificar a configuração de segurança."
+        },
+        {
+          "index": 4,
+          "text": "Permitir acesso direto à Internet."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Usar o Redis no ElastiCache para gerenciar filas de mensagens melhora a latência de processamento, proporcionando um sistema distribuído mais eficiente."
+    },
+    {
+      "id": "id-aws005-jkl345",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma organização está implementando um cluster Redis no ElastiCache para armazenar dados temporários que precisam ser acessados rapidamente. Qual é a principal vantagem dessa abordagem?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Reduzir o custo de armazenamento de dados."
+        },
+        {
+          "index": 2,
+          "text": "Melhorar a latência de acesso aos dados temporários."
+        },
+        {
+          "index": 3,
+          "text": "Simplificar a configuração de segurança."
+        },
+        {
+          "index": 4,
+          "text": "Permitir acesso direto à Internet."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Usar o Redis no ElastiCache para armazenar dados temporários melhora a latência de acesso, proporcionando uma experiência de usuário mais rápida e eficiente."
+    },
+    {
+      "id": "id-aws001-abc123",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa está implementando o Redis no ElastiCache para melhorar o desempenho de sua aplicação web. Eles decidem usar a estratégia de carregamento lento. Qual é a principal vantagem dessa abordagem?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Reduzir a latência inicial de todas as solicitações de dados."
+        },
+        {
+          "index": 2,
+          "text": "Evitar o preenchimento do cache com dados desnecessários."
+        },
+        {
+          "index": 3,
+          "text": "Garantir que os dados no cache estejam sempre atualizados."
+        },
+        {
+          "index": 4,
+          "text": "Permitir acesso direto à Internet para todas as instâncias."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A principal vantagem da estratégia de carregamento lento é evitar o preenchimento do cache com dados desnecessários, armazenando apenas os dados que são realmente solicitados."
+    },
+    {
+      "id": "id-aws002-def456",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa está usando a estratégia de gravação simultânea com Redis no ElastiCache. Qual é uma possível desvantagem dessa abordagem?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Aumentar a latência de leitura dos dados."
+        },
+        {
+          "index": 2,
+          "text": "Preencher o cache com dados que não são frequentemente acessados."
+        },
+        {
+          "index": 3,
+          "text": "Reduzir a consistência dos dados no cache."
+        },
+        {
+          "index": 4,
+          "text": "Impedir que os dados sejam replicados automaticamente."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Uma possível desvantagem da estratégia de gravação simultânea é preencher o cache com dados que não são frequentemente acessados, o que pode desperdiçar recursos."
+    },
+    {
+      "id": "id-aws003-ghi789",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa está configurando um cluster Redis no ElastiCache e deseja usar a estratégia de carregamento lento. O que deve ser feito quando os dados solicitados não estão no cache?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A aplicação deve retornar um erro ao usuário."
+        },
+        {
+          "index": 2,
+          "text": "A aplicação deve buscar os dados no banco de dados e atualizar o cache."
+        },
+        {
+          "index": 3,
+          "text": "O cache deve ser automaticamente preenchido com todos os dados do banco de dados."
+        },
+        {
+          "index": 4,
+          "text": "Os dados devem ser buscados de um serviço externo."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Quando os dados solicitados não estão no cache, a aplicação deve buscar os dados no banco de dados e atualizar o cache, garantindo que os dados estejam disponíveis para futuras solicitações."
+    },
+    {
+      "id": "id-aws004-jkl012",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma empresa está usando a estratégia de gravação simultânea com Redis no ElastiCache para garantir a consistência dos dados. Qual é a principal vantagem dessa abordagem?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Reduzir a latência de gravação dos dados."
+        },
+        {
+          "index": 2,
+          "text": "Garantir que os dados no cache estejam sempre atualizados."
+        },
+        {
+          "index": 3,
+          "text": "Evitar o preenchimento do cache com dados desnecessários."
+        },
+        {
+          "index": 4,
+          "text": "Permitir acesso direto à Internet para todas as instâncias."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A principal vantagem da estratégia de gravação simultânea é garantir que os dados no cache estejam sempre atualizados, proporcionando consistência dos dados."
+    },
+    {
+      "id": "id-aws005-mno345",
+      "topicId": 50,
+      "levelId": 1,
+      "question": "Uma organização está implementando um cluster Redis no ElastiCache e deseja usar a estratégia de carregamento lento. Qual é uma possível desvantagem dessa abordagem?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Aumentar a latência inicial para a primeira solicitação de dados."
+        },
+        {
+          "index": 2,
+          "text": "Preencher o cache com dados que não são frequentemente acessados."
+        },
+        {
+          "index": 3,
+          "text": "Reduzir a consistência dos dados no cache."
+        },
+        {
+          "index": 4,
+          "text": "Impedir que os dados sejam replicados automaticamente."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Uma possível desvantagem da estratégia de carregamento lento é aumentar a latência inicial para a primeira solicitação de dados, pois os dados precisam ser buscados no banco de dados e atualizados no cache."
+    },
+    {
+      "id": "dynamodb-usecase-001",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Uma plataforma de e-commerce utiliza o DynamoDB para armazenar informações de produtos. Qual seria um caso de uso primário para o DynamoDB nesse cenário?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Armazenar logs de acesso detalhados dos usuários."
+        },
+        {
+          "index": 2,
+          "text": "Gerenciar relacionamentos complexos entre diferentes entidades de produtos."
+        },
+        {
+          "index": 3,
+          "text": "Armazenar metadados de produtos e permitir consultas rápidas por atributos como ID, nome e categoria."
+        },
+        {
+          "index": 4,
+          "text": "Realizar análises complexas de vendas e tendências de mercado em tempo real."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O DynamoDB é ideal para armazenar metadados de produtos devido à sua capacidade de fornecer consultas rápidas por chave e atributos, além de alta escalabilidade para lidar com um grande catálogo de produtos."
+    },
+    {
+      "id": "dynamodb-usecase-002",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Um aplicativo de jogos armazena sessões de jogadores no DynamoDB. Qual seria um bom caso de uso para o recurso de TTL (Time To Live) nesse contexto?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Garantir que os dados da conta do jogador sejam mantidos permanentemente."
+        },
+        {
+          "index": 2,
+          "text": "Remover automaticamente dados de sessões de jogo inativas após um determinado período."
+        },
+        {
+          "index": 3,
+          "text": "Realizar backups diários dos dados de todas as sessões de jogo."
+        },
+        {
+          "index": 4,
+          "text": "Controlar manualmente a expiração de dados de sessões específicas."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O TTL é útil para remover automaticamente dados de sessões de jogo que não são mais ativas, ajudando a reduzir custos de armazenamento e manter a tabela de sessões limpa."
+    },
+    {
+      "id": "dynamodb-usecase-003",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Em um sistema de rastreamento de pedidos usando DynamoDB, qual atributo seria uma boa escolha para Partition Key para otimizar consultas para um cliente específico?",
+      "options": [
+        {
+          "index": 1,
+          "text": "O ID do pedido (um valor único para cada pedido)."
+        },
+        {
+          "index": 2,
+          "text": "A data de criação do pedido."
+        },
+        {
+          "index": 3,
+          "text": "O ID do cliente."
+        },
+        {
+          "index": 4,
+          "text": "O status do pedido (pendente, enviado, entregue)."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Usar o ID do cliente como Partition Key permite consultas eficientes para buscar todos os pedidos associados a um cliente específico."
+    },
+    {
+      "id": "dynamodb-usecase-004",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Considere uma tabela de eventos de um aplicativo com `userId` como Partition Key. Para permitir consultas eficientes de todos os eventos de um usuário em ordem cronológica, qual atributo você adicionaria como Sort Key?",
+      "options": [
+        {
+          "index": 1,
+          "text": "O tipo do evento."
+        },
+        {
+          "index": 2,
+          "text": "Um ID único para cada evento."
+        },
+        {
+          "index": 3,
+          "text": "O timestamp da ocorrência do evento."
+        },
+        {
+          "index": 4,
+          "text": "A descrição do evento."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Usar o timestamp como Sort Key, juntamente com o `userId` como Partition Key, permite consultas eficientes para obter todos os eventos de um usuário e ordená-los por tempo."
+    },
+    {
+      "id": "dynamodb-usecase-005",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Um sistema de contagem de votos precisa garantir que cada voto seja registrado e lido com a informação mais atualizada imediatamente. Qual modelo de consistência de leitura o DynamoDB deveria utilizar?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Consistência Eventual."
+        },
+        {
+          "index": 2,
+          "text": "Consistência Forte."
+        },
+        {
+          "index": 3,
+          "text": "Ambos, dependendo da região."
+        },
+        {
+          "index": 4,
+          "text": "Nenhum dos dois, pois o DynamoDB não garante consistência."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Para garantir que a leitura reflita a gravação mais recente imediatamente, a Consistência Forte deve ser utilizada."
+    },
+    {
+      "id": "dynamodb-usecase-006",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Um aplicativo de notícias com alto volume de leituras e escritas intermitentes pode se beneficiar da Consistência Eventual para:",
+      "options": [
+        {
+          "index": 1,
+          "text": "Garantir que todos os usuários vejam a notícia exatamente ao mesmo tempo."
+        },
+        {
+          "index": 2,
+          "text": "Aumentar o throughput de leitura e reduzir os custos em comparação com a consistência forte."
+        },
+        {
+          "index": 3,
+          "text": "Evitar qualquer tipo de inconsistência nos dados."
+        },
+        {
+          "index": 4,
+          "text": "Simplificar a lógica de leitura do aplicativo."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A Consistência Eventual oferece maior throughput de leitura e menor custo, sendo adequada para cenários onde uma pequena latência na visualização das atualizações não é crítica."
+    },
+    {
+      "id": "dynamodb-usecase-007",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Uma aplicação que realiza muitas leituras de itens pequenos (menos de 4 KB) por segundo se beneficiaria de provisionar:",
+      "options": [
+        {
+          "index": 1,
+          "text": "Poucas Read Capacity Units (RCUs)."
+        },
+        {
+          "index": 2,
+          "text": "Um número adequado de Read Capacity Units (RCUs) para atender à demanda esperada."
+        },
+        {
+          "index": 3,
+          "text": "Muitas Write Capacity Units (WCUs)."
+        },
+        {
+          "index": 4,
+          "text": "Nenhuma unidade de capacidade provisionada, utilizando apenas o modo sob demanda."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "É crucial provisionar um número adequado de RCUs para garantir que a aplicação possa realizar as leituras necessárias sem sofrer throttling."
+    },
+    {
+      "id": "dynamodb-usecase-008",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Um sistema que ingere grandes volumes de dados (itens menores que 1 KB) no DynamoDB por segundo precisará de:",
+      "options": [
+        {
+          "index": 1,
+          "text": "Poucas Write Capacity Units (WCUs)."
+        },
+        {
+          "index": 2,
+          "text": "Um número adequado de Write Capacity Units (WCUs) para suportar a taxa de gravação."
+        },
+        {
+          "index": 3,
+          "text": "Muitas Read Capacity Units (RCUs)."
+        },
+        {
+          "index": 4,
+          "text": "Utilizar principalmente consultas SCAN para evitar custos de gravação."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Para suportar um alto volume de gravações, é necessário provisionar um número suficiente de WCUs para evitar throttling nas operações de escrita."
+    },
+    {
+      "id": "securitygroup-usecase-001",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Em uma arquitetura de três camadas na AWS, como você aplicaria o princípio do menor privilégio usando grupos de segurança para controlar o tráfego entre a camada de aplicação e a camada de banco de dados?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Permitir todo o tráfego TCP/UDP entre os blocos CIDR das sub-redes da camada de aplicação e da camada de banco de dados."
+        },
+        {
+          "index": 2,
+          "text": "Permitir todo o tráfego TCP/UDP entre os grupos de segurança associados às instâncias da camada de aplicação e da camada de banco de dados."
+        },
+        {
+          "index": 3,
+          "text": "Permitir apenas o tráfego na porta do banco de dados (por exemplo, 3306 para MySQL, 1433 para SQL Server) do grupo de segurança da camada de aplicação para o grupo de segurança da camada de banco de dados."
+        },
+        {
+          "index": 4,
+          "text": "Permitir todo o tráfego da VPC para o grupo de segurança da camada de banco de dados."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "A melhor prática para aplicar o princípio do menor privilégio é permitir apenas o tráfego necessário na porta específica do serviço (neste caso, o banco de dados) entre os grupos de segurança das camadas que precisam se comunicar. Isso limita a exposição e melhora a segurança."
+    },
+    {
+      "id": "securitygroup-usecase-002",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Você tem instâncias EC2 rodando um servidor web (HTTP na porta 80 e HTTPS na porta 443) em um grupo de segurança chamado `WebSG`. Você também tem um Application Load Balancer (ALB) na frente dessas instâncias. Qual configuração de regra de entrada no grupo de segurança `WebSG` é a mais segura, seguindo o princípio do menor privilégio?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Permitir tráfego TCP nas portas 80 e 443 de 0.0.0.0/0."
+        },
+        {
+          "index": 2,
+          "text": "Permitir todo o tráfego TCP de qualquer origem."
+        },
+        {
+          "index": 3,
+          "text": "Permitir tráfego TCP nas portas 80 e 443 do grupo de segurança associado ao ALB."
+        },
+        {
+          "index": 4,
+          "text": "Permitir tráfego TCP nas portas 80 e 443 dos blocos CIDR da sub-rede do ALB."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "A configuração mais segura é permitir o tráfego apenas do grupo de segurança associado ao ALB nas portas HTTP e HTTPS. Isso garante que apenas o ALB possa enviar tráfego para as instâncias web, aplicando o princípio do menor privilégio."
+    },
+    {
+      "id": "securitygroup-usecase-003",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Uma empresa possui um servidor de banco de dados SQL Server em uma instância EC2 dentro de um grupo de segurança chamado `DBSG`. As instâncias EC2 da camada de negócios estão em um grupo de segurança chamado `AppSG`. Qual regra de entrada você configuraria no `DBSG` para permitir que apenas a camada de negócios acesse o banco de dados na porta padrão do SQL Server (1433)?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Permitir tráfego TCP na porta 1433 de 0.0.0.0/0."
+        },
+        {
+          "index": 2,
+          "text": "Permitir todo o tráfego TCP do grupo de segurança `AppSG`."
+        },
+        {
+          "index": 3,
+          "text": "Permitir tráfego TCP na porta 1433 do grupo de segurança `AppSG`."
+        },
+        {
+          "index": 4,
+          "text": "Permitir tráfego TCP na porta 1433 do bloco CIDR da sub-rede onde as instâncias em `AppSG` estão localizadas."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "A maneira mais segura e que adere ao princípio do menor privilégio é permitir apenas o tráfego TCP na porta específica do SQL Server (1433) originário do grupo de segurança `AppSG`. Isso garante que apenas as instâncias na camada de negócios possam acessar o banco de dados."
+    },
+    {
+      "id": "securitygroup-usecase-004",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Por que é preferível usar IDs de grupos de segurança em vez de IDs de instâncias nas regras de entrada e saída dos grupos de segurança em um ambiente AWS dinâmico com Auto Scaling?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Usar IDs de instâncias é mais fácil de configurar e gerenciar."
+        },
+        {
+          "index": 2,
+          "text": "Os IDs das instâncias são estáticos e não mudam, tornando as regras mais confiáveis."
+        },
+        {
+          "index": 3,
+          "text": "Os IDs dos grupos de segurança referenciam um conjunto lógico de instâncias com uma função específica, e as regras baseadas neles se aplicam automaticamente a novas instâncias lançadas pelo Auto Scaling."
+        },
+        {
+          "index": 4,
+          "text": "Usar IDs de instâncias oferece maior granularidade e controle sobre o tráfego."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Em ambientes com Auto Scaling, as instâncias são substituídas dinamicamente. Usar IDs de grupos de segurança garante que as regras de firewall se apliquem automaticamente a novas instâncias lançadas dentro desse grupo, mantendo a segurança sem intervenção manual constante."
+    },
+    {
+      "id": "securitygroup-usecase-005",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Qual é a principal desvantagem de criar regras de grupo de segurança que permitem tráfego com base nos blocos CIDR da VPC em vez de usar IDs de grupos de segurança em uma arquitetura de múltiplas camadas?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Regras baseadas em CIDR são mais difíceis de entender."
+        },
+        {
+          "index": 2,
+          "text": "Regras baseadas em CIDR podem permitir tráfego desnecessário entre camadas que não deveriam se comunicar diretamente, violando o princípio do menor privilégio."
+        },
+        {
+          "index": 3,
+          "text": "Regras baseadas em CIDR são mais caras de implementar."
+        },
+        {
+          "index": 4,
+          "text": "Regras baseadas em CIDR não funcionam em diferentes Zonas de Disponibilidade."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Permitir tráfego com base nos blocos CIDR da VPC concede permissões amplas a qualquer instância dentro daquela faixa de IPs, potencialmente permitindo comunicação não intencional entre diferentes camadas e violando o princípio do menor privilégio."
+    },
+    {
+      "id": "aurora-global-db-usecase-001",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Uma empresa global de comércio eletrônico com clientes em todo o mundo deseja garantir alta disponibilidade e baixa latência para seu banco de dados Aurora. Eles também precisam de uma estratégia de recuperação de desastres com um RTO muito baixo. Qual solução da AWS seria mais adequada?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Usar réplicas de leitura do Aurora em várias regiões."
+        },
+        {
+          "index": 2,
+          "text": "Configurar backups regulares do Aurora para o S3 em outra região."
+        },
+        {
+          "index": 3,
+          "text": "Implementar o Amazon Aurora Global Database com regiões secundárias."
+        },
+        {
+          "index": 4,
+          "text": "Usar instâncias RDS Multi-AZ em diferentes regiões."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O Amazon Aurora Global Database é projetado para cenários globais, oferecendo replicação de baixa latência entre regiões e um RTO muito baixo em caso de falha regional, tornando-o ideal para alta disponibilidade e DR."
+    },
+    {
+      "id": "aurora-global-db-usecase-002",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Em um cenário de recuperação de desastres usando o Amazon Aurora Global Database, o que acontece quando ocorre uma falha na região primária?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Os dados são perdidos e precisam ser restaurados do backup."
+        },
+        {
+          "index": 2,
+          "text": "Uma das regiões secundárias é automaticamente promovida a nova região primária com um RTO tipicamente inferior a 1 minuto."
+        },
+        {
+          "index": 3,
+          "text": "O banco de dados fica inacessível até que a região primária seja restaurada."
+        },
+        {
+          "index": 4,
+          "text": "A replicação para as regiões secundárias é pausada."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Em caso de falha na região primária do Aurora Global Database, uma das regiões secundárias é rapidamente promovida a primária, minimizando o tempo de inatividade (baixo RTO)."
+    },
+    {
+      "id": "standby-aquecido-usecase-001",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Uma empresa precisa de uma estratégia de DR com um RTO baixo para seu aplicativo web. Eles decidem manter uma réplica funcional de seu ambiente na região de DR, mas com capacidade reduzida. Essa abordagem é conhecida como:",
+      "options": [
+        {
+          "index": 1,
+          "text": "Backup e restauração."
+        },
+        {
+          "index": 2,
+          "text": "Piloto leve."
+        },
+        {
+          "index": 3,
+          "text": "Standby aquecido."
+        },
+        {
+          "index": 4,
+          "text": "Multi-AZ."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Um 'standby aquecido' envolve manter uma versão totalmente funcional do ambiente na região de DR, pronta para assumir em caso de falha, embora possa estar rodando com recursos reduzidos até a ativação."
+    },
+    {
+      "id": "standby-aquecido-usecase-002",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Qual é a principal vantagem de uma estratégia de recuperação de desastres de 'standby aquecido' em comparação com uma estratégia de 'piloto leve'?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Menor custo de infraestrutura na região de DR."
+        },
+        {
+          "index": 2,
+          "text": "Menor tempo de recuperação (RTO)."
+        },
+        {
+          "index": 3,
+          "text": "Maior complexidade de implementação."
+        },
+        {
+          "index": 4,
+          "text": "Maior facilidade de teste de DR."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A principal vantagem do 'standby aquecido' é um RTO menor, pois a infraestrutura essencial já está em execução na região de DR, enquanto no 'piloto leve' mais recursos precisam ser provisionados e iniciados durante o evento de DR."
+    },
+    {
+      "id": "menor-latencia-usecase-001",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Um aplicativo precisa acessar dados replicados em outra região da AWS com a menor latência possível para garantir uma boa experiência do usuário global. Qual serviço da AWS é projetado para replicação de dados com baixa latência entre regiões?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS S3 Cross-Region Replication."
+        },
+        {
+          "index": 2,
+          "text": "AWS Backup."
+        },
+        {
+          "index": 3,
+          "text": "Amazon Aurora Global Database."
+        },
+        {
+          "index": 4,
+          "text": "AWS DataSync."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O Amazon Aurora Global Database é especificamente projetado para fornecer replicação de dados com baixa latência entre regiões da AWS para workloads de banco de dados."
+    },
+    {
+      "id": "menor-latencia-usecase-002",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Em um cenário de DR multi-região, por que a baixa latência na replicação do banco de dados é crucial para atingir um RTO baixo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Garante que os backups sejam concluídos rapidamente."
+        },
+        {
+          "index": 2,
+          "text": "Assegura que os dados na região de DR estejam o mais atualizados possível, minimizando a perda de dados e o tempo necessário para a recuperação."
+        },
+        {
+          "index": 3,
+          "text": "Reduz os custos de transferência de dados entre regiões."
+        },
+        {
+          "index": 4,
+          "text": "Simplifica a configuração da infraestrutura na região de DR."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A baixa latência na replicação garante que a região de DR tenha uma cópia quase em tempo real dos dados da região primária. Isso minimiza a quantidade de dados que precisam ser recuperados durante um failover, contribuindo para um RTO mais baixo."
+    },
+    {
+      "id": "capacidade-reduzida-escalabilidade-usecase-001",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Em uma estratégia de DR, manter a infraestrutura na região secundária com capacidade reduzida ajuda a:",
+      "options": [
+        {
+          "index": 1,
+          "text": "Aumentar o RTO."
+        },
+        {
+          "index": 2,
+          "text": "Reduzir os custos operacionais da região de DR durante a operação normal."
+        },
+        {
+          "index": 3,
+          "text": "Simplificar o processo de failover."
+        },
+        {
+          "index": 4,
+          "text": "Melhorar o desempenho do aplicativo na região primária."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Executar a infraestrutura de DR com capacidade reduzida minimiza os custos na região secundária até que seja necessário escalar em caso de falha na região primária."
+    },
+    {
+      "id": "capacidade-reduzida-escalabilidade-usecase-002",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Quais serviços da AWS podem ser usados para escalar automaticamente a capacidade na região de DR durante um evento de failover, se a infraestrutura estiver rodando inicialmente com capacidade reduzida?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Backup e Amazon S3."
+        },
+        {
+          "index": 2,
+          "text": "Amazon CloudWatch e AWS Trusted Advisor."
+        },
+        {
+          "index": 3,
+          "text": "AWS Auto Scaling e Amazon EC2 Instance Types."
+        },
+        {
+          "index": 4,
+          "text": "AWS Config e AWS Systems Manager."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O AWS Auto Scaling pode ser configurado para aumentar automaticamente o número de instâncias EC2 ou a capacidade de outros recursos na região de DR em resposta a um evento de failover ou a um aumento na demanda."
+    },
+    {
+      "id": "rto-baixo-usecase-001",
+      "topicId": 50,
+      "levelId": 2,
+      "question": "Uma empresa com um aplicativo crítico para os negócios precisa garantir que o tempo de inatividade em caso de desastre seja mínimo. Qual métrica eles priorizariam em sua estratégia de recuperação de desastres?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Ponto de Recuperação (RPO)."
+        },
+        {
+          "index": 2,
+          "text": "Tempo de Recuperação (RTO)."
+        },
+        {
+          "index": 3,
+          "text": "Objetivo de Nível de Serviço (SLO)."
+        },
+        {
+          "index": 4,
+          "text": "Custo Total de Propriedade (TCO)."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O Tempo de Recuperação (RTO) é a métrica que define o tempo máximo aceitável para restaurar um serviço após uma interrupção. Um RTO baixo é crucial para aplicativos críticos para os negócios."
+    },
+    {
+      "id": "rto-baixo-usecase-002",
+      "topicId": 50,
+      "levelId": 3,
+      "question": "Quais estratégias de recuperação de desastres geralmente resultam em um RTO mais baixo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Backup e restauração de dados para uma região secundária."
+        },
+        {
+          "index": 2,
+          "text": "Uma implantação de piloto leve com necessidade de provisionamento adicional durante o failover."
+        },
+        {
+          "index": 3,
+          "text": "Uma implantação de standby aquecido ou multi-ativa onde a infraestrutura na região de DR está pronta para assumir imediatamente."
+        },
+        {
+          "index": 4,
+          "text": "Usar o AWS Snowball para transportar dados de backup para uma região de DR."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Estratégias como 'standby aquecido' e 'multi-ativa' mantêm a infraestrutura pronta na região de DR, permitindo um failover mais rápido e, portanto, um RTO mais baixo."
+    }
+  ]
+}

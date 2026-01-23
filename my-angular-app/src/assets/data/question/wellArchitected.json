@@ -169,19 +169,7 @@
       ],
       "answer": 3
     },
-    {
-      "id": "wellArchitected3c4d5e6f7",
-      "topicId": 11,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Recuperação de falhas?",
-      "options": [
-        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
-        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
-        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
-        { "index": 4, "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem" }
-      ],
-      "answer": 3
-    },    {
+     {
       "id": "wellArchitected8a9b0c1d2",
       "topicId": 11,
       "levelId": 2,
@@ -198,7 +186,7 @@
       "id": "wellArchitected9e0f1g2h3",
       "topicId": 11,
       "levelId": 2,
-      "question": "Quais são os cinco pilares do AWS Well-Architected Framework?",
+      "question": "Quais são os seis pilares do AWS Well-Architected Framework?",
       "options": [
         { "index": 1, "text": "Excelência operacional, Segurança, Confiabilidade, Eficiência de performance, Otimização de custos" },
         { "index": 2, "text": "Segurança, Confiabilidade, Eficiência de performance, Otimização de custos, Sustentabilidade" },
@@ -324,19 +312,7 @@
       ],
       "answer": 3
     },
-    {
-      "id": "wellArchitected0s1t2u3v4",
-      "topicId": 11,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Eficiência de performance?",
-      "options": [
-        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
-        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
-        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
-        { "index": 4, "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem" }
-      ],
-      "answer": 4
-    },
+   
     {
       "id": "wellArchitected1w2x3y4z5",
       "topicId": 11,
@@ -402,19 +378,7 @@
       ],
       "answer": 3
     },
-    {
-      "id": "wellArchitected6q7r8s9t0",
-      "topicId": 11,
-      "levelId": 2,
-      "question": "Quais são os principais tópicos do pilar Recuperação de falhas?",
-      "options": [
-        { "index": 1, "text": "Automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias" },
-        { "index": 2, "text": "Confidencialidade e integridade de dados, gerenciamento de permissões de usuário e estabelecimento de controles para detectar eventos de segurança" },
-        { "index": 3, "text": "Projeto de sistemas distribuídos, planejamento de recuperação e requisitos adaptação a mudanças" },
-        { "index": 4, "text": "Seleção dos tipos e tamanhos certos dos recursos otimizados para os requisitos de workload, monitoramento de performance e manutenção da eficiência à medida que as necessidades comerciais evoluem" } 
-      ],
-      "answer": 3
-    },
+   
     {
       "id": "wellArchitected7a8b9c0d1",
       "topicId": 11,

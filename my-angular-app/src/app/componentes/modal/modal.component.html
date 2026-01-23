@@ -1,0 +1,24 @@
+<ng-container *ngIf="modalState$ | async as modal">
+  <div class="modal-overlay" (click)="onBackdropClick($event)">
+    <div class="modal-box" [ngClass]="'modal-box--' + modal.type" (click)="$event.stopPropagation()">
+      <div class="modal-box__icon" [ngClass]="'modal-box__icon--' + modal.type">
+        <i class="fas" [ngClass]="iconFor(modal.type)"></i>
+      </div>
+      <div class="modal-box__content">
+        <h2 *ngIf="modal.title" class="modal-box__title">{{ modal.title }}</h2>
+        <p class="modal-box__message">{{ modal.message }}</p>
+      </div>
+      <div class="modal-box__actions">
+        <button
+          *ngIf="modal.cancelText"
+          type="button"
+          class="modal-box__button modal-box__button--secondary"
+          (click)="cancel()"
+        >
+          {{ modal.cancelText }}
+        </button>
+        <button type="button" class="modal-box__button" (click)="confirm()">{{ modal.confirmText }}</button>
+      </div>
+    </div>
+  </div>
+</ng-container>

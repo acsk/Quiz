@@ -449,6 +449,136 @@
         }
       ],
       "answer": 2
+    },
+    {
+      "id": "dynamodb1a2b3c4d5",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "O que é o Amazon DynamoDB?",
+      "options": [
+        { "index": 1, "text": "Um serviço de banco de dados relacional totalmente gerenciado." },
+        { "index": 2, "text": "Um serviço de banco de dados NoSQL totalmente gerenciado que oferece desempenho rápido e previsível com escalabilidade contínua." },
+        { "index": 3, "text": "Um serviço de armazenamento de objetos que permite armazenar e recuperar qualquer quantidade de dados." },
+        { "index": 4, "text": "Um serviço de computação sem servidor que permite executar código sem provisionar ou gerenciar servidores." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamodb6e7f8g9h0",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "Quais são os principais benefícios do Amazon DynamoDB?",
+      "options": [
+        { "index": 1, "text": "Desempenho lento e escalabilidade limitada." },
+        { "index": 2, "text": "Desempenho rápido e previsível, escalabilidade contínua, alta disponibilidade e integração com outros serviços da AWS." },
+        { "index": 3, "text": "Apenas suporte para bancos de dados relacionais." },
+        { "index": 4, "text": "Apenas armazenamento de objetos com baixa durabilidade." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamodb1i2j3k4l5",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "Como o Amazon DynamoDB lida com a escalabilidade?",
+      "options": [
+        { "index": 1, "text": "O DynamoDB não oferece escalabilidade." },
+        { "index": 2, "text": "O DynamoDB escala automaticamente para cima e para baixo com base na demanda, sem tempo de inatividade ou degradação de desempenho." },
+        { "index": 3, "text": "A escalabilidade no DynamoDB requer intervenção manual para ajustar a capacidade." },
+        { "index": 4, "text": "O DynamoDB só escala verticalmente, aumentando o tamanho das instâncias." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamodb7m8n9o0p1",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "O que é o DynamoDB Accelerator (DAX)?",
+      "options": [
+        { "index": 1, "text": "Um serviço de armazenamento de objetos de alta durabilidade." },
+        { "index": 2, "text": "Um cache em memória totalmente gerenciado que oferece desempenho de microssegundos para aplicações que exigem baixa latência." },
+        { "index": 3, "text": "Um serviço de banco de dados relacional para substituir o DynamoDB." },
+        { "index": 4, "text": "Um serviço de computação sem servidor para executar funções Lambda." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamodb2q3r4s5t6",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "Como o Amazon DynamoDB garante alta disponibilidade?",
+      "options": [
+        { "index": 1, "text": "O DynamoDB não oferece alta disponibilidade." },
+        { "index": 2, "text": "O DynamoDB replica dados automaticamente em várias zonas de disponibilidade em uma região para garantir alta disponibilidade e durabilidade." },
+        { "index": 3, "text": "A alta disponibilidade no DynamoDB requer configuração manual de réplicas." },
+        { "index": 4, "text": "O DynamoDB só garante alta disponibilidade em regiões específicas." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamodb8u9v0w1x2",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "O que são tabelas globais no Amazon DynamoDB?",
+      "options": [
+        { "index": 1, "text": "Tabelas que armazenam dados apenas em uma única região." },
+        { "index": 2, "text": "Tabelas que replicam dados automaticamente em várias regiões da AWS para suportar aplicações globais com baixa latência." },
+        { "index": 3, "text": "Tabelas que só podem ser acessadas por usuários específicos." },
+        { "index": 4, "text": "Tabelas que não suportam replicação de dados." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamodb9e0f1g2h3",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "Como o Amazon DynamoDB cobra pelos serviços?",
+      "options": [
+        { "index": 1, "text": "O DynamoDB cobra apenas pelo armazenamento de dados, sem custos adicionais." },
+        { "index": 2, "text": "O DynamoDB cobra com base no provisionamento de capacidade (leitura/escrita) ou no modo sob demanda, além do armazenamento de dados." },
+        { "index": 3, "text": "O DynamoDB cobra uma taxa fixa mensal, independente do uso." },
+        { "index": 4, "text": "O DynamoDB não cobra pelo uso, apenas pela configuração inicial." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamodb4i5j6k7l8",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "O que é o modo sob demanda no Amazon DynamoDB?",
+      "options": [
+        { "index": 1, "text": "Um modo que permite pagar apenas pelo que você usa, sem necessidade de provisionamento de capacidade." },
+        { "index": 2, "text": "Um modo que requer provisionamento manual de capacidade para leitura e escrita." },
+        { "index": 3, "text": "Um modo que limita o uso do DynamoDB a apenas uma região." },
+        { "index": 4, "text": "Um modo que não suporta operações de leitura e escrita." }
+      ],
+      "answer": 1
+    },
+    {
+      "id": "dynamodb5m6n7o8p9",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "Como o Amazon DynamoDB lida com backups?",
+      "options": [
+        { "index": 1, "text": "O DynamoDB não oferece suporte a backups." },
+        { "index": 2, "text": "O DynamoDB oferece backups contínuos e sob demanda, permitindo a restauração de dados para qualquer ponto no tempo." },
+        { "index": 3, "text": "Os backups no DynamoDB requerem configuração manual e intervenção do usuário." },
+        { "index": 4, "text": "O DynamoDB só permite backups em regiões específicas." }
+      ],
+      "answer": 2
+    },
+    {
+      "id": "dynamodb0q1r2s3t4",
+      "topicId": 6,
+      "levelId": 1,
+      "question": "O que é o Time to Live (TTL) no Amazon DynamoDB?",
+      "options": [
+        { "index": 1, "text": "Um recurso que permite excluir automaticamente itens expirados com base em um timestamp." },
+        { "index": 2, "text": "Um recurso que limita o tempo de execução de consultas no DynamoDB." },
+        { "index": 3, "text": "Um recurso que define o tempo máximo de armazenamento de dados no DynamoDB." },
+        { "index": 4, "text": "Um recurso que controla o tempo de vida das instâncias do EC2 associadas ao DynamoDB." }
+      ],
+      "answer": 1
     }
   ]
 }

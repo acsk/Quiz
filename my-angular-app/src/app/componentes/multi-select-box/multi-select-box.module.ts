@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MultiSelectBoxComponent } from './multi-select-box/multi-select-box.component';
 import { FormsModule } from '@angular/forms';
+import { ClickOutsideDirective, MultiSelectBoxComponent } from './multi-select-box/multi-select-box.component';
 
 
 
 @NgModule({
   declarations: [
-    MultiSelectBoxComponent
+    MultiSelectBoxComponent,
+    ClickOutsideDirective
   ],
   imports: [
     CommonModule,
     FormsModule
   ],
   exports: [
-    MultiSelectBoxComponent
+    MultiSelectBoxComponent,
+    ClickOutsideDirective
   ]
 })
 export class MultiSelectBoxModule { }

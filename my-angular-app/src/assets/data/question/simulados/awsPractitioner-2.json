@@ -1,0 +1,1881 @@
+{
+  "questions": [
+    {
+      "id": "question1",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Clientes na Europa e Austrália enfrentam lentidão no carregamento de imagens em um site cuja infraestrutura está na Região de São Paulo. Qual solução imediata poderia ser implementada para melhorar a performance global, considerando a necessidade de reduzir a latência e otimizar a experiência do usuário?",
+      "options": [
+        {
+          "index": 1,
+          "text": "criar uma conta nessas regiões e duplicar a infraestrutura"
+        },
+        {
+          "index": 2,
+          "text": "habililitar o CloudFront"
+        },
+        {
+          "index": 3,
+          "text": "habilitar o Intelligent-Tiering das classes do S3"
+        },
+        {
+          "index": 4,
+          "text": "deixar as imagens numa resolução bem baixa"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O Amazon CloudFront é um serviço de rede de entrega de conteúdo (CDN) que faz o cache do conteúdo em \"edge locations\", que são data centers estrategicamente localizados mais próximos dos usuários finais. Essas localizações de borda armazenam cópias temporárias do conteúdo, permitindo uma entrega mais rápida e eficiente aos usuários ao redor do mundo. CloudFront é especialmente útil para melhorar a performance de sites, aplicações e streams de vídeo, reduzindo a latência e aumentando a velocidade de carregamento. Vale ressaltar que as edge locations são controladas pela AWS, sem possibilidade de implementação direta de serviços pelos clientes, focando em otimizar a distribuição de conteúdo e as conexões de rede. AWS CloudFront"
+    },
+    {
+      "id": "question2",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa foi autuada após uma auditoria que identificou a exposição de arquivos contendo dados sensíveis de clientes em buckets do S3, levantando preocupações sobre vazamento de informações. Qual serviço da AWS pode ser utilizado para monitorar e proteger esses dados, prevenindo futuras exposições e garantindo a conformidade com normas de segurança?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Macie"
+        },
+        {
+          "index": 2,
+          "text": "AWS GuardDuty"
+        },
+        {
+          "index": 3,
+          "text": "AWS Sensitive"
+        },
+        {
+          "index": 4,
+          "text": "AWS Keys Management Service (KMS)"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O AWS Macie é o serviço recomendado para proteger dados sensíveis em buckets do S3, pois é um serviço de segurança que utiliza machine learning para identificar, classificar e proteger dados confidenciais. Ele monitora continuamente os buckets do S3, detectando automaticamente informações pessoais identificáveis (PII) e outros dados sensíveis. O Macie também fornece alertas e recomendações de segurança quando detecta exposição ou risco de vazamento, permitindo que as empresas tomem medidas imediatas para proteger os dados. Além disso, o serviço ajuda a garantir conformidade com normas de segurança e privacidade, como GDPR e HIPAA, proporcionando visibilidade e controle aprimorados sobre os dados armazenados no S3. Amazon Macie"
+    },
+    {
+      "id": "question3",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "No contexto do modelo de responsabilidade compartilhada, a AWS é responsável pela segurança da infraestrutura global onde os dados são armazenados. O que pode ser afirmado sobre a criptografia utilizada nesse processo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "A AWS criptografa automaticamente os dados na camada física ao armazená-los."
+        },
+        {
+          "index": 2,
+          "text": "A AWS não criptografa os dados, entretanto fornece o KMS para o cliente fazê-la"
+        },
+        {
+          "index": 3,
+          "text": "A AWS criptografa automaticamente somente os dados em trânsito, enquanto os\r\n                                        clientes criptografam os dados em repouso."
+        },
+        {
+          "index": 4,
+          "text": "A AWS não criptografa os dados, entretanto fornece o ACM para o cliente fazê-la"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "AWS criptografa dados para proteger contra vazamento em caso de furto de hardware utilizando criptografia em repouso e em trânsito. Para dados em repouso, a AWS usa métodos como criptografia de volume e criptografia do lado do servidor, onde os dados são automaticamente criptografados antes de serem armazenados e descriptografados ao serem acessados. Além disso, a AWS oferece serviços de gerenciamento de chaves, como AWS Key Management Service (KMS), para controlar o acesso e a rotação de chaves criptográficas. Isso garante que mesmo se os hardwares forem fisicamente comprometidos, os dados permanecem inacessíveis sem as chaves de decriptação adequadas. Criptografia"
+    },
+    {
+      "id": "question4",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa está desenvolvendo uma nova plataforma para a distribuição global de vídeos. Qual serviço pode reduzir a latência entre a solicitação e a entrega do serviço para essa solução?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Amazon S3"
+        },
+        {
+          "index": 2,
+          "text": "Amazon CloudFront"
+        },
+        {
+          "index": 3,
+          "text": "Amazon Kinesis"
+        },
+        {
+          "index": 4,
+          "text": "Amazon ElasticCache"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O Amazon CloudFront é um serviço de Content Delivery Network (CDN) que distribui conteúdo globalmente com baixa latência e alta velocidade. Utilizando uma rede de locais de borda distribuídos, o CloudFront posiciona o conteúdo mais próximo dos usuários finais, melhorando a experiência de acesso a sites, vídeos e aplicações web. Ele armazena em cache conteúdo estático e dinâmico, reduzindo a carga nos servidores de origem e otimizando o tempo de resposta. Além disso, o CloudFront suporta segurança integrada, como criptografia SSL/TLS e autenticação de usuários, garantindo a entrega segura de conteúdo. Com integração nativa com outros serviços AWS, como S3, EC2 e Lambda, o CloudFront facilita a entrega escalável e segura de dados. Isso o torna uma escolha ideal para empresas que buscam melhorar a performance e a segurança de suas aplicações globais. Amazon CloudFront"
+    },
+    {
+      "id": "question5",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual medida de segurança avançada você implementaria para fortalecer a proteção da sua conta AWS contra acessos não autorizados e garantir a integridade dos recursos críticos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Habilitar o AWS Secrets Manager"
+        },
+        {
+          "index": 2,
+          "text": "Habilitar a Autenticação Multifator - Multi-Facto Authentication (MFA)"
+        },
+        {
+          "index": 3,
+          "text": "Habilitar o AWS Certificate Manager"
+        },
+        {
+          "index": 4,
+          "text": "Habilitar o AWS Key Management Service (KMS)"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A Autenticação Multifator (MFA) é uma medida de segurança que requer dois ou mais métodos de verificação para confirmar a identidade de um usuário ao acessar uma conta ou sistema. No contexto da AWS, o MFA é utilizado para proteger contas e usuários, exigindo uma combinação de algo que o usuário conhece (como uma senha) e algo que o usuário possui (como um dispositivo de autenticação). O dispositivo de autenticação pode ser um token de hardware, uma aplicação de autenticação em um smartphone ou uma mensagem SMS. Ao implementar o MFA, mesmo que uma senha seja comprometida, o acesso não autorizado é impedido, pois o invasor também precisaria do dispositivo de autenticação. Isso acrescenta uma camada extra de segurança, reduzindo significativamente o risco de acesso não autorizado e ajudando a proteger informações e recursos sensíveis na AWS. AWS MFA"
+    },
+    {
+      "id": "question6",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma startup brasileira precisa garantir alta disponibilidade, resiliência e performance para uma aplicação crítica usando o Amazon RDS. Quais configurações devem ser implementadas para assegurar a implementação destes requisitos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Multi A-Z  (Distribuir os bancos de daos em mais de uma zona de\r\n                                        disponibilidade na mesma região)"
+        },
+        {
+          "index": 2,
+          "text": "Criar um Security Group para isolar apenas os bancos de dados da aplicação."
+        },
+        {
+          "index": 3,
+          "text": "Multi Regions (Distribuir os banco de dados em mais de uma região)"
+        },
+        {
+          "index": 4,
+          "text": "Read Replicas (Utilizar cópias de leitura dos bancos de dados)"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O Amazon RDS é um serviço gerenciado que facilita a gestão de bancos de dados relacionais na nuvem, suportando mecanismos como MySQL e PostgreSQL. O recurso Multi-Region permite replicar dados entre regiões, ideal para recuperação de desastres (DR), assegurando disponibilidade mesmo em caso de falha completa em uma região. O Multi-AZ (Multi-Availability Zone) oferece alta disponibilidade e durabilidade, replicando dados em diferentes zonas de disponibilidade, melhorando também a performance. Além disso, Read Replicas aumentam a capacidade de leitura e desempenho, podendo ser usadas em diferentes regiões para acesso de baixa latência e recuperação de desastres, tornando o RDS uma solução completa e flexível para banco de dados na nuvem. RDS Multi-AZ"
+    },
+    {
+      "id": "question7",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Ao definir um orçamento no AWS Budgets, qual serviço da AWS é encarregado de monitorar os gastos e disparar alarmes para alertar sobre o cumprimento dos limites estabelecidos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Amazon CloudTrail"
+        },
+        {
+          "index": 2,
+          "text": "AWS Trusted Advisor"
+        },
+        {
+          "index": 3,
+          "text": "Amazon EventBridge"
+        },
+        {
+          "index": 4,
+          "text": "Amazon CloudWatch"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "O Amazon CloudWatch é um serviço de monitoramento e observação da AWS que fornece insights sobre os recursos e aplicativos em execução na nuvem. Ele coleta e rastreia métricas, registra logs e permite configurar alarmes para monitorar o desempenho e a disponibilidade dos recursos. O CloudWatch permite que os serviços sejam monitorados para envio de mensagens e alarmes, inclusive é utilizado no AWS Budget para enviar alertas de orçamento estourado. Além disso, o CloudWatch permite criar painéis personalizados para visualização de métricas e logs, facilitando o monitoramento em tempo real. Seus benefícios incluem o suporte à otimização de desempenho, identificação proativa de problemas e aprimoramento da eficiência operacional. O CloudWatch é uma ferramenta poderosa para garantir a confiabilidade e o desempenho dos serviços da AWS, possibilitando a tomada de decisões informadas e a melhoria contínua dos ambientes em nuvem. AWS CloudWatch"
+    },
+    {
+      "id": "question8",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma equipe de desenvolvimento de software está encarregada de criar uma pipeline de CI/CD para uma nova aplicação na AWS. Qual serviço específico da AWS deve ser integrado no final da pipeline para automatizar o processo de implantação nos servidores, garantindo uma entrega contínua e segura?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Git"
+        },
+        {
+          "index": 2,
+          "text": "AWS CodeDeploy"
+        },
+        {
+          "index": 3,
+          "text": "AWS CodeCommit"
+        },
+        {
+          "index": 4,
+          "text": "AWS Deploy"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O AWS CodeDeploy é um serviço totalmente gerenciado de implantação que automatiza implantações de software em diversos serviços de computação como Amazon EC2, AWS Fargate, AWS Lambda e servidores locais. O AWS CodeDeploy facilita o lançamento rápido de novos recursos, ajuda a evitar tempo de inatividade durante a implantação de aplicativos e lida com a complexidade de atualizá-los. Você pode usar o AWS CodeDeploy para automatizar implantações de software e eliminar a necessidade de operações manuais propensas a erros. O serviço é dimensionado para estar de acordo com as suas necessidades de implantação. AWS CodeDeploy"
+    },
+    {
+      "id": "question9",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é o banco de dados sem servidor da AWS que oferece escalabilidade automática, suporte a esquemas flexíveis e é ideal para cargas de trabalho que requerem baixa latência, como jogos e IoT?",
+      "options": [
+        {
+          "index": 1,
+          "text": "MySql"
+        },
+        {
+          "index": 2,
+          "text": "Aurora"
+        },
+        {
+          "index": 3,
+          "text": "MariaDB"
+        },
+        {
+          "index": 4,
+          "text": "DynamoDB"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Aurora, MariaDB e MySQL são mecanismos de bancos de dados que podem ser utilizados no Amazon RDS (Relational Database Service), uma plataforma gerenciada que facilita tarefas administrativas como backups, atualizações e escalabilidade, proporcionando alta disponibilidade e segurança. O RDS é ideal para bancos de dados relacionais que requerem conformidade com SQL e suporte a transações ACID. Em contraste, o Amazon DynamoDB é um banco de dados NoSQL, sem servidor, que oferece escalabilidade automática e suporte a esquemas flexíveis. DynamoDB é ideal para aplicações que exigem baixa latência, como jogos, IoT e e-commerce, e não necessitam de um esquema de dados fixo ou transações complexas. Enquanto o RDS é mais adequado para dados estruturados e relações complexas, o DynamoDB é a escolha certa para cargas de trabalho variáveis e grandes volumes de dados não estruturados. Amazon DynamoDB"
+    },
+    {
+      "id": "question10",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Você precisa criar pequenos scripts para automatizar a administração de uma aplicação em servidores Linux na AWS. Qual serviço pode ser utilizado para essa finalidade através de um navegador?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS IQ"
+        },
+        {
+          "index": 2,
+          "text": "AWS Cloud9"
+        },
+        {
+          "index": 3,
+          "text": "AWS CloudShell"
+        },
+        {
+          "index": 4,
+          "text": "AWS Device Farm"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Os scripts Shell permitem que administradores e desenvolvedores criem pequenos programas para automatizarem a administração de um sistema. Com o AWS CloudShell, através de um navegador, você pode iniciar diretamente do AWS Management Console o CLI usando seu shell preferido, comoBash PowerShell, ouZ shell. E você pode fazer isso sem precisar baixar ou instalar ferramentas de linha de comando. AWS CloudShell"
+    },
+    {
+      "id": "question11",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é a maior diferença entre os serviços Amazon RDS e Amazon DynamoDB?",
+      "options": [
+        {
+          "index": 1,
+          "text": "RDS é SQL, DynamoDB é NoSQL"
+        },
+        {
+          "index": 2,
+          "text": "RDS é gerenciado, DynamoDB não é gerenciado"
+        },
+        {
+          "index": 3,
+          "text": "RDS é NoSQL, DynamoDB é SQL"
+        },
+        {
+          "index": 4,
+          "text": "RDS é chave e valor, DynamoDb é relacional."
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "No Amazon RDS, o SQL (Structured Query Language) é usado como um padrão para interagir com bancos de dados relacionais. Ele oferece uma estrutura organizada para definir esquemas, consultar e manipular dados de maneira tabular. O Amazon DynamoDB, por outro lado, é um banco de dados NoSQL que oferece armazenamento e recuperação de dados altamente escalável e flexível. NoSQL se refere a \"Not Only SQL\", e no caso do DynamoDB, permite armazenar e consultar dados não estruturados ou semi-estruturados em formatos como documentos ou pares chave-valor. Essas abordagens têm diferentes vantagens dependendo das necessidades da aplicação: SQL para estruturas organizadas e relacionais, e NoSQL para flexibilidade e escalabilidade de dados não estruturados. AWS RDS AWS DynamoDB"
+    },
+    {
+      "id": "question12",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa enfrenta problemas em produção com suas aplicações críticas, e a falta de registros detalhados dos componentes está dificultando a equipe de suporte na resolução dos problemas e na restauração das aplicações. Qual serviço da AWS é recomendado para monitorar o ambiente, coletar logs, e fornecer informações detalhadas para auxiliar na solução de problemas e no gerenciamento contínuo da infraestrutura?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS CloudTrail"
+        },
+        {
+          "index": 2,
+          "text": "AWS Monitor"
+        },
+        {
+          "index": 3,
+          "text": "AWS CloudWatch"
+        },
+        {
+          "index": 4,
+          "text": "AWS Log"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O Amazon CloudWatch é um serviço abrangente de monitoramento e observabilidade destinado a engenheiros de DevOps, desenvolvedores, engenheiros de confiabilidade de sites (SREs), gerentes de TI e proprietários de produtos. Ele fornece dados críticos e insights valiosos para monitorar aplicações, responder a mudanças de desempenho em todo o sistema e otimizar a utilização de recursos. O CloudWatch coleta dados operacionais e de monitoramento por meio de logs, métricas e eventos, permitindo que os usuários monitorem a saúde de suas infraestruturas e aplicações. Além disso, oferece alarmes e dashboards personalizáveis, ajudando a detectar e responder rapidamente a problemas operacionais e oportunidades de melhoria de desempenho. Amazon CloudWatch"
+    },
+    {
+      "id": "question13",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Quais opções representam recursos fundamentais do AWS Cloud Adoption Framework (AWS CAF) para a perspectiva de segurança? (Selecione 3)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Proteção de dados com criptografia em repouso e em trânsito."
+        },
+        {
+          "index": 2,
+          "text": "Planejamento de capacidade e desempenho."
+        },
+        {
+          "index": 3,
+          "text": "Monitoramento de atividades e auditoria de logs de segurança."
+        },
+        {
+          "index": 4,
+          "text": "Implementação de controles de acesso baseados em identidade."
+        },
+        {
+          "index": 5,
+          "text": "Automação de respostas a eventos de segurança."
+        }
+      ],
+      "answer": [
+        1,
+        3,
+        4
+      ],
+      "explanation": "A perspectiva de segurança no AWS CAF se concentra em proteger recursos e dados, garantindo que sistemas sejam resilientes a ataques e conformes com regulamentos. Controles de acesso, monitoramento e auditorias, e criptografia são recursos fundamentais para alcançar esses objetivos. Outras práticas, como automação e planejamento de capacidade, estão relacionadas a diferentes perspectivas ou são ferramentas complementares, mas não centrais na segurança. AWS CAF"
+    },
+    {
+      "id": "question14",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "No modelo de Responsabilidade Compartilhada, a AWS e o cliente têm responsabilidades distintas para a segurança da infraestrutura e dos dados. Qual é a função específica desempenhada pela AWS nesse modelo? (selecione 2 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Realizar a manutenção dos hardwares"
+        },
+        {
+          "index": 2,
+          "text": "Atualizar o Sistema Operacional das Instâncias EC2"
+        },
+        {
+          "index": 3,
+          "text": "Proteger os data centers"
+        },
+        {
+          "index": 4,
+          "text": "Proteger o acesso aos dados das aplicações dos usuários"
+        }
+      ],
+      "answer": [
+        1,
+        3
+      ],
+      "explanation": "A AWS adota um modelo de responsabilidade compartilhada, cuidando da segurança da infraestrutura subjacente, incluindo data centers e redes, e fornecendo serviços gerenciados com patches de segurança. Contudo, cabe aos clientes a responsabilidade de configurar corretamente suas instâncias, controlar o acesso, gerenciar identidades e aplicar medidas de segurança em suas aplicações e dados. Essa divisão de responsabilidades é crucial para assegurar uma postura de segurança robusta e eficaz na nuvem, garantindo que todos os aspectos de proteção sejam devidamente atendidos. Assim, a colaboração entre a AWS e os clientes é essencial para uma segurança completa e bem gerida. Modelo de Responsabilidade Compartilhada"
+    },
+    {
+      "id": "question15",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma equipe de desenvolvimento backend iniciou o uso do API Gateway para a implementação de novas APIs para um projeto na AWS. Considerando as funcionalidades e os recursos avançados oferecidos pelo API Gateway, quais das seguintes opções destacam suas principais finalidades? (Selecione 2 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Criação e Contenirização de microsserviços"
+        },
+        {
+          "index": 2,
+          "text": "Criação e execução de funções sem servidores"
+        },
+        {
+          "index": 3,
+          "text": "Criação de APIs RESTful e WebSocket"
+        },
+        {
+          "index": 4,
+          "text": "Balanceamento de carga."
+        },
+        {
+          "index": 5,
+          "text": "Publicação, manutenção e monitoramento de APIs"
+        }
+      ],
+      "answer": [
+        3,
+        5
+      ],
+      "explanation": "O Amazon API Gateway é um serviço que facilita a criação, publicação, manutenção, monitoramento e proteção de APIs em qualquer escala. Ele atua como uma porta de entrada para que aplicativos acessem dados e funcionalidades de back-end. Com ele, é possível criar APIs RESTful e WebSocket, permitindo comunicação bidirecional em tempo real. O serviço suporta cargas de trabalho conteinerizadas e sem servidor, além de aplicativos web, e inclui recursos como integração a serviços de conteinerização, balanceamento de carga e funções sem servidor. AWS API Gateway"
+    },
+    {
+      "id": "question16",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Quais dos itens não fazem parte dos pilares do Well-Architected Framework? (selecione 2 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Desacoplamento"
+        },
+        {
+          "index": 2,
+          "text": "Segurança"
+        },
+        {
+          "index": 3,
+          "text": "Elasticidade"
+        },
+        {
+          "index": 4,
+          "text": "Excelência Operacional"
+        },
+        {
+          "index": 5,
+          "text": "Sustentabilidade"
+        }
+      ],
+      "answer": [
+        1,
+        3
+      ],
+      "explanation": "Os seis pilares do AWS Well-Architected Framework são: Excelência Operacional: Foca em executar e monitorar sistemas para entregar valor de negócios, garantindo a melhoria contínua dos processos operacionais. Segurança: Envolve a proteção de informações e sistemas, implementando medidas como controle de acesso, criptografia de dados e monitoramento de ameaças para manter a confidencialidade, integridade e disponibilidade. Confiabilidade: Garante que uma carga de trabalho possa se recuperar de falhas e atender às expectativas dos clientes, utilizando práticas como recuperação de desastres e replicação de dados. Eficiência de Desempenho: Visa o uso eficiente de recursos computacionais, escolhendo corretamente os tipos e tamanhos de recursos para melhorar o desempenho. Otimização de Custos: Foca na entrega de valor ao menor custo possível, evitando gastos excessivos e utilizando recursos de maneira econômica. Sustentabilidade: Promove o uso responsável dos recursos, minimizando o impacto ambiental das operações e incentivando práticas eficientes e sustentáveis na nuvem. Esses pilares guiam arquiteturas de sistemas para serem seguras, eficientes, resilientes e sustentáveis. AWS Well Architected Framework"
+    },
+    {
+      "id": "question17",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é o serviço da AWS que permite a migração eficiente e segura de dados entre bancos de dados, suportando uma ampla gama de tipos de bancos de dados, tanto relacionais quanto não relacionais, e que também oferece a capacidade de realizar migrações contínuas com mínima interrupção do serviço?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Connect"
+        },
+        {
+          "index": 2,
+          "text": "AWS Data Migration Service (DMS)"
+        },
+        {
+          "index": 3,
+          "text": "AWS Snow"
+        },
+        {
+          "index": 4,
+          "text": "AWS Glue"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O AWS Database Migration Service (DMS) é uma ferramenta que facilita a migração de bancos de dados para a AWS de maneira segura e eficiente. Ele permite migrar dados de bancos de dados relacionais, NoSQL e de data warehouses para a nuvem, minimizando o tempo de inatividade das aplicações. O DMS suporta migrações de banco de dados homogêneas (por exemplo, Oracle para Oracle) e heterogêneas (por exemplo, SQL Server para Aurora). Além de migrações, o DMS também suporta replicação contínua de dados para alta disponibilidade e recuperação de desastres. O serviço é ideal para modernização de infraestruturas de dados e escalabilidade. AWS DMS"
+    },
+    {
+      "id": "question18",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é a diferença entre o AWS Web Application Firewall (WAF) e o AWS Firewall Manager em termos de funcionalidade e finalidade?",
+      "options": [
+        {
+          "index": 1,
+          "text": "O WAF é uma solução centralizada para gerenciar regras de firewall em várias\r\n                                        contas, enquanto o Firewall Manager é focado em proteger aplicativos web contra\r\n                                        ataques."
+        },
+        {
+          "index": 2,
+          "text": "Não há diferença significativa entre o WAF e o Firewall Manager em termos de\r\n                                        funcionalidade e finalidade."
+        },
+        {
+          "index": 3,
+          "text": "O WAF é usado para gerenciar políticas de segurança de firewall em várias contas,\r\n                                        enquanto o Firewall Manager é usado para proteger aplicativos web."
+        },
+        {
+          "index": 4,
+          "text": "O WAF é um serviço para bloquear ataques de aplicativos web, enquanto o Firewall\r\n                                        Manager é uma solução para gerenciar regras de firewall em várias contas."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Correta A diferença principal é que o WAF é projetado especificamente para proteger aplicativos web contra ataques, enquanto o Firewall Manager se concentra em gerenciar regras de firewall em várias contas. O AWS WAF (Web Application Firewall) é um serviço de segurança da Amazon Web Services que protege aplicativos web contra ameaças e ataques comuns, como SQL injection e cross-site scripting (XSS). Ele permite a definição de regras personalizadas para bloquear tráfego malicioso e fornece insights detalhados sobre o tráfego da web. O AWS WAF ajuda a garantir a segurança e a disponibilidade dos aplicativos web hospedados na AWS. https://aws.amazon.com/pt/waf/ O AWS Firewall Manager é um serviço da Amazon Web Services projetado para simplificar o gerenciamento de políticas de segurança e garantir uma postura de segurança consistente em várias contas e recursos da AWS. Ele oferece a capacidade de configurar e aplicar regras de firewall centralizadas em ambientes complexos, facilitando o cumprimento de políticas de segurança em toda a organização. O Firewall Manager ajuda a proteger a infraestrutura e os aplicativos da AWS contra ameaças e ataques cibernéticos. https://aws.amazon.com/pt/firewall-manager/ Incorretas O WAF não é usado para gerenciar políticas de segurança de firewall em várias contas. O Firewall Manager não é usado para proteger aplicativos web contra ataques. Há uma diferença significativa entre as funcionalidades e finalidades do WAF e do Firewall Manager."
+    },
+    {
+      "id": "question19",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é o modelo de utilização de nuvem em que não é necessário se preocupar com o gerenciamento dos recursos de infraestrutura tecnológica, permitindo que o foco do cliente esteja principalmente no desenvolvimento das aplicações que serão executadas sobre esses recursos?",
+      "options": [
+        {
+          "index": 1,
+          "text": "BaaS"
+        },
+        {
+          "index": 2,
+          "text": "PaaS"
+        },
+        {
+          "index": 3,
+          "text": "IaaS"
+        },
+        {
+          "index": 4,
+          "text": "SaaS"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Os serviços Platform as a Service (PaaS) oferecem um nível de abstração acima da infraestrutura subjacente, proporcionando ambientes de desenvolvimento completos com ferramentas e serviços integrados. Isso inclui sistemas operacionais, bancos de dados, servidores, e outros componentes necessários para desenvolver, testar e implantar aplicações. A principal vantagem do PaaS é permitir que os desenvolvedores se concentrem exclusivamente no desenvolvimento de software, sem precisar gerenciar ou configurar a infraestrutura subjacente, como servidores ou armazenamento. Além disso, os serviços PaaS facilitam a escalabilidade automática e a integração contínua, simplificando a manutenção e a atualização das aplicações. Tipos de Cloud"
+    },
+    {
+      "id": "question20",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Quais são os 6 pilares do Well-Architected Framework?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Excelência Operacional, Segurança, Confiabilidade, Desempenho Eficiente,\r\n                                        Escalabilidade, Disciplina"
+        },
+        {
+          "index": 2,
+          "text": "Excelência Operacional, Segurança, Confiabilidade, Desempenho Eficiente,\r\n                                        Otimização de Custos, Sustentabilidade"
+        },
+        {
+          "index": 3,
+          "text": "Excelência Operacional, Escalabilidade, Confiabilidade, Desempenho Eficiente,\r\n                                        Otimização de Custos, Disciplina"
+        },
+        {
+          "index": 4,
+          "text": "Excelência Operacional, Segurança, Escalabilidade, Desempenho Eficiente,\r\n                                        Otimização de Custos, Sustentabilidade"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O AWS Well-Architected Framework é um conjunto de boas práticas e orientações desenvolvido pela AWS para ajudar arquitetos de sistemas a construir infraestrutura segura, eficiente, resiliente e otimizada na nuvem. Ele é composto por seis pilares principais que abrangem os aspectos mais críticos do design de sistemas na AWS. Estes pilares são: Excelência Operacional: Envolve a gestão e monitoramento eficaz de sistemas para entregar valor de negócios de forma contínua e eficiente, promovendo melhorias constantes nos processos. Segurança: Enfatiza a proteção de dados, sistemas e ativos, implementando medidas como controle de acesso, criptografia e monitoramento para garantir a confidencialidade, integridade e disponibilidade. Confiabilidade: Assegura que os sistemas possam se recuperar de falhas, atender às demandas e resistir a interrupções, através de práticas como backup, recuperação de desastres e replicação de dados. Desempenho Eficiente: Foca na utilização eficiente dos recursos de TI, escolhendo corretamente os tipos e tamanhos de recursos para melhorar a performance e otimizar o uso de recursos. Otimização de Custos: Visa minimizar os gastos desnecessários, garantindo que os recursos sejam utilizados de forma econômica e que o uso de serviços esteja alinhado com os objetivos de negócios. Sustentabilidade: Adicionado recentemente, este pilar incentiva práticas que minimizem o impacto ambiental das operações na nuvem, promovendo a eficiência energética e o uso responsável dos recursos tecnológicos. AWS Well Architected Framework"
+    },
+    {
+      "id": "question21",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Quais são as melhores práticas para implementar o princípio de \"projetar para a falha\" e assegurar a continuidade e resiliência do sistema mesmo em caso de falhas?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Monitorar constantemente o ambiente e enviar alertas de falhar pelo CloudWatch"
+        },
+        {
+          "index": 2,
+          "text": "Implantar o sistema exclusivamente com o CodeDeploy"
+        },
+        {
+          "index": 3,
+          "text": "Implantar o sistema em múltiplas zonas de disponibilidade"
+        },
+        {
+          "index": 4,
+          "text": "Utilizar CloudFront para fazer o cache do conteúdo do sistema"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Distribuir a carga de trabalho em várias Zonas de Disponibilidade (AZs) é uma prática essencial para aumentar a disponibilidade e resiliência de uma aplicação. Isso significa que, se uma AZ sofrer uma falha, as outras podem continuar operando e manter o serviço disponível para os usuários. Essa abordagem é uma aplicação prática do princípio de \"projetar para falhas\", que reconhece que componentes individuais podem falhar e, portanto, sistemas devem ser projetados para lidar com essas falhas de maneira eficaz. Ao adotar essa mentalidade, desenvolvedores e arquitetos de sistemas são incentivados a implementar redundância, balanceamento de carga, e failover automático, garantindo que a aplicação continue funcionando mesmo diante de problemas inesperados. Essa preparação proativa para falhas aumenta a confiabilidade e a experiência do usuário. Tolerância a Falhas"
+    },
+    {
+      "id": "question22",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é a plataforma da AWS para Big Data em Cloud que permite integração com várias ferramentas de código livre como Apache Spark, Apache Hive, Apache HBase, Apache Flink, Apache Hudi?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Amazon EMR"
+        },
+        {
+          "index": 2,
+          "text": "Amazon Kinesis"
+        },
+        {
+          "index": 3,
+          "text": "Amazon Hadoop"
+        },
+        {
+          "index": 4,
+          "text": "Amazon RedShift"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O Amazon EMR (Elastic MapReduce) é um serviço de big data da AWS que permite processar e analisar grandes volumes de dados de forma rápida e eficiente. Ele oferece um ambiente seguro e escalável para executar frameworks populares, como Apache Hadoop, Apache Spark e Apache Hive, além de outras ferramentas de processamento de dados. Os benefícios do Amazon EMR incluem a facilidade de configurar e gerenciar clusters de processamento de dados, a escalabilidade para lidar com grandes cargas de trabalho, a capacidade de processar dados em tempo real e a integração com outros serviços da AWS para armazenamento, análise e visualização de dados. Com o Amazon EMR, as empresas podem realizar análises avançadas e extrair insights valiosos de seus dados de maneira econômica e eficaz. Amazon EMR"
+    },
+    {
+      "id": "question23",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Para facilitar a localização de informações importantes armazenadas na grande quantidade de conteúdo distribuído na sua empresa, você gostaria que os desenvolvedores adicionassem recursos de pesquisa diretamente em suas aplicações. Qual serviço pode ser utilizado para essa finalidade?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Amazon Comprehend"
+        },
+        {
+          "index": 2,
+          "text": "Amazon Lex"
+        },
+        {
+          "index": 3,
+          "text": "Amazon Kendra"
+        },
+        {
+          "index": 4,
+          "text": "Amazon Polly"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Correta O Amazon Kendra é um serviço de pesquisa empresarial altamente preciso e fácil de usar baseado em machine learning (ML). Ele permite que os desenvolvedores adicionem recursos de pesquisa a suas aplicações, para que seus usuários finais possam descobrir informações armazenadas na grande quantidade de conteúdo distribuída pela empresa. Isso inclui dados de manuais, relatórios de pesquisa, perguntas frequentes, documentação de recursos humanos (RH) e guias de atendimento ao cliente, que podem ser encontrados em vários sistemas, como Amazon Simple Storage Service (S3), Microsoft SharePoint, Salesforce, ServiceNow, bancos de dados do RDS ou Microsoft OneDrive. Quando você digita uma pergunta, o serviço usa algoritmos de ML para entender o contexto e retornar os resultados mais relevantes, quer isso signifique uma resposta precisa ou um documento inteiro. Amazon Kendra"
+    },
+    {
+      "id": "question24",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma organização almeja estabelecer governança nos serviços de TI homologados e aprovados para utilização na AWS, monitorando custos, desempenho, segurança e status operacional desses serviços. Qual é o serviço destinado à criação de catálogos de serviços de TI para atender a esse propósito?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Marketplace"
+        },
+        {
+          "index": 2,
+          "text": "AWS License Manager"
+        },
+        {
+          "index": 3,
+          "text": "AWS Console Manager"
+        },
+        {
+          "index": 4,
+          "text": "AWS Service Catalog"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "O AWS Service Catalog é um serviço que permite às organizações criar e gerenciar um catálogo de serviços de TI aprovados para serem usados por equipes internas. Ele oferece uma maneira controlada de disponibilizar serviços e recursos da AWS para os usuários, permitindo padronização e governança. Com o Service Catalog, as equipes podem acessar e implantar recursos pré-aprovados sem a necessidade de entender a complexidade subjacente. Isso promove a automação, a conformidade e a consistência, reduzindo erros e agilizando as implantações, enquanto mantém o controle sobre o que é disponibilizado para as equipes. AWS Service Catalog"
+    },
+    {
+      "id": "question25",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma equipe de desenvolvimento precisa redesenhar um sistema para modernizá-lo na AWS. Um dos requisitos não funcionais é reduzir a interdependência entre os microsserviços para minimizar o impacto de possíveis falhas. Qual dos seguintes conceitos deve ser aplicado para alcançar esse objetivo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Agregação"
+        },
+        {
+          "index": 2,
+          "text": "Segregação"
+        },
+        {
+          "index": 3,
+          "text": "Escalabilidade"
+        },
+        {
+          "index": 4,
+          "text": "Desacoplamento"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Desacoplamento é uma prática essencial em design de sistemas e arquitetura de software, que visa reduzir a dependência direta entre diferentes componentes ou serviços. A ideia central é que cada componente funcione de maneira independente, com interfaces bem definidas, permitindo que mudanças ou falhas em um componente não afetem diretamente os outros. Isso é alcançado usando técnicas como comunicação assíncrona, filas de mensagens ou APIs, que isolam os componentes e permitem uma evolução independente. O desacoplamento melhora a resiliência, facilita a manutenção e atualização do sistema e permite escalar componentes de forma independente, atendendo melhor às demandas de negócio. Microsserviços Desacoplados."
+    },
+    {
+      "id": "question26",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa containerizou dois microsserviços com padrões de carga variáveis: um tem picos de acesso pela manhã e o outro à tarde. Para garantir escalabilidade automatizada e uso eficiente dos recursos, quais serviços da AWS podem orquestrar e ajustar dinamicamente os recursos conforme as variações de carga?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Elastic Kubernetes Service (EKS) ou Elastic Container Service (ECS)"
+        },
+        {
+          "index": 2,
+          "text": "Elastic Container Register (ECR) ou Elastic Container Service (ECS)"
+        },
+        {
+          "index": 3,
+          "text": "Elastic Compute Cloud (EC2) ou Elastic Kubernetes Service (EKS)"
+        },
+        {
+          "index": 4,
+          "text": "Lambda ou Elastic Kubernetes Service (EKS)"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "AWS ECS (Elastic Container Service) e AWS EKS (Elastic Kubernetes Service) são ideais para gerenciar microsserviços containerizados com cargas de trabalho variáveis. Ambos oferecem autoscaling, ajustando automaticamente o número de contêineres em resposta à demanda, garantindo disponibilidade durante picos e eficiência de recursos. ECS é uma solução AWS nativa e simplificada para gerenciar contêineres, enquanto EKS é baseado no Kubernetes, oferecendo mais flexibilidade e compatibilidade com a comunidade Kubernetes. Ambas as plataformas permitem orquestração e gerenciamento eficientes, incluindo balanceamento de carga, rede, e segurança, tornando-as adequadas para aplicações com requisitos de escalabilidade e eficiência. AWS ECS AWS EKS"
+    },
+    {
+      "id": "question27",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é o modelo de planos flexíveis que oferece preços mais vantajosos em comparação com outros modelos de tarifação, exigindo um compromisso de uso específico em dólares por hora por um período de um ou três anos, independentemente da região, tipo de instância ou serviço AWS, como EC2, Fargate e Lambda?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Savings Plans"
+        },
+        {
+          "index": 2,
+          "text": "Reservada (Reserved)"
+        },
+        {
+          "index": 3,
+          "text": "Sob Demanda (On-Demand)"
+        },
+        {
+          "index": 4,
+          "text": "Spot"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O AWS Saving Plans é um modelo flexível de compromisso de pagamento que oferece economias significativas em relação às taxas sob demanda. Ele permite aos clientes obter descontos em instâncias EC2 e outros recursos de computação da AWS em troca de um compromisso de uso a longo prazo. Ao contrário de instâncias reservadas tradicionais, o Saving Plans oferece flexibilidade em relação à família de instâncias e à região, permitindo otimizar economias. Comparado a outros planos, como o Reserved, o Saving Plans oferece uma abordagem mais ampla, permitindo economias em diferentes tipos de instâncias e simplificando o gerenciamento de descontos em toda a infraestrutura da AWS. SavingsPlans"
+    },
+    {
+      "id": "question28",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma das principais vantagens ao optar pela AWS reside nas opções flexíveis de pagamento oferecidas por seus serviços. Qual é o método de pagamento padrão amplamente utilizado na maioria dos serviços da AWS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Pagamento conforme a compra"
+        },
+        {
+          "index": 2,
+          "text": "Pagamento conforme o uso"
+        },
+        {
+          "index": 3,
+          "text": "Pagamento conforme o licenciamento"
+        },
+        {
+          "index": 4,
+          "text": "Pagamento conforme o contrato"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A forma de pagamento padrão dos serviços da AWS é conforme o uso, onde os clientes pagam apenas pelo que consomem. Esse modelo, conhecido como \"pay-as-you-go\", oferece flexibilidade, pois não exige contratos de longo prazo ou compromissos antecipados. Ele permite dimensionar recursos conforme a demanda, evitando gastos excessivos em infraestrutura desnecessária. Além disso, a AWS oferece uma ampla gama de opções de pagamento, como faturamento mensal, pagamento por hora ou por segundo, permitindo que os clientes escolham a opção que melhor se adapta às suas necessidades. Isso possibilita controlar custos, otimizar recursos e pagar somente pelo valor utilizado. Modelos de Pagamentos"
+    },
+    {
+      "id": "question29",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Sua empresa faz uso do Apache Kafka no ambiente on premises para ingestão de logs e processamento de eventos em tempo real. Numa migração da infraestutura para a AWS, qual serviço pode ser utilizado para manter o uso desta tecnologia de maneira totalmente gerenciada?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Amazon MSK"
+        },
+        {
+          "index": 2,
+          "text": "Amazon EKS"
+        },
+        {
+          "index": 3,
+          "text": "Amazon SQS"
+        },
+        {
+          "index": 4,
+          "text": "Amazon KMS"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O Amazon Managed Streaming for Apache Kafka (Amazon MSK) é um serviço totalmente gerenciado pela AWS que facilita a implantação e a operação de clusters Apache Kafka altamente escaláveis e seguros. Ele é projetado para processamento de streaming de dados em tempo real, permitindo que as empresas ingiram, armazenem e analisem grandes volumes de dados de maneira eficiente. O Amazon MSK oferece recursos de alta disponibilidade, escalabilidade automática e integração com outras soluções da AWS, tornando-o ideal para casos de uso como transmissões ao vivo, análises de dados em tempo real, ingestão de logs e processamento de eventos em tempo real. AWS MSK Nota Os serviços totalmente gerenciados são aqueles ofertados como plataforma(PaaS) ou serviço(SaaS), onde a AWS é totalmente responsável pela implementação e manutenção dos mesmos e onde o cliente só precisa se preocupar com o seu uso."
+    },
+    {
+      "id": "question30",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual banco de dados SQL da AWS é projetado para garantir uma disponibilidade de 99,99% ou superior, realizando replicação automática de seis cópias dos dados em três zonas de disponibilidade distintas, e utilizando o Amazon S3 para backups contínuos e duráveis?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Aurora"
+        },
+        {
+          "index": 2,
+          "text": "MySql"
+        },
+        {
+          "index": 3,
+          "text": "MariaDB"
+        },
+        {
+          "index": 4,
+          "text": "DynamoDB"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O Amazon Aurora é frequentemente considerado uma escolha superior a outros mecanismos de banco de dados, como MySQL e MariaDB, devido a várias razões. Primeiro, Aurora oferece desempenho significativamente melhor, com até cinco vezes a taxa de transferência do MySQL e três vezes a do MariaDB, graças à sua arquitetura otimizada para a nuvem. Ele é projetado para alta disponibilidade, replicando automaticamente os dados em seis cópias distribuídas por três zonas de disponibilidade, o que também proporciona uma recuperação rápida e eficiente de falhas. Aurora suporta escalabilidade automática, permitindo o ajuste dinâmico da capacidade de leitura e escrita com mínima interrupção. Além disso, oferece recursos avançados de segurança, como criptografia em repouso e em trânsito, além de backups automáticos e contínuos para o Amazon S3, garantindo proteção e durabilidade dos dados. Por fim, a compatibilidade com MySQL e PostgreSQL facilita a migração e a integração, tornando o Aurora uma opção robusta e eficiente para aplicações de missão crítica. Amazon Aurora Nota SQL/NoSQL SQL (Structured Query Language) databases são baseados em um esquema de tabelas rígido e utilizam linguagem SQL para consultas, oferecendo consistência e suporte a transações complexas. NoSQL (Not Only SQL) bancos de dados são mais flexíveis, permitindo armazenamento de dados em formatos como documentos, grafos ou chave-valor, e são escaláveis horizontalmente, sendo ideais para grandes volumes de dados não estruturados ou semi-estruturados."
+    },
+    {
+      "id": "question31",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Ao usar a AWS, é possível obter descontos proporcionais ao volume, resultando em economias significativas conforme o uso aumenta. Em qual serviço a definição de preço é estruturada em camadas, oferecendo redução no custo por GB à medida que o uso aumenta?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Elastic Kubernetes Service (EKS)"
+        },
+        {
+          "index": 2,
+          "text": "Simple Storage Service (S3)"
+        },
+        {
+          "index": 3,
+          "text": "Lambda"
+        },
+        {
+          "index": 4,
+          "text": "Elastic Contâiner Service (ECS)"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "A AWS implementa uma política de descontos progressivos, onde o custo por gigabyte diminui à medida que o volume de utilização aumenta, proporcionando economias consideráveis. Para o Amazon S3, essa estrutura de preços em camadas é aplicada de forma que, quanto maior o uso de armazenamento, menor o custo por gigabyte. A AWS permite economias de custos em escala através de uma estrutura de preços que favorece o uso crescente. À medida que as empresas aumentam seu consumo de recursos, elas podem se beneficiar de preços decrescentes por unidade de medida, aproveitando descontos progressivos. A flexibilidade de pagamento sob demanda ajuda a evitar custos desnecessários, garantindo que as empresas paguem apenas pelo que realmente utilizam. Além disso, a AWS oferece modelos de preços que incentivam o compromisso de longo prazo, resultando em economias adicionais. A capacidade de escalar automaticamente os recursos de acordo com a demanda também otimiza a alocação de recursos, evitando desperdícios e reduzindo despesas operacionais gerais. Definição de Preço"
+    },
+    {
+      "id": "question32",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Quais são as principais funções do AWS Glue? (Selecione 3 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Extrair dados"
+        },
+        {
+          "index": 2,
+          "text": "Carregar dados"
+        },
+        {
+          "index": 3,
+          "text": "Criptografar dados"
+        },
+        {
+          "index": 4,
+          "text": "Transformar dados"
+        },
+        {
+          "index": 5,
+          "text": "Arquivar dados"
+        }
+      ],
+      "answer": [
+        1,
+        2,
+        4
+      ],
+      "explanation": "O AWS Glue é um serviço totalmente gerenciado que facilita o processo de ETL (Extração, Transformação e Carga) para preparação e movimentação de dados. Ele automatiza tarefas de descoberta de metadados, geração de código ETL e monitoramento de jobs. Os benefícios do AWS Glue incluem a redução do esforço e tempo necessários para criar e gerenciar pipelines de dados, a escalabilidade para lidar com grandes volumes de dados e a integração com outros serviços da AWS para armazenamento e análise de dados. Com o AWS Glue, as empresas podem simplificar o processo de ETL, melhorar a qualidade dos dados e acelerar a obtenção de insights valiosos a partir dos dados armazenados na nuvem da AWS. AWS Glue"
+    },
+    {
+      "id": "question33",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Se você deseja realizar um gerenciamento total do seu banco de dados, qual é o serviço mais indicado para implementá-lo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "EC2"
+        },
+        {
+          "index": 2,
+          "text": "RDS"
+        },
+        {
+          "index": 3,
+          "text": "DocumentDB"
+        },
+        {
+          "index": 4,
+          "text": "DynamoDB"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "A instalação manual de um banco de dados em instâncias do EC2 oferece ao cliente total controle sobre a configuração e o gerenciamento do ambiente, diferentemente de serviços gerenciados como o Amazon RDS. Nesse modelo IaaS (Infraestrutura como Serviço), o cliente é responsável por escolher e instalar o sistema de gerenciamento de banco de dados (DBMS), como MySQL, PostgreSQL ou SQL Server, além de configurar o sistema operacional e implementar medidas de segurança. Essa abordagem permite personalizar o ambiente de acordo com necessidades específicas, incluindo ajustes de desempenho e configurações de rede. Contudo, essa flexibilidade também significa que o cliente deve gerenciar atualizações, backups, escalabilidade e disponibilidade, incluindo a implementação de replicação e balanceamento de carga, o que pode demandar mais esforço e expertise técnica. Amazon EC2"
+    },
+    {
+      "id": "question34",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma pequena empresa deseja implementar um site dinâmico em WordPress com despesas mínimas. Qual serviço fornece um servidor privado virtual simples (VPS) de baixo custo que pode satisfazer essa demanda?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Amazon S3"
+        },
+        {
+          "index": 2,
+          "text": "Amazon LightSail"
+        },
+        {
+          "index": 3,
+          "text": "Amazon EC2"
+        },
+        {
+          "index": 4,
+          "text": "Amazon ECS"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Implementar o WordPress no Amazon Lightsail é uma escolha conveniente e econômica para muitos usuários, especialmente quando comparado ao uso de EC2, S3 ou ECS. Lightsail oferece um ambiente pré-configurado com tudo o que é necessário para hospedar um site WordPress, incluindo servidores web, bancos de dados e armazenamento, simplificando o processo de configuração e gerenciamento. Isso é ideal para usuários que preferem uma solução pronta para uso, sem a necessidade de configurar manualmente a infraestrutura. Além disso, Lightsail inclui custos previsíveis e baixos, com pacotes mensais que cobrem os recursos de computação, rede e armazenamento. Em contraste, o uso de EC2, S3 ou ECS pode exigir um maior nível de configuração e gerenciamento, além de potencialmente resultar em custos mais altos e variáveis, dependendo do uso dos recursos. Sites estáticos são compostos por páginas fixas, onde o conteúdo é o mesmo para todos os usuários e não muda com interações. Eles são rápidos e simples de desenvolver, pois não requerem um servidor de backend. O Amazon S3 é ideal para hospedar sites estáticos, pois oferece armazenamento escalável e entrega de conteúdo rápida e segura. Em contraste, sites dinâmicos geram conteúdo em tempo real, adaptando-se às interações do usuário e podendo exibir informações personalizadas. Para esses sites, o Amazon Lightsail é útil, pois fornece uma plataforma de hospedagem simples e econômica que suporta servidores web, bancos de dados e outras ferramentas necessárias para aplicações dinâmicas. AWS Lightsail"
+    },
+    {
+      "id": "question35",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Para desenvolver uma solução que permita a uma aplicação escalonar automaticamente conforme a demanda, quais serviços da AWS são essenciais? (selecione 2 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "CloudFormation"
+        },
+        {
+          "index": 2,
+          "text": "Auto Scaling Group (ALG)"
+        },
+        {
+          "index": 3,
+          "text": "Elastic Load Balancer (ELB)"
+        },
+        {
+          "index": 4,
+          "text": "CloudFront"
+        },
+        {
+          "index": 5,
+          "text": "Route 53"
+        }
+      ],
+      "answer": [
+        2,
+        3
+      ],
+      "explanation": "O Auto Scaling é uma funcionalidade da AWS que ajusta automaticamente o número de instâncias de acordo com a demanda da aplicação. Ele garante que a aplicação tenha a quantidade ideal de recursos para lidar com a carga de trabalho, aumentando ou diminuindo o número de instâncias conforme necessário. Isso otimiza o uso de recursos, evitando custos desnecessários e garantindo disponibilidade. Já o Elastic Load Balancing (ELB) distribui o tráfego de rede de forma equilibrada entre as instâncias em execução, assegurando que nenhuma instância seja sobrecarregada. Juntos, Auto Scaling e ELB proporcionam uma solução escalável e resiliente para gerenciar cargas de trabalho variáveis. AWS ASG AWS ELB"
+    },
+    {
+      "id": "question36",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual dos seguintes ítens é de responsabilidade exclusiva da AWS no modelo de responsabilidade compartilhada (shared responsability model)?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Proteger os dados das aplicações dos usuários."
+        },
+        {
+          "index": 2,
+          "text": "Gerenciar imagens customizadas das instâncias do AMI"
+        },
+        {
+          "index": 3,
+          "text": "Proteger a infraestrutura global."
+        },
+        {
+          "index": 4,
+          "text": "Atualizar patch de segurança em instâncias do clientes."
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "No modelo de responsabilidade compartilhada da AWS, a AWS é responsável pela \"segurança da nuvem,\" o que inclui a manutenção e gestão de toda a infraestrutura física. Isso abrange a segurança dos data centers, manutenção de hardware, garantia de fornecimento de energia, controle de acesso físico, e proteção contra desastres naturais. A AWS também cuida da segurança das redes e dos equipamentos que compõem a infraestrutura subjacente. Por outro lado, os clientes são responsáveis pela \"segurança na nuvem,\" o que inclui a gestão de dados, configuração de segurança dos serviços, controle de acesso, e proteção das aplicações e informações que eles implantam na infraestrutura da AWS. Isso significa que, enquanto a AWS garante a segurança física e a continuidade dos serviços de infraestrutura, os clientes devem implementar as práticas de segurança apropriadas para proteger suas aplicações e dados na nuvem. Modelo de Responsabilidade Compartilhada"
+    },
+    {
+      "id": "question37",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Um administrador de redes atua em um escritório jurídico que lida com uma grande quantidade de contratos de clientes. Estes documentos passam alterações frequentes e demandam um eficiente processo de gerenciamento de versões. Qual serviço da AWS recomenda-se para armazenar esses documentos e atender a esse requisito específico?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS CodeCommit"
+        },
+        {
+          "index": 2,
+          "text": "Amazon EBS"
+        },
+        {
+          "index": 3,
+          "text": "Git"
+        },
+        {
+          "index": 4,
+          "text": "Amazon S3"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "No Amazon S3, ao criar um Bucket para armazenar arquivos, você pode melhorar o controle sobre as mudanças ativando a função de versionamento de objetos. Essa funcionalidade permite acompanhar e gerenciar várias versões de um mesmo arquivo, proporcionando maior segurança e controle durante alterações e atualizações. Embora o S3 não identifique diretamente o autor das alterações, você pode usar o AWS CloudTrail para registrar as atividades de API, o que permite rastrear quem fez as mudanças e quando ocorreram. Isso é especialmente útil para recuperação de versões anteriores em caso de erros ou mudanças indesejadas, adicionando uma camada adicional de proteção e gerenciamento de arquivos. S3 Características"
+    },
+    {
+      "id": "question38",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa encontra-se atualmente em processo de avaliação do uso do banco de dados DynamoDB, buscando compreender as diversas oportunidades relacionadas ao seu uso. Qual das seguintes opções NÃO representa uma característica deste serviço?",
+      "options": [
+        {
+          "index": 1,
+          "text": "É um banco de dados cobrado por MB na solicitação de gravação e leitura"
+        },
+        {
+          "index": 2,
+          "text": "É um banco de dados sem servidor"
+        },
+        {
+          "index": 3,
+          "text": "é um banco de dados de chave-valor e documentos"
+        },
+        {
+          "index": 4,
+          "text": "É um banco de dados totalmente gerenciado"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O DynamoDB é um banco de dados NoSQL, sem servidor e totalmente gerenciado pela AWS, que se destaca pela sua flexibilidade e escalabilidade. Diferente dos bancos de dados relacionais, ele não exige um esquema predefinido, o que permite armazenar dados não estruturados de forma eficiente, como em formatos JSON e documentos. Sua estrutura é baseada em tabelas com colunas de chave-valor, permitindo que cada item de uma tabela possa ter um conjunto diferente de atributos. Isso torna o DynamoDB ideal para aplicações que precisam armazenar e acessar grandes volumes de dados de maneira dinâmica, como aplicativos móveis, jogos online, e-commerce e IoT. Além disso, o serviço oferece escalabilidade automática e integrada, ajustando a capacidade de leitura e gravação de forma transparente, garantindo alta performance e disponibilidade. AWS DynamoDB Nota Serviços Gerenciados Serviços gerenciados pela AWS, como RDS e DynamoDB, oferecem infraestrutura, manutenção, escalabilidade e segurança automatizadas, permitindo que os usuários se concentrem mais nas aplicações e menos na gestão do backend. Em contraste, serviços não gerenciados exigem que os usuários configurem, administrem e mantenham a infraestrutura, como instâncias EC2, o que pode demandar mais tempo e esforço para garantir o desempenho e a segurança."
+    },
+    {
+      "id": "question39",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Selecione as afirmações verdadeiras sobre o AWS Identity and Access Management (IAM), o serviço que permite gerenciar o acesso aos recursos da AWS de forma segura. (Selecione 3 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Não permite a delegação de permissões específicas para serviços da AWS."
+        },
+        {
+          "index": 2,
+          "text": "Permite a criação de políticas (policies) de controle de acesso detalhadas para\r\n                                        usuários e grupos."
+        },
+        {
+          "index": 3,
+          "text": "Oferece autenticação multifator (MFA) para aumentar a segurança das contas."
+        },
+        {
+          "index": 4,
+          "text": "Suporta a integração com provedores de identidade externos para autenticação\r\n                                        federada."
+        },
+        {
+          "index": 5,
+          "text": "Necessita de uma conta root para criar novos usuários e grupos."
+        }
+      ],
+      "answer": [
+        2,
+        3,
+        4
+      ],
+      "explanation": "O AWS Identity and Access Management (IAM) é um serviço que permite gerenciar o acesso a recursos da AWS de forma segura. Com o IAM, você pode criar e gerenciar usuários e grupos, além de definir permissões para controlar quem pode acessar quais recursos. As permissões são configuradas por meio de policies, que são documentos JSON detalhando ações permitidas ou negadas em recursos específicos. Essas policies podem ser anexadas a usuários, grupos ou roles, definindo assim as permissões de forma granular. O IAM permite a implementação de boas práticas de segurança, como o princípio do menor privilégio, assegurando que os usuários tenham apenas as permissões necessárias para realizar suas tarefas. AWS IAM e Policies"
+    },
+    {
+      "id": "question40",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Um banco está desenvolvendo um microsserviço para realizar análises de crédito solicitadas por clientes. Os resultados dessas análises precisam ser enviados para sistemas de vendas, de empréstimos e para um serviço de log interno. Qual serviço da AWS é mais adequado para facilitar essas integrações de forma rápida e eficiente, permitindo futuras expansões?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS SNS"
+        },
+        {
+          "index": 2,
+          "text": "AWS Lambda"
+        },
+        {
+          "index": 3,
+          "text": "AWS ECS"
+        },
+        {
+          "index": 4,
+          "text": "AWS SES"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O Amazon Simple Notification Service (SNS) facilita a integração de sistemas por meio da função Pub/Sub. Utilizando tópicos e assinantes, o SNS permite a publicação de mensagens em tópicos específicos, representando eventos ou categorias. Sistemas interessados se inscrevem nos tópicos pertinentes, indicando o interesse em receber notificações sobre eventos específicos. Quando uma mensagem é publicada, o SNS a entrega a todos os assinantes do tópico, possibilitando a comunicação em tempo real entre sistemas distribuídos. Essa abordagem escalável e flexível facilita a construção de aplicações dinâmicas, permitindo a adição ou remoção dinâmica de assinantes e tópicos. O SNS se destaca como uma ferramenta eficiente para a integração ágil de sistemas em ambientes diversos de desenvolvimento de software. AWS SNS"
+    },
+    {
+      "id": "question41",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma corporação global com clientes distribuídos em praticamente todos os países pretende adotar a AWS como sua nova provedora de serviços de computação em nuvem. Qual é o principal benefício imediato para os clientes dessa empresa ao utilizar a AWS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Documentações bem traduzidas em 50 idiomas"
+        },
+        {
+          "index": 2,
+          "text": "Suporte ao usuário final"
+        },
+        {
+          "index": 3,
+          "text": "Presença Global"
+        },
+        {
+          "index": 4,
+          "text": "Suporte em mais de 50 idiomas"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Ao optar por implementar seus aplicativos e cargas de trabalho na nuvem da AWS, você obtém a flexibilidade de escolher uma infraestrutura tecnológica que se aproxime mais da localização principal dos seus usuários, estando disponível globalmente. Essa capacidade de escolha não apenas proporciona uma resposta mais eficiente e rápida para os usuários finais, mas também permite uma otimização estratégica, garantindo que a infraestrutura esteja distribuída de maneira a atender às demandas específicas de diferentes regiões do mundo. Isso possibilita uma experiência de usuário mais personalizada e eficaz, levando em consideração as nuances geográficas e as necessidades específicas de cada localidade. Regiões e AZs da infraestrutura global (amazon.com)"
+    },
+    {
+      "id": "question42",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é o banco de dados NoSQL do tipo chave-valor, totalmente gerenciado pela AWS, que oferece escalabilidade automática e é ideal para aplicações com alta demanda de leitura e escrita?",
+      "options": [
+        {
+          "index": 1,
+          "text": "RDS MySql"
+        },
+        {
+          "index": 2,
+          "text": "Amazon KeySpaces"
+        },
+        {
+          "index": 3,
+          "text": "DynamoDB"
+        },
+        {
+          "index": 4,
+          "text": "Aurora"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O Amazon DynamoDB é um banco de dados NoSQL do tipo chave-valor, o que significa que ele armazena dados como pares de chave-valor, onde cada chave é única e associa-se a um valor que pode ser um documento, um número, uma string, ou uma combinação desses. Esse modelo de dados é altamente flexível, permitindo que diferentes itens em uma tabela tenham diferentes atributos, facilitando o armazenamento de dados sem um esquema fixo. O DynamoDB é totalmente gerenciado e sem servidor, eliminando a necessidade de administração de infraestrutura. Ele é ideal para aplicações que requerem alta escalabilidade e baixa latência, como e-commerce, jogos e IoT. DynamoDB"
+    },
+    {
+      "id": "question43",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Um desenvolvedor pretende criar uma aplicação utilizando Java ou C# e busca integrar suas funcionalidades com serviços da AWS. Qual conjunto de ferramentas e bibliotecas da AWS ele deve utilizar para facilitar essa integração, permitindo o uso de APIs e serviços da nuvem de forma otimizada para essas linguagens de programação?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS CodeDeveloper"
+        },
+        {
+          "index": 2,
+          "text": "AWS Console"
+        },
+        {
+          "index": 3,
+          "text": "AWS SDK"
+        },
+        {
+          "index": 4,
+          "text": "AWS CLI"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O AWS SDK (Software Development Kit) é um conjunto de ferramentas e bibliotecas fornecido pela AWS para desenvolvedores criarem aplicativos que interagem com os serviços da nuvem da AWS. Ele oferece APIs e recursos de programação que permitem aos desenvolvedores integrar facilmente funcionalidades de serviços da AWS em suas aplicações. O SDK está disponível em várias linguagens de programação, incluindo Java, Python, JavaScript, .NET e mais. Ele simplifica tarefas complexas, como autenticação, chamadas de API, gerenciamento de credenciais e manipulação de solicitações e respostas, permitindo que os desenvolvedores criem aplicativos eficientes e escaláveis que interagem com os serviços da AWS de forma segura e confiável. AWS SDK (Software Development Kit)"
+    },
+    {
+      "id": "question44",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "A Amazon oferece várias classes de armazenamento no S3 específicas para cada tipo de uso. Qual das opções abaixo são classes existentes no serviço? (selecione 3)",
+      "options": [
+        {
+          "index": 1,
+          "text": "S3 Standard Infrequent Access"
+        },
+        {
+          "index": 2,
+          "text": "S3 Standard"
+        },
+        {
+          "index": 3,
+          "text": "S3 Intelligent-Tiering"
+        },
+        {
+          "index": 4,
+          "text": "S3 Business"
+        },
+        {
+          "index": 5,
+          "text": "S3 Enterprise"
+        }
+      ],
+      "answer": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "Essas são três das sete classes existentes: - S3 Standard, para armazenamento geral de dados acessados com frequência - S3 Intelligent-Tiering, para dados com padrões de acesso desconhecidos ou variáveis, - S3 Standard-Infrequent Access (S3 Standard – IA) - S3 One Zone-Infrequent Access (S3 One Zone – IA) para dados duradouros acessados com menos frequência e Amazon - S3 Glacier (S3 Glacier) - S3 Glacier Deep Archive (S3 Glacier Deep Archive) para preservação digital e arquivamento de longo prazo. - S3 Outposts para armazenar seus dados do S3 on-premises AWS S3 - Classes"
+    },
+    {
+      "id": "question45",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "O que pode-se afirmar sobre o AWS Budgets? (Selecione 3 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Pode calcular e estimar os custos dos serviços da AWS"
+        },
+        {
+          "index": 2,
+          "text": "Pode ser utilizados para refinar e filtrar orçamentos"
+        },
+        {
+          "index": 3,
+          "text": "Pode ser utilizado para enviar alertas para te ajudar no controle do uso dos\r\n                                        serviços da sua conta"
+        },
+        {
+          "index": 4,
+          "text": "Pode ser utilizado para criar e gerenciar orçamentos"
+        },
+        {
+          "index": 5,
+          "text": "Pode enviar notificações para até 5 destinatários de e-mail no máximo"
+        }
+      ],
+      "answer": [
+        2,
+        3,
+        4
+      ],
+      "explanation": "O AWS Budgets é um serviço da AWS que permite aos clientes definirem limites de gastos e monitorarem seus custos na nuvem. Ele ajuda a controlar os gastos, enviando alertas por e-mail ou SMS quando os custos se aproximam ou excedem os limites estabelecidos. O AWS Budgets oferece uma visão clara dos gastos em relação às metas definidas, permitindo ajustes proativos para otimizar os custos. Ele é útil para evitar gastos inesperados, garantir aderência aos orçamentos e melhorar a gestão financeira das operações na nuvem. AWS Budgets"
+    },
+    {
+      "id": "question46",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Quais fatores são considerados para calcular o Total Cost of Ownership (TCO) numa migração para a AWS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "custos de infraestrutura de hardware, manutenção e suporte, consumo de energia,\r\n                                        custos operacionais como mão de obra e linguagens de programação."
+        },
+        {
+          "index": 2,
+          "text": "custos de infraestrutura de hardware, manutenção e suporte, consumo de energia,\r\n                                        custos operacionais como mão de obra e satisfação dos usuários finais."
+        },
+        {
+          "index": 3,
+          "text": "custos de infraestrutura de hardware, manutenção e suporte, consumo de energia,\r\n                                        custos de treinamentos e administração de sistemas."
+        },
+        {
+          "index": 4,
+          "text": "custos de infraestrutura de hardware, manutenção e suporte, consumo de energia,\r\n                                        custos operacionais como mão de obra e administração de sistemas."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "Os custos de infraestrutura de hardware, manutenção e suporte, consumo de energia, bem como custos operacionais como mão de obra e administração de sistemas, são fatores que influenciam diretamente o cálculo do Total Cost of Ownership (TCO) ao migrar para a AWS. Esses elementos representam uma parte significativa dos custos que podem ser economizados ou reduzidos ao mover cargas de trabalho para a nuvem. Eles incluem: Infraestrutura de Hardware: Custos associados à compra, atualização e substituição de servidores, armazenamento e redes. Manutenção e Suporte: Custos contínuos para manter e reparar o hardware e o software, além de suporte técnico. Consumo de Energia: Custos de energia elétrica para operar e resfriar a infraestrutura de TI on-premises. Mão de Obra e Administração de Sistemas: Custos com equipes de TI responsáveis por gerenciar, manter e monitorar a infraestrutura e os sistemas. Esses custos são diretamente impactados pela migração para a AWS, onde a infraestrutura é gerenciada pela AWS, resultando em potenciais economias de custos significativas. AWS TCO"
+    },
+    {
+      "id": "question47",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Sua empresa começou a utilizar a AWS e precisa conceder acessos a 100 funcionários. Considerando que o time é composto por desenvolvedores, DBAs e arquitetos, e que cada grupo precisa de permissões específicas para diferentes recursos, qual serviço da AWS você escolheria para gerenciar esses acessos de forma eficiente?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Organizations"
+        },
+        {
+          "index": 2,
+          "text": "Amazon Cognito"
+        },
+        {
+          "index": 3,
+          "text": "IAM Grupos"
+        },
+        {
+          "index": 4,
+          "text": "IAM Roles"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Com o AWS IAM (Identity and Access Management) Groups, você pode criar grupos específicos para diferentes equipes, como desenvolvedores, DBAs e arquitetos. Cada grupo pode ter políticas de acesso definidas que concedem permissões específicas para os recursos necessários ao seu trabalho. Isso permite que, ao invés de configurar permissões individualmente para cada usuário, você simplesmente adicione novos colaboradores ao grupo apropriado, e eles herdarão automaticamente as permissões atribuídas a esse grupo. Por exemplo, um grupo de desenvolvedores pode ter acesso a instâncias EC2, buckets S3 e bancos de dados RDS, enquanto um grupo de DBAs pode ter permissões adicionais para gerenciamento de bancos de dados. Essa abordagem facilita o gerenciamento de acessos e mantém a segurança e a organização, garantindo que todos os membros do grupo tenham as permissões corretas de forma eficiente e dinâmica. IAM Groups"
+    },
+    {
+      "id": "question48",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Em cenários de migração para a AWS, como as empresas podem aplicar o AWS Application Discovery Service para auxiliá-las?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Para criar aplicativos móveis para clientes."
+        },
+        {
+          "index": 2,
+          "text": "Para armazenar backups de dados."
+        },
+        {
+          "index": 3,
+          "text": "Para gerar relatórios de custos."
+        },
+        {
+          "index": 4,
+          "text": "Para identificar e avaliar as dependências de aplicativos e servidores locais."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "O AWS Application Discovery Service é uma ferramenta da Amazon Web Services que ajuda as empresas a mapearem e entenderem seus ativos de TI existentes em seus ambientes locais. Ele coleta informações detalhadas sobre servidores, aplicativos e dependências, facilitando a migração para a nuvem, otimização de recursos e planejamento de capacidade. O serviço fornece insights valiosos sobre o ambiente de TI, identificando oportunidades de economia de custos, riscos e dependências críticas. Ao automatizar a descoberta e a análise de ativos, o AWS Application Discovery Service é uma ferramenta fundamental para empresas que buscam maximizar os benefícios da computação em nuvem. AWS Application Discovery"
+    },
+    {
+      "id": "question49",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Por que é necessário associar um Elastic Block Store (EBS) a uma instância EC2?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Para deixar o fluxo de transmissão de dados mais rápido na instância."
+        },
+        {
+          "index": 2,
+          "text": "Para  fornecer armazenamento persistente e escalável para a instância."
+        },
+        {
+          "index": 3,
+          "text": "Para que os dados sejam criptografados na instância."
+        },
+        {
+          "index": 4,
+          "text": "Para permitir redundância computacional da instância."
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "O Amazon Elastic Block Store (EBS) é um serviço que fornece armazenamento persistente e escalável para instâncias EC2. Ele é essencial porque o armazenamento local das instâncias EC2 é efêmero, o que significa que os dados são perdidos quando a instância é interrompida ou encerrada. Com o EBS, você pode criar volumes de armazenamento que permanecem intactos mesmo após a interrupção da instância, garantindo a durabilidade dos dados. Esses volumes podem ser facilmente anexados, desanexados e transferidos entre diferentes instâncias EC2, oferecendo flexibilidade e alta disponibilidade para aplicativos e serviços. O EBS também suporta snapshots para backup e recuperação de dados, aumentando ainda mais a resiliência do ambiente de nuvem. AWS EBS"
+    },
+    {
+      "id": "question50",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual serviço da AWS permite a execução de contêineres de forma serverless, abstraindo totalmente o gerenciamento da infraestrutura subjacente, incluindo provisionamento, escalabilidade, e manutenção de servidores, para que os desenvolvedores possam focar apenas no código e lógica de aplicação?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Amazon Elastic Container Service (ECS)"
+        },
+        {
+          "index": 2,
+          "text": "AWS Lambda"
+        },
+        {
+          "index": 3,
+          "text": "Amazon Elastic Kubernetes Services (EKS)"
+        },
+        {
+          "index": 4,
+          "text": "AWS Fargate"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "O AWS Fargate é um serviço de computação serverless que permite aos desenvolvedores executar contêineres sem a necessidade de gerenciar servidores ou clusters subjacentes. Com o Fargate, você paga apenas pelos recursos de computação que utiliza, evitando custos com infraestrutura não utilizada. Ele é compatível com o Amazon ECS (Elastic Container Service) e o Amazon EKS (Elastic Kubernetes Service), proporcionando flexibilidade para executar contêineres com qualquer orquestrador de sua escolha. O Fargate elimina a necessidade de gerenciar o ciclo de vida da infraestrutura, como provisionamento, dimensionamento e manutenção, permitindo que os desenvolvedores se concentrem exclusivamente na construção e execução de suas aplicações. Isso simplifica a operação de ambientes de contêineres e melhora a eficiência operacional. AWS Fargate"
+    },
+    {
+      "id": "question51",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa deu início a um processo de migração para a AWS, exigindo que todos os departamentos de sistemas implementem suas aplicações utilizando modelos de infraestrutura pré-definidos pelo time de arquitetos e especialistas, aplicando a técnica de Infraestrutura como Código (IAC). Qual serviço é o mais adequado para ser utilizado neste processo?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Config"
+        },
+        {
+          "index": 2,
+          "text": "Cloud Templates"
+        },
+        {
+          "index": 3,
+          "text": "AWS CloudFormation"
+        },
+        {
+          "index": 4,
+          "text": "Cloud Stacks"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O AWS CloudFormation permite modelar, provisionar e gerenciar recursos da AWS e de terceiros ao tratar a infraestrutura como código. Como código, a infraestrutura pode ser alterada, versionada e automatizada para atender diversos requisitos de uma implementação de infraestrutura, como o apresentado na questão. Template (modelo) é o nome dado ao arquivo onde são declarados todos os serviços necessários na infraestrutura desejada. Um template no AWS CloudFormation é um arquivo que descreve a infraestrutura de nuvem desejada usando formato YAML ou JSON. Ele especifica todos os recursos necessários, suas configurações e dependências, permitindo a criação e gerenciamento automatizado da infraestrutura. Embora o CloudFormation seja uma opção popular, outras ferramentas como Terraform também são amplamente utilizadas para essa finalidade, oferecendo alternativas para a gestão de infraestrutura como código. No entanto, o uso de outras ferramentas não é foco nas certificações AWS. AWS CloudFormation"
+    },
+    {
+      "id": "question52",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual serviço da AWS que além de ajudar na visualização dos cinco serviços que mais oneram os custos de uma conta, também disponibiliza um detalhamento minucioso sobre todos os serviços e custos da conta?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Pricing Calculator"
+        },
+        {
+          "index": 2,
+          "text": "AWS Trusted Advisor"
+        },
+        {
+          "index": 3,
+          "text": "AWS Cost Explorer"
+        },
+        {
+          "index": 4,
+          "text": "AWS Budget"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O AWS Cost Explorer é a ferramenta ideal para visualizar e analisar os custos e o uso de serviços na AWS. Ele permite identificar facilmente os cinco serviços que mais impactam os custos de uma conta, ajudando a focar em áreas de maior gasto. Além disso, oferece um detalhamento minucioso de todos os serviços e seus respectivos custos, permitindo uma análise granular das despesas. Com o Cost Explorer, você pode criar relatórios personalizados, analisar tendências de gastos e projetar futuros custos com base no uso histórico. Essa ferramenta é essencial para gerenciar o orçamento e otimizar os recursos, ajudando a identificar oportunidades de economia e eficiência na utilização dos serviços da AWS. AWS Cost Explorer"
+    },
+    {
+      "id": "question53",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é o plano de suporte recomendado se você é um desenvolvedor e está experimentado ou testando na AWS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Basic"
+        },
+        {
+          "index": 2,
+          "text": "Enterprise"
+        },
+        {
+          "index": 3,
+          "text": "Business"
+        },
+        {
+          "index": 4,
+          "text": "Developer"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "A AWS oferece cinco planos de suporte, cada um projetado para diferentes níveis de necessidade e uso de seus serviços: Plano Básico (Basic Support): Descrição: Inclui suporte a recursos de autoajuda, como documentação, whitepapers e fóruns da AWS. Não oferece suporte técnico especializado. Recomendação de Uso: Ideal para usuários que estão começando a explorar a AWS e não precisam de suporte técnico ativo. Plano Developer (Developer Support): Descrição: Fornece suporte técnico durante o horário comercial e acesso a consultorias de arquitetura geral para a AWS. Inclui tempo de resposta de 12 a 24 horas para consultas gerais. Recomendação de Uso: Recomendado para desenvolvedores que experimentam serviços AWS ou estão em fase inicial de desenvolvimento e precisam de suporte técnico limitado. Plano Business (Business Support): Descrição: Inclui suporte técnico 24/7 com tempo de resposta de 1 hora para problemas críticos, e consultorias detalhadas sobre práticas recomendadas, otimização de custos, e orientação para arquiteturas. Oferece acesso a ferramentas de gerenciamento de casos e recursos de automação. Recomendação de Uso: Indicado para empresas que dependem de AWS para operações de produção e necessitam de suporte proativo e orientação contínua. Plano Enterprise (Enterprise Support): Descrição: Oferece um Suporte Técnico Dedicado (Technical Account Manager - TAM), análise de contas, otimização de custos e workshops personalizados. Tem tempo de resposta de 15 minutos para problemas críticos. Recomendação de Uso: Ideal para grandes empresas com cargas de trabalho críticas que exigem um nível de suporte muito alto e personalizado para suas operações na AWS. Plano Enterprise On-Ramp (Enterprise On-Ramp Support): Descrição: Similar ao Enterprise Support, mas com foco em empresas em crescimento que ainda não precisam de todo o escopo de suporte do plano Enterprise. Oferece suporte 24/7, orientação para arquitetura e tempo de resposta rápido para questões críticas. Recomendação de Uso: Projetado para empresas que estão escalando seus serviços na AWS e precisam de suporte técnico aprofundado, mas ainda não necessitam do nível completo do plano Enterprise. Cada plano é pensado para diferentes estágios de desenvolvimento e operação na AWS, permitindo que as empresas escolham o nível de suporte que melhor atende às suas necessidades e orçamento. Planos de Suporte"
+    },
+    {
+      "id": "question54",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Quais são as possíveis utilizações do AWS CLI (Command Line Interface) após o correto download, instalação e configuração deste serviço em seu computador? (Selecione 2 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Visualização de Dashboards Personalizados"
+        },
+        {
+          "index": 2,
+          "text": "Controlar múltiplos serviços da AWS"
+        },
+        {
+          "index": 3,
+          "text": "Visualizar gráficos de Custo de serviços da AWS"
+        },
+        {
+          "index": 4,
+          "text": "Criação de Grupos de Recursos Personalizados no Console do AWS Management"
+        },
+        {
+          "index": 5,
+          "text": "Automatizar serviços da AWS"
+        }
+      ],
+      "answer": [
+        2,
+        5
+      ],
+      "explanation": "A Interface da Linha de Comando (CLI) da AWS é uma ferramenta poderosa e unificada para gerenciar e automatizar serviços na nuvem da AWS. Com a CLI, os usuários podem controlar e interagir com vários serviços da AWS diretamente pela linha de comando, simplificando o processo de gerenciamento e automação. Ela é particularmente útil para a implementação de scripts de automação, que podem realizar tarefas como a criação de recursos, configuração de serviços e monitoramento, sem a necessidade de interações manuais através do console web. A CLI da AWS suporta múltiplas plataformas e pode ser configurada para acessar diferentes contas e regiões da AWS, tornando-se uma ferramenta essencial para engenheiros de DevOps, administradores de sistemas e desenvolvedores que buscam automatizar operações em seus ambientes na nuvem. AWS CLI"
+    },
+    {
+      "id": "question55",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa desenvolveu uma aplicação hospedada no Amazon EC2 que precisa se conectar de forma segura e eficiente a um banco de dados no Amazon RDS. Para garantir uma comunicação segura e a configuração adequada de acesso entre a aplicação e o banco de dados, qual serviço da AWS deve ser implementado?",
+      "options": [
+        {
+          "index": 1,
+          "text": "IAM Roles"
+        },
+        {
+          "index": 2,
+          "text": "IAM Groups"
+        },
+        {
+          "index": 3,
+          "text": "IAM Grant"
+        },
+        {
+          "index": 4,
+          "text": "IAM Users"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "As IAM Roles (funções do IAM) na AWS são identidades que concedem permissões temporárias para aplicações ou serviços, permitindo acesso seguro a recursos específicos na AWS. Essas roles são usadas para fornecer permissões sem a necessidade de compartilhar credenciais permanentes, garantindo que as aplicações só tenham acesso aos recursos necessários para suas operações. Uma aplicação assume uma role para interagir com outros serviços da AWS de maneira segura, controlando de forma precisa o que pode ou não ser acessado. IAM Função (Roles)"
+    },
+    {
+      "id": "question56",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Ao definir uma estratégia de backup robusta para bancos de dados utilizando o Amazon RDS, é crucial considerar o limite imposto pela AWS para snapshots manuais por região. Além de gerenciar a retenção de dados e otimização de custos de armazenamento, qual é o número máximo de snapshots manuais permitidos por região?",
+      "options": [
+        {
+          "index": 1,
+          "text": "100 snapshots por região"
+        },
+        {
+          "index": 2,
+          "text": "128 snapshots por região"
+        },
+        {
+          "index": 3,
+          "text": "256 snapshots por região"
+        },
+        {
+          "index": 4,
+          "text": "o número de cópia é virtualmente ilimitado"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O Amazon RDS permite criar backups manuais dos bancos de dados por meio de snapshots. Esses snapshots consomem espaço de armazenamento, o que pode resultar em aumento dos custos operacionais. Portanto, é essencial gerenciar a quantidade de snapshots e estabelecer políticas de retenção para otimizar o uso do armazenamento e garantir a proteção dos dados. Ao contrário dos backups automáticos, os snapshots manuais não são removidos automaticamente. A AWS permite até 100 snapshots manuais por região; se esse limite for excedido, será necessário deletar alguns snapshots existentes para poder criar novos. RDS - Cotas e Restrições"
+    },
+    {
+      "id": "question57",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Quais planos de suporte da AWS incluem acesso completo ao AWS Trusted Advisor, que oferece recomendações para otimizar o uso de recursos e seguir as melhores práticas de segurança e eficiência?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Business, Enterprise OnRamp e Enterprise"
+        },
+        {
+          "index": 2,
+          "text": "Enterprise OnRamp e Enterprise"
+        },
+        {
+          "index": 3,
+          "text": "Developer, Business, Enterprise OnRamp e Enterprise"
+        },
+        {
+          "index": 4,
+          "text": "Basic, Developer, Business, Enterprise OnRamp e Enterprise"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O AWS Trusted Advisor oferece recomendações para otimização de custos, segurança, tolerância a falhas, desempenho e limites de serviço. A disponibilidade dessas recomendações varia conforme o plano de suporte da AWS: Plano Basic: este plano gratuito oferece suporte essencial com acesso a recursos de autoajuda, como documentação, whitepapers e fóruns. Ele também inclui o AWS Personal Health Dashboard para monitoramento de eventos e acesso limitado ao Trusted Advisor com verificações básicas (segurança e limites de serviço). Não inclui suporte técnico direto. Plano Developer: Oferece um conjunto básico de sete verificações no Trusted Advisor, focando em áreas essenciais como segurança de acesso público, segurança de bucket S3 e limites de serviço. É ideal para desenvolvedores individuais e pequenas empresas. Plano Business: Inclui todas as verificações do plano Developer e adiciona uma gama mais ampla de checagens em todas as cinco categorias do Trusted Advisor (otimização de custos, segurança, tolerância a falhas, desempenho e limites de serviço). Este plano é adequado para empresas que necessitam de um suporte técnico mais abrangente. Plano Enterprise On-Ramp: Fornece suporte intermediário entre os planos Business e Enterprise, oferecendo acesso a um maior número de verificações do Trusted Advisor, além de suporte técnico mais personalizado e assistência proativa para planejamento e otimização de recursos. Plano Enterprise: Oferece acesso completo a todas as verificações e recomendações do Trusted Advisor, incluindo checagens avançadas para maximizar a eficiência e segurança. Este plano é ideal para grandes organizações com necessidades complexas e oferece suporte contínuo, personalizado e consultivo, garantindo uma gestão proativa e otimizada dos recursos na AWS. Planos de Suporte x AWS Trusted Advisor"
+    },
+    {
+      "id": "question58",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Você trabalha numa grande organização que utiliza o AWS Control Tower. Qual é a principal função deste serviço?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Realizar análise de big data em tempo real na AWS."
+        },
+        {
+          "index": 2,
+          "text": "Hospedar sites da web na AWS."
+        },
+        {
+          "index": 3,
+          "text": "Gerenciar a segurança de dispositivos IoT na AWS."
+        },
+        {
+          "index": 4,
+          "text": "Fornecer recursos de gerenciamento centralizado e governança para contas na AWS."
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "A principal função do AWS Control Tower é fornecer recursos de gerenciamento centralizado e governança para contas na AWS. Ele ajuda as organizações a estabelecerem uma infraestrutura de nuvem segura e bem governada. Este serviço foi projetado para fornecer recursos de gerenciamento centralizado e governança em uma conta mestra, ajudando as organizações a estabelecerem e manterem uma infraestrutura de nuvem segura e bem governada. Suas principais funções incluem a criação automatizada de várias contas na AWS, a aplicação de políticas de segurança e conformidade predefinidas, o monitoramento contínuo da conformidade, a implementação de melhores práticas e o suporte para cenários de várias contas. O AWS Control Tower ajuda as organizações a garantirem a segurança, o controle e a eficiência em seus ambientes de nuvem, facilitando a conformidade com regulamentações e a gestão de contas e recursos na AWS. AWS Control Tower"
+    },
+    {
+      "id": "question59",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual serviço da AWS pode ser utilizado para mitigar problemas de tráfego de dados dinâmicos causados por congestionamento na Internet, aproveitando a infraestrutura global da AWS?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Global Accelerator"
+        },
+        {
+          "index": 2,
+          "text": "AWS CloudFront"
+        },
+        {
+          "index": 3,
+          "text": "AWS Snowball"
+        },
+        {
+          "index": 4,
+          "text": "AWS DataSync"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O Amazon Global Accelerator é um serviço da AWS que melhora a disponibilidade e o desempenho de aplicações globais, utilizando a infraestrutura de rede global da AWS. Ele direciona o tráfego de usuários para o endpoint mais próximo e disponível, reduzindo a latência e melhorando a experiência do usuário. O serviço fornece endereços IP estáticos que são usados para rotear o tráfego, permitindo uma migração transparente de endpoints e simplificando a gestão de roteamento, sem utilizar a rede pública da internet. AWS Global Accelerator"
+    },
+    {
+      "id": "question60",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa precisa configurar uma rede virtual isolada para hospedar seus servidores virtuais, separando a camada de dados da camada de servidores de aplicação em sub-redes distintas. Qual serviço da AWS é mais adequado para criar e gerenciar essa infraestrutura, garantindo a segregação apropriada dos recursos em diferentes sub-redes?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Virtual Private Cloud (VPC)"
+        },
+        {
+          "index": 2,
+          "text": "Elastic Load Balancer (ELB)"
+        },
+        {
+          "index": 3,
+          "text": "AWS Budget"
+        },
+        {
+          "index": 4,
+          "text": "AWS Organizations"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O Amazon Virtual Private Cloud (VPC) é um serviço da AWS que permite a criação de uma rede virtual isolada dentro da nuvem da AWS. Essa rede virtual proporciona controle total sobre o ambiente de rede, incluindo a escolha do intervalo de endereços IP, a criação de sub-redes (subnets), tabelas de roteamento, gateways de internet e grupos de segurança. Com o VPC, você pode segmentar sua rede para organizar e isolar os recursos, como separar camadas de aplicação e dados em diferentes sub-redes para melhorar a segurança e a gestão. Além disso, o VPC permite conectar sua infraestrutura local à nuvem da AWS, criando uma rede híbrida. É uma solução ideal para aplicações que exigem um ambiente de rede altamente seguro e configurável. Amazon VPC."
+    },
+    {
+      "id": "question61",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma organização precisa realizar uma grande quantidade de processos em lote para atualizar informações de clientes, mas não tem uma estimativa clara dos recursos computacionais necessários. Qual serviço da AWS é recomendado para lidar com esse cenário, oferecendo escalabilidade automática e flexibilidade de recursos, sem a necessidade de provisionamento antecipado de infraestrutura?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS OnDemand"
+        },
+        {
+          "index": 2,
+          "text": "AWS Step Functions"
+        },
+        {
+          "index": 3,
+          "text": "AWS EC2 Reserved"
+        },
+        {
+          "index": 4,
+          "text": "AWS Batch"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "O AWS Batch é um serviço que facilita o processamento de tarefas em lote e a execução de trabalhos em paralelo na AWS. Ele automatiza a criação, agendamento e dimensionamento de trabalhos, como análises de dados, conversão de arquivos e simulações. O serviço gerencia a alocação de recursos computacionais e provisiona instâncias sob demanda, garantindo eficiência na execução dos trabalhos. Ao dividir as tarefas em lotes e escaloná-las conforme necessário, o AWS Batch otimiza o uso de recursos e reduz o tempo de execução, oferecendo uma solução eficaz e econômica para o processamento em lote na nuvem. AWS Batch"
+    },
+    {
+      "id": "question62",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Para garantir que os nomes de buckets no Amazon S3 sejam únicos e atendam aos requisitos do serviço, quais são as regras específicas que devem ser seguidas na criação desses nomes? (Selecione 3 alternativas)",
+      "options": [
+        {
+          "index": 1,
+          "text": "Devem ser formatados como um endereço IP sempre que possível"
+        },
+        {
+          "index": 2,
+          "text": "Devem consistir apenas em letras minúsculas, números, pontos (.) e hífens"
+        },
+        {
+          "index": 3,
+          "text": "Devem começar e terminar com uma letra ou número"
+        },
+        {
+          "index": 4,
+          "text": "Devem começar exclusivamente com uma letra"
+        },
+        {
+          "index": 5,
+          "text": "Devem possuir de 3 a 63 caracteres"
+        }
+      ],
+      "answer": [
+        2,
+        3,
+        5
+      ],
+      "explanation": "As regras de nomeação de buckets no Amazon S3 exigem que os nomes sejam únicos globalmente e sigam o formato DNS. Os nomes devem ter entre 3 e 63 caracteres, usar apenas letras minúsculas, números, pontos (.) e hífens (-). O nome não pode começar ou terminar com um ponto, nem conter pontos consecutivos. Além disso, os nomes devem evitar palavras reservadas e ser memoráveis, pois identificam de forma exclusiva os buckets no namespace global do S3. Essas regras se aplicam principalmente a buckets públicos e globais, enquanto buckets privados e regionais não precisam seguir a restrição de nome único global. Regras de nomeação de Buckets"
+    },
+    {
+      "id": "question63",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma corretora de investimentos busca estabelecer uma integração eficiente e segura entre seus escritórios em São Paulo, Londres e 2 mil funcionários distribuídos globalmente. Qual serviço da AWS é recomendado para facilitar essa integração de maneira rápida e escalável?",
+      "options": [
+        {
+          "index": 1,
+          "text": "AWS Link"
+        },
+        {
+          "index": 2,
+          "text": "AWS DataSync"
+        },
+        {
+          "index": 3,
+          "text": "AWS VPC"
+        },
+        {
+          "index": 4,
+          "text": "AWS VPN"
+        }
+      ],
+      "answer": [
+        4
+      ],
+      "explanation": "O AWS VPN é uma solução ideal para integrar escritórios em diferentes regiões e conectar funcionários distribuídos globalmente. Ele oferece conexões seguras e criptografadas entre a rede local da empresa e a infraestrutura da AWS, garantindo a proteção dos dados em trânsito. Com o AWS VPN, as empresas podem configurar túneis VPN IPsec, que são altamente seguros e suportam autenticação forte. Além disso, o serviço é escalável e pode ser facilmente integrado a outras soluções AWS, proporcionando flexibilidade e adaptabilidade. A configuração e o gerenciamento centralizados permitem uma administração eficiente, enquanto o suporte a alta disponibilidade garante conexões confiáveis e estáveis. Isso resulta em uma comunicação segura e eficiente para toda a organização, independentemente da localização dos funcionários. AWS VPN"
+    },
+    {
+      "id": "question64",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Uma empresa adquiriu um contrato para obter um pacote com 50 licenças do Microsoft SQL Server, planejando instalar esses softwares em novos servidores conforme expande seus negócios globalmente. Devido às auditorias frequentes, a empresa precisa assegurar que apenas softwares licenciados estejam presentes em sua rede. Qual serviço da AWS simplifica o processo de conformidade nesse cenário?",
+      "options": [
+        {
+          "index": 1,
+          "text": "License Manager"
+        },
+        {
+          "index": 2,
+          "text": "CloudFormation"
+        },
+        {
+          "index": 3,
+          "text": "Certificate Manager"
+        },
+        {
+          "index": 4,
+          "text": "Config"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "O AWS License Manager facilita o gerenciamento de suas licenças de software de fornecedores como Microsoft, SAP, Oracle e IBM em ambientes AWS e on-premises. O AWS License Manager permite que os administradores criem regras de licenciamento personalizadas para refletir os períodos de vigência de seus contratos de licenciamento. Os administradores podem usar essas regras para ajudar a evitar violações de licenciamento, como o uso de mais licenças do que o estipulado em contrato. AWS License Manager"
+    },
+    {
+      "id": "question65",
+      "topicId": 44,
+      "levelId": 1,
+      "question": "Qual é o serviço de mensagens desenvolvido para Apache Active MQ e Rabbit MQ que torna as integrações com sistemas legados desacoplados mais fáceis e que permite o uso de arquiteturas híbridas?",
+      "options": [
+        {
+          "index": 1,
+          "text": "Amazon SQS"
+        },
+        {
+          "index": 2,
+          "text": "Amazon SNS"
+        },
+        {
+          "index": 3,
+          "text": "Amazon MQ"
+        },
+        {
+          "index": 4,
+          "text": "Amazon MSK"
+        }
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "O Amazon MQ é um serviço gerenciado de mensageria que facilita a configuração e operação de brokers de mensagens, compatível com os protocolos Apache ActiveMQ e RabbitMQ. Ele fornece uma solução escalável e de alta disponibilidade para troca de mensagens entre aplicativos distribuídos. Os benefícios do Amazon MQ incluem a eliminação da complexidade de gerenciamento de infraestrutura de brokers, a garantia de segurança e confiabilidade na entrega de mensagens e a compatibilidade com ferramentas e aplicativos existentes que utilizam os protocolos suportados. Com o Amazon MQ, os desenvolvedores podem se concentrar na construção de aplicativos sem se preocupar com a infraestrutura de mensageria subjacente. Amazon MQ"
+    }
+  ]
+}

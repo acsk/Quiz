@@ -1,174 +1,75 @@
 {
   "topics": [
+   
     {
-      "id": 1,
-      "name": "Amazon EC2",
-      "description": "Serviço de computação em nuvem que fornece capacidade de computação redimensionável na nuvem."
+      "id": 41,
+      "name": "Simulado AWS Practitioner 4",
+      "description": "Certifica Tech "
     },
     {
-      "id": 2,
-      "name": "Amazon S3",
-      "description": "Serviço de armazenamento de objetos que oferece escalabilidade, disponibilidade de dados e segurança."
+      "id": 42,
+      "name": "Simulado AWS Practitioner 3",
+      "description": "Certifica Tech "
     },
     {
-      "id": 3,
-      "name": "Amazon RDS",
-      "description": "Serviço de banco de dados relacional que facilita a configuração, operação e escalabilidade de um banco de dados relacional na nuvem."
+      "id": 43,
+      "name": "Simulado AWS Practitioner 1",
+      "description": "Certifica Tech "
     },
     {
-      "id": 4,
-      "name": "AWS Lambda",
-      "description": "Serviço de computação sem servidor que executa código em resposta a eventos e gerencia automaticamente os recursos de computação subjacentes."
+      "id": 44,
+      "name": "Simulado AWS Practitioner 2",
+      "description": "Certifica Tech "
     },
     {
-      "id": 5,
-      "name": "Amazon VPC",
-      "description": "Serviço que permite provisionar uma seção logicamente isolada da nuvem AWS onde você pode lançar recursos da AWS em uma rede virtual que você define."
+      "id": 45,
+      "name": "Simulado AWS Practitioner 5",
+      "description": "Certifica Tech "
     },
     {
-      "id": 6,
-      "name": "Amazon DynamoDB",
-      "description": "Serviço de banco de dados NoSQL rápido e flexível para todas as aplicações que precisam de latência de milissegundos de um dígito em qualquer escala."
+      "id": 46,
+      "name": "Simulado AWS Practitioner 6",
+      "description": "Certifica Tech "
     },
     {
-      "id": 7,
-      "name": "Amazon CloudFront",
-      "description": "Serviço de rede de entrega de conteúdo (CDN) que entrega dados, vídeos, aplicativos e APIs a clientes globalmente com baixa latência e altas velocidades de transferência."
+      "id": 47,
+      "name": "Simulado AWS SAA-C03  1 - Andre Iacono",
+      "description": "Andre Iacono "
     },
     {
-      "id": 8,
-      "name": "Amazon SNS",
-      "description": "Serviço de mensagens totalmente gerenciado para comunicação entre aplicativos e microserviços."
+      "id": 48,
+      "name": "Simulado AWS SAA-C03  2 - Andre Iacono",
+      "description": "Andre Iacono "
     },
     {
-      "id": 9,
-      "name": "Amazon SQS",
-      "description": "Serviço de fila de mensagens totalmente gerenciado que permite desacoplar e escalar microsserviços, sistemas distribuídos e aplicativos sem servidor."
+      "id": 49,
+      "name": "Simulado AWS SAA-C03  3 - Andre Iacono",
+      "description": "Andre Iacono "
     },
     {
-      "id": 10,
-      "name": "AWS Support",
-      "description": "Serviço que oferece suporte técnico e orientação para ajudar a construir e gerenciar seus aplicativos na AWS."
+      "id": 50,
+      "name": "VPC e Subredes",
+      "description": "Cabral"
     },
     {
-      "id": 11,
-      "name": "AWS Well-Architected",
-      "description": "Serviço que ajuda a criar arquiteturas seguras, de alto desempenho, resilientes e eficientes."
+      "id": 51,
+      "name": "Simulado AWS SAA-C03  4 - Paulo Cruz",
+      "description": "Paulo Cruz "
     },
     {
-      "id": 12,
-      "name": "Amazon EKS",
-      "description": "Serviço gerenciado para executar Kubernetes na AWS sem precisar instalar e operar seu próprio plano de controle Kubernetes."
+      "id": 52,
+      "name": "Simulado AWS SAA-C03  5 - Paulo Cruz",
+      "description": "Paulo Cruz "
     },
     {
-      "id": 13,
-      "name": "Amazon ECS",
-      "description": "Serviço de orquestração de contêineres que permite executar e escalar aplicativos Docker na AWS."
+      "id": 53,
+      "name": "Simulado AWS SAA-C03  6 - Paulo Cruz",
+      "description": "Paulo Cruz "
     },
     {
-      "id": 14,
-      "name": "Amazon Aurora",
-      "description": "Serviço de banco de dados relacional compatível com MySQL e PostgreSQL, construído para a nuvem, que combina o desempenho e a disponibilidade de bancos de dados comerciais com a simplicidade e o custo-benefício de bancos de dados de código aberto."
-    },
-    {
-      "id": 15,
-      "name": "Amazon Redshift",
-      "description": "Serviço de armazenamento de dados em nuvem que permite analisar todos os seus dados usando SQL padrão e ferramentas de inteligência de negócios existentes."
-    },
-    {
-      "id": 16,
-      "name": "AWS IAM",
-      "description": "Serviço de gerenciamento de acesso e identidade que ajuda a controlar de forma segura o acesso aos recursos da AWS."
-    },
-    {
-      "id": 17,
-      "name": "AWS Step Functions",
-      "description": "Serviço que permite coordenar componentes de aplicativos distribuídos e microsserviços usando fluxos de trabalho visuais."
-    },
-    {
-      "id": 18,
-      "name": "AWS IoT Core",
-      "description": "Serviço que permite conectar dispositivos da Internet das Coisas (IoT) à nuvem AWS de forma segura e escalável."
-    },
-    {
-      "id": 19,
-      "name": "AWS Amplify",
-      "description": "Plataforma que facilita a criação, implantação e hospedagem de aplicativos web e móveis completos."
-    },
-    {
-      "id": 20,
-      "name": "AWS AppSync",
-      "description": "Serviço que permite criar APIs GraphQL flexíveis e escaláveis para aplicativos móveis e web."
-    },
-    {
-      "id": 21,
-      "name": "AWS Device Farm",
-      "description": "Serviço que permite testar aplicativos móveis e web em uma ampla variedade de dispositivos reais na nuvem."
-    },
-    {
-      "id": 22,
-      "name": "AWS Security Token Service (STS)",
-      "description": "Serviço que permite criar e gerenciar credenciais temporárias para acessar recursos da AWS."
-    },
-    {
-      "id": 23,
-      "name": "Amazon Cognito",
-      "description": "Serviço que permite adicionar autenticação, autorização e gerenciamento de usuários aos seus aplicativos web e móveis."
-    },
-    {
-      "id": 24,
-      "name": "AWS AppFlow",
-      "description": "Serviço que facilita a transferência de dados entre serviços da AWS e aplicativos SaaS."
-    },
-    {
-      "id": 25,
-      "name": "AWS Backup",
-      "description": "Serviço que facilita o backup centralizado e automatizado de dados em serviços da AWS."
-    },
-    {
-      "id": 26,
-      "name": "AWS Disaster Recovery Strategy",
-      "description": "Conjunto de práticas e serviços que ajudam a proteger dados e aplicativos críticos contra desastres e interrupções."
-    },
-    {
-      "id": 27,
-      "name": "Amazon WorkSpaces",
-      "description": "Serviço de desktop como serviço (DaaS) que permite provisionar desktops virtuais na nuvem."
-    },
-    {
-      "id": 28,
-      "name": "Amazon AppStream 2.0",
-      "description": "Serviço que permite transmitir aplicativos de desktop para qualquer dispositivo diretamente do AWS."
-    },
-    {
-      "id": 29,
-      "name": "AWS Route 53",
-      "description": "Serviço de sistema de nomes de domínio (DNS) escalável e altamente disponível, projetado para oferecer roteamento de usuários finais para aplicativos da Internet."
-    },
-    {
-      "id": 30,
-      "name": "AWS CloudTrail",
-      "description": "Serviço que registra as ações realizadas em uma conta da AWS, permitindo auditorar, monitorar a segurança e solucionar problemas operacionais."
-    },
-    {
-      "id": 31,
-      "name": "AWS WAF",
-      "description": "Serviço de firewall de aplicações Web que ajuda a proteger aplicações Web de ataques ao permitir, bloquear ou monitorar solicitações da Web com base em condições definidas."
-    },
-    {
-      "id": 32,
-      "name": "AWS Config",
-      "description": "Serviço que fornece uma visão detalhada da configuração dos recursos AWS em sua conta, incluindo como os recursos estão relacionados e como foram configurados no passado."
-    },
-    {
-      "id": 33,
-      "name": "AWS Cloud Adoption Framework (AWS CAF)",
-      "description": "Conjunto de práticas recomendadas que ajudam na transformação digital e aceleram os resultados de negócios usando a AWS de forma inovadora. O AWS CAF agrupa recursos em seis perspectivas: Negócios, Pessoas, Governança, Plataforma, Segurança e Operações."
-    },
-    {
-      "id": 34,
-      "name": "Definição de Preços",
-      "description": "Informações sobre a estrutura de preços dos serviços da AWS, incluindo modelos de pagamento, custos associados e práticas recomendadas para otimização de custos."
+      "id": 54,
+      "name": "Simulado AWS SAA-C03  7 - Paulo Cruz",
+      "description": "Paulo Cruz "
     }
   ]
 }

@@ -1,0 +1,134 @@
+{
+    "questions": [
+      {
+        "id": "guardduty1a2b3c4d5",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "O que é o Amazon GuardDuty?",
+        "options": [
+          { "index": 1, "text": "Um serviço de detecção de ameaças contínua que monitora atividades maliciosas e comportamentos anômalos em contas da AWS." },
+          { "index": 2, "text": "Um serviço de armazenamento de objetos que permite armazenar e recuperar qualquer quantidade de dados a qualquer momento." },
+          { "index": 3, "text": "Um serviço de banco de dados relacional que facilita a configuração, operação e escalabilidade de bancos de dados na nuvem." },
+          { "index": 4, "text": "Um serviço de computação sem servidor que permite executar código sem provisionar ou gerenciar servidores." }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "guardduty6e7f8g9h0",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "Quais tipos de dados o Amazon GuardDuty analisa para detectar ameaças?",
+        "options": [
+          { "index": 1, "text": "Apenas logs de acesso a buckets do Amazon S3." },
+          { "index": 2, "text": "Logs de eventos do AWS CloudTrail, logs de fluxo do VPC e logs de DNS." },
+          { "index": 3, "text": "Apenas logs de banco de dados do Amazon RDS." },
+          { "index": 4, "text": "Apenas logs de aplicações web hospedadas no Amazon EC2." }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "guardduty1i2j3k4l5",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "Como o Amazon GuardDuty identifica ameaças?",
+        "options": [
+          { "index": 1, "text": "Usando apenas regras pré-definidas sem qualquer análise de machine learning." },
+          { "index": 2, "text": "Combinando análise de machine learning, inteligência de ameaças e detecção de anomalias." },
+          { "index": 3, "text": "Apenas através de inspeção manual de logs por especialistas em segurança." },
+          { "index": 4, "text": "Apenas verificando vulnerabilidades de software em instâncias do EC2." }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "guardduty7m8n9o0p1",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "O que são findings no Amazon GuardDuty?",
+        "options": [
+          { "index": 1, "text": "Relatórios de custo detalhados sobre o uso de serviços da AWS." },
+          { "index": 2, "text": "Resultados de verificações de desempenho de instâncias do EC2." },
+          { "index": 3, "text": "Notificações de segurança que indicam atividades maliciosas ou comportamentos anômalos detectados pelo GuardDuty." },
+          { "index": 4, "text": "Relatórios de conformidade com padrões de segurança como PCI-DSS e CIS." }
+        ],
+        "answer": 3
+      },
+      {
+        "id": "guardduty2q3r4s5t6",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "Como o Amazon GuardDuty se integra a outros serviços da AWS?",
+        "options": [
+          { "index": 1, "text": "O GuardDuty pode enviar findings para o AWS Security Hub, Amazon CloudWatch Events e AWS Lambda para automatizar respostas a ameaças." },
+          { "index": 2, "text": "O GuardDuty não se integra a outros serviços da AWS." },
+          { "index": 3, "text": "O GuardDuty só se integra ao Amazon S3 para análise de logs." },
+          { "index": 4, "text": "O GuardDuty só se integra ao Amazon RDS para monitoramento de bancos de dados." }
+        ],
+        "answer": 1
+      },
+      {
+        "id": "guardduty8u9v0w1x2",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "O que é a inteligência de ameaças usada pelo Amazon GuardDuty?",
+        "options": [
+          { "index": 1, "text": "Uma lista de preços dos serviços da AWS." },
+          { "index": 2, "text": "Dados atualizados sobre ameaças conhecidas, como listas de IPs maliciosos, domínios suspeitos e assinaturas de ataques." },
+          { "index": 3, "text": "Um relatório de desempenho do sistema." },
+          { "index": 4, "text": "Uma lista de usuários com acesso a um recurso da AWS." }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "guardduty9e0f1g2h3",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "O Amazon GuardDuty requer a instalação de agentes ou software adicional?",
+        "options": [
+          { "index": 1, "text": "Sim, é necessário instalar um agente em cada instância do EC2." },
+          { "index": 2, "text": "Não, o GuardDuty é um serviço totalmente gerenciado que não requer instalação de agentes ou software adicional." },
+          { "index": 3, "text": "Sim, mas apenas para instâncias do EC2 que executam sistemas operacionais Windows." },
+          { "index": 4, "text": "Não, mas é necessário configurar manualmente os logs em cada serviço da AWS." }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "guardduty4i5j6k7l8",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "Como o Amazon GuardDuty ajuda a reduzir falsos positivos?",
+        "options": [
+          { "index": 1, "text": "Ignorando todas as atividades suspeitas." },
+          { "index": 2, "text": "Usando apenas regras estáticas para detecção de ameaças." },
+          { "index": 3, "text": "Combinando machine learning, inteligência de ameaças e análise contextual para priorizar descobertas relevantes." },
+          { "index": 4, "text": "Não reduz falsos positivos; todas as atividades são relatadas como ameaças." }
+        ],
+        "answer": 3
+      },
+      {
+        "id": "guardduty5m6n7o8p9",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "O que é necessário para começar a usar o Amazon GuardDuty?",
+        "options": [
+          { "index": 1, "text": "Configurar manualmente todos os logs de serviços da AWS." },
+          { "index": 2, "text": "Ativar o GuardDuty no Console de Gerenciamento da AWS e conceder as permissões necessárias." },
+          { "index": 3, "text": "Contratar um especialista em segurança para configurar o serviço." },
+          { "index": 4, "text": "Migrar todos os dados para um novo banco de dados relacional." }
+        ],
+        "answer": 2
+      },
+      {
+        "id": "guardduty0q1r2s3t4",
+        "topicId": 39,
+        "levelId": 1,
+        "question": "Quais são os benefícios do Amazon GuardDuty?",
+        "options": [
+          { "index": 1, "text": "Detecção contínua de ameaças, integração com outros serviços da AWS, redução de falsos positivos e escalabilidade automática." },
+          { "index": 2, "text": "Apenas monitoramento de logs de banco de dados." },
+          { "index": 3, "text": "Apenas verificação de vulnerabilidades de software." },
+          { "index": 4, "text": "Apenas gerenciamento de custos de serviços da AWS." }
+        ],
+        "answer": 1
+      }
+    ]
+  }

@@ -1,0 +1,215 @@
+:host {
+  pointer-events: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(30, 41, 59, 0.55), rgba(15, 23, 42, 0.78));
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  z-index: 999;
+  pointer-events: all;
+  animation: fadeIn 0.28s ease;
+}
+
+.modal-box {
+  position: relative;
+  width: min(620px, 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(248, 250, 252, 0.98) 100%);
+  border-radius: 26px;
+  padding: 32px 28px;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  display: grid;
+  gap: 20px;
+  transform: translateY(10px);
+  animation: slideUp 0.32s ease forwards;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  --modal-accent: #6366f1;
+  --modal-accent-dark: #4338ca;
+  --modal-glow: rgba(99, 102, 241, 0.22);
+}
+
+.modal-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--modal-accent, #6366f1);
+}
+
+.modal-box--info {
+  --modal-accent: #3b82f6;
+  --modal-accent-dark: #1d4ed8;
+  --modal-glow: rgba(59, 130, 246, 0.26);
+}
+
+.modal-box--success {
+  --modal-accent: #22c55e;
+  --modal-accent-dark: #15803d;
+  --modal-glow: rgba(34, 197, 94, 0.24);
+}
+
+.modal-box--warning {
+  --modal-accent: #f59e0b;
+  --modal-accent-dark: #b45309;
+  --modal-glow: rgba(245, 158, 11, 0.28);
+}
+
+.modal-box--danger {
+  --modal-accent: #ef4444;
+  --modal-accent-dark: #b91c1c;
+  --modal-glow: rgba(239, 68, 68, 0.26);
+}
+
+.modal-box__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--modal-accent, #4338ca);
+  box-shadow: 0 14px 25px var(--modal-glow, rgba(99, 102, 241, 0.2));
+}
+
+.modal-box__icon--info {
+  background: rgba(59, 130, 246, 0.14);
+  color: #2563eb;
+  box-shadow: 0 14px 25px rgba(59, 130, 246, 0.2);
+}
+
+.modal-box__icon--success {
+  background: rgba(16, 185, 129, 0.14);
+  color: #047857;
+  box-shadow: 0 14px 25px rgba(34, 197, 94, 0.2);
+}
+
+.modal-box__icon--warning {
+  background: rgba(234, 179, 8, 0.18);
+  color: #b45309;
+  box-shadow: 0 14px 25px rgba(245, 158, 11, 0.24);
+}
+
+.modal-box__icon--danger {
+  background: rgba(248, 113, 113, 0.18);
+  color: #dc2626;
+  box-shadow: 0 14px 25px rgba(239, 68, 68, 0.24);
+}
+
+.modal-box__content {
+  display: grid;
+  gap: 8px;
+  color: #0f172a;
+}
+
+.modal-box__title {
+  margin: 0;
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.modal-box__message {
+  margin: 0;
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.modal-box__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+  gap: 12px;
+}
+
+.modal-box__button {
+  min-width: 150px;
+  padding: 12px 24px;
+  border-radius: 14px;
+  border: none;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--modal-accent, #6366f1) 0%, var(--modal-accent-dark, #4338ca) 100%);
+  box-shadow: 0 18px 32px var(--modal-glow, rgba(79, 70, 229, 0.25));
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.modal-box__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 38px var(--modal-glow, rgba(79, 70, 229, 0.3));
+  filter: brightness(1.04);
+}
+
+.modal-box__button:active {
+  transform: translateY(0);
+  box-shadow: 0 12px 20px var(--modal-glow, rgba(79, 70, 229, 0.22));
+}
+
+.modal-box__button--secondary {
+  background: rgba(148, 163, 184, 0.18);
+  color: #475569;
+  box-shadow: none;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.modal-box__button--secondary:hover {
+  box-shadow: none;
+  filter: none;
+  background: rgba(148, 163, 184, 0.24);
+  transform: translateY(-1px);
+}
+
+.modal-box__button--secondary:active {
+  transform: translateY(0);
+  background: rgba(148, 163, 184, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-box {
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+
+  .modal-box__actions {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-box__button {
+    width: 100%;
+  }
+}
