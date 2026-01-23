@@ -452,29 +452,15 @@
       "id": "question17",
       "topicId": 45,
       "levelId": 1,
-      "question": "Uma aplicação web necessita de um mecanismo de busca para identificar páginas contendo informações específicas. Como esse recurso pode ser habilitado de maneira simples?",
+      "question": "Sua equipe precisa pesquisar e visualizar logs de aplicações e infraestrutura com dashboards e alertas. Qual serviço gerenciado atende melhor?",
       "options": [
-        {
-          "index": 1,
-          "text": "Crie um domínio no Amazon ElasticSearchService, configure opções de indexação e\r\n                                        integre as APIs a aplicação web."
-        },
-        {
-          "index": 2,
-          "text": "Crie um domínio no Amazon CloudSearch, configure opções de indexação e integre as\r\n                                        APIs a aplicação web."
-        },
-        {
-          "index": 3,
-          "text": "Crie um domínio no Amazon Athena, configure opções de indexação e integre as APIs\r\n                                        a aplicação web."
-        },
-        {
-          "index": 4,
-          "text": "Crie um domínio no Amazon ElasticCache, configure opções de indexação e integre\r\n                                        as APIs a aplicação web."
-        }
+        { "index": 1, "text": "Amazon CloudSearch" },
+        { "index": 2, "text": "Amazon OpenSearch Service" },
+        { "index": 3, "text": "Amazon Athena" },
+        { "index": 4, "text": "Amazon QuickSight" }
       ],
-      "answer": [
-        2
-      ],
-      "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica. O Amazon CloudSearch oferece suporte para 34 idiomas e recursos populares de pesquisa, como destaques, autopreenchimento e pesquisa geoespacial. Para implementar o Amazon CloudSearch, acesse o console AWS e crie um novo domínio de pesquisa. Configure o domínio definindo tipo e capacidade. Defina o esquema de dados, especifique os campos a serem indexados e carregue seus dados. Ajuste as opções de pesquisa, como facetas e relevância, e crie o endpoint. Configure a segurança para controlar o acesso e, finalmente, monitore o desempenho ajustando as configurações conforme necessário. AWS CloudSearch"
+      "answer": [2],
+      "explanation": "O Amazon OpenSearch Service (antigo Amazon Elasticsearch Service) é gerenciado para indexação, pesquisa e visualização de logs/telemetria com Kibana/OpenSearch Dashboards, suporte a alertas e integrações como CloudWatch Logs e Kinesis."
     },
     {
       "id": "question18",

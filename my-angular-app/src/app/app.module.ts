@@ -7,6 +7,7 @@ import { PerguntaModule } from './componentes/pergunta/pergunta.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SpinnerComponent } from './componentes/spinner/spinner.component';
 import { ModalComponent } from './componentes/modal/modal.component';
+import { ToastComponent } from './componentes/toast/toast.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ModalComponent } from './componentes/modal/modal.component';
     AppComponent,
     SpinnerComponent,
     ModalComponent,
+    ToastComponent,
  
   ],
   imports: [

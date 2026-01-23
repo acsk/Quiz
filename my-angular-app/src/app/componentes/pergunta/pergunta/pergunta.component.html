@@ -12,25 +12,10 @@
           </div>
         </div>
         <div class="quiz-header__actions">
-          <button
-            type="button"
-            class="btn btn-ghost btn-theme-toggle"
-            (click)="cycleThemePreference()"
-            [attr.aria-pressed]="isDarkModeEnabled"
-            [attr.title]="themeToggleLabel"
-          >
+          <button type="button" class="btn btn-ghost btn-icon" (click)="toggleDrawer()" aria-label="Configurações" title="Configurações">
             <span class="btn__icon" aria-hidden="true">
-              <i [ngClass]="themeToggleIcon"></i>
+              <i class="fas fa-cog"></i>
             </span>
-            <span class="btn-theme-toggle__label">{{ themeToggleLabel }}</span>
-          </button>
-          <button type="button" class="btn btn-ghost" (click)="toggleDrawer()">
-            <span class="btn__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M10.5 6a1.5 1.5 0 0 1 3 0v.621a7.5 7.5 0 0 1 1.865 1.078l.551-.318a1.5 1.5 0 1 1 1.5 2.598l-.551.318c.12.6.12 1.233 0 1.833l.551.318a1.5 1.5 0 1 1-1.5 2.598l-.551-.318A7.5 7.5 0 0 1 13.5 16.88V17.5a1.5 1.5 0 0 1-3 0v-.621a7.5 7.5 0 0 1-1.865-1.078l-.551.318a1.5 1.5 0 1 1-1.5-2.598l.551-.318a6 6 0 0 1 0-1.833l-.551-.318a1.5 1.5 0 1 1 1.5-2.598l.551.318A7.5 7.5 0 0 1 10.5 6.62V6Z" />
-              </svg>
-            </span>
-            Configurações
           </button>
         </div>
       </div>
@@ -150,29 +135,27 @@
         <h2>Resumo do Teste</h2>
         <ul class="quiz-summary-card__data">
           <li><span>Total de Perguntas</span><strong>{{ filteredQuestions.length }}</strong></li>
-          <li><span>Corretas</span><strong>{{ correctAnswers }}</strong></li>
-          <li><span>Erradas</span><strong>{{ incorrectAnswers }}</strong></li>
+          <li class="is-correct" [style.--pct]="summaryCorrectPercentage + '%'">
+            <span>Corretas</span><strong>{{ correctAnswers }}</strong>
+          </li>
+          <li class="is-incorrect" [style.--pct]="summaryIncorrectPercentage + '%'">
+            <span>Erradas</span><strong>{{ incorrectAnswers }}</strong>
+          </li>
         </ul>
         <div *ngIf="summaryChartAvailable" class="quiz-summary-chart">
           <div class="quiz-summary-chart__bar" role="img" aria-label="Distribuição de acertos e erros">
             <span
               class="quiz-summary-chart__segment quiz-summary-chart__segment--correct"
               [style.width.%]="summaryCorrectPercentage"
-            ></span>
+            >
+              <span class="quiz-summary-chart__label">{{ summaryCorrectPercentage }}% acertos</span>
+            </span>
             <span
               class="quiz-summary-chart__segment quiz-summary-chart__segment--incorrect"
               [style.width.%]="summaryIncorrectPercentage"
-            ></span>
-          </div>
-          <div class="quiz-summary-chart__legend">
-            <div class="quiz-summary-chart__legend-item">
-              <span class="quiz-summary-chart__swatch quiz-summary-chart__swatch--correct"></span>
-              <span>{{ summaryCorrectPercentage }}% acertos</span>
-            </div>
-            <div class="quiz-summary-chart__legend-item">
-              <span class="quiz-summary-chart__swatch quiz-summary-chart__swatch--incorrect"></span>
-              <span>{{ summaryIncorrectPercentage }}% erros</span>
-            </div>
+            >
+              <span class="quiz-summary-chart__label">{{ summaryIncorrectPercentage }}% erros</span>
+            </span>
           </div>
         </div>
         <div *ngIf="pendingReviewPromptVisible" class="quiz-summary-card__notice">
@@ -237,6 +220,21 @@
         <button type="button" class="btn btn-ghost" (click)="closeDrawer()">Fechar</button>
       </div>
       <div class="quiz-drawer__content">
+        <div class="quiz-form-field">
+          <label class="quiz-form-field__label">Tema</label>
+          <div class="quiz-switch-row">
+            <label class="quiz-switch">
+              <input type="checkbox" [checked]="themePreference === 'system'" (change)="setThemePreferenceSystem($any($event.target).checked)" />
+              <span class="quiz-switch__control" aria-hidden="true"></span>
+              <span class="quiz-switch__label">Automático (sistema)</span>
+            </label>
+            <label class="quiz-switch" [class.is-disabled]="themePreference === 'system'">
+              <input type="checkbox" [disabled]="themePreference === 'system'" [checked]="themePreference === 'dark'" (change)="setThemePreferenceDark($any($event.target).checked)" />
+              <span class="quiz-switch__control" aria-hidden="true"></span>
+              <span class="quiz-switch__label">Modo escuro</span>
+            </label>
+          </div>
+        </div>
         <div class="quiz-form-field">
           <label class="quiz-form-field__label">Tópicos</label>
           <app-multi-select-box [items]="topics" [value]="selectedTopics" (selectionChange)="onTopicsChange($event)" [disabled]="testStarted">

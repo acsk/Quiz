@@ -1,0 +1,24 @@
+<div class="toast-container" role="region" aria-live="polite" aria-atomic="true">
+  <div
+    *ngFor="let t of toasts"
+    class="toast"
+    [class.toast--success]="t.type === 'success'"
+    [class.toast--info]="t.type === 'info'"
+    [class.toast--warning]="t.type === 'warning'"
+    [class.toast--danger]="t.type === 'danger'"
+  >
+    <div class="toast__icon" aria-hidden="true">
+      <i class="fas" [ngClass]="{
+        'fa-check-circle': t.type === 'success',
+        'fa-info-circle': t.type === 'info',
+        'fa-exclamation-triangle': t.type === 'warning',
+        'fa-times-circle': t.type === 'danger'
+      }"></i>
+    </div>
+    <div class="toast__message">{{ t.message }}</div>
+    <button type="button" class="toast__close" (click)="dismiss(t.id)" aria-label="Fechar">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+

@@ -519,31 +519,15 @@
             "id": "awsPractitioner18",
             "topicId": 41,
             "levelId": 1,
-            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "question": "Qual serviço da AWS permite criar chatbots com reconhecimento de fala e processamento de linguagem natural?",
             "options": [
-                {
-                    "index": 1,
-                    "text": "Amazon Athena",
-                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
-                },
-                {
-                    "index": 2,
-                    "text": "Amazon ElasticSearchService",
-                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
-                },
-                {
-                    "index": 3,
-                    "text": "Amazon ElasticCache",
-                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
-                },
-                {
-                    "index": 4,
-                    "text": "Amazon CloudSearch",
-                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
-                }
+                { "index": 1, "text": "Amazon Polly", "explanation": "O Polly converte texto em fala, não constrói bots de conversação." },
+                { "index": 2, "text": "Amazon Rekognition", "explanation": "O Rekognition faz análise de imagens e vídeos, não é para chatbots." },
+                { "index": 3, "text": "Amazon Lex", "explanation": "O Lex permite criar chatbots com ASR e NLU, integrando com AWS Lambda e outros serviços." },
+                { "index": 4, "text": "Amazon Transcribe", "explanation": "O Transcribe converte fala em texto, não provê todo o framework de bot." }
             ],
-            "answer": [4],
-            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+            "answer": [3],
+            "explanation": "O Amazon Lex é o serviço gerenciado para criar interfaces de conversação com reconhecimento de fala e NLU, com integração nativa a Lambda e canais como Slack e Facebook."
         },
         {
             "id": "awsPractitioner19",
@@ -639,31 +623,15 @@
             "id": "awsPractitioner22",
             "topicId": 41,
             "levelId": 1,
-            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "question": "Qual serviço facilita a coleta, transformação e carregamento (ETL) de dados em data lakes e data warehouses na AWS?",
             "options": [
-                {
-                    "index": 1,
-                    "text": "Amazon Athena",
-                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
-                },
-                {
-                    "index": 2,
-                    "text": "Amazon ElasticSearchService",
-                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
-                },
-                {
-                    "index": 3,
-                    "text": "Amazon ElasticCache",
-                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
-                },
-                {
-                    "index": 4,
-                    "text": "Amazon CloudSearch",
-                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
-                }
+                { "index": 1, "text": "AWS Glue", "explanation": "O AWS Glue provê ETL serverless, crawlers e integração com o Glue Data Catalog." },
+                { "index": 2, "text": "AWS DataSync", "explanation": "DataSync migra dados em alta velocidade, não é um serviço ETL completo." },
+                { "index": 3, "text": "Amazon EMR", "explanation": "EMR executa frameworks como Spark/Hadoop; Glue é o ETL gerenciado serverless." },
+                { "index": 4, "text": "AWS DMS", "explanation": "DMS migra bancos de dados, não é voltado à orquestração ETL para data lakes." }
             ],
-            "answer": [4],
-            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS que permite configurar, gerenciar e dimensionar uma solução de pesquisa para seu site ou aplicativo de forma simples e econômica. Suportando 34 idiomas, ele oferece recursos populares de pesquisa, como destaques, autopreenchimento e pesquisa geoespacial. CloudSearch pode ser integrado em sites e aplicativos através de APIs RESTful, permitindo que os desenvolvedores enviem dados de pesquisa e consultem o serviço para obter resultados de pesquisa relevantes. Ele também suporta indexação automática de dados, o que facilita a atualização e manutenção dos índices de pesquisa, garantindo que os usuários finais sempre recebam informações precisas e atualizadas. Essa integração permite que sites e aplicativos ofereçam funcionalidades de pesquisa avançadas, melhorando a experiência do usuário e aumentando a eficiência na recuperação de informações."
+            "answer": [1],
+            "explanation": "O AWS Glue automatiza tarefas de ETL com crawlers para descobrir esquemas e jobs serverless para transformar e carregar dados para S3/Redshift." 
         },
         {
             "id": "awsPractitioner23",
@@ -849,31 +817,15 @@
             "id": "awsPractitioner29",
             "topicId": 41,
             "levelId": 1,
-            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "question": "Qual serviço fornece relatórios de melhores práticas e verificações em categorias como custo, segurança, tolerância a falhas e limites de serviço?",
             "options": [
-                {
-                    "index": 1,
-                    "text": "Amazon Athena",
-                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
-                },
-                {
-                    "index": 2,
-                    "text": "Amazon ElasticSearchService",
-                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
-                },
-                {
-                    "index": 3,
-                    "text": "Amazon ElasticCache",
-                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
-                },
-                {
-                    "index": 4,
-                    "text": "Amazon CloudSearch",
-                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
-                }
+                { "index": 1, "text": "AWS Trusted Advisor", "explanation": "Trusted Advisor executa checks e recomendações em múltiplas categorias." },
+                { "index": 2, "text": "AWS Config", "explanation": "Config avalia conformidade de recursos contra regras, não tem checks de limites de serviço/custo como o Trusted Advisor." },
+                { "index": 3, "text": "Amazon CloudWatch", "explanation": "CloudWatch monitora métricas/logs e alarmes, não provê checks de melhores práticas de conta." },
+                { "index": 4, "text": "AWS Compute Optimizer", "explanation": "Focado em recomendações de dimensionamento de recursos; escopo diferente do Trusted Advisor." }
             ],
-            "answer": [4],
-            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS que permite configurar, gerenciar e dimensionar uma solução de pesquisa para seu site ou aplicativo de forma simples e econômica. Suportando 34 idiomas, ele oferece recursos populares de pesquisa, como destaques, autopreenchimento e pesquisa geoespacial. CloudSearch pode ser integrado em sites e aplicativos através de APIs RESTful, permitindo que os desenvolvedores enviem dados de pesquisa e consultem o serviço para obter resultados de pesquisa relevantes. Ele também suporta indexação automática de dados, o que facilita a atualização e manutenção dos índices de pesquisa, garantindo que os usuários finais sempre recebam informações precisas e atualizadas. Essa integração permite que sites e aplicativos ofereçam funcionalidades de pesquisa avançadas, melhorando a experiência do usuário e aumentando a eficiência na recuperação de informações."
+            "answer": [1],
+            "explanation": "O AWS Trusted Advisor analisa sua conta e recomenda melhorias em custo, segurança, performance e limites de serviço." 
         },
         {
             "id": "awsPractitioner30",
@@ -1125,31 +1077,15 @@
             "id": "awsPractitioner39",
             "topicId": 41,
             "levelId": 1,
-            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "question": "Qual serviço simplifica a distribuição global de conteúdo com baixa latência por meio de uma rede de borda?",
             "options": [
-                {
-                    "index": 1,
-                    "text": "Amazon Athena",
-                    "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3."
-                },
-                {
-                    "index": 2,
-                    "text": "Amazon ElasticSearchService",
-                    "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura."
-                },
-                {
-                    "index": 3,
-                    "text": "Amazon ElasticCache",
-                    "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável."
-                },
-                {
-                    "index": 4,
-                    "text": "Amazon CloudSearch",
-                    "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
-                }
+                { "index": 1, "text": "Amazon CloudFront", "explanation": "CloudFront é a CDN da AWS, entrega conteúdo via edge locations com baixa latência." },
+                { "index": 2, "text": "Amazon Route 53", "explanation": "Route 53 é DNS gerenciado; pode direcionar tráfego, mas não entrega conteúdo em cache." },
+                { "index": 3, "text": "AWS Global Accelerator", "explanation": "O Accelerator otimiza rotas TCP/UDP, não é uma CDN de conteúdo estático/dinâmico." },
+                { "index": 4, "text": "Amazon S3 Transfer Acceleration", "explanation": "Acelera uploads/downloads para S3, não é uma CDN completa." }
             ],
-            "answer": [4],
-            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+            "answer": [1],
+            "explanation": "O Amazon CloudFront é a CDN da AWS que distribui conteúdo globalmente por edge locations para reduzir latência." 
         },
         {
             "id": "awsPractitioner40",
@@ -1271,15 +1207,15 @@
             "id": "awsPractitioner46",
             "topicId": 41,
             "levelId": 1,
-            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "question": "Qual serviço permite executar bancos de dados relacionais compatíveis com MySQL/PostgreSQL com desempenho e alta disponibilidade, mantendo compatibilidade de código?",
             "options": [
-                { "index": 1, "text": "Amazon Athena", "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3." },
-                { "index": 2, "text": "Amazon ElasticSearchService", "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura." },
-                { "index": 3, "text": "Amazon ElasticCache", "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável." },
-                { "index": 4, "text": "Amazon CloudSearch", "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica." }
+                { "index": 1, "text": "Amazon RDS for MySQL", "explanation": "Gerenciado para MySQL, mas a pergunta pede compatibilidade MySQL/PostgreSQL em um engine." },
+                { "index": 2, "text": "Amazon Aurora", "explanation": "Aurora oferece compatibilidade com MySQL e PostgreSQL, com maior desempenho e HA." },
+                { "index": 3, "text": "Amazon Redshift", "explanation": "Redshift é um data warehouse analítico, não um banco relacional OLTP." },
+                { "index": 4, "text": "Amazon Neptune", "explanation": "Neptune é um banco de grafo; não atende à compatibilidade pedida." }
             ],
-            "answer": [4],
-            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+            "answer": [2],
+            "explanation": "Amazon Aurora é compatível com MySQL e PostgreSQL, oferece replicação e melhorias de performance e disponibilidade."
         },
         {
             "id": "awsPractitioner47",
@@ -1355,15 +1291,15 @@
             "id": "awsPractitioner52",
             "topicId": 41,
             "levelId": 1,
-            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "question": "Qual serviço de mensagens pub/sub envia notificações para múltiplos assinantes ou endpoints (e-mail, HTTP, filas)?",
             "options": [
-                { "index": 1, "text": "Amazon Athena", "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3." },
-                { "index": 2, "text": "Amazon ElasticSearchService", "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura." },
-                { "index": 3, "text": "Amazon ElasticCache", "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável." },
-                { "index": 4, "text": "Amazon CloudSearch", "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica." }
+                { "index": 1, "text": "Amazon SNS", "explanation": "SNS é pub/sub gerenciado, entrega para e-mail, HTTP/S, SQS, Lambda etc." },
+                { "index": 2, "text": "Amazon SQS", "explanation": "SQS é fila de mensagens; não faz fan-out pub/sub para múltiplos assinantes." },
+                { "index": 3, "text": "Amazon MQ", "explanation": "MQ é broker gerenciado (ActiveMQ/RabbitMQ), não o serviço nativo pub/sub da AWS." },
+                { "index": 4, "text": "AWS Step Functions", "explanation": "Orquestração de workflows; não é pub/sub de mensagens." }
             ],
-            "answer": [4],
-            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+            "answer": [1],
+            "explanation": "O Amazon SNS implementa pub/sub para fan-out de mensagens para diversos tipos de endpoints/assinantes."
         },
         {
             "id": "awsPractitioner53",
@@ -1495,15 +1431,15 @@
             "id": "awsPractitioner62",
             "topicId": 41,
             "levelId": 1,
-            "question": "Qual é o serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa, de forma simples e econômica, para o seu site ou aplicativo?",
+            "question": "Qual serviço gerenciado armazena e rota segredos (chaves de API, senhas) com rotação automática?",
             "options": [
-                { "index": 1, "text": "Amazon Athena", "explanation": "O Amazon Athena permite é um serviço serveless que permite a consulta através de queries SQL em dados armazenados em Bucket do S3." },
-                { "index": 2, "text": "Amazon ElasticSearchService", "explanation": "O ElasticSearchService fornece uma alta capacidade de armazenamento de dados de logs de serviços para permitir a análise de problemas e falhas de forma automatizada na sua infraestrutura." },
-                { "index": 3, "text": "Amazon ElasticCache", "explanation": "O Amazon ElasticCache é um serviço que oferece uma solução de armazenamento de informações em cache de forma escalável." },
-                { "index": 4, "text": "Amazon CloudSearch", "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica." }
+                { "index": 1, "text": "AWS Systems Manager Parameter Store", "explanation": "Armazena parâmetros/segredos, porém rotação automática é recurso do Secrets Manager." },
+                { "index": 2, "text": "AWS KMS", "explanation": "Gerencia chaves de criptografia, não é um cofre de segredos de aplicações." },
+                { "index": 3, "text": "AWS Secrets Manager", "explanation": "Gerencia segredos com rotação automática integrada a serviços como RDS e Lambda." },
+                { "index": 4, "text": "Amazon Cognito", "explanation": "Gerencia identidades de usuários, não segredos de aplicações." }
             ],
-            "answer": [4],
-            "explanation": "O Amazon CloudSearch é um serviço gerenciado na nuvem AWS com o qual é possível configurar, gerenciar e dimensionar uma solução de pesquisa para o seu site ou aplicativo de forma simples e econômica."
+            "answer": [3],
+            "explanation": "O AWS Secrets Manager facilita o armazenamento, controle de acesso e rotação automática de segredos, com integrações nativas e auditoria." 
         },
         {
             "id": "awsPractitioner63",

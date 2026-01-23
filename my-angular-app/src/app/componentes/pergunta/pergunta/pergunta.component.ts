@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpQuestionsService } from '../../../services/http/http-questions.service';
 import { ModalService } from '../../modal/modal.service';
+import { ToastService } from '../../toast/toast.service';
 
 @Component({
   selector: 'app-pergunta',
@@ -38,7 +39,11 @@ export class PerguntaComponent implements OnInit, OnDestroy {
   private systemDarkMedia?: MediaQueryList;
   private systemThemeListener?: (event: MediaQueryListEvent | MediaQueryList) => void;
 
-  constructor(private httpQuestionsService: HttpQuestionsService, private modalService: ModalService) {
+  constructor(
+    private httpQuestionsService: HttpQuestionsService,
+    private modalService: ModalService,
+    private toast: ToastService
+  ) {
     this.initializeFavoriteQuestions();
   }
 
@@ -240,9 +245,9 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     this.repeatWrongQuestions = !this.repeatWrongQuestions;
     if (this.repeatWrongQuestions) {
       this.wrongQuestionsQueue = []; // Limpa a fila ao ativar o modo
-      this.modalService.open('Modo de repetição de perguntas erradas ativado!', { type: 'success' });
+      this.toast.success('Modo de repetição de perguntas erradas ativado!');
     } else {
-      this.modalService.open('Modo de repetição de perguntas erradas desativado!', { type: 'info' });
+      this.toast.info('Modo de repetição de perguntas erradas desativado!');
     }
   }
 
@@ -336,15 +341,24 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     }
 
     const currentId = String(this.currentQuestion.id);
-    const [deferredQuestion] = this.filteredQuestions.splice(this.currentQuestionIndex, 1);
-    if (!deferredQuestion) {
+    const removed = this.filteredQuestions.splice(this.currentQuestionIndex, 1);
+    if (!removed.length) {
       return;
     }
-    this.filteredQuestions.push(deferredQuestion);
+    // Empurra a atual para o final
+    this.filteredQuestions.push(removed[0]);
     this.deferredQuestionIds.add(currentId);
-    this.currentQuestionIndex = Math.max(-1, this.currentQuestionIndex - 1);
-    this.nextQuestion();
-    this.modalService.open('Questão marcada para responder depois.', { type: 'info' });
+
+    // Mantém o índice apontando para a próxima questão original.
+    // Caso a questão adiada fosse a última, volta para o início da lista.
+    if (this.currentQuestionIndex >= this.filteredQuestions.length - 1) {
+      this.currentQuestionIndex = 0;
+    }
+
+    // Define explicitamente a próxima questão e reidrata o estado, sem acionar a fila de erradas.
+    this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
+    this.hydrateCurrentQuestionState();
+    this.toast.info('Questão marcada para responder depois.');
   }
 
   handlePrimaryAction(): void {
@@ -397,7 +411,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     this.currentQuestion = this.filteredQuestions[this.currentQuestionIndex] || null;
     this.hydrateCurrentQuestionState();
 
-    this.modalService.open(`Foram filtradas ${this.filteredQuestions.length} questões com até ${maxLength} caracteres.`, { type: 'info' });
+    this.toast.info(`Foram filtradas ${this.filteredQuestions.length} questões com até ${maxLength} caracteres.`);
   }
 
   finalizeTest(force: boolean = false, showPendingNotice: boolean = true): void {
@@ -432,7 +446,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     this.incorrectAnswers = this.filteredQuestions.length - this.correctAnswers;
     this.pendingReviewPromptVisible = showPendingNotice && pending > 0;
     if (!this.pendingReviewPromptVisible) {
-      this.modalService.open('Parabéns! Você concluiu o teste.', { type: 'success', confirmText: 'Fechar' });
+      this.toast.success('Parabéns! Você concluiu o teste.');
     }
   }
 
@@ -453,7 +467,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
   startTest(): void {
     if (this.canStartTest()) {
       if (this.filteredQuestions.length === 0) {
-        this.modalService.open('Nenhuma pergunta disponível para os filtros selecionados. Ajuste os filtros e tente novamente.', { type: 'warning' });
+        this.toast.warning('Nenhuma pergunta disponível para os filtros selecionados. Ajuste os filtros e tente novamente.');
         return;
       }
       this.testStarted = true;
@@ -513,14 +527,14 @@ export class PerguntaComponent implements OnInit, OnDestroy {
         this.currentQuestion.options.map((option: { text: string }, index: number) => `${index + 1}. ${option.text}`).join('\n');
       
       navigator.clipboard.writeText(questionText).then(() => {
-        this.modalService.open('Pergunta e opções copiadas para a área de transferência!', { type: 'success' });
+        this.toast.success('Pergunta e opções copiadas para a área de transferência!');
       }).catch(err => {
         console.error('Erro ao copiar para a área de transferência:', err);
-        this.modalService.open('Não foi possível copiar. Verifique se a pergunta e as opções estão carregadas corretamente.', { type: 'danger' });
+        this.toast.danger('Não foi possível copiar. Verifique se a pergunta e as opções estão carregadas corretamente.');
       });
     } else {
       console.error('Erro: Dados da pergunta ou opções estão ausentes.');
-      this.modalService.open('Não foi possível copiar. Verifique se a pergunta e as opções estão carregadas corretamente.', { type: 'danger' });
+      this.toast.danger('Não foi possível copiar. Verifique se a pergunta e as opções estão carregadas corretamente.');
     }
   }
 
@@ -534,7 +548,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
   reviewPendingQuestions(): void {
     this.pendingReviewPromptVisible = false;
     if (this.unansweredCount === 0) {
-      this.modalService.open('Não há questões pendentes. Ótimo trabalho!', { type: 'info', confirmText: 'Entendi' });
+      this.toast.info('Não há questões pendentes. Ótimo trabalho!');
       return;
     }
 
@@ -543,7 +557,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
       .filter(({ question }) => !this.showAnswers[question.id]);
 
     if (!unanswered.length) {
-      this.modalService.open('Não há questões pendentes. Ótimo trabalho!', { type: 'info', confirmText: 'Entendi' });
+      this.toast.info('Não há questões pendentes. Ótimo trabalho!');
       return;
     }
 
@@ -559,7 +573,7 @@ export class PerguntaComponent implements OnInit, OnDestroy {
 
   finalizeWithoutPending(): void {
     this.pendingReviewPromptVisible = false;
-    this.modalService.open('Teste finalizado com sucesso!', { type: 'success', confirmText: 'Fechar' });
+    this.toast.success('Teste finalizado com sucesso!');
   }
 
   saveAnsweredQuestion(questionId: string, isCorrect: boolean): void {
@@ -574,18 +588,18 @@ export class PerguntaComponent implements OnInit, OnDestroy {
 
   clearAnsweredQuestions(): void {
     localStorage.removeItem('answeredQuestions');
-    this.modalService.open('Perguntas respondidas foram limpas!', { type: 'success' });
+    this.toast.success('Perguntas respondidas foram limpas!');
     this.loadQuestions(); // Recarregar perguntas
   }
 
   clearFavoriteQuestions(): void {
     if (!this.hasFavoriteQuestions) {
-      this.modalService.open('Nenhuma pergunta favorita para limpar.', { type: 'info' });
+      this.toast.info('Nenhuma pergunta favorita para limpar.');
       return;
     }
     this.favoriteQuestionIds = new Set();
     this.persistFavoriteQuestions();
-    this.modalService.open('Perguntas favoritas foram limpas!', { type: 'success' });
+    this.toast.success('Perguntas favoritas foram limpas!');
   }
 
   cycleThemePreference(): void {
@@ -596,6 +610,24 @@ export class PerguntaComponent implements OnInit, OnDestroy {
     } else {
       this.themePreference = 'system';
     }
+    this.applyThemeFromPreference(true);
+  }
+
+  setThemePreferenceSystem(checked: boolean): void {
+    if (checked) {
+      this.themePreference = 'system';
+    } else {
+      // ao sair de automático, mantenha o modo visual atual como preferência
+      this.themePreference = this.isDarkModeEnabled ? 'dark' : 'light';
+    }
+    this.applyThemeFromPreference(true);
+  }
+
+  setThemePreferenceDark(checked: boolean): void {
+    if (this.themePreference === 'system') {
+      return;
+    }
+    this.themePreference = checked ? 'dark' : 'light';
     this.applyThemeFromPreference(true);
   }
 
